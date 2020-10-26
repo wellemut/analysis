@@ -42,7 +42,9 @@ for goal, needle in KEYWORDS.items():
     regex_patterns[goal] = pattern
 
 # Analyze each HTML snippet in database
-while url_object := get_next_url_to_analyze():
+last_id = None
+while url_object := get_next_url_to_analyze(last_id=last_id):
+    id = url_object["id"]
     url = url_object["url"]
     html = url_object["html"]
     print("Searching for keywords in scraped HTML for", url, end=" ... ", flush=True)
@@ -62,4 +64,5 @@ while url_object := get_next_url_to_analyze():
     add_matches(url=url, matches=matches, word_count=len(text.split()))
 
     print("Done")
-    print(matches)
+    last_id = id
+    # print(matches)
