@@ -1,16 +1,13 @@
 import os
 import shutil
-from database.config import DATABASE_PATH
-from database.add_analysis_columns import add_analysis_columns
+from helpers.get_scraped_database import get_scraped_database
+
+database_path = get_scraped_database().file_path
 
 # Copy database from scrape/
-if os.path.exists(DATABASE_PATH):
+if os.path.exists(database_path):
     raise Exception("Destination file exists!")
 else:
     shutil.copy(
-        os.path.join("..", "scrape", "database", "database.sqlite"),
-        DATABASE_PATH
+        os.path.join("..", "scrape", "database", "database.sqlite"), database_path
     )
-
-# Add columns
-add_analysis_columns()

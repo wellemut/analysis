@@ -1,5 +1,5 @@
 # Ignore SQLite database
-/database/*.sqlite
+/databases/*.sqlite
 
 # Ignore exports
 export/
