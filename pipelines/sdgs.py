@@ -5,6 +5,7 @@ import pandas as pd
 from database import Database, Column, Field, Order
 from helpers.get_scraped_database import get_scraped_database
 from helpers.get_sdg_regex_patterns import get_sdg_regex_patterns
+from helpers.get_context import get_context
 from helpers.save_result import save_result
 
 PIPELINE = Path(__file__).stem
@@ -89,7 +90,14 @@ def run_pipeline(domain, url, reset):
         for goal, pattern in regex_patterns.items():
             for match in pattern.finditer(text):
                 matches[goal] = matches.get(goal, [])
-                matches[goal].append(match.group())
+                matches[goal].append(
+                    {
+                        "keyword": match.group(),
+                        "context": get_context(
+                            text, start=match.start(), end=match.end(), context=50
+                        ),
+                    }
+                )
 
         # Write matches to database
         db.insert(
