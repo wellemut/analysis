@@ -83,7 +83,7 @@ def run_pipeline(domain, url, reset):
 
         # Convert HTML to text
         soup = BeautifulSoup(html, "html.parser")
-        text = soup.get_text().strip()
+        text = soup.get_text(separator=" ").strip()
 
         # Search for keywords in string
         matches = {}
