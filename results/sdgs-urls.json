@@ -10,82 +10,101 @@
     "sdg2_matches": [
       {
         "keyword": "Seeds",
-        "context": "von Eckert & Ziegler BEBIG wie IsoSeed® (einzelne Seeds) oder IsoCord® (Seedketten) wird seit mehr als zehn"
+        "context": "von Eckert & Ziegler BEBIG wie IsoSeed® (einzelne Seeds) oder IsoCord® (Seedketten) wird seit mehr als zehn",
+        "tag": "other"
       }
     ],
     "sdg2_matches_count": 1,
     "sdg3_matches": [
       {
+        "keyword": "Therapie",
+        "context": "Wirksame Therapie für Vorhofflimmern",
+        "tag": "h3"
+      },
+      {
+        "keyword": "Behandlung",
+        "context": "Gezielte und schonende Behandlung von Prostatakrebs",
+        "tag": "h3"
+      },
+      {
         "keyword": "Medizin",
-        "context": "ist ein international renommierter Wissenschafts-, Medizin- und Technologiestandort im Nordosten Berlins."
+        "context": "ist ein international renommierter Wissenschafts-, Medizin- und Technologiestandort im Nordosten Berlins.",
+        "tag": "p"
       },
       {
         "keyword": "Medizinprodukte",
-        "context": "innovative Materialien und Technologien in Bereich der Medizinprodukte: ein doppellagiger Einzelhandschuh mit integrierten"
+        "context": "innovative Materialien und Technologien in Bereich der Medizinprodukte: ein doppellagiger Einzelhandschuh mit integrierten",
+        "tag": "other"
       },
       {
         "keyword": "medizinische",
-        "context": "konkret \n Chirurgische Handschuhe – Two-in-One \n Sterile medizinische Handschuhe dienen dem Schutz von Patient und Anwender."
+        "context": "Zukunft konkret \n \n Sterile medizinische Handschuhe dienen dem Schutz von Patient und Anwender.",
+        "tag": "other"
       },
       {
         "keyword": "Patient",
-        "context": "Sterile medizinische Handschuhe dienen dem Schutz von Patient und Anwender. Viele Chirurgen und Krankenschwestern"
+        "context": "Sterile medizinische Handschuhe dienen dem Schutz von Patient und Anwender. Viele Chirurgen und Krankenschwestern",
+        "tag": "other"
       },
       {
         "keyword": "medizinische",
-        "context": "Geschicklichkeit der Anwender unterstützt und den Schutz für das medizinische Personal verbessert. \n \n Zum Zukunftsort \n Zum Unternehmen"
+        "context": "Geschicklichkeit der Anwender unterstützt und den Schutz für das medizinische Personal verbessert. \n \n Zum Zukunftsort \n Zum Unternehmen",
+        "tag": "other"
       },
       {
         "keyword": "Medizin",
-        "context": "Blankenstein vom Max-Delbrück-Centrum für Molekulare Medizin in der Helmholtz-Gemeinschaft ist es gelungen, menschliche"
-      },
-      {
-        "keyword": "Therapie",
-        "context": "Zum Unternehmen \n \n \n \n Zukunft konkret \n Wirksame Therapie für Vorhofflimmern \n 2013 als Spin-off des Max-Delbrück-Centrum"
+        "context": "Blankenstein vom Max-Delbrück-Centrum für Molekulare Medizin in der Helmholtz-Gemeinschaft ist es gelungen, menschliche",
+        "tag": "other"
       },
       {
         "keyword": "Medizin",
-        "context": "als Spin-off des Max-Delbrück-Centrum für Molekulare Medizin (MDC) gegründet, schaffte es OMEICOS in nur drei Jahren,"
+        "context": "als Spin-off des Max-Delbrück-Centrum für Molekulare Medizin (MDC) gegründet, schaffte es OMEICOS in nur drei Jahren,",
+        "tag": "other"
       },
       {
         "keyword": "Medikamenten",
-        "context": "erstmals ursächlich zu behandeln. Mit klassischen Medikamenten ist es zwar möglich, die Symptome zu therapieren,"
+        "context": "erstmals ursächlich zu behandeln. Mit klassischen Medikamenten ist es zwar möglich, die Symptome zu therapieren,",
+        "tag": "other"
       },
       {
         "keyword": "Medikamentenkandidat",
-        "context": "vergleichender Forschung am MDC entdeckt wurde. Der Medikamentenkandidat OMT-28 könnte Millionen von Patienten eine sichere"
+        "context": "vergleichender Forschung am MDC entdeckt wurde. Der Medikamentenkandidat OMT-28 könnte Millionen von Patienten eine sichere",
+        "tag": "other"
       },
       {
         "keyword": "Behandlungsmöglichkeit",
-        "context": "Millionen von Patienten eine sichere und wirksame Behandlungsmöglichkeit eröffnen. \n \n Zum Zukunftsort \n Zum Unternehmen"
+        "context": "Millionen von Patienten eine sichere und wirksame Behandlungsmöglichkeit eröffnen. \n \n Zum Zukunftsort \n Zum Unternehmen",
+        "tag": "other"
       },
       {
         "keyword": "Behandlung",
-        "context": "Unternehmen \n \n \n \n Zukunft konkret \n Gezielte und schonende Behandlung von Prostatakrebs \n Prostatakrebs ist eine der häufigsten"
-      },
-      {
-        "keyword": "Behandlung",
-        "context": "Neuerkrankungen. Als besonders schonende Form der Behandlung für frühe Stadien des Prostatakarzinoms hat sich die"
+        "context": "Neuerkrankungen. Als besonders schonende Form der Behandlung für frühe Stadien des Prostatakarzinoms hat sich die",
+        "tag": "other"
       },
       {
         "keyword": "Behandlungszeit",
-        "context": "gut verträglich und zeichnet sich durch eine kurze Behandlungszeit sowie eine vergleichsweise schnelle körperliche Genesung"
+        "context": "gut verträglich und zeichnet sich durch eine kurze Behandlungszeit sowie eine vergleichsweise schnelle körperliche Genesung",
+        "tag": "other"
       },
       {
         "keyword": "Medizinprodukten",
-        "context": "körperliche Genesung aus. Die LDR-Brachytherapie mit Medizinprodukten von Eckert & Ziegler BEBIG wie IsoSeed® (einzelne"
+        "context": "körperliche Genesung aus. Die LDR-Brachytherapie mit Medizinprodukten von Eckert & Ziegler BEBIG wie IsoSeed® (einzelne",
+        "tag": "other"
       },
       {
         "keyword": "Praxis",
-        "context": "(Seedketten) wird seit mehr als zehn Jahren in der klinischen Praxis erfolgreich durchgeführt.\r\nEckert & Ziegler BEBIG"
+        "context": "(Seedketten) wird seit mehr als zehn Jahren in der klinischen Praxis erfolgreich durchgeführt.\r\nEckert & Ziegler BEBIG",
+        "tag": "other"
       },
       {
         "keyword": "Health",
-        "context": "verschiedenen Bereichen, von Virtual Reality über Health Care bis hin zu industriellen Anwendungen. Individuelle"
+        "context": "verschiedenen Bereichen, von Virtual Reality über Health Care bis hin zu industriellen Anwendungen. Individuelle",
+        "tag": "other"
       },
       {
         "keyword": "Care",
-        "context": "verschiedenen Bereichen, von Virtual Reality über Health Care bis hin zu industriellen Anwendungen. Individuelle"
+        "context": "verschiedenen Bereichen, von Virtual Reality über Health Care bis hin zu industriellen Anwendungen. Individuelle",
+        "tag": "other"
       }
     ],
     "sdg3_matches_count": 18,
@@ -97,114 +116,140 @@
     "sdg6_matches_count": 0,
     "sdg7_matches": [
       {
+        "keyword": "Batterie",
+        "context": "Entlastung der Umwelt durch Batterie-Sharing-Prinzip",
+        "tag": "h3"
+      },
+      {
         "keyword": "Energien",
-        "context": "Bundesregierung für das Jahr 2050, indem hier erneuerbare Energien und ein lokales Micro Smart Grid für eine klimaneutrale"
+        "context": "Bundesregierung für das Jahr 2050, indem hier erneuerbare Energien und ein lokales Micro Smart Grid für eine klimaneutrale",
+        "tag": "p"
       },
       {
         "keyword": "Energieversorgung",
-        "context": "ein lokales Micro Smart Grid für eine klimaneutrale Energieversorgung genutzt werden.  \n \n \n Zum Zukunftsort  EUREF-Campus"
-      },
-      {
-        "keyword": "Batterie",
-        "context": "Zukunft konkret \n Entlastung der Umwelt durch Batterie-Sharing-Prinzip \n Durch das Batterie-Sharing Prinzip"
-      },
-      {
-        "keyword": "Batterie",
-        "context": "Umwelt durch Batterie-Sharing-Prinzip \n Durch das Batterie-Sharing Prinzip wird ein hoher Beitrag zur Entlastung"
-      },
-      {
-        "keyword": "Strom",
-        "context": "verbessert die Luftqualität und verbraucht dabei keinen Strom, da die Luft durch die Algen erwärmt wird und eine"
-      },
-      {
-        "keyword": "energieeffizienten",
-        "context": "entsteht.\r\n\r\nNachhaltige Algensysteme zur wasser- und energieeffizienten Luftreinigung werden im Innen- und Außenbereich eingesetzt."
+        "context": "ein lokales Micro Smart Grid für eine klimaneutrale Energieversorgung genutzt werden.",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
+      },
+      {
+        "keyword": "Batterie",
+        "context": "Unternehmen \n \n \n \n Zukunft konkret \n \n Durch das Batterie-Sharing Prinzip wird ein hoher Beitrag zur Entlastung",
+        "tag": "other"
+      },
+      {
+        "keyword": "Strom",
+        "context": "verbessert die Luftqualität und verbraucht dabei keinen Strom, da die Luft durch die Algen erwärmt wird und eine",
+        "tag": "other"
+      },
+      {
+        "keyword": "energieeffizienten",
+        "context": "entsteht.\r\n\r\nNachhaltige Algensysteme zur wasser- und energieeffizienten Luftreinigung werden im Innen- und Außenbereich eingesetzt.",
+        "tag": "other"
       }
     ],
     "sdg7_matches_count": 7,
     "sdg8_matches": [
       {
-        "keyword": "Kreativität",
-        "context": "Europas. Hier verschmelzen mühelos Technologie und Kreativität.  \n \n \n Zum Zukunftsort  Berlin Campus Charlottenburg"
-      },
-      {
-        "keyword": "Innovation",
-        "context": "Siemensstadt 2.0: Freiheit, Toleranz und technologische Innovation auf 700.000 qm . Auf dem historischen Areal der Siemensstadt"
-      },
-      {
-        "keyword": "Innovation",
-        "context": "Volker Hofmann ist Geschäftsführer der Humboldt-Innovation GmbH. Der Diplom-Kaufmann, gebürtige Berliner und"
-      },
-      {
-        "keyword": "Innovation",
-        "context": "bzw. Teamleiter des Spin-Off Management der Humboldt- Innovation und für eine Unternehmensberatung tätig."
-      },
-      {
-        "keyword": "Innovation",
-        "context": "gleich mehrere renommierte Auszeichnungen im Bereich Innovation und Produktdesign. „IRMA 6“ ist ein Zählsensor und"
-      },
-      {
         "keyword": "JOB",
-        "context": "Du suchst einen ZUKUNFTS­ JOB ? \n Jetzt den passenden Job bei den Zukunftsorten"
+        "context": "Du suchst einen ZUKUNFTS­ JOB ?",
+        "tag": "h2"
+      },
+      {
+        "keyword": "Kreativität",
+        "context": "Europas. Hier verschmelzen mühelos Technologie und Kreativität.",
+        "tag": "p"
+      },
+      {
+        "keyword": "Innovation",
+        "context": "Siemensstadt 2.0: Freiheit, Toleranz und technologische Innovation auf 700.000 qm . Auf dem historischen Areal der Siemensstadt",
+        "tag": "p"
+      },
+      {
+        "keyword": "Innovation",
+        "context": "Volker Hofmann ist Geschäftsführer der Humboldt-Innovation GmbH. Der Diplom-Kaufmann, gebürtige Berliner und",
+        "tag": "other"
+      },
+      {
+        "keyword": "Innovation",
+        "context": "bzw. Teamleiter des Spin-Off Management der Humboldt- Innovation und für eine Unternehmensberatung tätig.",
+        "tag": "other"
+      },
+      {
+        "keyword": "Innovation",
+        "context": "gleich mehrere renommierte Auszeichnungen im Bereich Innovation und Produktdesign. „IRMA 6“ ist ein Zählsensor und",
+        "tag": "other"
       },
       {
         "keyword": "Job",
-        "context": "suchst einen ZUKUNFTS­ JOB ? \n Jetzt den passenden Job bei den Zukunftsorten finden und aktiv unser Leben"
+        "context": "Jetzt den passenden Job bei den Zukunftsorten finden und aktiv unser Leben",
+        "tag": "other"
       }
     ],
     "sdg8_matches_count": 7,
     "sdg9_matches": [
       {
+        "keyword": "Digitalisierung",
+        "context": "3D-Scanner zur Digitalisierung von Personen und Objekten",
+        "tag": "h3"
+      },
+      {
         "keyword": "Forschungs",
-        "context": "dem Areal entsteht dann in den folgenden Jahren ein Forschungs- und Industriepark für urbane Technologien: Berlin"
+        "context": "dem Areal entsteht dann in den folgenden Jahren ein Forschungs- und Industriepark für urbane Technologien: Berlin",
+        "tag": "p"
       },
       {
         "keyword": "Smart",
-        "context": "indem hier erneuerbare Energien und ein lokales Micro Smart Grid für eine klimaneutrale Energieversorgung genutzt"
+        "context": "indem hier erneuerbare Energien und ein lokales Micro Smart Grid für eine klimaneutrale Energieversorgung genutzt",
+        "tag": "p"
       },
       {
         "keyword": "Forschung",
-        "context": "Stefanie Molthagen-Schnöring ist Vizepräsidentin für Forschung und Transfer an der HTW Berlin, an der sie zuvor als"
+        "context": "Stefanie Molthagen-Schnöring ist Vizepräsidentin für Forschung und Transfer an der HTW Berlin, an der sie zuvor als",
+        "tag": "other"
       },
       {
         "keyword": "Fahrräder",
-        "context": "Passagierfluss, die Ein- und Aussteiger und erkennt Objekte wie Fahrräder oder Rollstühle. Die Daten, die in Echtzeit abrufbar"
+        "context": "Passagierfluss, die Ein- und Aussteiger und erkennt Objekte wie Fahrräder oder Rollstühle. Die Daten, die in Echtzeit abrufbar",
+        "tag": "other"
       },
       {
         "keyword": "Fahrzeuge",
-        "context": "abrufbar sind, dienen als Quelle für neue Dienste. Fahrzeuge, Verkehrsunternehmen und Betreiber sind über den Sensor"
+        "context": "abrufbar sind, dienen als Quelle für neue Dienste. Fahrzeuge, Verkehrsunternehmen und Betreiber sind über den Sensor",
+        "tag": "other"
       },
       {
         "keyword": "Forschungsteam",
-        "context": "Immunsystem sie nicht attackiert, sondern toleriert. Einem Forschungsteam um Prof. Thomas Blankenstein vom Max-Delbrück-Centrum"
+        "context": "Immunsystem sie nicht attackiert, sondern toleriert. Einem Forschungsteam um Prof. Thomas Blankenstein vom Max-Delbrück-Centrum",
+        "tag": "other"
       },
       {
         "keyword": "Forschung",
-        "context": "zerstören können. Damit wurden mehr als zehn Jahre Forschung vom Erfolg gekrönt. Das Start-up T-knife entwickelt"
+        "context": "zerstören können. Damit wurden mehr als zehn Jahre Forschung vom Erfolg gekrönt. Das Start-up T-knife entwickelt",
+        "tag": "other"
       },
       {
         "keyword": "Forschung",
-        "context": "Relevanz in jahrelanger, systematisch vergleichender Forschung am MDC entdeckt wurde. Der Medikamentenkandidat OMT-28"
-      },
-      {
-        "keyword": "Digitalisierung",
-        "context": "Unternehmen \n \n \n \n Zukunft konkret  \n 3D-Scanner zur Digitalisierung von Personen und Objekten \n Seit 2013 entwickelt und"
+        "context": "Relevanz in jahrelanger, systematisch vergleichender Forschung am MDC entdeckt wurde. Der Medikamentenkandidat OMT-28",
+        "tag": "other"
       },
       {
         "keyword": "digitalisiert",
-        "context": "unterschiedlichste Objekte können so schnell und einfach in 3D digitalisiert werden. Die entstandenen 3D-Modelle haben eine absolut"
+        "context": "unterschiedlichste Objekte können so schnell und einfach in 3D digitalisiert werden. Die entstandenen 3D-Modelle haben eine absolut",
+        "tag": "other"
       },
       {
         "keyword": "Virtual Reality",
-        "context": "finden ihren Einsatz in verschiedenen Bereichen, von Virtual Reality über Health Care bis hin zu industriellen Anwendungen."
+        "context": "finden ihren Einsatz in verschiedenen Bereichen, von Virtual Reality über Health Care bis hin zu industriellen Anwendungen.",
+        "tag": "other"
       },
       {
         "keyword": "Forschungs",
-        "context": "Anwendungen. Individuelle Scan-Lösungen werden in der eigenen Forschungs- und Entwicklungsabteilung realisiert. \n \n Zum Zukunftsort"
+        "context": "Anwendungen. Individuelle Scan-Lösungen werden in der eigenen Forschungs- und Entwicklungsabteilung realisiert. \n \n Zum Zukunftsort",
+        "tag": "other"
       }
     ],
     "sdg9_matches_count": 12,
@@ -213,69 +258,84 @@
     "sdg11_matches": [
       {
         "keyword": "Verkehrs",
-        "context": "konkret \n  Zählsensor zur Optimierung des öffentlichen Verkehrs in Bussen und Bahnen \n Die iris-GmbH infrared & intelligent"
+        "context": "Zählsensor zur Optimierung des öffentlichen Verkehrs in Bussen und Bahnen",
+        "tag": "h3"
+      },
+      {
+        "keyword": "Luftqualität",
+        "context": "Verbesserung der Luftqualität",
+        "tag": "h3"
       },
       {
         "keyword": "Verkehrs",
-        "context": "Zählsensor und dient zur Optimierung des öffentlichen Verkehrs in Bussen und Bahnen. Dazu erfasst er den Passagierfluss,"
+        "context": "Zählsensor und dient zur Optimierung des öffentlichen Verkehrs in Bussen und Bahnen. Dazu erfasst er den Passagierfluss,",
+        "tag": "other"
       },
       {
         "keyword": "Verkehrsunternehmen",
-        "context": "sind, dienen als Quelle für neue Dienste. Fahrzeuge, Verkehrsunternehmen und Betreiber sind über den Sensor miteinander vernetzt."
+        "context": "sind, dienen als Quelle für neue Dienste. Fahrzeuge, Verkehrsunternehmen und Betreiber sind über den Sensor miteinander vernetzt.",
+        "tag": "other"
       },
       {
         "keyword": "Elektroleichtmobilität",
-        "context": "Ladeinfrastruktur fördern wir die zukunftsweisende Technologie der Elektroleichtmobilität. \n \n Zum Zukunftsort \n Zum Unternehmen \n \n \n \n Zukunft"
+        "context": "Ladeinfrastruktur fördern wir die zukunftsweisende Technologie der Elektroleichtmobilität. \n \n Zum Zukunftsort \n Zum Unternehmen \n \n \n \n Zukunft",
+        "tag": "other"
       },
       {
         "keyword": "Luftqualität",
-        "context": "Unternehmen \n \n \n \n Zukunft konkret \n Verbesserung der Luftqualität \n Das Algenbild Alwe verbessert die Luftqualität und"
-      },
-      {
-        "keyword": "Luftqualität",
-        "context": "der Luftqualität \n Das Algenbild Alwe verbessert die Luftqualität und verbraucht dabei keinen Strom, da die Luft durch"
+        "context": "Zukunft konkret \n \n Das Algenbild Alwe verbessert die Luftqualität und verbraucht dabei keinen Strom, da die Luft durch",
+        "tag": "other"
       }
     ],
     "sdg11_matches_count": 6,
     "sdg12_matches": [
       {
-        "keyword": "nachhaltige",
-        "context": "Rahmenbedingungen für produzierende Unternehmen, die auf nachhaltige und effiziente Technologien spezialisiert sind und"
-      },
-      {
-        "keyword": "biologische",
-        "context": "Stoffwechselproduktes der Omega-3-Fettsäuren, dessen biologische Relevanz in jahrelanger, systematisch vergleichender"
-      },
-      {
         "keyword": "Sharing",
-        "context": "Zukunft konkret \n Entlastung der Umwelt durch Batterie-Sharing-Prinzip \n Durch das Batterie-Sharing Prinzip wird"
-      },
-      {
-        "keyword": "Sharing",
-        "context": "durch Batterie-Sharing-Prinzip \n Durch das Batterie-Sharing Prinzip wird ein hoher Beitrag zur Entlastung der"
-      },
-      {
-        "keyword": "Nachhaltige",
-        "context": "wird und eine natürliche Zirkulation entsteht.\r\n\r\nNachhaltige Algensysteme zur wasser- und energieeffizienten Luftreinigung"
+        "context": "Entlastung der Umwelt durch Batterie-Sharing-Prinzip",
+        "tag": "h3"
       },
       {
         "keyword": "Nachhaltiger",
-        "context": "Zukunftsort \n Zum Unternehmen \n \n \n \n Zukunft konkret \n Nachhaltiger Umgang mit Nutzerdaten  \n TICE möchte Bewusstsein"
+        "context": "Nachhaltiger Umgang mit Nutzerdaten",
+        "tag": "h3"
+      },
+      {
+        "keyword": "nachhaltige",
+        "context": "Rahmenbedingungen für produzierende Unternehmen, die auf nachhaltige und effiziente Technologien spezialisiert sind und",
+        "tag": "p"
+      },
+      {
+        "keyword": "biologische",
+        "context": "Stoffwechselproduktes der Omega-3-Fettsäuren, dessen biologische Relevanz in jahrelanger, systematisch vergleichender",
+        "tag": "other"
+      },
+      {
+        "keyword": "Sharing",
+        "context": "Unternehmen \n \n \n \n Zukunft konkret \n \n Durch das Batterie-Sharing Prinzip wird ein hoher Beitrag zur Entlastung der",
+        "tag": "other"
+      },
+      {
+        "keyword": "Nachhaltige",
+        "context": "wird und eine natürliche Zirkulation entsteht.\r\n\r\nNachhaltige Algensysteme zur wasser- und energieeffizienten Luftreinigung",
+        "tag": "other"
       },
       {
         "keyword": "nachhaltigen",
-        "context": "mit Nutzerdaten  \n TICE möchte Bewusstsein für einen nachhaltigen Umgang mit Nutzerdaten schaffen. Durch moderne Verschlüsselung"
+        "context": "Zukunft konkret \n \n TICE möchte Bewusstsein für einen nachhaltigen Umgang mit Nutzerdaten schaffen. Durch moderne Verschlüsselung",
+        "tag": "other"
       }
     ],
     "sdg12_matches_count": 7,
     "sdg13_matches": [
       {
         "keyword": "CO2",
-        "context": "Der EUREF-Campus Berlin erfüllt schon heute die CO2-Klimaziele der Bundesregierung für das Jahr 2050,"
+        "context": "Der EUREF-Campus Berlin erfüllt schon heute die CO2-Klimaziele der Bundesregierung für das Jahr 2050,",
+        "tag": "p"
       },
       {
         "keyword": "CO2",
-        "context": "Innen- und Außenbereich eingesetzt. Die Systeme können CO2 und Luftschadstoffe wie Stickoxide und Feinstaub aufnehmen."
+        "context": "Innen- und Außenbereich eingesetzt. Die Systeme können CO2 und Luftschadstoffe wie Stickoxide und Feinstaub aufnehmen.",
+        "tag": "other"
       }
     ],
     "sdg13_matches_count": 2,
@@ -285,55 +345,67 @@
     "sdg15_matches_count": 0,
     "sdg16_matches": [
       {
-        "keyword": "war",
-        "context": "als Professorin für Wirtschaftskommunikation tätig war."
+        "keyword": "Sicherheitsgurt",
+        "context": "Sicherheitsgurt für Gelenke",
+        "tag": "h3"
       },
       {
         "keyword": "war",
-        "context": "Berliner und Alumnus der Humboldt-Universität zu Berlin war zuvor Leiter des HU Gründungsservices bzw. Teamleiter"
+        "context": "als Professorin für Wirtschaftskommunikation tätig war.",
+        "tag": "other"
+      },
+      {
+        "keyword": "war",
+        "context": "Berliner und Alumnus der Humboldt-Universität zu Berlin war zuvor Leiter des HU Gründungsservices bzw. Teamleiter",
+        "tag": "other"
       },
       {
         "keyword": "sichergestellt",
-        "context": "miteinander vernetzt. Die Datensicherheit ist dabei sichergestellt. Als Produkt ist es ästhetisch gestaltet, intuitiv"
+        "context": "miteinander vernetzt. Die Datensicherheit ist dabei sichergestellt. Als Produkt ist es ästhetisch gestaltet, intuitiv",
+        "tag": "other"
       },
       {
         "keyword": "sichere",
-        "context": "Medikamentenkandidat OMT-28 könnte Millionen von Patienten eine sichere und wirksame Behandlungsmöglichkeit eröffnen."
-      },
-      {
-        "keyword": "Sicherheitsgurt",
-        "context": "Zukunftsort \n Zum Unternehmen \n \n \n \n Zukunft konkret \n Sicherheitsgurt für Gelenke \n Das Berliner Start-up Betterguards Technology"
+        "context": "Medikamentenkandidat OMT-28 könnte Millionen von Patienten eine sichere und wirksame Behandlungsmöglichkeit eröffnen.",
+        "tag": "other"
       },
       {
         "keyword": "Sicherheitsgurte",
-        "context": "Betterguards Technology GmbH entwickelt und produziert \"Sicherheitsgurte\" für menschliche Gelenke – Made in Germany. Die Technologie"
+        "context": "Betterguards Technology GmbH entwickelt und produziert \"Sicherheitsgurte\" für menschliche Gelenke – Made in Germany. Die Technologie",
+        "tag": "other"
       }
     ],
     "sdg16_matches_count": 6,
     "sdg17_matches": [
       {
         "keyword": "Innovation",
-        "context": "Siemensstadt 2.0: Freiheit, Toleranz und technologische Innovation auf 700.000 qm . Auf dem historischen Areal der Siemensstadt"
+        "context": "Siemensstadt 2.0: Freiheit, Toleranz und technologische Innovation auf 700.000 qm . Auf dem historischen Areal der Siemensstadt",
+        "tag": "p"
       },
       {
         "keyword": "Innovation",
-        "context": "Volker Hofmann ist Geschäftsführer der Humboldt-Innovation GmbH. Der Diplom-Kaufmann, gebürtige Berliner und"
+        "context": "Volker Hofmann ist Geschäftsführer der Humboldt-Innovation GmbH. Der Diplom-Kaufmann, gebürtige Berliner und",
+        "tag": "other"
       },
       {
         "keyword": "Innovation",
-        "context": "bzw. Teamleiter des Spin-Off Management der Humboldt- Innovation und für eine Unternehmensberatung tätig."
+        "context": "bzw. Teamleiter des Spin-Off Management der Humboldt- Innovation und für eine Unternehmensberatung tätig.",
+        "tag": "other"
       },
       {
         "keyword": "Innovation",
-        "context": "gleich mehrere renommierte Auszeichnungen im Bereich Innovation und Produktdesign. „IRMA 6“ ist ein Zählsensor und"
+        "context": "gleich mehrere renommierte Auszeichnungen im Bereich Innovation und Produktdesign. „IRMA 6“ ist ein Zählsensor und",
+        "tag": "other"
       },
       {
         "keyword": "Daten",
-        "context": "erkennt Objekte wie Fahrräder oder Rollstühle. Die Daten, die in Echtzeit abrufbar sind, dienen als Quelle"
+        "context": "erkennt Objekte wie Fahrräder oder Rollstühle. Die Daten, die in Echtzeit abrufbar sind, dienen als Quelle",
+        "tag": "other"
       },
       {
         "keyword": "Daten",
-        "context": "herzrhythmusstabilisierender und kardioprotektiver Wirkung. Alle bisherigen Daten deuten darauf hin, dass die Wissenschaftler eine Möglichkeit"
+        "context": "herzrhythmusstabilisierender und kardioprotektiver Wirkung. Alle bisherigen Daten deuten darauf hin, dass die Wissenschaftler eine Möglichkeit",
+        "tag": "other"
       }
     ],
     "sdg17_matches_count": 6
@@ -351,19 +423,23 @@
     "sdg3_matches": [
       {
         "keyword": "Gesundheit",
-        "context": "bezüglich Arbeitsleistung, wirtschaftlicher Lage, Gesundheit, persönlicher Vorlieben, Interessen, Zuverlässigkeit,"
+        "context": "bezüglich Arbeitsleistung, wirtschaftlicher Lage, Gesundheit, persönlicher Vorlieben, Interessen, Zuverlässigkeit,",
+        "tag": "p"
       },
       {
         "keyword": "Behinderung",
-        "context": "Recht, diese Daten einem anderen Verantwortlichen ohne Behinderung durch den Verantwortlichen, dem die personenbezogenen"
+        "context": "Recht, diese Daten einem anderen Verantwortlichen ohne Behinderung durch den Verantwortlichen, dem die personenbezogenen",
+        "tag": "p"
       },
       {
         "keyword": "verletzt",
-        "context": "beispielsweise der Fall, wenn ein Besucher in unserem Betrieb verletzt werden würde und daraufhin sein Name, sein Alter,"
+        "context": "beispielsweise der Fall, wenn ein Besucher in unserem Betrieb verletzt werden würde und daraufhin sein Name, sein Alter,",
+        "tag": "p"
       },
       {
         "keyword": "Arzt",
-        "context": "oder sonstige lebenswichtige Informationen an einen Arzt, ein Krankenhaus oder sonstige Dritte weitergegeben"
+        "context": "oder sonstige lebenswichtige Informationen an einen Arzt, ein Krankenhaus oder sonstige Dritte weitergegeben",
+        "tag": "p"
       }
     ],
     "sdg3_matches_count": 4,
@@ -376,11 +452,13 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "ist ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe des Landes Berlin. Betreibergesellschaft"
+        "context": "ist ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe des Landes Berlin. Betreibergesellschaft",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 2,
@@ -388,90 +466,110 @@
     "sdg8_matches_count": 0,
     "sdg9_matches": [
       {
-        "keyword": "automatisierter",
-        "context": "Verarbeitung \n Verarbeitung ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang oder jede solche Vorgangsreihe"
-      },
-      {
         "keyword": "automatisierten",
-        "context": "einzuschränken. \n e) Profiling \n Profiling ist jede Art der automatisierten Verarbeitung personenbezogener Daten, die darin besteht,"
-      },
-      {
-        "keyword": "automatisiertes",
-        "context": "Internetseite durch eine betroffene Person oder ein automatisiertes System eine Reihe von allgemeinen Daten und Informationen."
-      },
-      {
-        "keyword": "automatisch",
-        "context": "betroffenen Person übermittelten personenbezogenen Daten automatisch gespeichert. Solche auf freiwilliger Basis von einer"
-      },
-      {
-        "keyword": "automatisierten",
-        "context": "über die Herkunft der Daten \n• das Bestehen einer automatisierten Entscheidungsfindung einschließlich Profiling gemäß"
-      },
-      {
-        "keyword": "automatisierter",
-        "context": "Buchstabe b DS-GVO beruht und die Verarbeitung mithilfe automatisierter Verfahren erfolgt, sofern die Verarbeitung nicht für"
-      },
-      {
-        "keyword": "Forschungszwecken",
-        "context": "Management GmbH zu wissenschaftlichen oder historischen Forschungszwecken oder zu statistischen Zwecken gemäß Art. 89 Abs. 1"
-      },
-      {
-        "keyword": "automatisierter",
-        "context": "der Richtlinie 2005EG, ihr Widerspruchsrecht mittels automatisierter Verfahren auszuüben, bei denen technische Spezifikationen"
+        "context": "16. Bestehen einer automatisierten Entscheidungsfindung",
+        "tag": "h3"
       },
       {
         "keyword": "Automatisierte",
-        "context": "technische Spezifikationen verwendet werden. \n h) Automatisierte Entscheidungen im Einzelfall einschließlich Profiling"
+        "context": "h) Automatisierte Entscheidungen im Einzelfall einschließlich Profiling",
+        "tag": "h4"
+      },
+      {
+        "keyword": "automatisierter",
+        "context": "Verarbeitung ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführte Vorgang oder jede solche Vorgangsreihe",
+        "tag": "p"
       },
       {
         "keyword": "automatisierten",
-        "context": "gewährte Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung — einschließlich Profiling — beruhenden"
+        "context": "Profiling ist jede Art der automatisierten Verarbeitung personenbezogener Daten, die darin besteht,",
+        "tag": "p"
       },
       {
-        "keyword": "automatisierte",
-        "context": "Möchte die betroffene Person Rechte mit Bezug auf automatisierte Entscheidungen geltend machen, kann sie sich hierzu"
+        "keyword": "automatisiertes",
+        "context": "Internetseite durch eine betroffene Person oder ein automatisiertes System eine Reihe von allgemeinen Daten und Informationen.",
+        "tag": "p"
       },
       {
         "keyword": "automatisch",
-        "context": "zwei Monate nach Bekanntgabe der Absageentscheidung automatisch gelöscht, sofern einer Löschung keine sonstigen berechtigten"
+        "context": "betroffenen Person übermittelten personenbezogenen Daten automatisch gespeichert. Solche auf freiwilliger Basis von einer",
+        "tag": "p"
       },
       {
         "keyword": "automatisierten",
-        "context": "personenbezogenen Daten hätte. \n 16. Bestehen einer automatisierten Entscheidungsfindung \n Als verantwortungsbewusstes"
+        "context": "über die Herkunft der Daten \n• das Bestehen einer automatisierten Entscheidungsfindung einschließlich Profiling gemäß",
+        "tag": "p"
+      },
+      {
+        "keyword": "automatisierter",
+        "context": "Buchstabe b DS-GVO beruht und die Verarbeitung mithilfe automatisierter Verfahren erfolgt, sofern die Verarbeitung nicht für",
+        "tag": "p"
+      },
+      {
+        "keyword": "Forschungszwecken",
+        "context": "Management GmbH zu wissenschaftlichen oder historischen Forschungszwecken oder zu statistischen Zwecken gemäß Art. 89 Abs. 1",
+        "tag": "p"
+      },
+      {
+        "keyword": "automatisierter",
+        "context": "der Richtlinie 2005EG, ihr Widerspruchsrecht mittels automatisierter Verfahren auszuüben, bei denen technische Spezifikationen",
+        "tag": "p"
+      },
+      {
+        "keyword": "automatisierten",
+        "context": "gewährte Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung — einschließlich Profiling — beruhenden",
+        "tag": "p"
+      },
+      {
+        "keyword": "automatisierte",
+        "context": "Möchte die betroffene Person Rechte mit Bezug auf automatisierte Entscheidungen geltend machen, kann sie sich hierzu",
+        "tag": "p"
+      },
+      {
+        "keyword": "automatisch",
+        "context": "zwei Monate nach Bekanntgabe der Absageentscheidung automatisch gelöscht, sofern einer Löschung keine sonstigen berechtigten",
+        "tag": "p"
       },
       {
         "keyword": "automatische",
-        "context": "verantwortungsbewusstes Unternehmen verzichten wir auf eine automatische Entscheidungsfindung oder ein Profiling. \n Diese Datenschutzerklärung"
+        "context": "verantwortungsbewusstes Unternehmen verzichten wir auf eine automatische Entscheidungsfindung oder ein Profiling.",
+        "tag": "p"
       }
     ],
     "sdg9_matches_count": 14,
     "sdg10_matches": [
       {
         "keyword": "Behinderung",
-        "context": "Recht, diese Daten einem anderen Verantwortlichen ohne Behinderung durch den Verantwortlichen, dem die personenbezogenen"
+        "context": "Recht, diese Daten einem anderen Verantwortlichen ohne Behinderung durch den Verantwortlichen, dem die personenbezogenen",
+        "tag": "p"
       }
     ],
     "sdg10_matches_count": 1,
     "sdg11_matches": [
       {
         "keyword": "elektronische",
-        "context": "gesetzlichen Vorschriften Angaben, die eine schnelle elektronische Kontaktaufnahme zu unserem Unternehmen sowie eine"
+        "context": "gesetzlichen Vorschriften Angaben, die eine schnelle elektronische Kontaktaufnahme zu unserem Unternehmen sowie eine",
+        "tag": "p"
       },
       {
         "keyword": "Kommunikation",
-        "context": "Kontaktaufnahme zu unserem Unternehmen sowie eine unmittelbare Kommunikation mit uns ermöglichen, was ebenfalls eine allgemeine"
+        "context": "Kontaktaufnahme zu unserem Unternehmen sowie eine unmittelbare Kommunikation mit uns ermöglichen, was ebenfalls eine allgemeine",
+        "tag": "p"
       },
       {
         "keyword": "elektronischen",
-        "context": "ebenfalls eine allgemeine Adresse der sogenannten elektronischen Post (E-Mail-Adresse) umfasst. Sofern eine betroffene"
+        "context": "ebenfalls eine allgemeine Adresse der sogenannten elektronischen Post (E-Mail-Adresse) umfasst. Sofern eine betroffene",
+        "tag": "p"
       },
       {
         "keyword": "elektronischem",
-        "context": "Bewerbungsverfahrens. Die Verarbeitung kann auch auf elektronischem Wege erfolgen. Dies ist insbesondere dann der Fall,"
+        "context": "Bewerbungsverfahrens. Die Verarbeitung kann auch auf elektronischem Wege erfolgen. Dies ist insbesondere dann der Fall,",
+        "tag": "p"
       },
       {
         "keyword": "elektronischen",
-        "context": "Bewerber entsprechende Bewerbungsunterlagen auf dem elektronischen Wege, beispielsweise per E-Mail oder über ein auf"
+        "context": "Bewerber entsprechende Bewerbungsunterlagen auf dem elektronischen Wege, beispielsweise per E-Mail oder über ein auf",
+        "tag": "p"
       }
     ],
     "sdg11_matches_count": 5,
@@ -486,458 +584,571 @@
     "sdg16_matches": [
       {
         "keyword": "sicherzustellen",
-        "context": "Internetseite verarbeiteten personenbezogenen Daten sicherzustellen. Dennoch können Internetbasierte Datenübertragungen"
+        "context": "Internetseite verarbeiteten personenbezogenen Daten sicherzustellen. Dennoch können Internetbasierte Datenübertragungen",
+        "tag": "p"
       },
       {
         "keyword": "Sicherheitslücken",
-        "context": "Internetbasierte Datenübertragungen grundsätzlich Sicherheitslücken aufweisen, sodass ein absoluter Schutz nicht gewährleistet"
+        "context": "Internetbasierte Datenübertragungen grundsätzlich Sicherheitslücken aufweisen, sodass ein absoluter Schutz nicht gewährleistet",
+        "tag": "p"
       },
       {
         "keyword": "sicherzustellen",
-        "context": "die von uns verarbeiteten personenbezogenen Daten sicherzustellen. Die anonymen Daten der Server-Logfiles werden getrennt"
+        "context": "die von uns verarbeiteten personenbezogenen Daten sicherzustellen. Die anonymen Daten der Server-Logfiles werden getrennt",
+        "tag": "p"
       },
       {
         "keyword": "Gewalt",
-        "context": "öffentlichen Interesse liegt oder in Ausübung öffentlicher Gewalt erfolgt, welche dem Verantwortlichen übertragen wurde."
+        "context": "öffentlichen Interesse liegt oder in Ausübung öffentlicher Gewalt erfolgt, welche dem Verantwortlichen übertragen wurde.",
+        "tag": "p"
       }
     ],
     "sdg16_matches_count": 4,
     "sdg17_matches": [
       {
         "keyword": "Daten",
-        "context": "ist grundsätzlich ohne jede Angabe personenbezogener Daten möglich. Sofern eine betroffene Person besondere Services"
+        "context": "6. Erfassung von allgemeinen Daten und Informationen",
+        "tag": "h3"
       },
       {
         "keyword": "Daten",
-        "context": "könnte jedoch eine Verarbeitung personenbezogener Daten erforderlich werden. Ist die Verarbeitung personenbezogener"
+        "context": "Routinemäßige Löschung und Sperrung von personenbezogenen Daten",
+        "tag": "h3"
       },
       {
         "keyword": "Daten",
-        "context": "erforderlich werden. Ist die Verarbeitung personenbezogener Daten erforderlich und besteht für eine solche Verarbeitung"
+        "context": "14. Dauer, für die die personenbezogenen Daten gespeichert werden",
+        "tag": "h3"
       },
       {
         "keyword": "Daten",
-        "context": "betroffenen Person ein. \n Die Verarbeitung personenbezogener Daten, beispielsweise des Namens, der Anschrift, E-Mail-Adresse"
+        "context": "Vorschriften zur Bereitstellung der personenbezogenen Daten; Erforderlichkeit für den Vertragsabschluss; Verpflichtung",
+        "tag": "h3"
       },
       {
         "keyword": "Daten",
-        "context": "erhobenen, genutzten und verarbeiteten personenbezogenen Daten informieren. Ferner werden betroffene Personen mittels"
+        "context": "Verpflichtung der betroffenen Person, die personenbezogenen Daten bereitzustellen; mögliche Folgen der Nichtbereitstellung",
+        "tag": "h3"
       },
       {
         "keyword": "Daten",
-        "context": "diese Internetseite verarbeiteten personenbezogenen Daten sicherzustellen. Dennoch können Internetbasierte Datenübertragungen"
+        "context": "a) personenbezogene Daten",
+        "tag": "h4"
       },
       {
         "keyword": "Daten",
-        "context": "es jeder betroffenen Person frei, personenbezogene Daten auch auf alternativen Wegen, beispielsweise telefonisch,"
+        "context": "ist grundsätzlich ohne jede Angabe personenbezogener Daten möglich. Sofern eine betroffene Person besondere Services",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "anderem die folgenden Begriffe: \n a) personenbezogene Daten \n Personenbezogene Daten sind alle Informationen,"
+        "context": "könnte jedoch eine Verarbeitung personenbezogener Daten erforderlich werden. Ist die Verarbeitung personenbezogener",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Begriffe: \n a) personenbezogene Daten \n Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte"
+        "context": "erforderlich werden. Ist die Verarbeitung personenbezogener Daten erforderlich und besteht für eine solche Verarbeitung",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "identifizierbare natürliche Person, deren personenbezogene Daten von dem für die Verarbeitung Verantwortlichen verarbeitet"
+        "context": "Die Verarbeitung personenbezogener Daten, beispielsweise des Namens, der Anschrift, E-Mail-Adresse",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Vorgangsreihe im Zusammenhang mit personenbezogenen Daten wie das Erheben, das Erfassen, die Organisation, das"
+        "context": "erhobenen, genutzten und verarbeiteten personenbezogenen Daten informieren. Ferner werden betroffene Personen mittels",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "ist die Markierung gespeicherter personenbezogener Daten mit dem Ziel, ihre künftige Verarbeitung einzuschränken."
+        "context": "diese Internetseite verarbeiteten personenbezogenen Daten sicherzustellen. Dennoch können Internetbasierte Datenübertragungen",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "der automatisierten Verarbeitung personenbezogener Daten, die darin besteht, dass diese personenbezogenen Daten"
+        "context": "es jeder betroffenen Person frei, personenbezogene Daten auch auf alternativen Wegen, beispielsweise telefonisch,",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Daten, die darin besteht, dass diese personenbezogenen Daten verwendet werden, um bestimmte persönliche Aspekte,"
+        "context": "Personenbezogene Daten sind alle Informationen, die sich auf eine identifizierte",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Pseudonymisierung ist die Verarbeitung personenbezogener Daten in einer Weise, auf welche die personenbezogenen Daten"
+        "context": "identifizierbare natürliche Person, deren personenbezogene Daten von dem für die Verarbeitung Verantwortlichen verarbeitet",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Daten in einer Weise, auf welche die personenbezogenen Daten ohne Hinzuziehung zusätzlicher Informationen nicht"
+        "context": "Vorgangsreihe im Zusammenhang mit personenbezogenen Daten wie das Erheben, das Erfassen, die Organisation, das",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "unterliegen, die gewährleisten, dass die personenbezogenen Daten nicht einer identifizierten oder identifizierbaren"
+        "context": "ist die Markierung gespeicherter personenbezogener Daten mit dem Ziel, ihre künftige Verarbeitung einzuschränken.",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "und Mittel der Verarbeitung von personenbezogenen Daten entscheidet. Sind die Zwecke und Mittel dieser Verarbeitung"
+        "context": "der automatisierten Verarbeitung personenbezogener Daten, die darin besteht, dass diese personenbezogenen Daten",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Einrichtung oder andere Stelle, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet. \n i)"
+        "context": "Daten, die darin besteht, dass diese personenbezogenen Daten verwendet werden, um bestimmte persönliche Aspekte,",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Einrichtung oder andere Stelle, der personenbezogene Daten offengelegt werden, unabhängig davon, ob es sich bei"
+        "context": "Pseudonymisierung ist die Verarbeitung personenbezogener Daten in einer Weise, auf welche die personenbezogenen Daten",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "der Mitgliedstaaten möglicherweise personenbezogene Daten erhalten, gelten jedoch nicht als Empfänger. \n j)"
+        "context": "Daten in einer Weise, auf welche die personenbezogenen Daten ohne Hinzuziehung zusätzlicher Informationen nicht",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Auftragsverarbeiters befugt sind, die personenbezogenen Daten zu verarbeiten. \n k) Einwilligung \n Einwilligung ist"
+        "context": "unterliegen, die gewährleisten, dass die personenbezogenen Daten nicht einer identifizierten oder identifizierbaren",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Verarbeitung der sie betreffenden personenbezogenen Daten einverstanden ist. \n 2. Name und Anschrift der für"
+        "context": "und Mittel der Verarbeitung von personenbezogenen Daten entscheidet. Sind die Zwecke und Mittel dieser Verarbeitung",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "können. \n Wenn Sie mit der Speicherung und Nutzung Ihrer Daten nicht einverstanden sind, können Sie die Speicherung"
+        "context": "Einrichtung oder andere Stelle, die personenbezogene Daten im Auftrag des Verantwortlichen verarbeitet.",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "aktiviert werden. \n \n 6. Erfassung von allgemeinen Daten und Informationen \n Die Internetseite der WISTA Management"
+        "context": "Einrichtung oder andere Stelle, der personenbezogene Daten offengelegt werden, unabhängig davon, ob es sich bei",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "automatisiertes System eine Reihe von allgemeinen Daten und Informationen. Diese allgemeinen Daten und Informationen"
+        "context": "der Mitgliedstaaten möglicherweise personenbezogene Daten erhalten, gelten jedoch nicht als Empfänger.",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "allgemeinen Daten und Informationen. Diese allgemeinen Daten und Informationen werden in den Logfiles des Servers"
+        "context": "Auftragsverarbeiters befugt sind, die personenbezogenen Daten zu verarbeiten.",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "des zugreifenden Systems und (8) sonstige ähnliche Daten und Informationen, die der Gefahrenabwehr im Falle"
+        "context": "Verarbeitung der sie betreffenden personenbezogenen Daten einverstanden ist.",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Systeme dienen. \n Bei der Nutzung dieser allgemeinen Daten und Informationen zieht die WISTA Management GmbH"
+        "context": "Wenn Sie mit der Speicherung und Nutzung Ihrer Daten nicht einverstanden sind, können Sie die Speicherung",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Informationen bereitzustellen. Diese anonym erhobenen Daten und Informationen werden durch die WISTA Management"
+        "context": "automatisiertes System eine Reihe von allgemeinen Daten und Informationen. Diese allgemeinen Daten und Informationen",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Schutzniveau für die von uns verarbeiteten personenbezogenen Daten sicherzustellen. Die anonymen Daten der Server-Logfiles"
+        "context": "allgemeinen Daten und Informationen. Diese allgemeinen Daten und Informationen werden in den Logfiles des Servers",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "personenbezogenen Daten sicherzustellen. Die anonymen Daten der Server-Logfiles werden getrennt von allen durch"
+        "context": "des zugreifenden Systems und (8) sonstige ähnliche Daten und Informationen, die der Gefahrenabwehr im Falle",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "eine betroffene Person angegebenen personenbezogenen Daten gespeichert. \n 7. Kontaktmöglichkeit über die Internetseite"
+        "context": "Bei der Nutzung dieser allgemeinen Daten und Informationen zieht die WISTA Management GmbH",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "betroffenen Person übermittelten personenbezogenen Daten automatisch gespeichert. Solche auf freiwilliger Basis"
+        "context": "Informationen bereitzustellen. Diese anonym erhobenen Daten und Informationen werden durch die WISTA Management",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Verarbeitung Verantwortlichen übermittelten personenbezogenen Daten werden für Zwecke der Bearbeitung oder der Kontaktaufnahme"
+        "context": "Schutzniveau für die von uns verarbeiteten personenbezogenen Daten sicherzustellen. Die anonymen Daten der Server-Logfiles",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "erfolgt keine Weitergabe dieser personenbezogenen Daten an Dritte. \n 8. Einbindung externer Dienstleistungen"
+        "context": "personenbezogenen Daten sicherzustellen. Die anonymen Daten der Server-Logfiles werden getrennt von allen durch",
+        "tag": "p"
+      },
+      {
+        "keyword": "Daten",
+        "context": "eine betroffene Person angegebenen personenbezogenen Daten gespeichert.",
+        "tag": "p"
+      },
+      {
+        "keyword": "Daten",
+        "context": "betroffenen Person übermittelten personenbezogenen Daten automatisch gespeichert. Solche auf freiwilliger Basis",
+        "tag": "p"
+      },
+      {
+        "keyword": "Daten",
+        "context": "Verarbeitung Verantwortlichen übermittelten personenbezogenen Daten werden für Zwecke der Bearbeitung oder der Kontaktaufnahme",
+        "tag": "p"
+      },
+      {
+        "keyword": "Daten",
+        "context": "erfolgt keine Weitergabe dieser personenbezogenen Daten an Dritte.",
+        "tag": "p"
       },
       {
         "keyword": "Data",
-        "context": "Dienstes  OpenStreetMap  ein, die auf Grundlage der Open Data Commons Open Database Lizenz ( ODbL ) durch die OpenStreetMap"
+        "context": "Dienstes  OpenStreetMap  ein, die auf Grundlage der Open Data Commons Open Database Lizenz ( ODbL ) durch die OpenStreetMap",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "angeboten werden. Nach unserer Kenntnis werden die Daten der Nutzer durch OpenStreetMap ausschließlich zu Zwecken"
+        "context": "angeboten werden. Nach unserer Kenntnis werden die Daten der Nutzer durch OpenStreetMap ausschließlich zu Zwecken",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Zwischenspeicherung der gewählten Einstellungen verwendet. Zu diesen Daten können insbesondere IP-Adressen und Standortdaten"
+        "context": "Zwischenspeicherung der gewählten Einstellungen verwendet. Zu diesen Daten können insbesondere IP-Adressen und Standortdaten",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "ihrer Mobilgeräte vollzogen), erhoben werden. Die Daten können in den USA verarbeitet werden. \nWeitere Informationen"
+        "context": "ihrer Mobilgeräte vollzogen), erhoben werden. Die Daten können in den USA verarbeitet werden. \nWeitere Informationen",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Routinemäßige Löschung und Sperrung von personenbezogenen Daten \n Der für die Verarbeitung Verantwortliche verarbeitet"
+        "context": "Verantwortliche verarbeitet und speichert personenbezogene Daten der betroffenen Person nur für den Zeitraum, der zur",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Verantwortliche verarbeitet und speichert personenbezogene Daten der betroffenen Person nur für den Zeitraum, der zur"
+        "context": "vorgeschriebene Speicherfrist ab, werden die personenbezogenen Daten routinemäßig und entsprechend den gesetzlichen Vorschriften",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "vorgeschriebene Speicherfrist ab, werden die personenbezogenen Daten routinemäßig und entsprechend den gesetzlichen Vorschriften"
+        "context": "zu verlangen, ob sie betreffende personenbezogene Daten verarbeitet werden. Möchte eine betroffene Person",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "zu verlangen, ob sie betreffende personenbezogene Daten verarbeitet werden. Möchte eine betroffene Person"
+        "context": "Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien-",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Auskunft \n Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien-"
+        "context": "die zu seiner Person gespeicherten personenbezogenen Daten und eine Kopie dieser Auskunft zu erhalten. Ferner",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "die zu seiner Person gespeicherten personenbezogenen Daten und eine Kopie dieser Auskunft zu erhalten. Ferner"
+        "context": "Verarbeitungszwecke \n• die Kategorien personenbezogener Daten, die verarbeitet werden \n• die Empfänger oder Kategorien",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Verarbeitungszwecke \n• die Kategorien personenbezogener Daten, die verarbeitet werden \n• die Empfänger oder Kategorien"
+        "context": "Empfängern, gegenüber denen die personenbezogenen Daten offengelegt worden sind oder noch offengelegt werden,",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Empfängern, gegenüber denen die personenbezogenen Daten offengelegt worden sind oder noch offengelegt werden,"
+        "context": "die geplante Dauer, für die die personenbezogenen Daten gespeichert werden, oder, falls dies nicht möglich",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "die geplante Dauer, für die die personenbezogenen Daten gespeichert werden, oder, falls dies nicht möglich"
+        "context": "oder Löschung der sie betreffenden personenbezogenen Daten oder auf Einschränkung der Verarbeitung durch den",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "oder Löschung der sie betreffenden personenbezogenen Daten oder auf Einschränkung der Verarbeitung durch den"
+        "context": "einer Aufsichtsbehörde \n• wenn die personenbezogenen Daten nicht bei der betroffenen Person erhoben werden: Alle",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "einer Aufsichtsbehörde \n• wenn die personenbezogenen Daten nicht bei der betroffenen Person erhoben werden: Alle"
+        "context": "Alle verfügbaren Informationen über die Herkunft der Daten \n• das Bestehen einer automatisierten Entscheidungsfindung",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Alle verfügbaren Informationen über die Herkunft der Daten \n• das Bestehen einer automatisierten Entscheidungsfindung"
+        "context": "ein Auskunftsrecht darüber zu, ob personenbezogene Daten an ein Drittland oder an eine internationale Organisation",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "ein Auskunftsrecht darüber zu, ob personenbezogene Daten an ein Drittland oder an eine internationale Organisation"
+        "context": "Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien-",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Berichtigung \n Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien-"
+        "context": "Berichtigung sie betreffender unrichtiger personenbezogener Daten zu verlangen. Ferner steht der betroffenen Person",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Berichtigung sie betreffender unrichtiger personenbezogener Daten zu verlangen. Ferner steht der betroffenen Person"
+        "context": "Vervollständigung unvollständiger personenbezogener Daten — auch mittels einer ergänzenden Erklärung — zu verlangen.",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Vervollständigung unvollständiger personenbezogener Daten — auch mittels einer ergänzenden Erklärung — zu verlangen."
+        "context": "Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien-",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "werden) \n Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien-"
+        "context": "verlangen, dass die sie betreffenden personenbezogenen Daten unverzüglich gelöscht werden, sofern einer der folgenden",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "verlangen, dass die sie betreffenden personenbezogenen Daten unverzüglich gelöscht werden, sofern einer der folgenden"
+        "context": "• Die personenbezogenen Daten wurden für solche Zwecke erhoben oder auf sonstige",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "nicht erforderlich ist: \n • Die personenbezogenen Daten wurden für solche Zwecke erhoben oder auf sonstige"
+        "context": "gegen die Verarbeitung ein. \n• Die personenbezogenen Daten wurden unrechtmäßig verarbeitet. \n• Die Löschung der",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "gegen die Verarbeitung ein. \n• Die personenbezogenen Daten wurden unrechtmäßig verarbeitet. \n• Die Löschung der"
+        "context": "verarbeitet. \n• Die Löschung der personenbezogenen Daten ist zur Erfüllung einer rechtlichen Verpflichtung",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "verarbeitet. \n• Die Löschung der personenbezogenen Daten ist zur Erfüllung einer rechtlichen Verpflichtung"
+        "context": "Verantwortliche unterliegt. \n• Die personenbezogenen Daten wurden in Bezug auf angebotene Dienste der Informationsgesellschaft",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Verantwortliche unterliegt. \n• Die personenbezogenen Daten wurden in Bezug auf angebotene Dienste der Informationsgesellschaft"
+        "context": "betroffene Person die Löschung von personenbezogenen Daten, die bei der WISTA Management GmbH gespeichert sind,",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "betroffene Person die Löschung von personenbezogenen Daten, die bei der WISTA Management GmbH gespeichert sind,"
+        "context": "Wurden die personenbezogenen Daten von der WISTA Management GmbH öffentlich gemacht und",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "nachgekommen wird. \n Wurden die personenbezogenen Daten von der WISTA Management GmbH öffentlich gemacht und"
+        "context": "17 Abs. 1 DS-GVO zur Löschung der personenbezogenen Daten verpflichtet, so trifft die WISTA Management GmbH",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "17 Abs. 1 DS-GVO zur Löschung der personenbezogenen Daten verpflichtet, so trifft die WISTA Management GmbH"
+        "context": "Verantwortliche, welche die veröffentlichten personenbezogenen Daten verarbeiten, darüber in Kenntnis zu setzen, dass die",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Verantwortliche, welche die veröffentlichten personenbezogenen Daten verarbeiten, darüber in Kenntnis zu setzen, dass die"
+        "context": "Löschung sämtlicher Links zu diesen personenbezogenen Daten oder von Kopien oder Replikationen dieser personenbezogenen",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Löschung sämtlicher Links zu diesen personenbezogenen Daten oder von Kopien oder Replikationen dieser personenbezogenen"
+        "context": "Kopien oder Replikationen dieser personenbezogenen Daten verlangt hat, soweit die Verarbeitung nicht erforderlich",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Kopien oder Replikationen dieser personenbezogenen Daten verlangt hat, soweit die Verarbeitung nicht erforderlich"
+        "context": "Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien-",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Verarbeitung \n Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien-"
+        "context": "gegeben ist: \n• Die Richtigkeit der personenbezogenen Daten wird von der betroffenen Person bestritten, und zwar",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "gegeben ist: \n• Die Richtigkeit der personenbezogenen Daten wird von der betroffenen Person bestritten, und zwar"
+        "context": "ermöglicht, die Richtigkeit der personenbezogenen Daten zu überprüfen. \n• Die Verarbeitung ist unrechtmäßig,",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "ermöglicht, die Richtigkeit der personenbezogenen Daten zu überprüfen. \n• Die Verarbeitung ist unrechtmäßig,"
+        "context": "betroffene Person lehnt die Löschung der personenbezogenen Daten ab und verlangt stattdessen die Einschränkung der",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "betroffene Person lehnt die Löschung der personenbezogenen Daten ab und verlangt stattdessen die Einschränkung der"
+        "context": "die Einschränkung der Nutzung der personenbezogenen Daten. \n• Der Verantwortliche benötigt die personenbezogenen",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "die Einschränkung der Nutzung der personenbezogenen Daten. \n• Der Verantwortliche benötigt die personenbezogenen"
+        "context": "Der Verantwortliche benötigt die personenbezogenen Daten für die Zwecke der Verarbeitung nicht länger, die",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Der Verantwortliche benötigt die personenbezogenen Daten für die Zwecke der Verarbeitung nicht länger, die"
+        "context": "betroffene Person die Einschränkung von personenbezogenen Daten, die bei der WISTA Management GmbH gespeichert sind,",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "betroffene Person die Einschränkung von personenbezogenen Daten, die bei der WISTA Management GmbH gespeichert sind,"
+        "context": "Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien-",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Datenübertragbarkeit \n Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien-"
+        "context": "gewährte Recht, die sie betreffenden personenbezogenen Daten, welche durch die betroffene Person einem Verantwortlichen",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "gewährte Recht, die sie betreffenden personenbezogenen Daten, welche durch die betroffene Person einem Verantwortlichen"
+        "context": "Format zu erhalten. Sie hat außerdem das Recht, diese Daten einem anderen Verantwortlichen ohne Behinderung durch",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Format zu erhalten. Sie hat außerdem das Recht, diese Daten einem anderen Verantwortlichen ohne Behinderung durch"
+        "context": "durch den Verantwortlichen, dem die personenbezogenen Daten bereitgestellt wurden, zu übermitteln, sofern die",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "durch den Verantwortlichen, dem die personenbezogenen Daten bereitgestellt wurden, zu übermitteln, sofern die"
+        "context": "das Recht, zu erwirken, dass die personenbezogenen Daten direkt von einem Verantwortlichen an einen anderen",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "das Recht, zu erwirken, dass die personenbezogenen Daten direkt von einem Verantwortlichen an einen anderen"
+        "context": "Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien-",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Widerspruch \n Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien-"
+        "context": "die Verarbeitung sie betreffender personenbezogener Daten, die aufgrund von Art. 6 Abs. 1 Buchstaben e oder",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "die Verarbeitung sie betreffender personenbezogener Daten, die aufgrund von Art. 6 Abs. 1 Buchstaben e oder"
+        "context": "Management GmbH verarbeitet die personenbezogenen Daten im Falle des Widerspruchs nicht mehr, es sei denn,",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Management GmbH verarbeitet die personenbezogenen Daten im Falle des Widerspruchs nicht mehr, es sei denn,"
+        "context": "Verarbeitet die WISTA Management GmbH personenbezogene Daten, um Direktwerbung zu betreiben, so hat die betroffene",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Verarbeitet die WISTA Management GmbH personenbezogene Daten, um Direktwerbung zu betreiben, so hat die betroffene"
+        "context": "Widerspruch gegen die Verarbeitung der personenbezogenen Daten zum Zwecke derartiger Werbung einzulegen. Dies gilt",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Widerspruch gegen die Verarbeitung der personenbezogenen Daten zum Zwecke derartiger Werbung einzulegen. Dies gilt"
+        "context": "wird die WISTA Management GmbH die personenbezogenen Daten nicht mehr für diese Zwecke verarbeiten.",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "wird die WISTA Management GmbH die personenbezogenen Daten nicht mehr für diese Zwecke verarbeiten. \n Zudem hat"
+        "context": "die sie betreffende Verarbeitung personenbezogener Daten, die bei der WISTA Management GmbH zu wissenschaftlichen",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "die sie betreffende Verarbeitung personenbezogener Daten, die bei der WISTA Management GmbH zu wissenschaftlichen"
+        "context": "Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien-",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Profiling \n Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien-"
+        "context": "Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien-",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Einwilligung \n Jede von der Verarbeitung personenbezogener Daten betroffene Person hat das vom Europäischen Richtlinien-"
+        "context": "eine Einwilligung zur Verarbeitung personenbezogener Daten jederzeit zu widerrufen.",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "eine Einwilligung zur Verarbeitung personenbezogener Daten jederzeit zu widerrufen. \n Möchte die betroffene Person"
+        "context": "Verantwortliche erhebt und verarbeitet die personenbezogenen Daten von Bewerbern zum Zwecke der Abwicklung des Bewerbungsverfahrens.",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Verantwortliche erhebt und verarbeitet die personenbezogenen Daten von Bewerbern zum Zwecke der Abwicklung des Bewerbungsverfahrens."
+        "context": "Anstellungsvertrag mit einem Bewerber, werden die übermittelten Daten zum Zwecke der Abwicklung des Beschäftigungsverhältnisses",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Anstellungsvertrag mit einem Bewerber, werden die übermittelten Daten zum Zwecke der Abwicklung des Beschäftigungsverhältnisses"
+        "context": "Verarbeitungszweck einholen. Ist die Verarbeitung personenbezogener Daten zur Erfüllung eines Vertrags, dessen Vertragspartei",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Verarbeitungszweck einholen. Ist die Verarbeitung personenbezogener Daten zur Erfüllung eines Vertrags, dessen Vertragspartei"
+        "context": "durch welche eine Verarbeitung von personenbezogenen Daten erforderlich wird, wie beispielsweise zur Erfüllung",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "durch welche eine Verarbeitung von personenbezogenen Daten erforderlich wird, wie beispielsweise zur Erfüllung"
+        "context": "Fällen könnte die Verarbeitung von personenbezogenen Daten erforderlich werden, um lebenswichtige Interessen",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Fällen könnte die Verarbeitung von personenbezogenen Daten erforderlich werden, um lebenswichtige Interessen"
+        "context": "Basiert die Verarbeitung personenbezogener Daten auf Artikel 6 I lit. f DS-GVO ist unser berechtigtes",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "werden \n Basiert die Verarbeitung personenbezogener Daten auf Artikel 6 I lit. f DS-GVO ist unser berechtigtes"
+        "context": "für die Dauer der Speicherung von personenbezogenen Daten ist die jeweilige gesetzliche Aufbewahrungsfrist.",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Anteilseigner. \n 14. Dauer, für die die personenbezogenen Daten gespeichert werden \n Das Kriterium für die Dauer der"
+        "context": "Aufbewahrungsfrist. Nach Ablauf der Frist werden die entsprechenden Daten routinemäßig gelöscht, sofern sie nicht mehr zur Vertragserfüllung",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "für die Dauer der Speicherung von personenbezogenen Daten ist die jeweilige gesetzliche Aufbewahrungsfrist."
+        "context": "darüber auf, dass die Bereitstellung personenbezogener Daten zum Teil gesetzlich vorgeschrieben ist (z.B. Steuervorschriften)",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Aufbewahrungsfrist. Nach Ablauf der Frist werden die entsprechenden Daten routinemäßig gelöscht, sofern sie nicht mehr zur Vertragserfüllung"
+        "context": "sein, dass eine betroffene Person uns personenbezogene Daten zur Verfügung stellt, die in der Folge durch uns verarbeitet",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Vorschriften zur Bereitstellung der personenbezogenen Daten; Erforderlichkeit für den Vertragsabschluss; Verpflichtung"
+        "context": "ist beispielsweise verpflichtet uns personenbezogene Daten bereitzustellen, wenn unser Unternehmen mit ihr einen",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "Verpflichtung der betroffenen Person, die personenbezogenen Daten bereitzustellen; mögliche Folgen der Nichtbereitstellung"
+        "context": "abschließt. Eine Nichtbereitstellung der personenbezogenen Daten hätte zur Folge, dass der Vertrag mit dem Betroffenen",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "darüber auf, dass die Bereitstellung personenbezogener Daten zum Teil gesetzlich vorgeschrieben ist (z.B. Steuervorschriften)"
+        "context": "könnte. Vor einer Bereitstellung personenbezogener Daten durch den Betroffenen muss sich der Betroffene an",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "sein, dass eine betroffene Person uns personenbezogene Daten zur Verfügung stellt, die in der Folge durch uns verarbeitet"
+        "context": "darüber auf, ob die Bereitstellung der personenbezogenen Daten gesetzlich oder vertraglich vorgeschrieben oder für",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "ist beispielsweise verpflichtet uns personenbezogene Daten bereitzustellen, wenn unser Unternehmen mit ihr einen"
+        "context": "eine Verpflichtung besteht, die personenbezogenen Daten bereitzustellen, und welche Folgen die Nichtbereitstellung",
+        "tag": "p"
       },
       {
         "keyword": "Daten",
-        "context": "abschließt. Eine Nichtbereitstellung der personenbezogenen Daten hätte zur Folge, dass der Vertrag mit dem Betroffenen"
-      },
-      {
-        "keyword": "Daten",
-        "context": "könnte. Vor einer Bereitstellung personenbezogener Daten durch den Betroffenen muss sich der Betroffene an"
-      },
-      {
-        "keyword": "Daten",
-        "context": "darüber auf, ob die Bereitstellung der personenbezogenen Daten gesetzlich oder vertraglich vorgeschrieben oder für"
-      },
-      {
-        "keyword": "Daten",
-        "context": "eine Verpflichtung besteht, die personenbezogenen Daten bereitzustellen, und welche Folgen die Nichtbereitstellung"
-      },
-      {
-        "keyword": "Daten",
-        "context": "Folgen die Nichtbereitstellung der personenbezogenen Daten hätte. \n 16. Bestehen einer automatisierten Entscheidungsfindung"
+        "context": "Folgen die Nichtbereitstellung der personenbezogenen Daten hätte.",
+        "tag": "p"
       }
     ],
     "sdg17_matches_count": 109
@@ -963,7 +1174,8 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 1,
@@ -978,7 +1190,8 @@
     "sdg12_matches": [
       {
         "keyword": "nachhaltig",
-        "context": "Die Zukunft wird nachhaltig. (148x50mm, Farbverlauf)"
+        "context": "Die Zukunft wird nachhaltig. (148x50mm, Farbverlauf)",
+        "tag": "other"
       }
     ],
     "sdg12_matches_count": 1,
@@ -1004,37 +1217,44 @@
     "sdg2_matches": [
       {
         "keyword": "seeds",
-        "context": "millimeter-sized, low-level radioactive implants (seeds) are placed in a targeted area of the prostate. They"
+        "context": "millimeter-sized, low-level radioactive implants (seeds) are placed in a targeted area of the prostate. They",
+        "tag": "other"
       },
       {
         "keyword": "seeds",
-        "context": "from Eckert & Ziegler BEBIG as IsoSeed® (individual seeds) or IsoCord® (seed chains) has been successfully performed"
+        "context": "from Eckert & Ziegler BEBIG as IsoSeed® (individual seeds) or IsoCord® (seed chains) has been successfully performed",
+        "tag": "other"
       },
       {
         "keyword": "seed",
-        "context": "BEBIG as IsoSeed® (individual seeds) or IsoCord® (seed chains) has been successfully performed in clinical"
+        "context": "BEBIG as IsoSeed® (individual seeds) or IsoCord® (seed chains) has been successfully performed in clinical",
+        "tag": "other"
       },
       {
         "keyword": "seed",
-        "context": "BEBIG is the European leader in the field of permanent seed implantation and the world’s only provider of the"
+        "context": "BEBIG is the European leader in the field of permanent seed implantation and the world’s only provider of the",
+        "tag": "other"
       }
     ],
     "sdg2_matches_count": 4,
     "sdg3_matches": [
       {
         "keyword": "health",
-        "context": "entrepreneurs, patients – for all these Buch is the health location of Berlin. \n \n \n Read more  Berlin-Buch"
+        "context": "entrepreneurs, patients – for all these Buch is the health location of Berlin.",
+        "tag": "p"
       },
       {
         "keyword": "hepatitis",
-        "context": "try to protect themselves from infection risks (e.g. hepatitis B/C, HIV) by wearing two gloves on top of each. This"
+        "context": "try to protect themselves from infection risks (e.g. hepatitis B/C, HIV) by wearing two gloves on top of each. This",
+        "tag": "other"
       }
     ],
     "sdg3_matches_count": 2,
     "sdg4_matches": [
       {
         "keyword": "Learn",
-        "context": "Wissenschaftsstandort Berlin Schöneweide \n \n \n \n \n \n Learn more about Zukunftsorte \n \n   \n \n go to overview of"
+        "context": "Wissenschaftsstandort Berlin Schöneweide \n \n \n \n \n \n Learn more about Zukunftsorte \n \n   \n \n go to overview of",
+        "tag": "other"
       }
     ],
     "sdg4_matches_count": 1,
@@ -1046,43 +1266,52 @@
     "sdg7_matches_count": 0,
     "sdg8_matches": [
       {
-        "keyword": "innovation",
-        "context": "Siemensstadt 2.0: Freedom, tolerance and technological innovation on 700,000 sqm. \n \n \n Read more  Siemensstadt 2.0"
+        "keyword": "JOB",
+        "context": "Looking for a ZUKUNFTS JOB ?",
+        "tag": "h2"
       },
       {
-        "keyword": "JOB",
-        "context": "Looking for a ZUKUNFTS JOB ? \n Find the right job in future places and actively"
+        "keyword": "innovation",
+        "context": "Siemensstadt 2.0: Freedom, tolerance and technological innovation on 700,000 sqm.",
+        "tag": "p"
+      },
+      {
+        "keyword": "innovation",
+        "context": "agreement. These are Berlin`s eleven places of future innovation. The Business Office is the umbrella for those places.",
+        "tag": "p"
+      },
+      {
+        "keyword": "innovation",
+        "context": "decision-makers. Our tasks also include to establish Berlin as an innovation brand on the regional, national, and international",
+        "tag": "p"
       },
       {
         "keyword": "job",
-        "context": "Looking for a ZUKUNFTS JOB ? \n Find the right job in future places and actively help shape our future"
-      },
-      {
-        "keyword": "innovation",
-        "context": "agreement. These are Berlin`s eleven places of future innovation. The Business Office is the umbrella for those places."
-      },
-      {
-        "keyword": "innovation",
-        "context": "decision-makers. Our tasks also include to establish Berlin as an innovation brand on the regional, national, and international"
+        "context": "Find the right job in future places and actively help shape our future",
+        "tag": "other"
       }
     ],
     "sdg8_matches_count": 5,
     "sdg9_matches": [
       {
         "keyword": "research",
-        "context": "SÜDWEST \n \n Berlin SOUTHWEST has been a traditional research location for over 100 years. \n \n \n Read more  Berlin"
+        "context": "Berlin SOUTHWEST has been a traditional research location for over 100 years.",
+        "tag": "p"
       },
       {
         "keyword": "research",
-        "context": "former airport Berlin-Tegel is to be transformed into a research and industry park for urban technologies: Berlin TXL"
+        "context": "former airport Berlin-Tegel is to be transformed into a research and industry park for urban technologies: Berlin TXL",
+        "tag": "p"
       },
       {
         "keyword": "research",
-        "context": "not mount an attack but instead tolerates them. A research team led by Professor Thomas Blankenstein has now"
+        "context": "not mount an attack but instead tolerates them. A research team led by Professor Thomas Blankenstein has now",
+        "tag": "other"
       },
       {
         "keyword": "research",
-        "context": "destroy certain tumor cells. More than ten years of research have thus been crowned with success. The start-up"
+        "context": "destroy certain tumor cells. More than ten years of research have thus been crowned with success. The start-up",
+        "tag": "other"
       }
     ],
     "sdg9_matches_count": 4,
@@ -1091,14 +1320,16 @@
     "sdg11_matches": [
       {
         "keyword": "community",
-        "context": "Energy and Public Enterprises . It is part of the community economic development ‘Improving the Regional Business"
+        "context": "Energy and Public Enterprises . It is part of the community economic development ‘Improving the Regional Business",
+        "tag": "p"
       }
     ],
     "sdg11_matches_count": 1,
     "sdg12_matches": [
       {
         "keyword": "sustainable",
-        "context": "parameters for manufacturing companies that specialise in sustainable and effi cient technologies, and thus off ers potential"
+        "context": "parameters for manufacturing companies that specialise in sustainable and effi cient technologies, and thus off ers potential",
+        "tag": "p"
       }
     ],
     "sdg12_matches_count": 1,
@@ -1113,15 +1344,18 @@
     "sdg17_matches": [
       {
         "keyword": "innovation",
-        "context": "Siemensstadt 2.0: Freedom, tolerance and technological innovation on 700,000 sqm. \n \n \n Read more  Siemensstadt 2.0"
+        "context": "Siemensstadt 2.0: Freedom, tolerance and technological innovation on 700,000 sqm.",
+        "tag": "p"
       },
       {
         "keyword": "innovation",
-        "context": "agreement. These are Berlin`s eleven places of future innovation. The Business Office is the umbrella for those places."
+        "context": "agreement. These are Berlin`s eleven places of future innovation. The Business Office is the umbrella for those places.",
+        "tag": "p"
       },
       {
         "keyword": "innovation",
-        "context": "decision-makers. Our tasks also include to establish Berlin as an innovation brand on the regional, national, and international"
+        "context": "decision-makers. Our tasks also include to establish Berlin as an innovation brand on the regional, national, and international",
+        "tag": "p"
       }
     ],
     "sdg17_matches_count": 3
@@ -1139,7 +1373,8 @@
     "sdg3_matches": [
       {
         "keyword": "Medizinprodukte",
-        "context": "innovative Materialien und Technologien in Bereich der Medizinprodukte: ein doppellagiger Einzelhandschuh mit integrierten"
+        "context": "innovative Materialien und Technologien in Bereich der Medizinprodukte: ein doppellagiger Einzelhandschuh mit integrierten",
+        "tag": "other"
       }
     ],
     "sdg3_matches_count": 1,
@@ -1152,25 +1387,29 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 1,
     "sdg8_matches": [
       {
         "keyword": "Innovation",
-        "context": "Volker Hofmann ist Geschäftsführer der Humboldt-Innovation GmbH. Der Diplom-Kaufmann, gebürtige Berliner und"
+        "context": "Volker Hofmann ist Geschäftsführer der Humboldt-Innovation GmbH. Der Diplom-Kaufmann, gebürtige Berliner und",
+        "tag": "other"
       },
       {
         "keyword": "Innovation",
-        "context": "bzw. Teamleiter des Spin-Off Management der Humboldt- Innovation und für eine Unternehmensberatung tätig."
+        "context": "bzw. Teamleiter des Spin-Off Management der Humboldt- Innovation und für eine Unternehmensberatung tätig.",
+        "tag": "other"
       }
     ],
     "sdg8_matches_count": 2,
     "sdg9_matches": [
       {
         "keyword": "Forschung",
-        "context": "Stefanie Molthagen-Schnöring ist Vizepräsidentin für Forschung und Transfer an der HTW Berlin, an der sie zuvor als"
+        "context": "Stefanie Molthagen-Schnöring ist Vizepräsidentin für Forschung und Transfer an der HTW Berlin, an der sie zuvor als",
+        "tag": "other"
       }
     ],
     "sdg9_matches_count": 1,
@@ -1179,7 +1418,8 @@
     "sdg11_matches": [
       {
         "keyword": "Stadt",
-        "context": "vor - Lernt ausgewählte Impulsgeber*innen unserer Stadt kennen."
+        "context": "vor - Lernt ausgewählte Impulsgeber*innen unserer Stadt kennen.",
+        "tag": "other"
       }
     ],
     "sdg11_matches_count": 1,
@@ -1194,22 +1434,26 @@
     "sdg16_matches": [
       {
         "keyword": "war",
-        "context": "als Professorin für Wirtschaftskommunikation tätig war."
+        "context": "als Professorin für Wirtschaftskommunikation tätig war.",
+        "tag": "other"
       },
       {
         "keyword": "war",
-        "context": "Berliner und Alumnus der Humboldt-Universität zu Berlin war zuvor Leiter des HU Gründungsservices bzw. Teamleiter"
+        "context": "Berliner und Alumnus der Humboldt-Universität zu Berlin war zuvor Leiter des HU Gründungsservices bzw. Teamleiter",
+        "tag": "other"
       }
     ],
     "sdg16_matches_count": 2,
     "sdg17_matches": [
       {
         "keyword": "Innovation",
-        "context": "Volker Hofmann ist Geschäftsführer der Humboldt-Innovation GmbH. Der Diplom-Kaufmann, gebürtige Berliner und"
+        "context": "Volker Hofmann ist Geschäftsführer der Humboldt-Innovation GmbH. Der Diplom-Kaufmann, gebürtige Berliner und",
+        "tag": "other"
       },
       {
         "keyword": "Innovation",
-        "context": "bzw. Teamleiter des Spin-Off Management der Humboldt- Innovation und für eine Unternehmensberatung tätig."
+        "context": "bzw. Teamleiter des Spin-Off Management der Humboldt- Innovation und für eine Unternehmensberatung tätig.",
+        "tag": "other"
       }
     ],
     "sdg17_matches_count": 2
@@ -1227,15 +1471,18 @@
     "sdg3_matches": [
       {
         "keyword": "Medizinprodukte",
-        "context": "innovative Materialien und Technologien in Bereich der Medizinprodukte: ein doppellagiger Einzelhandschuh mit integrierten"
+        "context": "innovative Materialien und Technologien in Bereich der Medizinprodukte: ein doppellagiger Einzelhandschuh mit integrierten",
+        "tag": "p"
       },
       {
         "keyword": "Medikamenten",
-        "context": "möglichen Antworten auf die Krise von hoher Relevanz: Medikamenten- und Impfstoffentwicklung, Tracking von potenziell"
+        "context": "möglichen Antworten auf die Krise von hoher Relevanz: Medikamenten- und Impfstoffentwicklung, Tracking von potenziell",
+        "tag": "p"
       },
       {
         "keyword": "Impfstoffentwicklung",
-        "context": "auf die Krise von hoher Relevanz: Medikamenten- und Impfstoffentwicklung, Tracking von potenziell infizierten Personen und"
+        "context": "auf die Krise von hoher Relevanz: Medikamenten- und Impfstoffentwicklung, Tracking von potenziell infizierten Personen und",
+        "tag": "p"
       }
     ],
     "sdg3_matches_count": 3,
@@ -1248,25 +1495,29 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 1,
     "sdg8_matches": [
       {
         "keyword": "Innovation",
-        "context": "Materialforschung und -prüfung effektiv unterstützt.  \n Welche Innovation hat Sie in der letzten Zeit besonders beeindruckt?"
+        "context": "Welche Innovation hat Sie in der letzten Zeit besonders beeindruckt?",
+        "tag": "h2"
       }
     ],
     "sdg8_matches_count": 1,
     "sdg9_matches": [
       {
         "keyword": "Fahren",
-        "context": "spannend sind gleichermaßen Cryptowährungen, autonomes Fahren und künstliche Intelligenz. In Corona-Zeiten ist der"
+        "context": "spannend sind gleichermaßen Cryptowährungen, autonomes Fahren und künstliche Intelligenz. In Corona-Zeiten ist der",
+        "tag": "p"
       },
       {
         "keyword": "künstliche Intelligenz",
-        "context": "gleichermaßen Cryptowährungen, autonomes Fahren und künstliche Intelligenz. In Corona-Zeiten ist der Fokus aber natürlich verschoben"
+        "context": "gleichermaßen Cryptowährungen, autonomes Fahren und künstliche Intelligenz. In Corona-Zeiten ist der Fokus aber natürlich verschoben",
+        "tag": "p"
       }
     ],
     "sdg9_matches_count": 2,
@@ -1285,14 +1536,16 @@
     "sdg16_matches": [
       {
         "keyword": "sicherheits",
-        "context": "Privatanwender. Auf diesem Feld wollen wir mit unseren sicherheits-optimierten Handschuhen ebenfalls zur Antwort auf"
+        "context": "Privatanwender. Auf diesem Feld wollen wir mit unseren sicherheits-optimierten Handschuhen ebenfalls zur Antwort auf",
+        "tag": "p"
       }
     ],
     "sdg16_matches_count": 1,
     "sdg17_matches": [
       {
         "keyword": "Innovation",
-        "context": "Materialforschung und -prüfung effektiv unterstützt.  \n Welche Innovation hat Sie in der letzten Zeit besonders beeindruckt?"
+        "context": "Welche Innovation hat Sie in der letzten Zeit besonders beeindruckt?",
+        "tag": "h2"
       }
     ],
     "sdg17_matches_count": 1
@@ -1310,41 +1563,49 @@
     "sdg3_matches": [
       {
         "keyword": "Gesundheitsinformatik",
-        "context": "in Themenbereichen wie z.B. Erneuerbare Energien, Gesundheitsinformatik und Industrie  \n Was bedeutet es für die HTW an einem"
+        "context": "in Themenbereichen wie z.B. Erneuerbare Energien, Gesundheitsinformatik und Industrie",
+        "tag": "p"
       }
     ],
     "sdg3_matches_count": 1,
     "sdg4_matches": [
       {
         "keyword": "Hochschule",
-        "context": "Studierenden und 300 Professor_innen ist sie die größte Hochschule für angewandte Wissenschaften im Land Berlin. Der"
+        "context": "Studierenden und 300 Professor_innen ist sie die größte Hochschule für angewandte Wissenschaften im Land Berlin. Der",
+        "tag": "p"
       },
       {
         "keyword": "Lehre",
-        "context": "verbindet Industrietradition mit innovativer Forschung und Lehre in Themenbereichen wie z.B. Erneuerbare Energien,"
+        "context": "verbindet Industrietradition mit innovativer Forschung und Lehre in Themenbereichen wie z.B. Erneuerbare Energien,",
+        "tag": "p"
       },
       {
         "keyword": "Hochschule",
-        "context": "es für die HTW an einem Zukunftsort zu sein? \n Als Hochschule sehen wir es als unseren Auftrag, Zukunft aktiv zu"
+        "context": "Als Hochschule sehen wir es als unseren Auftrag, Zukunft aktiv zu",
+        "tag": "p"
       },
       {
         "keyword": "Lehre",
-        "context": "Schnittstellen entstehen spannende neue Ideen – in Lehre und Forschung, aber auch im Gründungsbereich, den"
+        "context": "Schnittstellen entstehen spannende neue Ideen – in Lehre und Forschung, aber auch im Gründungsbereich, den",
+        "tag": "p"
       },
       {
         "keyword": "Hochschule",
-        "context": "Forschung, aber auch im Gründungsbereich, den wir als Hochschule gerade mit viel Energie weiterentwickeln. Dabei möchten"
+        "context": "Forschung, aber auch im Gründungsbereich, den wir als Hochschule gerade mit viel Energie weiterentwickeln. Dabei möchten",
+        "tag": "p"
       },
       {
         "keyword": "Lehre",
-        "context": "meiner aktuellen Position meiner Leidenschaft für die Lehre leider nicht im gewohnten Maße nachkommen, aber ich"
+        "context": "meiner aktuellen Position meiner Leidenschaft für die Lehre leider nicht im gewohnten Maße nachkommen, aber ich",
+        "tag": "p"
       }
     ],
     "sdg4_matches_count": 6,
     "sdg5_matches": [
       {
         "keyword": "Diversität",
-        "context": "Partner_innen – um Lösungen für den Klimawandel zu finden, Diversität zu leben und Visionen für eine lebenswerte Zukunft"
+        "context": "Partner_innen – um Lösungen für den Klimawandel zu finden, Diversität zu leben und Visionen für eine lebenswerte Zukunft",
+        "tag": "p"
       }
     ],
     "sdg5_matches_count": 1,
@@ -1353,67 +1614,80 @@
     "sdg7_matches": [
       {
         "keyword": "Energien",
-        "context": "und Lehre in Themenbereichen wie z.B. Erneuerbare Energien, Gesundheitsinformatik und Industrie  \n Was bedeutet"
+        "context": "und Lehre in Themenbereichen wie z.B. Erneuerbare Energien, Gesundheitsinformatik und Industrie",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "Gründungsbereich, den wir als Hochschule gerade mit viel Energie weiterentwickeln. Dabei möchten wir nicht nur unseren"
+        "context": "Gründungsbereich, den wir als Hochschule gerade mit viel Energie weiterentwickeln. Dabei möchten wir nicht nur unseren",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 3,
     "sdg8_matches": [
       {
         "keyword": "Innovation",
-        "context": "Kommunikationsberaterin tätig.  \n Unternehmen/Produkt/Innovation: Die HTW Berlin bietet mehr als 70 Studiengänge in"
+        "context": "Welche Innovation hat Sie in der letzten Zeit besonders beeindruckt?",
+        "tag": "h2"
       },
       {
         "keyword": "Innovation",
-        "context": "Studierendenschaft, im Falle von Schöneweide auch Tradition und Innovation aufeinander. Und an diesen Schnittstellen entstehen"
+        "context": "Unternehmen/Produkt/Innovation: Die HTW Berlin bietet mehr als 70 Studiengänge in",
+        "tag": "p"
       },
       {
         "keyword": "Innovation",
-        "context": "Forschungsaktivitäten der HTW Berlin aktiv mitgestalten.  \n Welche Innovation hat Sie in der letzten Zeit besonders beeindruckt?"
+        "context": "Studierendenschaft, im Falle von Schöneweide auch Tradition und Innovation aufeinander. Und an diesen Schnittstellen entstehen",
+        "tag": "p"
       }
     ],
     "sdg8_matches_count": 3,
     "sdg9_matches": [
       {
         "keyword": "Forschung",
-        "context": "Stefanie Molthagen-Schnöring ist Vizepräsidentin für Forschung und Transfer an der HTW Berlin, an der sie zuvor als"
+        "context": "Stefanie Molthagen-Schnöring ist Vizepräsidentin für Forschung und Transfer an der HTW Berlin, an der sie zuvor als",
+        "tag": "p"
       },
       {
         "keyword": "Forschung",
-        "context": "Spree verbindet Industrietradition mit innovativer Forschung und Lehre in Themenbereichen wie z.B. Erneuerbare"
+        "context": "Spree verbindet Industrietradition mit innovativer Forschung und Lehre in Themenbereichen wie z.B. Erneuerbare",
+        "tag": "p"
       },
       {
         "keyword": "Forschung",
-        "context": "Schnittstellen entstehen spannende neue Ideen – in Lehre und Forschung, aber auch im Gründungsbereich, den wir als Hochschule"
+        "context": "Schnittstellen entstehen spannende neue Ideen – in Lehre und Forschung, aber auch im Gründungsbereich, den wir als Hochschule",
+        "tag": "p"
       },
       {
         "keyword": "Forschungsaktivitäten",
-        "context": "engagierten Student_innen, die auch die Transfer- und Forschungsaktivitäten der HTW Berlin aktiv mitgestalten.  \n Welche Innovation"
+        "context": "engagierten Student_innen, die auch die Transfer- und Forschungsaktivitäten der HTW Berlin aktiv mitgestalten.",
+        "tag": "p"
       },
       {
         "keyword": "digitalen",
-        "context": "durch das Menschen ihren Müllverbrauch mittels einer digitalen Plattform analysieren und reduzieren können. Und Selma"
+        "context": "durch das Menschen ihren Müllverbrauch mittels einer digitalen Plattform analysieren und reduzieren können. Und Selma",
+        "tag": "p"
       }
     ],
     "sdg9_matches_count": 5,
     "sdg10_matches": [
       {
         "keyword": "Diversität",
-        "context": "Partner_innen – um Lösungen für den Klimawandel zu finden, Diversität zu leben und Visionen für eine lebenswerte Zukunft"
+        "context": "Partner_innen – um Lösungen für den Klimawandel zu finden, Diversität zu leben und Visionen für eine lebenswerte Zukunft",
+        "tag": "p"
       }
     ],
     "sdg10_matches_count": 1,
     "sdg11_matches": [
       {
         "keyword": "Kommunikationsberaterin",
-        "context": "Agenturwelt eingestiegen und war auch in Berlin zunächst als Kommunikationsberaterin tätig.  \n Unternehmen/Produkt/Innovation: Die HTW"
+        "context": "Agenturwelt eingestiegen und war auch in Berlin zunächst als Kommunikationsberaterin tätig.",
+        "tag": "p"
       }
     ],
     "sdg11_matches_count": 1,
@@ -1422,7 +1696,8 @@
     "sdg13_matches": [
       {
         "keyword": "Klimawandel",
-        "context": "sowie mit externen Partner_innen – um Lösungen für den Klimawandel zu finden, Diversität zu leben und Visionen für eine"
+        "context": "sowie mit externen Partner_innen – um Lösungen für den Klimawandel zu finden, Diversität zu leben und Visionen für eine",
+        "tag": "p"
       }
     ],
     "sdg13_matches_count": 1,
@@ -1433,26 +1708,31 @@
     "sdg16_matches": [
       {
         "keyword": "war",
-        "context": "als Professorin für Wirtschaftskommunikation tätig war. Die gebürtige Sauerländerin und promovierte Germanistin"
+        "context": "als Professorin für Wirtschaftskommunikation tätig war. Die gebürtige Sauerländerin und promovierte Germanistin",
+        "tag": "p"
       },
       {
         "keyword": "war",
-        "context": "Münster in Hamburg in die Agenturwelt eingestiegen und war auch in Berlin zunächst als Kommunikationsberaterin"
+        "context": "Münster in Hamburg in die Agenturwelt eingestiegen und war auch in Berlin zunächst als Kommunikationsberaterin",
+        "tag": "p"
       }
     ],
     "sdg16_matches_count": 2,
     "sdg17_matches": [
       {
         "keyword": "Innovation",
-        "context": "Kommunikationsberaterin tätig.  \n Unternehmen/Produkt/Innovation: Die HTW Berlin bietet mehr als 70 Studiengänge in"
+        "context": "Welche Innovation hat Sie in der letzten Zeit besonders beeindruckt?",
+        "tag": "h2"
       },
       {
         "keyword": "Innovation",
-        "context": "Studierendenschaft, im Falle von Schöneweide auch Tradition und Innovation aufeinander. Und an diesen Schnittstellen entstehen"
+        "context": "Unternehmen/Produkt/Innovation: Die HTW Berlin bietet mehr als 70 Studiengänge in",
+        "tag": "p"
       },
       {
         "keyword": "Innovation",
-        "context": "Forschungsaktivitäten der HTW Berlin aktiv mitgestalten.  \n Welche Innovation hat Sie in der letzten Zeit besonders beeindruckt?"
+        "context": "Studierendenschaft, im Falle von Schöneweide auch Tradition und Innovation aufeinander. Und an diesen Schnittstellen entstehen",
+        "tag": "p"
       }
     ],
     "sdg17_matches_count": 3
@@ -1468,22 +1748,26 @@
     "sdg2_matches": [
       {
         "keyword": "essenzielles",
-        "context": "der Kern von Veränderung und Wandel und somit ein essenzielles Instrument zur Gestaltung von Zukunft, gerade für"
+        "context": "der Kern von Veränderung und Wandel und somit ein essenzielles Instrument zur Gestaltung von Zukunft, gerade für",
+        "tag": "p"
       }
     ],
     "sdg2_matches_count": 1,
     "sdg3_matches": [
       {
         "keyword": "Medikamenten",
-        "context": "Cyanobakterien, deren Wirkstoffe für die Herstellung von Medikamenten gebraucht werden. Mit Sitz im Technologiepark Adlershof"
+        "context": "Cyanobakterien, deren Wirkstoffe für die Herstellung von Medikamenten gebraucht werden. Mit Sitz im Technologiepark Adlershof",
+        "tag": "p"
       },
       {
         "keyword": "Impfstoff",
-        "context": "Unternehmen derzeit aktiv an der Suche nach einem Impfstoff. Cyano-Biotech sorgt für die kostenlose Bereitstellung"
+        "context": "Unternehmen derzeit aktiv an der Suche nach einem Impfstoff. Cyano-Biotech sorgt für die kostenlose Bereitstellung",
+        "tag": "p"
       },
       {
         "keyword": "Medikamenten",
-        "context": "Diese Naturstoffe sind wichtig bei der Entwicklung von Medikamenten und können den Verlauf einer Corona-Erkrankung behandeln"
+        "context": "Diese Naturstoffe sind wichtig bei der Entwicklung von Medikamenten und können den Verlauf einer Corona-Erkrankung behandeln",
+        "tag": "p"
       }
     ],
     "sdg3_matches_count": 3,
@@ -1496,69 +1780,84 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 1,
     "sdg8_matches": [
       {
         "keyword": "Innovation",
-        "context": "Volker Hofmann ist Geschäftsführer der Humboldt-Innovation GmbH. Der Diplom-Kaufmann, gebürtige Berliner und"
+        "context": "Welche Innovation hat Sie in der letzten Zeit besonders beeindruckt?",
+        "tag": "h2"
       },
       {
         "keyword": "Innovation",
-        "context": "bzw. Teamleiter des Spin-Off Management der Humboldt- Innovation und für eine Unternehmensberatung tätig. \n Die Humboldt-Innovation"
+        "context": "Volker Hofmann ist Geschäftsführer der Humboldt-Innovation GmbH. Der Diplom-Kaufmann, gebürtige Berliner und",
+        "tag": "p"
       },
       {
         "keyword": "Innovation",
-        "context": "für eine Unternehmensberatung tätig. \n Die Humboldt-Innovation verfolgt den Ansatz, universitäres Knowhow für Gesellschaft"
+        "context": "bzw. Teamleiter des Spin-Off Management der Humboldt- Innovation und für eine Unternehmensberatung tätig.",
+        "tag": "p"
       },
       {
         "keyword": "Innovation",
-        "context": "Humboldt-Universität zu Berlin gegründet, genießt die Humboldt-Innovation GmbH inzwischen als Wegbereiter und Ermöglicher bei"
+        "context": "Die Humboldt-Innovation verfolgt den Ansatz, universitäres Knowhow für Gesellschaft",
+        "tag": "p"
+      },
+      {
+        "keyword": "Innovation",
+        "context": "Humboldt-Universität zu Berlin gegründet, genießt die Humboldt-Innovation GmbH inzwischen als Wegbereiter und Ermöglicher bei",
+        "tag": "p"
       },
       {
         "keyword": "Arbeitsplätzen",
-        "context": "Forschenden mit insgesamt rund 1.500 neu geschaffenen Arbeitsplätzen sind bislang entstanden. 2018 wurde die Humboldt Innovation"
+        "context": "Forschenden mit insgesamt rund 1.500 neu geschaffenen Arbeitsplätzen sind bislang entstanden. 2018 wurde die Humboldt Innovation",
+        "tag": "p"
       },
       {
         "keyword": "Innovation",
-        "context": "Arbeitsplätzen sind bislang entstanden. 2018 wurde die Humboldt Innovation GmbH vom Deutschen Institut für Erfindungswesen als"
+        "context": "Arbeitsplätzen sind bislang entstanden. 2018 wurde die Humboldt Innovation GmbH vom Deutschen Institut für Erfindungswesen als",
+        "tag": "p"
       },
       {
         "keyword": "Innovation",
-        "context": "echten gesellschaftlichen Beitrag zu leisten. Denn Innovation ist der Kern von Veränderung und Wandel und somit"
-      },
-      {
-        "keyword": "Innovation",
-        "context": "Humboldt-Universität, ein effizienter Kreislauf von Wissen. \n Welche Innovation hat Sie in der letzten Zeit besonders beeindruckt?"
+        "context": "echten gesellschaftlichen Beitrag zu leisten. Denn Innovation ist der Kern von Veränderung und Wandel und somit",
+        "tag": "p"
       }
     ],
     "sdg8_matches_count": 8,
     "sdg9_matches": [
       {
         "keyword": "Forschung",
-        "context": "Humboldt-Universität kennzeichnet eine herausragende Forschung, die einen Ozean an Ideen und unermessliches Innovationspotenzial"
+        "context": "Humboldt-Universität kennzeichnet eine herausragende Forschung, die einen Ozean an Ideen und unermessliches Innovationspotenzial",
+        "tag": "p"
       },
       {
         "keyword": "Forschungsergebnissen",
-        "context": "Nährboden für einen erfolgreichen Transfer von Ideen und Forschungsergebnissen ist.  Diese Kombination bietet ein einzigartiges Potenzial"
+        "context": "Nährboden für einen erfolgreichen Transfer von Ideen und Forschungsergebnissen ist.  Diese Kombination bietet ein einzigartiges Potenzial",
+        "tag": "p"
       },
       {
         "keyword": "Forschung",
-        "context": "unserem Startupservice betreuen, entstehen aus der Forschung heraus. Jungen Unternehmer*innen als Webgebleiter"
+        "context": "unserem Startupservice betreuen, entstehen aus der Forschung heraus. Jungen Unternehmer*innen als Webgebleiter",
+        "tag": "p"
       },
       {
         "keyword": "Forschungsprojekte",
-        "context": "geben ihre Stärke zurück. So entstehen immer mehr Forschungsprojekte zwischen unseren Alumni Startups und der Humboldt-Universität,"
+        "context": "geben ihre Stärke zurück. So entstehen immer mehr Forschungsprojekte zwischen unseren Alumni Startups und der Humboldt-Universität,",
+        "tag": "p"
       },
       {
         "keyword": "Forschung",
-        "context": "besonders beeindruckt? \n Der unmittelbare Impact von Forschung auf die Gesellschaft wird für die Öffentlichkeit ja"
+        "context": "Der unmittelbare Impact von Forschung auf die Gesellschaft wird für die Öffentlichkeit ja",
+        "tag": "p"
       },
       {
         "keyword": "Forschung",
-        "context": "ist inzwischen weltweit führend in der angewandten Forschung und Entwicklung von Cyanobakterien, deren Wirkstoffe"
+        "context": "ist inzwischen weltweit führend in der angewandten Forschung und Entwicklung von Cyanobakterien, deren Wirkstoffe",
+        "tag": "p"
       }
     ],
     "sdg9_matches_count": 6,
@@ -1569,15 +1868,18 @@
     "sdg12_matches": [
       {
         "keyword": "nachhaltig",
-        "context": "Bindungen entstanden, von denen inzwischen beide Seiten nachhaltig profitieren. Und das ist nicht nur für Wirtschaft"
+        "context": "Bindungen entstanden, von denen inzwischen beide Seiten nachhaltig profitieren. Und das ist nicht nur für Wirtschaft",
+        "tag": "p"
       },
       {
         "keyword": "Biotech",
-        "context": "Bedrohung durch das Covid-19 Virus. Das Unternehmen Cyano Biotech, das 2004 als Startup aus der Humboldt-Universität"
+        "context": "Bedrohung durch das Covid-19 Virus. Das Unternehmen Cyano Biotech, das 2004 als Startup aus der Humboldt-Universität",
+        "tag": "p"
       },
       {
         "keyword": "Biotech",
-        "context": "derzeit aktiv an der Suche nach einem Impfstoff. Cyano-Biotech sorgt für die kostenlose Bereitstellung von Naturstoff-Bibliotheken,"
+        "context": "derzeit aktiv an der Suche nach einem Impfstoff. Cyano-Biotech sorgt für die kostenlose Bereitstellung von Naturstoff-Bibliotheken,",
+        "tag": "p"
       }
     ],
     "sdg12_matches_count": 3,
@@ -1586,7 +1888,8 @@
     "sdg14_matches": [
       {
         "keyword": "Ozean",
-        "context": "kennzeichnet eine herausragende Forschung, die einen Ozean an Ideen und unermessliches Innovationspotenzial bietet."
+        "context": "kennzeichnet eine herausragende Forschung, die einen Ozean an Ideen und unermessliches Innovationspotenzial bietet.",
+        "tag": "p"
       }
     ],
     "sdg14_matches_count": 1,
@@ -1595,38 +1898,46 @@
     "sdg16_matches": [
       {
         "keyword": "war",
-        "context": "Berliner und Alumnus der Humboldt-Universität zu Berlin war zuvor Leiter des HU Gründungsservices bzw. Teamleiter"
+        "context": "Berliner und Alumnus der Humboldt-Universität zu Berlin war zuvor Leiter des HU Gründungsservices bzw. Teamleiter",
+        "tag": "p"
       }
     ],
     "sdg16_matches_count": 1,
     "sdg17_matches": [
       {
         "keyword": "Innovation",
-        "context": "Volker Hofmann ist Geschäftsführer der Humboldt-Innovation GmbH. Der Diplom-Kaufmann, gebürtige Berliner und"
+        "context": "Welche Innovation hat Sie in der letzten Zeit besonders beeindruckt?",
+        "tag": "h2"
       },
       {
         "keyword": "Innovation",
-        "context": "bzw. Teamleiter des Spin-Off Management der Humboldt- Innovation und für eine Unternehmensberatung tätig. \n Die Humboldt-Innovation"
+        "context": "Volker Hofmann ist Geschäftsführer der Humboldt-Innovation GmbH. Der Diplom-Kaufmann, gebürtige Berliner und",
+        "tag": "p"
       },
       {
         "keyword": "Innovation",
-        "context": "für eine Unternehmensberatung tätig. \n Die Humboldt-Innovation verfolgt den Ansatz, universitäres Knowhow für Gesellschaft"
+        "context": "bzw. Teamleiter des Spin-Off Management der Humboldt- Innovation und für eine Unternehmensberatung tätig.",
+        "tag": "p"
       },
       {
         "keyword": "Innovation",
-        "context": "Humboldt-Universität zu Berlin gegründet, genießt die Humboldt-Innovation GmbH inzwischen als Wegbereiter und Ermöglicher bei"
+        "context": "Die Humboldt-Innovation verfolgt den Ansatz, universitäres Knowhow für Gesellschaft",
+        "tag": "p"
       },
       {
         "keyword": "Innovation",
-        "context": "Arbeitsplätzen sind bislang entstanden. 2018 wurde die Humboldt Innovation GmbH vom Deutschen Institut für Erfindungswesen als"
+        "context": "Humboldt-Universität zu Berlin gegründet, genießt die Humboldt-Innovation GmbH inzwischen als Wegbereiter und Ermöglicher bei",
+        "tag": "p"
       },
       {
         "keyword": "Innovation",
-        "context": "echten gesellschaftlichen Beitrag zu leisten. Denn Innovation ist der Kern von Veränderung und Wandel und somit"
+        "context": "Arbeitsplätzen sind bislang entstanden. 2018 wurde die Humboldt Innovation GmbH vom Deutschen Institut für Erfindungswesen als",
+        "tag": "p"
       },
       {
         "keyword": "Innovation",
-        "context": "Humboldt-Universität, ein effizienter Kreislauf von Wissen. \n Welche Innovation hat Sie in der letzten Zeit besonders beeindruckt?"
+        "context": "echten gesellschaftlichen Beitrag zu leisten. Denn Innovation ist der Kern von Veränderung und Wandel und somit",
+        "tag": "p"
       }
     ],
     "sdg17_matches_count": 7
@@ -1652,7 +1963,8 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 1,
@@ -1698,7 +2010,8 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 1,
@@ -1744,7 +2057,8 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 1,
@@ -1782,11 +2096,13 @@
     "sdg3_matches": [
       {
         "keyword": "Lebensqualität",
-        "context": "Unternehmer koordiniert an Impulsen für Innovationen und Lebensqualität."
+        "context": "Unternehmer koordiniert an Impulsen für Innovationen und Lebensqualität.",
+        "tag": "other"
       },
       {
         "keyword": "Medizintechnik",
-        "context": "Für Start-ups im Bereich Biotechnologie und Medizintechnik entsteht auf dem Campus Berlin-Buch bis 2023 ein neues"
+        "context": "Für Start-ups im Bereich Biotechnologie und Medizintechnik entsteht auf dem Campus Berlin-Buch bis 2023 ein neues",
+        "tag": "other"
       }
     ],
     "sdg3_matches_count": 2,
@@ -1799,33 +2115,39 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 1,
     "sdg8_matches": [
       {
         "keyword": "Labor",
-        "context": "startet Architekturwettbewerb für ein innovatives Labor- und Bürogebäude"
+        "context": "startet Architekturwettbewerb für ein innovatives Labor- und Bürogebäude",
+        "tag": "other"
       }
     ],
     "sdg8_matches_count": 1,
     "sdg9_matches": [
       {
         "keyword": "Smart",
-        "context": "Berlin wird Modellprojekt Smart City"
-      },
-      {
-        "keyword": "Smart",
-        "context": "erfolgreich in der 2. Förderstaffel als „Modellprojekt Smart City“ beim Bundesministerium des Innern, für Bau und"
+        "context": "Berlin wird Modellprojekt Smart City",
+        "tag": "h3"
       },
       {
         "keyword": "Mobilität",
-        "context": "Ein Interview mit Prof. Günther Tränkle zur Mobilität der Zukunft"
+        "context": "Ein Interview mit Prof. Günther Tränkle zur Mobilität der Zukunft",
+        "tag": "h3"
       },
       {
         "keyword": "forschung",
-        "context": "Leuchtturm für die Katalyse­forschung in Adlershof geplant"
+        "context": "Leuchtturm für die Katalyse­forschung in Adlershof geplant",
+        "tag": "h3"
+      },
+      {
+        "keyword": "Smart",
+        "context": "erfolgreich in der 2. Förderstaffel als „Modellprojekt Smart City“ beim Bundesministerium des Innern, für Bau und",
+        "tag": "other"
       }
     ],
     "sdg9_matches_count": 4,
@@ -1834,30 +2156,36 @@
     "sdg11_matches": [
       {
         "keyword": "City",
-        "context": "Berlin wird Modellprojekt Smart City"
-      },
-      {
-        "keyword": "City",
-        "context": "erfolgreich in der 2. Förderstaffel als „Modellprojekt Smart City“ beim Bundesministerium des Innern, für Bau und Heimat"
+        "context": "Berlin wird Modellprojekt Smart City",
+        "tag": "h3"
       },
       {
         "keyword": "Mobilität",
-        "context": "Ein Interview mit Prof. Günther Tränkle zur Mobilität der Zukunft"
+        "context": "Ein Interview mit Prof. Günther Tränkle zur Mobilität der Zukunft",
+        "tag": "h3"
+      },
+      {
+        "keyword": "City",
+        "context": "erfolgreich in der 2. Förderstaffel als „Modellprojekt Smart City“ beim Bundesministerium des Innern, für Bau und Heimat",
+        "tag": "other"
       },
       {
         "keyword": "Verkehrswende",
-        "context": "Gespräch über Effizienz, Technologieoffenheit und Verkehrswende"
+        "context": "Gespräch über Effizienz, Technologieoffenheit und Verkehrswende",
+        "tag": "other"
       }
     ],
     "sdg11_matches_count": 4,
     "sdg12_matches": [
       {
         "keyword": "Biotechnologie",
-        "context": "Für Start-ups im Bereich Biotechnologie und Medizintechnik entsteht auf dem Campus Berlin-Buch"
+        "context": "Für Start-ups im Bereich Biotechnologie und Medizintechnik entsteht auf dem Campus Berlin-Buch",
+        "tag": "other"
       },
       {
         "keyword": "Biotech",
-        "context": "Das Berliner Biotech-Start-Up T-knife, eine Ausgründung des MDC zusammen"
+        "context": "Das Berliner Biotech-Start-Up T-knife, eine Ausgründung des MDC zusammen",
+        "tag": "other"
       }
     ],
     "sdg12_matches_count": 2,
@@ -1872,7 +2200,8 @@
     "sdg17_matches": [
       {
         "keyword": "Finanzierung",
-        "context": "Euro. Vier Wagniskapitalfonds haben Anfang August die Finanzierung zugesagt. T-knife entwickelt neue Krebstherapien mit"
+        "context": "Euro. Vier Wagniskapitalfonds haben Anfang August die Finanzierung zugesagt. T-knife entwickelt neue Krebstherapien mit",
+        "tag": "other"
       }
     ],
     "sdg17_matches_count": 1
@@ -1898,11 +2227,13 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "bewältigen.“ \n Ramona Pop, Senatorin für Wirtschaft, Energie und Betriebe. \n Die Corona-Pandemie stellt die Akteure"
+        "context": "bewältigen.“ \n Ramona Pop, Senatorin für Wirtschaft, Energie und Betriebe.",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 2,
@@ -1911,15 +2242,18 @@
     "sdg9_matches": [
       {
         "keyword": "Forschungskompetenzen",
-        "context": "Berliner Zukunftsorte verfügen hierfür über hervorragende Forschungskompetenzen. Sie alle leisten damit einen wichtigen Beitrag, um"
+        "context": "Berliner Zukunftsorte verfügen hierfür über hervorragende Forschungskompetenzen. Sie alle leisten damit einen wichtigen Beitrag, um",
+        "tag": "p"
       },
       {
         "keyword": "Infrastruktur",
-        "context": "ergebende Schere aus Überlastung der Systeme kritischer Infrastruktur und komplettem Stillstand anderer Wirtschaftsbranchen"
+        "context": "ergebende Schere aus Überlastung der Systeme kritischer Infrastruktur und komplettem Stillstand anderer Wirtschaftsbranchen",
+        "tag": "p"
       },
       {
         "keyword": "Forschung",
-        "context": "heute. Dieser werden sie gerecht. \n Sie haben ihre Forschung und ihre Produktionsmöglichkeiten umgestellt, sodass"
+        "context": "Sie haben ihre Forschung und ihre Produktionsmöglichkeiten umgestellt, sodass",
+        "tag": "p"
       }
     ],
     "sdg9_matches_count": 3,
@@ -1955,7 +2289,8 @@
     "sdg4_matches": [
       {
         "keyword": "Bildung",
-        "context": "Zwischen Arbeiten und Leben. Zwischen Wissenschaft, Bildung, Forschung und Entwicklung. Zwischen Siemens, seinen"
+        "context": "Zwischen Arbeiten und Leben. Zwischen Wissenschaft, Bildung, Forschung und Entwicklung. Zwischen Siemens, seinen",
+        "tag": "p"
       }
     ],
     "sdg4_matches_count": 1,
@@ -1966,11 +2301,13 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n IT & Automatisierung"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n IT & Automatisierung",
+        "tag": "other"
       }
     ],
     "sdg7_matches_count": 2,
@@ -1978,32 +2315,39 @@
     "sdg8_matches_count": 0,
     "sdg9_matches": [
       {
-        "keyword": "Mobilität",
-        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n IT & Automatisierung"
-      },
-      {
-        "keyword": "Automatisierung",
-        "context": "& Mobilität \n Energie- & Umwelttechnologie \n IT & Automatisierung"
-      },
-      {
         "keyword": "Industrie 4.0",
-        "context": "und Arbeitswelt, in der die Elektromobilität, die Industrie 4.0, das Internet of Things und Künstliche Intelligenz"
+        "context": "und Arbeitswelt, in der die Elektromobilität, die Industrie 4.0, das Internet of Things und Künstliche Intelligenz",
+        "tag": "p"
       },
       {
         "keyword": "Internet of Things",
-        "context": "in der die Elektromobilität, die Industrie 4.0, das Internet of Things und Künstliche Intelligenz Gegenwart werden. Zu einem"
+        "context": "in der die Elektromobilität, die Industrie 4.0, das Internet of Things und Künstliche Intelligenz Gegenwart werden. Zu einem",
+        "tag": "p"
       },
       {
         "keyword": "Künstliche Intelligenz",
-        "context": "Elektromobilität, die Industrie 4.0, das Internet of Things und Künstliche Intelligenz Gegenwart werden. Zu einem CO2-neutralen Smart Campus"
+        "context": "Elektromobilität, die Industrie 4.0, das Internet of Things und Künstliche Intelligenz Gegenwart werden. Zu einem CO2-neutralen Smart Campus",
+        "tag": "p"
       },
       {
         "keyword": "Smart",
-        "context": "Intelligenz Gegenwart werden. Zu einem CO2-neutralen Smart Campus und einem Berliner Zukunftsort, in dem sich"
+        "context": "Intelligenz Gegenwart werden. Zu einem CO2-neutralen Smart Campus und einem Berliner Zukunftsort, in dem sich",
+        "tag": "p"
       },
       {
         "keyword": "Forschung",
-        "context": "Arbeiten und Leben. Zwischen Wissenschaft, Bildung, Forschung und Entwicklung. Zwischen Siemens, seinen Partnern,"
+        "context": "Arbeiten und Leben. Zwischen Wissenschaft, Bildung, Forschung und Entwicklung. Zwischen Siemens, seinen Partnern,",
+        "tag": "p"
+      },
+      {
+        "keyword": "Mobilität",
+        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n IT & Automatisierung",
+        "tag": "other"
+      },
+      {
+        "keyword": "Automatisierung",
+        "context": "& Mobilität \n Energie- & Umwelttechnologie \n IT & Automatisierung",
+        "tag": "other"
       }
     ],
     "sdg9_matches_count": 7,
@@ -2011,20 +2355,24 @@
     "sdg10_matches_count": 0,
     "sdg11_matches": [
       {
-        "keyword": "Verkehrstechnik",
-        "context": "13627 Berlin                                 \n \n   \n \n Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n IT &"
-      },
-      {
-        "keyword": "Mobilität",
-        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n IT & Automatisierung"
-      },
-      {
         "keyword": "Elektromobilität",
-        "context": "Stadtteil. Zur neuen Wohn- und Arbeitswelt, in der die Elektromobilität, die Industrie 4.0, das Internet of Things und Künstliche"
+        "context": "Stadtteil. Zur neuen Wohn- und Arbeitswelt, in der die Elektromobilität, die Industrie 4.0, das Internet of Things und Künstliche",
+        "tag": "p"
       },
       {
         "keyword": "Stadt",
-        "context": "Siemens, seinen Partnern, Kunden und den Menschen der Stadt. Zwischen Berlin und der Welt."
+        "context": "Siemens, seinen Partnern, Kunden und den Menschen der Stadt. Zwischen Berlin und der Welt.",
+        "tag": "p"
+      },
+      {
+        "keyword": "Verkehrstechnik",
+        "context": "13627 Berlin                                 \n \n   \n \n Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n IT &",
+        "tag": "other"
+      },
+      {
+        "keyword": "Mobilität",
+        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n IT & Automatisierung",
+        "tag": "other"
       }
     ],
     "sdg11_matches_count": 4,
@@ -2033,7 +2381,8 @@
     "sdg13_matches": [
       {
         "keyword": "CO2",
-        "context": "Künstliche Intelligenz Gegenwart werden. Zu einem CO2-neutralen Smart Campus und einem Berliner Zukunftsort,"
+        "context": "Künstliche Intelligenz Gegenwart werden. Zu einem CO2-neutralen Smart Campus und einem Berliner Zukunftsort,",
+        "tag": "p"
       }
     ],
     "sdg13_matches_count": 1,
@@ -2059,14 +2408,16 @@
     "sdg3_matches": [
       {
         "keyword": "Medizin",
-        "context": "ist ein international renommierter Wissenschafts-, Medizin- und Technologiestandort im Nordosten Berlins."
+        "context": "ist ein international renommierter Wissenschafts-, Medizin- und Technologiestandort im Nordosten Berlins.",
+        "tag": "p"
       }
     ],
     "sdg3_matches_count": 1,
     "sdg4_matches": [
       {
         "keyword": "Lernen",
-        "context": "Wirtschafts- und Innovationskraft geht darüber hinaus. Lernen Sie unser einzigartiges Netzwerk kennen, informieren"
+        "context": "Wirtschafts- und Innovationskraft geht darüber hinaus. Lernen Sie unser einzigartiges Netzwerk kennen, informieren",
+        "tag": "p"
       }
     ],
     "sdg4_matches_count": 1,
@@ -2077,41 +2428,49 @@
     "sdg7_matches": [
       {
         "keyword": "Energien",
-        "context": "Bundesregierung für das Jahr 2050, indem hier erneuerbare Energien und ein lokales Micro Smart Grid für eine klimaneutrale"
+        "context": "Bundesregierung für das Jahr 2050, indem hier erneuerbare Energien und ein lokales Micro Smart Grid für eine klimaneutrale",
+        "tag": "p"
       },
       {
         "keyword": "Energieversorgung",
-        "context": "ein lokales Micro Smart Grid für eine klimaneutrale Energieversorgung genutzt werden.  \n \n \n Zum Zukunftsort  EUREF-Campus"
+        "context": "ein lokales Micro Smart Grid für eine klimaneutrale Energieversorgung genutzt werden.",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "Berliner Politik, die Senatsverwaltung für Wirtschaft, Energie und Betriebe fördert diesen europaweit einzigartigen"
+        "context": "Berliner Politik, die Senatsverwaltung für Wirtschaft, Energie und Betriebe fördert diesen europaweit einzigartigen",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 4,
     "sdg8_matches": [
       {
         "keyword": "Kreativität",
-        "context": "Europas. Hier verschmelzen mühelos Technologie und Kreativität.  \n \n \n Zum Zukunftsort  Berlin Campus Charlottenburg"
+        "context": "Europas. Hier verschmelzen mühelos Technologie und Kreativität.",
+        "tag": "p"
       },
       {
         "keyword": "Innovation",
-        "context": "Siemensstadt 2.0: Freiheit, Toleranz und technologische Innovation auf 700.000 qm . Auf dem historischen Areal der Siemensstadt"
+        "context": "Siemensstadt 2.0: Freiheit, Toleranz und technologische Innovation auf 700.000 qm . Auf dem historischen Areal der Siemensstadt",
+        "tag": "p"
       }
     ],
     "sdg8_matches_count": 2,
     "sdg9_matches": [
       {
         "keyword": "Forschungs",
-        "context": "dem Areal entsteht dann in den folgenden Jahren ein Forschungs- und Industriepark für urbane Technologien: Berlin"
+        "context": "dem Areal entsteht dann in den folgenden Jahren ein Forschungs- und Industriepark für urbane Technologien: Berlin",
+        "tag": "p"
       },
       {
         "keyword": "Smart",
-        "context": "indem hier erneuerbare Energien und ein lokales Micro Smart Grid für eine klimaneutrale Energieversorgung genutzt"
+        "context": "indem hier erneuerbare Energien und ein lokales Micro Smart Grid für eine klimaneutrale Energieversorgung genutzt",
+        "tag": "p"
       }
     ],
     "sdg9_matches_count": 2,
@@ -2122,14 +2481,16 @@
     "sdg12_matches": [
       {
         "keyword": "nachhaltige",
-        "context": "Rahmenbedingungen für produzierende Unternehmen, die auf nachhaltige und effiziente Technologien spezialisiert sind und"
+        "context": "Rahmenbedingungen für produzierende Unternehmen, die auf nachhaltige und effiziente Technologien spezialisiert sind und",
+        "tag": "p"
       }
     ],
     "sdg12_matches_count": 1,
     "sdg13_matches": [
       {
         "keyword": "CO2",
-        "context": "Der EUREF-Campus Berlin erfüllt schon heute die CO2-Klimaziele der Bundesregierung für das Jahr 2050,"
+        "context": "Der EUREF-Campus Berlin erfüllt schon heute die CO2-Klimaziele der Bundesregierung für das Jahr 2050,",
+        "tag": "p"
       }
     ],
     "sdg13_matches_count": 1,
@@ -2140,14 +2501,16 @@
     "sdg16_matches": [
       {
         "keyword": "war",
-        "context": "immer wichtigere Rolle. Abschottung und Abgrenzung war gestern, Kooperation ist heute. Genau das verkörpern"
+        "context": "immer wichtigere Rolle. Abschottung und Abgrenzung war gestern, Kooperation ist heute. Genau das verkörpern",
+        "tag": "p"
       }
     ],
     "sdg16_matches_count": 1,
     "sdg17_matches": [
       {
         "keyword": "Innovation",
-        "context": "Siemensstadt 2.0: Freiheit, Toleranz und technologische Innovation auf 700.000 qm . Auf dem historischen Areal der Siemensstadt"
+        "context": "Siemensstadt 2.0: Freiheit, Toleranz und technologische Innovation auf 700.000 qm . Auf dem historischen Areal der Siemensstadt",
+        "tag": "p"
       }
     ],
     "sdg17_matches_count": 1
@@ -2165,11 +2528,13 @@
     "sdg3_matches": [
       {
         "keyword": "Medizin",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie",
+        "tag": "other"
       },
       {
         "keyword": "Gesundheitswirtschaft",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie",
+        "tag": "other"
       }
     ],
     "sdg3_matches_count": 2,
@@ -2182,11 +2547,13 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft",
+        "tag": "other"
       }
     ],
     "sdg7_matches_count": 2,
@@ -2195,11 +2562,13 @@
     "sdg9_matches": [
       {
         "keyword": "Mobilität",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life Science &"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life Science &",
+        "tag": "other"
       },
       {
         "keyword": "Automatisierung",
-        "context": "Medien & Kreativwirtschaft \n Photonik & Optik \n IT & Automatisierung \n Mikrosysteme & Materialien"
+        "context": "Medien & Kreativwirtschaft \n Photonik & Optik \n IT & Automatisierung \n Mikrosysteme & Materialien",
+        "tag": "other"
       }
     ],
     "sdg9_matches_count": 2,
@@ -2208,18 +2577,21 @@
     "sdg11_matches": [
       {
         "keyword": "Verkehrstechnik",
-        "context": "12489 Berlin                                 \n \n   \n \n Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life"
+        "context": "12489 Berlin                                 \n \n   \n \n Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life",
+        "tag": "other"
       },
       {
         "keyword": "Mobilität",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life Science &"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life Science &",
+        "tag": "other"
       }
     ],
     "sdg11_matches_count": 2,
     "sdg12_matches": [
       {
         "keyword": "Biotechnologie",
-        "context": "Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft"
+        "context": "Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft",
+        "tag": "other"
       }
     ],
     "sdg12_matches_count": 1,
@@ -2246,36 +2618,44 @@
     "sdg2_matches_count": 0,
     "sdg3_matches": [
       {
-        "keyword": "Medizin",
-        "context": "13125 Berlin                                 \n \n   \n \n Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie"
-      },
-      {
-        "keyword": "Gesundheitswirtschaft",
-        "context": "Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie"
-      },
-      {
         "keyword": "Health",
-        "context": "Berlin-Buch: Green Health City – für die Zukunft der Medizin \n Berlin-Buch ist"
+        "context": "Berlin-Buch: Green Health City – für die Zukunft der Medizin",
+        "tag": "p"
       },
       {
         "keyword": "Medizin",
-        "context": "Berlin-Buch: Green Health City – für die Zukunft der Medizin \n Berlin-Buch ist ein international renommierter Wissenschafts-,"
+        "context": "Berlin-Buch: Green Health City – für die Zukunft der Medizin",
+        "tag": "p"
       },
       {
         "keyword": "Medizin",
-        "context": "ist ein international renommierter Wissenschafts-, Medizin- und Technologiestandort im Nordosten Berlins. Rund"
+        "context": "ist ein international renommierter Wissenschafts-, Medizin- und Technologiestandort im Nordosten Berlins. Rund",
+        "tag": "p"
       },
       {
         "keyword": "Gesundheitswirtschaft",
-        "context": "Berlins. Rund 6.500 Menschen arbeiten hier in der Gesundheitswirtschaft. Herzstück ist der 32 Hektar große Campus Berlin-Buch,"
+        "context": "Berlins. Rund 6.500 Menschen arbeiten hier in der Gesundheitswirtschaft. Herzstück ist der 32 Hektar große Campus Berlin-Buch,",
+        "tag": "p"
       },
       {
         "keyword": "Medizin",
-        "context": "Forschungsinstitute auf den Gebieten der molekularen Medizin und Pharmakologie sowie der klinischen Forschung beherbergt"
+        "context": "Forschungsinstitute auf den Gebieten der molekularen Medizin und Pharmakologie sowie der klinischen Forschung beherbergt",
+        "tag": "p"
       },
       {
         "keyword": "Pharmakologie",
-        "context": "Forschungsinstitute auf den Gebieten der molekularen Medizin und Pharmakologie sowie der klinischen Forschung beherbergt – und einen"
+        "context": "Forschungsinstitute auf den Gebieten der molekularen Medizin und Pharmakologie sowie der klinischen Forschung beherbergt – und einen",
+        "tag": "p"
+      },
+      {
+        "keyword": "Medizin",
+        "context": "13125 Berlin                                 \n \n   \n \n Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie",
+        "tag": "other"
+      },
+      {
+        "keyword": "Gesundheitswirtschaft",
+        "context": "Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie",
+        "tag": "other"
       }
     ],
     "sdg3_matches_count": 8,
@@ -2288,25 +2668,29 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 1,
     "sdg8_matches": [
       {
         "keyword": "Labor",
-        "context": "BerlinBioCube im BiotechPark Berlin-Buch zusätzliche 8.000 qm Labor- und Bürofläche und attraktive Services für Start-ups"
+        "context": "BerlinBioCube im BiotechPark Berlin-Buch zusätzliche 8.000 qm Labor- und Bürofläche und attraktive Services für Start-ups",
+        "tag": "p"
       }
     ],
     "sdg8_matches_count": 1,
     "sdg9_matches": [
       {
         "keyword": "Forschungsinstitute",
-        "context": "32 Hektar große Campus Berlin-Buch, der exzellente Forschungsinstitute auf den Gebieten der molekularen Medizin und Pharmakologie"
+        "context": "32 Hektar große Campus Berlin-Buch, der exzellente Forschungsinstitute auf den Gebieten der molekularen Medizin und Pharmakologie",
+        "tag": "p"
       },
       {
         "keyword": "Forschung",
-        "context": "molekularen Medizin und Pharmakologie sowie der klinischen Forschung beherbergt – und einen der größten Biotechparks Deutschlands."
+        "context": "molekularen Medizin und Pharmakologie sowie der klinischen Forschung beherbergt – und einen der größten Biotechparks Deutschlands.",
+        "tag": "p"
       }
     ],
     "sdg9_matches_count": 2,
@@ -2315,26 +2699,31 @@
     "sdg11_matches": [
       {
         "keyword": "City",
-        "context": "Berlin-Buch: Green Health City – für die Zukunft der Medizin \n Berlin-Buch ist ein"
+        "context": "Berlin-Buch: Green Health City – für die Zukunft der Medizin",
+        "tag": "p"
       }
     ],
     "sdg11_matches_count": 1,
     "sdg12_matches": [
       {
-        "keyword": "Biotechnologie",
-        "context": "Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie"
-      },
-      {
         "keyword": "Biotechparks",
-        "context": "klinischen Forschung beherbergt – und einen der größten Biotechparks Deutschlands. Mit seiner klaren Ausrichtung auf Biomedizin"
+        "context": "klinischen Forschung beherbergt – und einen der größten Biotechparks Deutschlands. Mit seiner klaren Ausrichtung auf Biomedizin",
+        "tag": "p"
       },
       {
         "keyword": "Biomedizin",
-        "context": "Biotechparks Deutschlands. Mit seiner klaren Ausrichtung auf Biomedizin und interdisziplinären Kooperationen verfügt der Campus"
+        "context": "Biotechparks Deutschlands. Mit seiner klaren Ausrichtung auf Biomedizin und interdisziplinären Kooperationen verfügt der Campus",
+        "tag": "p"
       },
       {
         "keyword": "BiotechPark",
-        "context": "komplettiert. \n Ab 2023 wird der BerlinBioCube im BiotechPark Berlin-Buch zusätzliche 8.000 qm Labor- und Bürofläche"
+        "context": "Ab 2023 wird der BerlinBioCube im BiotechPark Berlin-Buch zusätzliche 8.000 qm Labor- und Bürofläche",
+        "tag": "p"
+      },
+      {
+        "keyword": "Biotechnologie",
+        "context": "Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie",
+        "tag": "other"
       }
     ],
     "sdg12_matches_count": 4,
@@ -2361,36 +2750,44 @@
     "sdg2_matches_count": 0,
     "sdg3_matches": [
       {
-        "keyword": "Medizin",
-        "context": "13125 Berlin                                 \n \n   \n \n Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie"
-      },
-      {
-        "keyword": "Gesundheitswirtschaft",
-        "context": "Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie"
-      },
-      {
         "keyword": "Health",
-        "context": "Berlin-Buch: Green Health City – für die Zukunft der Medizin \n Berlin-Buch ist"
+        "context": "Berlin-Buch: Green Health City – für die Zukunft der Medizin",
+        "tag": "p"
       },
       {
         "keyword": "Medizin",
-        "context": "Berlin-Buch: Green Health City – für die Zukunft der Medizin \n Berlin-Buch ist ein international renommierter Wissenschafts-,"
+        "context": "Berlin-Buch: Green Health City – für die Zukunft der Medizin",
+        "tag": "p"
       },
       {
         "keyword": "Medizin",
-        "context": "ist ein international renommierter Wissenschafts-, Medizin- und Technologiestandort im Nordosten Berlins. Rund"
+        "context": "ist ein international renommierter Wissenschafts-, Medizin- und Technologiestandort im Nordosten Berlins. Rund",
+        "tag": "p"
       },
       {
         "keyword": "Gesundheitswirtschaft",
-        "context": "Berlins. Rund 6.500 Menschen arbeiten hier in der Gesundheitswirtschaft. Herzstück ist der 32 Hektar große Campus Berlin-Buch,"
+        "context": "Berlins. Rund 6.500 Menschen arbeiten hier in der Gesundheitswirtschaft. Herzstück ist der 32 Hektar große Campus Berlin-Buch,",
+        "tag": "p"
       },
       {
         "keyword": "Medizin",
-        "context": "Forschungsinstitute auf den Gebieten der molekularen Medizin und Pharmakologie sowie der klinischen Forschung beherbergt"
+        "context": "Forschungsinstitute auf den Gebieten der molekularen Medizin und Pharmakologie sowie der klinischen Forschung beherbergt",
+        "tag": "p"
       },
       {
         "keyword": "Pharmakologie",
-        "context": "Forschungsinstitute auf den Gebieten der molekularen Medizin und Pharmakologie sowie der klinischen Forschung beherbergt – und einen"
+        "context": "Forschungsinstitute auf den Gebieten der molekularen Medizin und Pharmakologie sowie der klinischen Forschung beherbergt – und einen",
+        "tag": "p"
+      },
+      {
+        "keyword": "Medizin",
+        "context": "13125 Berlin                                 \n \n   \n \n Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie",
+        "tag": "other"
+      },
+      {
+        "keyword": "Gesundheitswirtschaft",
+        "context": "Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie",
+        "tag": "other"
       }
     ],
     "sdg3_matches_count": 8,
@@ -2403,25 +2800,29 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 1,
     "sdg8_matches": [
       {
         "keyword": "Labor",
-        "context": "BerlinBioCube im BiotechPark Berlin-Buch zusätzliche 8.000 qm Labor- und Bürofläche und attraktive Services für Start-ups"
+        "context": "BerlinBioCube im BiotechPark Berlin-Buch zusätzliche 8.000 qm Labor- und Bürofläche und attraktive Services für Start-ups",
+        "tag": "p"
       }
     ],
     "sdg8_matches_count": 1,
     "sdg9_matches": [
       {
         "keyword": "Forschungsinstitute",
-        "context": "32 Hektar große Campus Berlin-Buch, der exzellente Forschungsinstitute auf den Gebieten der molekularen Medizin und Pharmakologie"
+        "context": "32 Hektar große Campus Berlin-Buch, der exzellente Forschungsinstitute auf den Gebieten der molekularen Medizin und Pharmakologie",
+        "tag": "p"
       },
       {
         "keyword": "Forschung",
-        "context": "molekularen Medizin und Pharmakologie sowie der klinischen Forschung beherbergt – und einen der größten Biotechparks Deutschlands."
+        "context": "molekularen Medizin und Pharmakologie sowie der klinischen Forschung beherbergt – und einen der größten Biotechparks Deutschlands.",
+        "tag": "p"
       }
     ],
     "sdg9_matches_count": 2,
@@ -2430,26 +2831,31 @@
     "sdg11_matches": [
       {
         "keyword": "City",
-        "context": "Berlin-Buch: Green Health City – für die Zukunft der Medizin \n Berlin-Buch ist ein"
+        "context": "Berlin-Buch: Green Health City – für die Zukunft der Medizin",
+        "tag": "p"
       }
     ],
     "sdg11_matches_count": 1,
     "sdg12_matches": [
       {
-        "keyword": "Biotechnologie",
-        "context": "Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie"
-      },
-      {
         "keyword": "Biotechparks",
-        "context": "klinischen Forschung beherbergt – und einen der größten Biotechparks Deutschlands. Mit seiner klaren Ausrichtung auf Biomedizin"
+        "context": "klinischen Forschung beherbergt – und einen der größten Biotechparks Deutschlands. Mit seiner klaren Ausrichtung auf Biomedizin",
+        "tag": "p"
       },
       {
         "keyword": "Biomedizin",
-        "context": "Biotechparks Deutschlands. Mit seiner klaren Ausrichtung auf Biomedizin und interdisziplinären Kooperationen verfügt der Campus"
+        "context": "Biotechparks Deutschlands. Mit seiner klaren Ausrichtung auf Biomedizin und interdisziplinären Kooperationen verfügt der Campus",
+        "tag": "p"
       },
       {
         "keyword": "BiotechPark",
-        "context": "komplettiert. \n Ab 2023 wird der BerlinBioCube im BiotechPark Berlin-Buch zusätzliche 8.000 qm Labor- und Bürofläche"
+        "context": "Ab 2023 wird der BerlinBioCube im BiotechPark Berlin-Buch zusätzliche 8.000 qm Labor- und Bürofläche",
+        "tag": "p"
+      },
+      {
+        "keyword": "Biotechnologie",
+        "context": "Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie",
+        "tag": "other"
       }
     ],
     "sdg12_matches_count": 4,
@@ -2477,11 +2883,13 @@
     "sdg3_matches": [
       {
         "keyword": "Medizin",
-        "context": "12165 Berlin                                 \n \n   \n \n Medizin & Gesundheitswirtschaft \n IT & Automatisierung \n Mikrosysteme"
+        "context": "12165 Berlin                                 \n \n   \n \n Medizin & Gesundheitswirtschaft \n IT & Automatisierung \n Mikrosysteme",
+        "tag": "other"
       },
       {
         "keyword": "Gesundheitswirtschaft",
-        "context": "Medizin & Gesundheitswirtschaft \n IT & Automatisierung \n Mikrosysteme & Materialien"
+        "context": "Medizin & Gesundheitswirtschaft \n IT & Automatisierung \n Mikrosysteme & Materialien",
+        "tag": "other"
       }
     ],
     "sdg3_matches_count": 2,
@@ -2494,11 +2902,13 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "-prüfung und des Helmholtz-Zentrum für Materialien und Energie haben sich viele Start-ups insbesondere im Life Science-"
+        "context": "-prüfung und des Helmholtz-Zentrum für Materialien und Energie haben sich viele Start-ups insbesondere im Life Science-",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 2,
@@ -2507,7 +2917,8 @@
     "sdg9_matches": [
       {
         "keyword": "Automatisierung",
-        "context": "Medizin & Gesundheitswirtschaft \n IT & Automatisierung \n Mikrosysteme & Materialien"
+        "context": "Medizin & Gesundheitswirtschaft \n IT & Automatisierung \n Mikrosysteme & Materialien",
+        "tag": "other"
       }
     ],
     "sdg9_matches_count": 1,
@@ -2516,14 +2927,16 @@
     "sdg11_matches": [
       {
         "keyword": "Kommunikation",
-        "context": "Unternehmen einen Campus und Räume für Synergien, Kommunikation, Fortentwicklung und Wachstum Platz bieten."
+        "context": "Unternehmen einen Campus und Räume für Synergien, Kommunikation, Fortentwicklung und Wachstum Platz bieten.",
+        "tag": "p"
       }
     ],
     "sdg11_matches_count": 1,
     "sdg12_matches": [
       {
         "keyword": "Biotechnologiebereich",
-        "context": "viele Start-ups insbesondere im Life Science- und Biotechnologiebereich entwickelt. In den kommenden Jahren wird das Technologie-"
+        "context": "viele Start-ups insbesondere im Life Science- und Biotechnologiebereich entwickelt. In den kommenden Jahren wird das Technologie-",
+        "tag": "p"
       }
     ],
     "sdg12_matches_count": 1,
@@ -2551,14 +2964,16 @@
     "sdg3_matches": [
       {
         "keyword": "sauberes",
-        "context": "Mobilität, Recycling, die vernetzte Steuerung von Systemen, sauberes Wasser und der Einsatz neuer Materialien."
+        "context": "Mobilität, Recycling, die vernetzte Steuerung von Systemen, sauberes Wasser und der Einsatz neuer Materialien.",
+        "tag": "p"
       }
     ],
     "sdg3_matches_count": 1,
     "sdg4_matches": [
       {
         "keyword": "Hochschule",
-        "context": "2.500 Studierende werden mit der renommierten Beuth Hochschule in das ehemalige Terminalgebäude einziehen. Insgesamt"
+        "context": "2.500 Studierende werden mit der renommierten Beuth Hochschule in das ehemalige Terminalgebäude einziehen. Insgesamt",
+        "tag": "p"
       }
     ],
     "sdg4_matches_count": 1,
@@ -2567,22 +2982,26 @@
     "sdg6_matches": [
       {
         "keyword": "sauberes Wasser",
-        "context": "Mobilität, Recycling, die vernetzte Steuerung von Systemen, sauberes Wasser und der Einsatz neuer Materialien."
+        "context": "Mobilität, Recycling, die vernetzte Steuerung von Systemen, sauberes Wasser und der Einsatz neuer Materialien.",
+        "tag": "p"
       }
     ],
     "sdg6_matches_count": 1,
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n IT & Automatisierung \n Mikrosysteme"
+        "context": "Jahrhunderts am Leben erhält: der effiziente Einsatz von Energie, nachhaltiges Bauen, umweltschonende Mobilität, Recycling,",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "Jahrhunderts am Leben erhält: der effiziente Einsatz von Energie, nachhaltiges Bauen, umweltschonende Mobilität, Recycling,"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n IT & Automatisierung \n Mikrosysteme",
+        "tag": "other"
       }
     ],
     "sdg7_matches_count": 3,
@@ -2590,20 +3009,24 @@
     "sdg8_matches_count": 0,
     "sdg9_matches": [
       {
+        "keyword": "Forschungs",
+        "context": "dem Areal entsteht dann in den folgenden Jahren ein Forschungs- und Industriepark für urbane Technologien: Berlin",
+        "tag": "p"
+      },
+      {
         "keyword": "Mobilität",
-        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n IT & Automatisierung"
+        "context": "Einsatz von Energie, nachhaltiges Bauen, umweltschonende Mobilität, Recycling, die vernetzte Steuerung von Systemen,",
+        "tag": "p"
+      },
+      {
+        "keyword": "Mobilität",
+        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n IT & Automatisierung",
+        "tag": "other"
       },
       {
         "keyword": "Automatisierung",
-        "context": "& Mobilität \n Energie- & Umwelttechnologie \n IT & Automatisierung \n Mikrosysteme & Materialien"
-      },
-      {
-        "keyword": "Forschungs",
-        "context": "dem Areal entsteht dann in den folgenden Jahren ein Forschungs- und Industriepark für urbane Technologien: Berlin"
-      },
-      {
-        "keyword": "Mobilität",
-        "context": "Einsatz von Energie, nachhaltiges Bauen, umweltschonende Mobilität, Recycling, die vernetzte Steuerung von Systemen,"
+        "context": "& Mobilität \n Energie- & Umwelttechnologie \n IT & Automatisierung \n Mikrosysteme & Materialien",
+        "tag": "other"
       }
     ],
     "sdg9_matches_count": 4,
@@ -2611,31 +3034,37 @@
     "sdg10_matches_count": 0,
     "sdg11_matches": [
       {
-        "keyword": "Verkehrstechnik",
-        "context": "10707 Berlin                                 \n \n   \n \n Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n IT &"
-      },
-      {
-        "keyword": "Mobilität",
-        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n IT & Automatisierung"
-      },
-      {
         "keyword": "nachhaltiges Bauen",
-        "context": "Leben erhält: der effiziente Einsatz von Energie, nachhaltiges Bauen, umweltschonende Mobilität, Recycling, die vernetzte"
+        "context": "Leben erhält: der effiziente Einsatz von Energie, nachhaltiges Bauen, umweltschonende Mobilität, Recycling, die vernetzte",
+        "tag": "p"
       },
       {
         "keyword": "Mobilität",
-        "context": "Einsatz von Energie, nachhaltiges Bauen, umweltschonende Mobilität, Recycling, die vernetzte Steuerung von Systemen,"
+        "context": "Einsatz von Energie, nachhaltiges Bauen, umweltschonende Mobilität, Recycling, die vernetzte Steuerung von Systemen,",
+        "tag": "p"
+      },
+      {
+        "keyword": "Verkehrstechnik",
+        "context": "10707 Berlin                                 \n \n   \n \n Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n IT &",
+        "tag": "other"
+      },
+      {
+        "keyword": "Mobilität",
+        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n IT & Automatisierung",
+        "tag": "other"
       }
     ],
     "sdg11_matches_count": 4,
     "sdg12_matches": [
       {
         "keyword": "nachhaltiges",
-        "context": "Leben erhält: der effiziente Einsatz von Energie, nachhaltiges Bauen, umweltschonende Mobilität, Recycling, die vernetzte"
+        "context": "Leben erhält: der effiziente Einsatz von Energie, nachhaltiges Bauen, umweltschonende Mobilität, Recycling, die vernetzte",
+        "tag": "p"
       },
       {
         "keyword": "Recycling",
-        "context": "Energie, nachhaltiges Bauen, umweltschonende Mobilität, Recycling, die vernetzte Steuerung von Systemen, sauberes Wasser"
+        "context": "Energie, nachhaltiges Bauen, umweltschonende Mobilität, Recycling, die vernetzte Steuerung von Systemen, sauberes Wasser",
+        "tag": "p"
       }
     ],
     "sdg12_matches_count": 2,
@@ -2663,11 +3092,13 @@
     "sdg3_matches": [
       {
         "keyword": "Medizin",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie",
+        "tag": "other"
       },
       {
         "keyword": "Gesundheitswirtschaft",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft",
+        "tag": "other"
       }
     ],
     "sdg3_matches_count": 2,
@@ -2680,33 +3111,39 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft",
+        "tag": "other"
       }
     ],
     "sdg7_matches_count": 2,
     "sdg8_matches": [
       {
         "keyword": "Kreativität",
-        "context": "Europas. Hier verschmelzen mühelos Technologie und Kreativität. Der interdisziplinär angelegte Schmelztiegel für"
+        "context": "Europas. Hier verschmelzen mühelos Technologie und Kreativität. Der interdisziplinär angelegte Schmelztiegel für",
+        "tag": "p"
       }
     ],
     "sdg8_matches_count": 1,
     "sdg9_matches": [
       {
+        "keyword": "Forschung",
+        "context": "Kreativität. Der interdisziplinär angelegte Schmelztiegel für Forschung und Entwicklung geht auf eine Initiative der ansässigen",
+        "tag": "p"
+      },
+      {
         "keyword": "Mobilität",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie",
+        "tag": "other"
       },
       {
         "keyword": "Automatisierung",
-        "context": "Medien & Kreativwirtschaft \n Photonik & Optik \n IT & Automatisierung"
-      },
-      {
-        "keyword": "Forschung",
-        "context": "Kreativität. Der interdisziplinär angelegte Schmelztiegel für Forschung und Entwicklung geht auf eine Initiative der ansässigen"
+        "context": "Medien & Kreativwirtschaft \n Photonik & Optik \n IT & Automatisierung",
+        "tag": "other"
       }
     ],
     "sdg9_matches_count": 3,
@@ -2715,11 +3152,13 @@
     "sdg11_matches": [
       {
         "keyword": "Verkehrstechnik",
-        "context": "10623 Berlin                                 \n \n   \n \n Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie-"
+        "context": "10623 Berlin                                 \n \n   \n \n Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie-",
+        "tag": "other"
       },
       {
         "keyword": "Mobilität",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie",
+        "tag": "other"
       }
     ],
     "sdg11_matches_count": 2,
@@ -2749,11 +3188,13 @@
     "sdg3_matches": [
       {
         "keyword": "Medizin",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie",
+        "tag": "other"
       },
       {
         "keyword": "Gesundheitswirtschaft",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft",
+        "tag": "other"
       }
     ],
     "sdg3_matches_count": 2,
@@ -2766,33 +3207,39 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft",
+        "tag": "other"
       }
     ],
     "sdg7_matches_count": 2,
     "sdg8_matches": [
       {
         "keyword": "Kreativität",
-        "context": "Europas. Hier verschmelzen mühelos Technologie und Kreativität. Der interdisziplinär angelegte Schmelztiegel für"
+        "context": "Europas. Hier verschmelzen mühelos Technologie und Kreativität. Der interdisziplinär angelegte Schmelztiegel für",
+        "tag": "p"
       }
     ],
     "sdg8_matches_count": 1,
     "sdg9_matches": [
       {
+        "keyword": "Forschung",
+        "context": "Kreativität. Der interdisziplinär angelegte Schmelztiegel für Forschung und Entwicklung geht auf eine Initiative der ansässigen",
+        "tag": "p"
+      },
+      {
         "keyword": "Mobilität",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie",
+        "tag": "other"
       },
       {
         "keyword": "Automatisierung",
-        "context": "Medien & Kreativwirtschaft \n Photonik & Optik \n IT & Automatisierung"
-      },
-      {
-        "keyword": "Forschung",
-        "context": "Kreativität. Der interdisziplinär angelegte Schmelztiegel für Forschung und Entwicklung geht auf eine Initiative der ansässigen"
+        "context": "Medien & Kreativwirtschaft \n Photonik & Optik \n IT & Automatisierung",
+        "tag": "other"
       }
     ],
     "sdg9_matches_count": 3,
@@ -2801,11 +3248,13 @@
     "sdg11_matches": [
       {
         "keyword": "Verkehrstechnik",
-        "context": "10623 Berlin                                 \n \n   \n \n Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie-"
+        "context": "10623 Berlin                                 \n \n   \n \n Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie-",
+        "tag": "other"
       },
       {
         "keyword": "Mobilität",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie",
+        "tag": "other"
       }
     ],
     "sdg11_matches_count": 2,
@@ -2835,11 +3284,13 @@
     "sdg3_matches": [
       {
         "keyword": "Medizin",
-        "context": "12681 Berlin                                 \n \n   \n \n Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie"
+        "context": "12681 Berlin                                 \n \n   \n \n Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie",
+        "tag": "other"
       },
       {
         "keyword": "Gesundheitswirtschaft",
-        "context": "Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie"
+        "context": "Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie",
+        "tag": "other"
       }
     ],
     "sdg3_matches_count": 2,
@@ -2852,11 +3303,13 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie",
+        "tag": "other"
       }
     ],
     "sdg7_matches_count": 2,
@@ -2870,12 +3323,14 @@
     "sdg11_matches_count": 0,
     "sdg12_matches": [
       {
-        "keyword": "Biotechnologie",
-        "context": "Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie"
+        "keyword": "nachhaltige",
+        "context": "Rahmenbedingungen für produzierende Unternehmen, die auf nachhaltige und effiziente Technologien spezialisiert sind und",
+        "tag": "p"
       },
       {
-        "keyword": "nachhaltige",
-        "context": "Rahmenbedingungen für produzierende Unternehmen, die auf nachhaltige und effiziente Technologien spezialisiert sind und"
+        "keyword": "Biotechnologie",
+        "context": "Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie",
+        "tag": "other"
       }
     ],
     "sdg12_matches_count": 2,
@@ -2903,18 +3358,21 @@
     "sdg3_matches": [
       {
         "keyword": "Medizin",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie",
+        "tag": "other"
       },
       {
         "keyword": "Gesundheitswirtschaft",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft",
+        "tag": "other"
       }
     ],
     "sdg3_matches_count": 2,
     "sdg4_matches": [
       {
         "keyword": "lernen",
-        "context": "Inspiration und Vernetzung. Hier arbeiten, forschen und lernen über 3.500 Menschen in mehr als 150 etablierten Unternehmen"
+        "context": "Inspiration und Vernetzung. Hier arbeiten, forschen und lernen über 3.500 Menschen in mehr als 150 etablierten Unternehmen",
+        "tag": "p"
       }
     ],
     "sdg4_matches_count": 1,
@@ -2924,36 +3382,44 @@
     "sdg6_matches_count": 0,
     "sdg7_matches": [
       {
-        "keyword": "Energie",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft"
-      },
-      {
         "keyword": "Energiewende",
-        "context": "Das Reallabor der Energiewende \n Der EUREF-Campus Berlin bietet viel Raum für Inspiration"
+        "context": "Das Reallabor der Energiewende",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "Startups und Forschungseinrichtungen an den Themen Energie, Mobilität und Nachhaltigkeit – kooperativ, offen"
+        "context": "Startups und Forschungseinrichtungen an den Themen Energie, Mobilität und Nachhaltigkeit – kooperativ, offen",
+        "tag": "p"
       },
       {
         "keyword": "Energieversorgung",
-        "context": "für die smarte Stadt der Zukunft. Mit klimaneutraler Energieversorgung, einem intelligenten Energienetz, energieeffizienten"
+        "context": "für die smarte Stadt der Zukunft. Mit klimaneutraler Energieversorgung, einem intelligenten Energienetz, energieeffizienten",
+        "tag": "p"
       },
       {
         "keyword": "Energienetz",
-        "context": "klimaneutraler Energieversorgung, einem intelligenten Energienetz, energieeffizienten Gebäuden, einer Erprobungsplattform"
+        "context": "klimaneutraler Energieversorgung, einem intelligenten Energienetz, energieeffizienten Gebäuden, einer Erprobungsplattform",
+        "tag": "p"
       },
       {
         "keyword": "energieeffizienten",
-        "context": "Energieversorgung, einem intelligenten Energienetz, energieeffizienten Gebäuden, einer Erprobungsplattform für Elektromobilität"
+        "context": "Energieversorgung, einem intelligenten Energienetz, energieeffizienten Gebäuden, einer Erprobungsplattform für Elektromobilität",
+        "tag": "p"
       },
       {
         "keyword": "Energiewende",
-        "context": "Gasometer tagtäglich der Beweis erbracht, dass die Energiewende machbar und finanzierbar ist.  \n Dieser ökologisch"
+        "context": "Gasometer tagtäglich der Beweis erbracht, dass die Energiewende machbar und finanzierbar ist.",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
+      },
+      {
+        "keyword": "Energie",
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft",
+        "tag": "other"
       }
     ],
     "sdg7_matches_count": 8,
@@ -2961,24 +3427,29 @@
     "sdg8_matches_count": 0,
     "sdg9_matches": [
       {
-        "keyword": "Mobilität",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie"
-      },
-      {
-        "keyword": "Automatisierung",
-        "context": "Umwelttechnologie \n Medien & Kreativwirtschaft \n IT & Automatisierung"
-      },
-      {
         "keyword": "Forschungseinrichtungen",
-        "context": "Deutsche Bahn und Schneider Electric), Startups und Forschungseinrichtungen an den Themen Energie, Mobilität und Nachhaltigkeit"
+        "context": "Deutsche Bahn und Schneider Electric), Startups und Forschungseinrichtungen an den Themen Energie, Mobilität und Nachhaltigkeit",
+        "tag": "p"
       },
       {
         "keyword": "Mobilität",
-        "context": "und Forschungseinrichtungen an den Themen Energie, Mobilität und Nachhaltigkeit – kooperativ, offen und gemeinsam."
+        "context": "und Forschungseinrichtungen an den Themen Energie, Mobilität und Nachhaltigkeit – kooperativ, offen und gemeinsam.",
+        "tag": "p"
       },
       {
         "keyword": "Forschungsprojekten",
-        "context": "Erprobungsplattform für Elektromobilität und zahlreichen Forschungsprojekten wird rund um den Gasometer tagtäglich der Beweis erbracht,"
+        "context": "Erprobungsplattform für Elektromobilität und zahlreichen Forschungsprojekten wird rund um den Gasometer tagtäglich der Beweis erbracht,",
+        "tag": "p"
+      },
+      {
+        "keyword": "Mobilität",
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie",
+        "tag": "other"
+      },
+      {
+        "keyword": "Automatisierung",
+        "context": "Umwelttechnologie \n Medien & Kreativwirtschaft \n IT & Automatisierung",
+        "tag": "other"
       }
     ],
     "sdg9_matches_count": 5,
@@ -2986,50 +3457,60 @@
     "sdg10_matches_count": 0,
     "sdg11_matches": [
       {
-        "keyword": "Verkehrstechnik",
-        "context": "10829 Berlin                                 \n \n   \n \n Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie-"
-      },
-      {
-        "keyword": "Mobilität",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie"
-      },
-      {
         "keyword": "Electric",
-        "context": "Unternehmen (u. a. Cisco, Deutsche Bahn und Schneider Electric), Startups und Forschungseinrichtungen an den Themen"
+        "context": "Unternehmen (u. a. Cisco, Deutsche Bahn und Schneider Electric), Startups und Forschungseinrichtungen an den Themen",
+        "tag": "p"
       },
       {
         "keyword": "Mobilität",
-        "context": "und Forschungseinrichtungen an den Themen Energie, Mobilität und Nachhaltigkeit – kooperativ, offen und gemeinsam."
+        "context": "und Forschungseinrichtungen an den Themen Energie, Mobilität und Nachhaltigkeit – kooperativ, offen und gemeinsam.",
+        "tag": "p"
       },
       {
         "keyword": "Community",
-        "context": "und zahlreiche Partnerschaften entwickelt die EUREF-Community mitten in Berlin gemeinsam Lösungen für die smarte"
+        "context": "und zahlreiche Partnerschaften entwickelt die EUREF-Community mitten in Berlin gemeinsam Lösungen für die smarte",
+        "tag": "p"
       },
       {
         "keyword": "Stadt",
-        "context": "mitten in Berlin gemeinsam Lösungen für die smarte Stadt der Zukunft. Mit klimaneutraler Energieversorgung,"
+        "context": "mitten in Berlin gemeinsam Lösungen für die smarte Stadt der Zukunft. Mit klimaneutraler Energieversorgung,",
+        "tag": "p"
       },
       {
         "keyword": "Elektromobilität",
-        "context": "energieeffizienten Gebäuden, einer Erprobungsplattform für Elektromobilität und zahlreichen Forschungsprojekten wird rund um den"
+        "context": "energieeffizienten Gebäuden, einer Erprobungsplattform für Elektromobilität und zahlreichen Forschungsprojekten wird rund um den",
+        "tag": "p"
+      },
+      {
+        "keyword": "Verkehrstechnik",
+        "context": "10829 Berlin                                 \n \n   \n \n Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie-",
+        "tag": "other"
+      },
+      {
+        "keyword": "Mobilität",
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Energie- & Umwelttechnologie",
+        "tag": "other"
       }
     ],
     "sdg11_matches_count": 7,
     "sdg12_matches": [
       {
         "keyword": "Nachhaltigkeit",
-        "context": "Forschungseinrichtungen an den Themen Energie, Mobilität und Nachhaltigkeit – kooperativ, offen und gemeinsam. Durch eine intensive"
+        "context": "Forschungseinrichtungen an den Themen Energie, Mobilität und Nachhaltigkeit – kooperativ, offen und gemeinsam. Durch eine intensive",
+        "tag": "p"
       },
       {
         "keyword": "nachhaltige",
-        "context": "finanzierbar ist.  \n Dieser ökologisch und ökonomisch nachhaltige Standort erfüllt bereits seit 2014 die CO2-Klimaziele"
+        "context": "Dieser ökologisch und ökonomisch nachhaltige Standort erfüllt bereits seit 2014 die CO2-Klimaziele",
+        "tag": "p"
       }
     ],
     "sdg12_matches_count": 2,
     "sdg13_matches": [
       {
         "keyword": "CO2",
-        "context": "nachhaltige Standort erfüllt bereits seit 2014 die CO2-Klimaziele der Bundesregierung für das Jahr 2050."
+        "context": "nachhaltige Standort erfüllt bereits seit 2014 die CO2-Klimaziele der Bundesregierung für das Jahr 2050.",
+        "tag": "p"
       }
     ],
     "sdg13_matches_count": 1,
@@ -3063,7 +3544,8 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 1,
@@ -3101,18 +3583,21 @@
     "sdg3_matches": [
       {
         "keyword": "Medizin",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie",
+        "tag": "other"
       },
       {
         "keyword": "Gesundheitswirtschaft",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie",
+        "tag": "other"
       }
     ],
     "sdg3_matches_count": 2,
     "sdg4_matches": [
       {
         "keyword": "bilden",
-        "context": "dieses Zentrum über 150 Firmen angesiedelt. Zusammen bilden sie den Technologie-Park Berlin Humboldthain. Dieser"
+        "context": "dieses Zentrum über 150 Firmen angesiedelt. Zusammen bilden sie den Technologie-Park Berlin Humboldthain. Dieser",
+        "tag": "p"
       }
     ],
     "sdg4_matches_count": 1,
@@ -3123,11 +3608,13 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft",
+        "tag": "other"
       }
     ],
     "sdg7_matches_count": 2,
@@ -3136,11 +3623,13 @@
     "sdg9_matches": [
       {
         "keyword": "Mobilität",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life Science &"
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life Science &",
+        "tag": "other"
       },
       {
         "keyword": "Automatisierung",
-        "context": "Medien & Kreativwirtschaft \n Photonik & Optik \n IT & Automatisierung \n Mikrosysteme & Materialien"
+        "context": "Medien & Kreativwirtschaft \n Photonik & Optik \n IT & Automatisierung \n Mikrosysteme & Materialien",
+        "tag": "other"
       }
     ],
     "sdg9_matches_count": 2,
@@ -3148,23 +3637,27 @@
     "sdg10_matches_count": 0,
     "sdg11_matches": [
       {
+        "keyword": "Stadt",
+        "context": "Humboldthain. Dieser Campus, mitten im Zentrum der Stadt, hat die Technologien der Zukunft fest im Blick.",
+        "tag": "p"
+      },
+      {
         "keyword": "Verkehrstechnik",
-        "context": "13355 Berlin                                 \n \n   \n \n Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life"
+        "context": "13355 Berlin                                 \n \n   \n \n Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life",
+        "tag": "other"
       },
       {
         "keyword": "Mobilität",
-        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life Science &"
-      },
-      {
-        "keyword": "Stadt",
-        "context": "Humboldthain. Dieser Campus, mitten im Zentrum der Stadt, hat die Technologien der Zukunft fest im Blick."
+        "context": "Verkehrstechnik & Mobilität \n Medizin & Gesundheitswirtschaft \n Life Science &",
+        "tag": "other"
       }
     ],
     "sdg11_matches_count": 3,
     "sdg12_matches": [
       {
         "keyword": "Biotechnologie",
-        "context": "Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft"
+        "context": "Medizin & Gesundheitswirtschaft \n Life Science & Biotechnologie \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft",
+        "tag": "other"
       }
     ],
     "sdg12_matches_count": 1,
@@ -3194,11 +3687,13 @@
     "sdg4_matches": [
       {
         "keyword": "Hochschule",
-        "context": "Wissenschaft und Design geschätzt und genutzt wird. Mit der Hochschule für Technik und Wirtschaft (HTW Berlin) als größte"
+        "context": "Wissenschaft und Design geschätzt und genutzt wird. Mit der Hochschule für Technik und Wirtschaft (HTW Berlin) als größte",
+        "tag": "p"
       },
       {
         "keyword": "Hochschule",
-        "context": "Technik und Wirtschaft (HTW Berlin) als größte Berliner Hochschule für Angewandte Wissenschaften befindet sich ein bedeutender"
+        "context": "Technik und Wirtschaft (HTW Berlin) als größte Berliner Hochschule für Angewandte Wissenschaften befindet sich ein bedeutender",
+        "tag": "p"
       }
     ],
     "sdg4_matches_count": 2,
@@ -3209,11 +3704,13 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       },
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft",
+        "tag": "other"
       }
     ],
     "sdg7_matches_count": 2,
@@ -3222,11 +3719,13 @@
     "sdg9_matches": [
       {
         "keyword": "Mobilität",
-        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft"
+        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft",
+        "tag": "other"
       },
       {
         "keyword": "Automatisierung",
-        "context": "Medien & Kreativwirtschaft \n Photonik & Optik \n IT & Automatisierung \n Mikrosysteme & Materialien"
+        "context": "Medien & Kreativwirtschaft \n Photonik & Optik \n IT & Automatisierung \n Mikrosysteme & Materialien",
+        "tag": "other"
       }
     ],
     "sdg9_matches_count": 2,
@@ -3235,11 +3734,13 @@
     "sdg11_matches": [
       {
         "keyword": "Verkehrstechnik",
-        "context": "12459 Berlin                                 \n \n   \n \n Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n Medien"
+        "context": "12459 Berlin                                 \n \n   \n \n Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n Medien",
+        "tag": "other"
       },
       {
         "keyword": "Mobilität",
-        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft"
+        "context": "Verkehrstechnik & Mobilität \n Energie- & Umwelttechnologie \n Medien & Kreativwirtschaft",
+        "tag": "other"
       }
     ],
     "sdg11_matches_count": 2,
@@ -3277,7 +3778,8 @@
     "sdg7_matches": [
       {
         "keyword": "Energie",
-        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms"
+        "context": "ein Projekt der Senatsverwaltung für Wirtschaft, Energie und Betriebe  im Rahmen des Wirtschaftsförderprogramms",
+        "tag": "p"
       }
     ],
     "sdg7_matches_count": 1,

@@ -81,30 +81,47 @@ def run_pipeline(domain, url, reset):
             "Searching for keywords in scraped HTML for", url, end=" ... ", flush=True
         )
 
-        # Convert HTML to text
+        # Prepare text extraction from HTML
         soup = BeautifulSoup(html, "html.parser")
-        text = soup.get_text(separator=" ").strip()
+        word_count = len(soup.get_text(separator=" ", strip=True).split())
 
-        # Search for keywords in string
+        def find_keywords_in_text(text, matches, tag):
+            # Search for keywords in string
+            for goal, pattern in regex_patterns.items():
+                for match in pattern.finditer(text):
+                    matches[goal] = matches.get(goal, [])
+                    matches[goal].append(
+                        {
+                            "keyword": match.group(),
+                            "context": get_context(
+                                text, start=match.start(), end=match.end(), context=50
+                            ),
+                            "tag": tag,
+                        }
+                    )
+
+        # Search for matches in the HTML
         matches = {}
-        for goal, pattern in regex_patterns.items():
-            for match in pattern.finditer(text):
-                matches[goal] = matches.get(goal, [])
-                matches[goal].append(
-                    {
-                        "keyword": match.group(),
-                        "context": get_context(
-                            text, start=match.start(), end=match.end(), context=50
-                        ),
-                    }
+        SEARCH_TAGS = ["h1", "h2", "h3", "h4", "h5", "h6", "p"]
+        for tag in SEARCH_TAGS:
+            for item in soup.find_all(tag):
+                find_keywords_in_text(
+                    item.get_text(separator=" ").strip(), matches, tag
                 )
+                # Remove the item, so that we avoid duplicates (if one tag
+                # is nested inside another, for example)
+                item.decompose()
+
+        find_keywords_in_text(
+            soup.get_text(separator=" ").strip(), matches, tag="other"
+        )
 
         # Write matches to database
         db.insert(
             domain=domain,
             url=url,
             matches=json.dumps(matches),
-            word_count=len(text.split()),
+            word_count=word_count,
         ).execute()
 
         print("Done")
