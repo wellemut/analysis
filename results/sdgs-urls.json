@@ -2591,8 +2591,14 @@
     "domain": "www.sensefinity.com",
     "url": "https://www.sensefinity.com/sdg12",
     "word_count": 196,
-    "sdgs_matches": [],
-    "sdgs_matches_count": 0,
+    "sdgs_matches": [
+      {
+        "keyword": "SDG12",
+        "context": "SDG12 — The Internet of Cargo The IoT Transformation Company",
+        "tag": "title"
+      }
+    ],
+    "sdgs_matches_count": 1,
     "sdg1_matches": [],
     "sdg1_matches_count": 0,
     "sdg2_matches": [
@@ -2713,8 +2719,14 @@
     "domain": "www.sensefinity.com",
     "url": "https://www.sensefinity.com/sdg2",
     "word_count": 196,
-    "sdgs_matches": [],
-    "sdgs_matches_count": 0,
+    "sdgs_matches": [
+      {
+        "keyword": "SDG2",
+        "context": "SDG2 — The Internet of Cargo The IoT Transformation Company",
+        "tag": "title"
+      }
+    ],
+    "sdgs_matches_count": 1,
     "sdg1_matches": [],
     "sdg1_matches_count": 0,
     "sdg2_matches": [
