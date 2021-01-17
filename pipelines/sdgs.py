@@ -4,8 +4,7 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from database import Database, Column, Field, Order
 from helpers.get_scraped_database import get_scraped_database
-from helpers.get_sdg_regex_patterns import get_sdg_regex_patterns
-from helpers.get_context import get_context
+from helpers.find_sdg_keywords_in_text import find_sdg_keywords_in_text
 from helpers.save_result import save_result
 
 PIPELINE = Path(__file__).stem
@@ -58,9 +57,6 @@ def run_pipeline(domain, url, reset):
     # Fetch analyzed URLs
     analyzed_urls = db.select("url").fetch_values()
 
-    # Load regex patterns
-    regex_patterns = get_sdg_regex_patterns()
-
     # Analyze each HTML snippet in database
     for scraped_record_id in ids_of_scraped_records:
         scraped_record = (
@@ -85,21 +81,6 @@ def run_pipeline(domain, url, reset):
         soup = BeautifulSoup(html, "html.parser")
         word_count = len(soup.get_text(separator=" ", strip=True).split())
 
-        def find_keywords_in_text(text, matches, tag):
-            # Search for keywords in string
-            for goal, pattern in regex_patterns.items():
-                for match in pattern.finditer(text):
-                    matches[goal] = matches.get(goal, [])
-                    matches[goal].append(
-                        {
-                            "keyword": match.group(),
-                            "context": get_context(
-                                text, start=match.start(), end=match.end(), context=50
-                            ),
-                            "tag": tag,
-                        }
-                    )
-
         # Search for matches in the HTML
         # After an item is parsed/searced, we remove the item with decompose(),
         # so that we avoid duplicates (if one tag is nested inside another, for
@@ -108,13 +89,15 @@ def run_pipeline(domain, url, reset):
 
         # Search page title
         title = soup.head.find("title")
-        find_keywords_in_text(title.get_text(separator=" ").strip(), matches, "title")
+        find_sdg_keywords_in_text(
+            title.get_text(separator=" ").strip(), matches, tag="title"
+        )
         title.decompose()
 
         # Search page meta description
         description = soup.head.select_one('meta[name="description"]')
-        find_keywords_in_text(
-            description["content"].strip(), matches, "meta description"
+        find_sdg_keywords_in_text(
+            description["content"].strip(), matches, tag="meta description"
         )
         description.decompose()
 
@@ -130,12 +113,12 @@ def run_pipeline(domain, url, reset):
         ]
         for tag in SEARCH_TAGS:
             for item in soup.body.find_all(tag):
-                find_keywords_in_text(
+                find_sdg_keywords_in_text(
                     item.get_text(separator=" ").strip(), matches, tag
                 )
                 item.decompose()
 
-        find_keywords_in_text(
+        find_sdg_keywords_in_text(
             soup.get_text(separator=" ").strip(), matches, tag="other"
         )
 
