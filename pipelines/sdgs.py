@@ -101,15 +101,38 @@ def run_pipeline(domain, url, reset):
                     )
 
         # Search for matches in the HTML
+        # After an item is parsed/searced, we remove the item with decompose(),
+        # so that we avoid duplicates (if one tag is nested inside another, for
+        # example)
         matches = {}
-        SEARCH_TAGS = ["h1", "h2", "h3", "h4", "h5", "h6", "p"]
+
+        # Search page title
+        title = soup.head.find("title")
+        find_keywords_in_text(title.get_text(separator=" ").strip(), matches, "title")
+        title.decompose()
+
+        # Search page meta description
+        description = soup.head.select_one('meta[name="description"]')
+        find_keywords_in_text(
+            description["content"].strip(), matches, "meta description"
+        )
+        description.decompose()
+
+        # Search body
+        SEARCH_TAGS = [
+            "h1",
+            "h2",
+            "h3",
+            "h4",
+            "h5",
+            "h6",
+            "p",
+        ]
         for tag in SEARCH_TAGS:
-            for item in soup.find_all(tag):
+            for item in soup.body.find_all(tag):
                 find_keywords_in_text(
                     item.get_text(separator=" ").strip(), matches, tag
                 )
-                # Remove the item, so that we avoid duplicates (if one tag
-                # is nested inside another, for example)
                 item.decompose()
 
         find_keywords_in_text(
