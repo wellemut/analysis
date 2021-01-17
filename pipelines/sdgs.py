@@ -1,5 +1,6 @@
 from pathlib import Path
 import json
+from pymaybe import maybe
 from bs4 import BeautifulSoup
 import pandas as pd
 from database import Database, Column, Field, Order
@@ -88,18 +89,22 @@ def run_pipeline(domain, url, reset):
         matches = {}
 
         # Search page title
-        title = soup.head.find("title")
-        find_sdg_keywords_in_text(
-            title.get_text(separator=" ").strip(), matches, tag="title"
-        )
-        title.decompose()
+        title = maybe(soup.head).find("title").or_none()
+        if title:
+            find_sdg_keywords_in_text(
+                title.get_text(separator=" ").strip(), matches, tag="title"
+            )
+            title.decompose()
 
         # Search page meta description
-        description = soup.head.select_one('meta[name="description"]')
-        find_sdg_keywords_in_text(
-            description["content"].strip(), matches, tag="meta description"
-        )
-        description.decompose()
+        description = maybe(soup.head).select_one('meta[name="description"]').or_none()
+        if description:
+            find_sdg_keywords_in_text(
+                description.get("content", "").strip(),
+                matches,
+                tag="meta description",
+            )
+            description.decompose()
 
         # Search body
         SEARCH_TAGS = [
@@ -112,7 +117,7 @@ def run_pipeline(domain, url, reset):
             "p",
         ]
         for tag in SEARCH_TAGS:
-            for item in soup.body.find_all(tag):
+            for item in maybe(soup.body).find_all(tag).or_else([]):
                 find_sdg_keywords_in_text(
                     item.get_text(separator=" ").strip(), matches, tag
                 )

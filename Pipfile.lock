@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "0d8ac09058e21db7588006ba905b1ecc76ee78ae5a50b5625535f81b713315df"
+            "sha256": "0177191a24c1d5253f0d3f2c3f22eacdd64cef368559c196645ae353ef43f052"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -33,12 +33,20 @@
             "index": "pypi",
             "version": "==4.9.3"
         },
-        "pypika": {
+        "pymaybe": {
             "hashes": [
-                "sha256:5c7d8fc2c254fb805f2a58d296f45cd97c31434e10b5f87bc964046b187e8a42"
+                "sha256:01d0f71b98e1c155ecfecd9db44ce49f37ae374b5cb8f1d27c0ee00c3d7aa4dd",
+                "sha256:77ed1602e1b9e8b05dccd0d84891ede4ee2004728170e52af7f9c08d4c62378c"
             ],
             "index": "pypi",
-            "version": "==0.47.1"
+            "version": "==0.1.6"
+        },
+        "pypika": {
+            "hashes": [
+                "sha256:f02fbfd2f70b1cee0f1ee8d750c2134912da776280d350a3c7491510d5566f1b"
+            ],
+            "index": "pypi",
+            "version": "==0.47.3"
         },
         "soupsieve": {
             "hashes": [

@@ -9,6 +9,7 @@ verify_ssl = true
 beautifulsoup4 = "*"
 pypika = "*"
 argparse = "*"
+pymaybe = "*"
 
 [requires]
 python_version = "3.8"
