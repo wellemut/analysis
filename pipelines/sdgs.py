@@ -72,6 +72,7 @@ def run_pipeline(domain, url, reset):
 
         # If this URL has already been analyzed, let's skip it.
         if analyzed_urls.count(url) >= 1:
+            print("Skipping", url, "...", "Already done")
             continue
 
         print(
@@ -137,27 +138,42 @@ def run_pipeline(domain, url, reset):
 
         print("Done")
 
+    print("Exporting to dataframe...")
+
     # Combine by domain
     df = db.to_pandas_dataframe("domain", "url", "matches", "word_count")
 
-    # Get and count matches for each SDG of each row
+    # Generate pandas dataframe for matches object
+    df_matches = pd.json_normalize(df.matches.apply(json.loads))
+
+    # Rename columns in matches dataframe: sdg8 -> sdg8_matches
+    df_matches = df_matches.rename(columns=lambda name: name + "_matches")
+
+    # Count matches for each SDG of each row
+    for column in df_matches.columns:
+        df_matches[column + "_count"] = (
+            df_matches[column].str.len().fillna(0).astype(int)
+        )
+
+    # Reorder the columns
+    columns = []
     sdg_keys = list("sdg" + str(i) for i in range(1, 18))
     for key in ["sdgs", *sdg_keys]:
-        df[key + "_matches"] = df.apply(
-            lambda row: json.loads(row["matches"]).get(key, []), axis=1
-        )
-        df[key + "_matches_count"] = df.apply(
-            lambda row: len(row[key + "_matches"]), axis=1
-        )
+        columns.append(key + "_matches_count")
+        columns.append(key + "_matches")
+    df_matches = df_matches[columns]
 
     # Drop matches column
     df = df.drop(columns=["matches"])
+
+    # Combine our domain and URLs with our matches
+    df = pd.concat([df, df_matches], axis=1)
 
     # Sort
     df = df.sort_values(by=["domain", "url"])
 
     # Save as JSON
-    save_result(PIPELINE, "urls", df.to_dict(orient="records"))
+    save_result(PIPELINE, "urls", df)
 
     # Aggregate by domain
     df = df.groupby(by=["domain"]).apply(aggregate_rows_by_domain)
@@ -167,4 +183,4 @@ def run_pipeline(domain, url, reset):
     df = df.sort_values(by=["domain"])
 
     # Save as JSON
-    save_result(PIPELINE, "domains", df.to_dict(orient="records"))
+    save_result(PIPELINE, "domains", df)
