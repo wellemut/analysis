@@ -51,18 +51,22 @@ class Database:
         finally:
             connection.close()
 
+    @contextmanager
+    def start_transaction(self):
+        with self.connect() as connection:
+            yield connection
+
     # Execute a SQL query. Return true.
     def execute(self, query):
-        with self.connect() as connection:
-            connection.cursor().execute(query.get_sql())
-            connection.commit()
+        with self.start_transaction() as transaction:
+            transaction.cursor().execute(query.get_sql())
+            transaction.commit()
             return True
 
-        # connection = self.connect()
-        # connection.cursor.execute(query.get_sql())
-        # connection.commit()
-        # connection.close()
-        # print(query.get_sql())
+    # Execute a SQL query within a transaction, without committing. Return true.
+    def execute_in_transaction(self, transaction=None, query=None):
+        transaction.cursor().execute(query.get_sql())
+        return True
 
     # Fetch and return all results for the SQL query.
     def fetch_all(self, query):

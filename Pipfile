@@ -10,6 +10,7 @@ beautifulsoup4 = "*"
 pypika = "*"
 argparse = "*"
 pymaybe = "*"
+filetype = "*"
 
 [requires]
 python_version = "3.8"

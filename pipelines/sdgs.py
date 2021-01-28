@@ -5,20 +5,11 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from database import Database, Column, Field, Order
 from helpers.get_scraped_database import get_scraped_database
+from helpers.is_binary_string import is_binary_string
 from helpers.find_sdg_keywords_in_text import find_sdg_keywords_in_text
 from helpers.save_result import save_result
 
 PIPELINE = Path(__file__).stem
-
-
-def aggregate_rows_by_domain(row):
-    d = {}
-
-    for column in row.columns:
-        if column.endswith("_matches_count") or column == "word_count":
-            d[column] = row[column].sum()
-
-    return pd.Series(d)
 
 
 def run_pipeline(domain, url, reset):
@@ -28,11 +19,17 @@ def run_pipeline(domain, url, reset):
         Column("id", "integer", nullable=False),
         Column("domain", "text", nullable=False),
         Column("url", "text", nullable=False),
-        Column("matches", "JSON"),
-        Column("word_count", "integer", nullable=False),
+        Column("sdg", "text", nullable=False),
+        Column("keyword", "text", nullable=False),
+        Column("context", "text", nullable=False),
+        Column("tag", "text", nullable=False),
+        Column("url_word_count", "integer", nullable=False),
         Column("CHECK(domain <> '')"),
         Column("CHECK(url <> '')"),
-    ).if_not_exists().unique("url").primary_key("id").execute()
+        Column("CHECK(sdg <> '')"),
+        Column("CHECK(keyword <> '')"),
+        Column("CHECK(context <> '')"),
+    ).if_not_exists().primary_key("id").execute()
 
     # Clear records for domain/url
     if reset:
@@ -56,7 +53,7 @@ def run_pipeline(domain, url, reset):
     )
 
     # Fetch analyzed URLs
-    analyzed_urls = db.select("url").fetch_values()
+    analyzed_urls = db.select("url").distinct().fetch_values()
 
     # Analyze each HTML snippet in database
     for scraped_record_id in ids_of_scraped_records:
@@ -75,6 +72,11 @@ def run_pipeline(domain, url, reset):
             print("Skipping", url, "...", "Already done")
             continue
 
+        # If this URL contains binary text, let's skip it
+        if is_binary_string(html):
+            print("Skipping", url, "...", "Binary file detected")
+            continue
+
         print(
             "Searching for keywords in scraped HTML for", url, end=" ... ", flush=True
         )
@@ -87,23 +89,26 @@ def run_pipeline(domain, url, reset):
         # After an item is parsed/searced, we remove the item with decompose(),
         # so that we avoid duplicates (if one tag is nested inside another, for
         # example)
-        matches = {}
+        matches = []
 
         # Search page title
         title = maybe(soup.head).find("title").or_none()
         if title:
-            find_sdg_keywords_in_text(
-                title.get_text(separator=" ").strip(), matches, tag="title"
+            matches.extend(
+                find_sdg_keywords_in_text(
+                    title.get_text(separator=" ").strip(), tag="title"
+                )
             )
             title.decompose()
 
         # Search page meta description
         description = maybe(soup.head).select_one('meta[name="description"]').or_none()
         if description:
-            find_sdg_keywords_in_text(
-                description.get("content", "").strip(),
-                matches,
-                tag="meta description",
+            matches.extend(
+                find_sdg_keywords_in_text(
+                    description.get("content", "").strip(),
+                    tag="meta description",
+                )
             )
             description.decompose()
 
@@ -119,61 +124,63 @@ def run_pipeline(domain, url, reset):
         ]
         for tag in SEARCH_TAGS:
             for item in maybe(soup.body).find_all(tag).or_else([]):
-                find_sdg_keywords_in_text(
-                    item.get_text(separator=" ").strip(), matches, tag
+                matches.extend(
+                    find_sdg_keywords_in_text(item.get_text(separator=" ").strip(), tag)
                 )
                 item.decompose()
 
-        find_sdg_keywords_in_text(
-            soup.get_text(separator=" ").strip(), matches, tag="other"
+        matches.extend(
+            find_sdg_keywords_in_text(soup.get_text(separator=" ").strip(), tag="other")
         )
 
         # Write matches to database
-        db.insert(
-            domain=domain,
-            url=url,
-            matches=json.dumps(matches),
-            word_count=word_count,
-        ).execute()
+        with db.start_transaction() as transaction:
+            for match in matches:
+                db.insert(
+                    domain=domain,
+                    url=url,
+                    sdg=match["sdg"],
+                    keyword=match["keyword"],
+                    context=match["context"],
+                    tag=match["tag"],
+                    url_word_count=word_count,
+                ).execute_in_transaction(transaction)
+
+            transaction.commit()
 
         print("Done")
 
     print("Exporting to dataframe...")
 
-    # Combine by domain
-    df = db.to_pandas_dataframe("domain", "url", "matches", "word_count")
+    # Get data
+    df = db.to_pandas_dataframe("domain", "url", "sdg", "url_word_count")
 
-    # Generate pandas dataframe for matches object
-    df_matches = pd.json_normalize(df.matches.apply(json.loads))
+    # Prepare aggregating by URL
+    def aggregate_rows_by_url(row):
+        d = {}
 
-    # Rename columns in matches dataframe: sdg8 -> sdg8_matches
-    df_matches = df_matches.rename(columns=lambda name: name + "_matches")
+        d["word_count"] = row["url_word_count"].max()
 
-    # Count matches for each SDG of each row
-    for column in df_matches.columns:
-        df_matches[column + "_count"] = (
-            df_matches[column].str.len().fillna(0).astype(int)
-        )
+        # Count SDG matches
+        sdg_keys = list("sdg" + str(i) for i in range(1, 18))
+        for key in ["sdgs", *sdg_keys]:
+            d[key + "_matches_count"] = (row["sdg"] == key).sum()
 
-    # Reorder the columns
-    columns = []
-    sdg_keys = list("sdg" + str(i) for i in range(1, 18))
-    for key in ["sdgs", *sdg_keys]:
-        columns.append(key + "_matches_count")
-        columns.append(key + "_matches")
-    df_matches = df_matches[columns]
+        return pd.Series(d)
 
-    # Drop matches column
-    df = df.drop(columns=["matches"])
+    # Aggregate by URL
+    df = df.groupby(by=["domain", "url"]).apply(aggregate_rows_by_url)
+    df = df.reset_index()
 
-    # Combine our domain and URLs with our matches
-    df = pd.concat([df, df_matches], axis=1)
+    # Prepare aggregating by domain
+    def aggregate_rows_by_domain(row):
+        d = {}
 
-    # Sort
-    df = df.sort_values(by=["domain", "url"])
+        for column in row.columns:
+            if column.endswith("_matches_count") or column == "word_count":
+                d[column] = row[column].sum()
 
-    # Save as JSON
-    save_result(PIPELINE, "urls", df)
+        return pd.Series(d)
 
     # Aggregate by domain
     df = df.groupby(by=["domain"]).apply(aggregate_rows_by_domain)
@@ -183,4 +190,4 @@ def run_pipeline(domain, url, reset):
     df = df.sort_values(by=["domain"])
 
     # Save as JSON
-    save_result(PIPELINE, "domains", df)
+    save_result(PIPELINE, df)

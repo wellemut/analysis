@@ -21,6 +21,9 @@ class QueryBuilder:
     def execute(self):
         return self.database.execute(self)
 
+    def execute_in_transaction(self, transaction):
+        return self.database.execute_in_transaction(transaction=transaction, query=self)
+
     def fetch_all(self):
         return self.database.fetch_all(self)
 

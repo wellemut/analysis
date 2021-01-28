@@ -5,13 +5,15 @@ from helpers.get_context import get_context
 regex_patterns = get_sdg_regex_patterns()
 
 
-def find_sdg_keywords_in_text(text, matches, tag):
+def find_sdg_keywords_in_text(text, tag):
+    matches = []
+
     # Search for keywords in string
     for goal, pattern in regex_patterns.items():
         for match in pattern.finditer(text):
-            matches[goal] = matches.get(goal, [])
-            matches[goal].append(
+            matches.append(
                 {
+                    "sdg": goal,
                     "keyword": match.group(),
                     "context": get_context(
                         text, start=match.start(), end=match.end(), context=50
@@ -19,3 +21,5 @@ def find_sdg_keywords_in_text(text, matches, tag):
                     "tag": tag,
                 }
             )
+
+    return matches

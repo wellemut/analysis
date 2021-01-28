@@ -5,8 +5,8 @@ import json
 RESULTS_DIR = Path(os.path.join(__file__, "..", "..", "results")).resolve()
 
 # Save the dictionary as JSON as a result file
-def save_result(pipeline, name, df):
-    filename = os.path.join(RESULTS_DIR, pipeline + "-" + name + ".json")
+def save_result(pipeline, df):
+    filename = os.path.join(RESULTS_DIR, pipeline + ".json")
 
     print("Exporting results:", os.path.basename(filename), end=" ... ", flush=True)
 
