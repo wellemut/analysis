@@ -44,6 +44,24 @@ def run_pipeline(domain, url, reset):
         "CREATE INDEX IF NOT EXISTS matches_url_id_index ON matches (url_id)"
     )
 
+    # Create view: combination of urls and matches
+    db.execute_sql(
+        "CREATE VIEW IF NOT EXISTS results AS {query}".format(
+            query=db.table("urls")
+            .select(
+                "domain",
+                "url",
+                "word_count",
+                Table("matches").sdg,
+                Table("matches").keyword,
+                Table("matches").context,
+            )
+            .join(Table("matches"))
+            .on(Table("urls").id == Table("matches").url_id)
+            .get_sql()
+        )
+    )
+
     # Clear records for domain/url
     if reset:
         db.table("urls").delete().where(
@@ -175,13 +193,7 @@ def run_pipeline(domain, url, reset):
     print("Exporting to dataframe...")
 
     # Get data
-    df = (
-        db.table("urls")
-        .join(Table("matches"))
-        .on(Table("urls").id == Table("matches").url_id)
-        .select("domain", "url", "word_count", Table("matches").sdg)
-        .to_dataframe()
-    )
+    df = db.view("results").select("domain", "url", "word_count", "sdg").to_dataframe()
 
     # Prepare aggregating by URL
     def aggregate_rows_by_url(row):

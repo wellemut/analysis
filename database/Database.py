@@ -21,6 +21,9 @@ class Database:
     def table(self, name):
         return Table(database=self, name=name)
 
+    def view(self, *args, **kwargs):
+        return self.table(*args, **kwargs)
+
     @contextmanager
     def connect(self):
         try:
