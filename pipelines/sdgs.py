@@ -39,6 +39,11 @@ def run_pipeline(domain, url, reset):
         "id"
     ).if_not_exists().execute()
 
+    # Add index on foreign key matches.url_id
+    db.execute_sql(
+        "CREATE INDEX IF NOT EXISTS matches_url_id_index ON matches (url_id)"
+    )
+
     # Clear records for domain/url
     if reset:
         db.table("urls").delete().where(

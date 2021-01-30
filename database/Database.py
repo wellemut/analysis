@@ -35,6 +35,13 @@ class Database:
         with self.connect() as connection:
             yield connection
 
+    # Execute raw SQL. Return last inserted row ID, if available.
+    def execute_sql(self, sql):
+        with self.start_transaction() as transaction:
+            result = self.execute_sql_in_transaction(transaction=transaction, sql=sql)
+            transaction.commit()
+            return result
+
     # Execute a SQL query. Return last inserted row ID, if available.
     def execute(self, query):
         with self.start_transaction() as transaction:
@@ -45,8 +52,15 @@ class Database:
     # Execute a SQL query within a transaction, without committing.
     # Return last inserted row ID, if available.
     def execute_in_transaction(self, transaction=None, query=None):
+        return self.execute_sql_in_transaction(
+            transaction=transaction, sql=query.get_sql()
+        )
+
+    # Execute raw SQL within a transaction, without committing.
+    # Return last inserted row ID, if available.
+    def execute_sql_in_transaction(self, transaction=None, sql=None):
         cursor = transaction.cursor()
-        cursor.execute(query.get_sql())
+        cursor.execute(sql)
         return {"lastrowid": cursor.lastrowid}
 
     # Fetch and return all results for the SQL query.
