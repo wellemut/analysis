@@ -69,7 +69,7 @@ def run_pipeline(domain, url, reset):
     analyzed_urls = db.table("urls").select("url").fetch_values()
 
     # Analyze each HTML snippet in database
-    for index, scraped_record_id in enumerate(ids_of_scraped_records):
+    for index, scraped_record_id in enumerate(ids_of_scraped_records, start=1):
         scraped_record = (
             scraped_urls.select("id", "domain", "url", "html")
             .where(Field("id") == scraped_record_id)
