@@ -15,8 +15,12 @@ class QueryBuilder:
 
         return delegator
 
-    def get_sql(self):
-        return self.query.get_sql()
+    def get_sql(self, *args, **kwargs):
+        return self.query.get_sql(*args, **kwargs)
+
+    # Needed to support subqueries
+    def nodes_(self, *args, **kwargs):
+        return self.query.nodes_(*args, **kwargs)
 
     def execute(self):
         return self.database.execute(self)

@@ -62,6 +62,21 @@ def run_pipeline(domain, url, reset):
         )
     )
 
+    # Create view: URLs without any matches
+    db.execute_sql(
+        "CREATE VIEW IF NOT EXISTS urls_without_matches AS {query}".format(
+            query=db.table("urls")
+            .select(
+                "domain",
+                "url",
+            )
+            .where(
+                Table("urls").id.notin(db.table("matches").select("url_id").distinct())
+            )
+            .get_sql()
+        )
+    )
+
     # Clear records for domain/url
     if reset:
         db.table("urls").delete().where(
