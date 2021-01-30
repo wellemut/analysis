@@ -2,7 +2,7 @@ import os
 from pathlib import Path
 from contextlib import contextmanager
 import sqlite3
-from pypika import Table
+from .Table import Table
 from .QueryBuilder import QueryBuilder
 import pandas
 
@@ -11,42 +11,21 @@ DATABASES_FOLDER = Path(os.path.join(__file__, "..", "..", "databases")).resolve
 
 
 class Database:
-    def __init__(self, name, table="default"):
+    def __init__(self, name):
         self.name = name
-        self.table = Table(table)
 
     @property
     def file_path(self):
         return os.path.join(DATABASES_FOLDER, self.name + ".sqlite")
 
-    # def connect(self):
-    #     return sqlite3.connect(self.file_path)
-
-    # Start a new insertion query
-    def insert(self, **kwargs):
-        return (
-            QueryBuilder(self)
-            .into(self.table)
-            .columns(*kwargs.keys())
-            .insert(*kwargs.values())
-        )
-
-    # Start a new deletion query
-    def delete(self, *args, **kwargs):
-        return QueryBuilder(self).from_(self.table).delete(*args, **kwargs)
-
-    # Start a new select query
-    def select(self, *args, **kwargs):
-        return QueryBuilder(self).from_(self.table).select(*args, **kwargs)
-
-    # Create the table in the database with the given columns
-    def create(self, *args, **kwargs):
-        return QueryBuilder(self).create_table(self.table).columns(*args, **kwargs)
+    def table(self, name):
+        return Table(database=self, name=name)
 
     @contextmanager
     def connect(self):
         try:
             connection = sqlite3.connect(self.file_path)
+            connection.execute("PRAGMA foreign_keys = ON")
             yield connection
         finally:
             connection.close()
@@ -56,24 +35,27 @@ class Database:
         with self.connect() as connection:
             yield connection
 
-    # Execute a SQL query. Return true.
+    # Execute a SQL query. Return last inserted row ID, if available.
     def execute(self, query):
         with self.start_transaction() as transaction:
-            transaction.cursor().execute(query.get_sql())
+            result = self.execute_in_transaction(transaction=transaction, query=query)
             transaction.commit()
-            return True
+            return result
 
-    # Execute a SQL query within a transaction, without committing. Return true.
+    # Execute a SQL query within a transaction, without committing.
+    # Return last inserted row ID, if available.
     def execute_in_transaction(self, transaction=None, query=None):
-        transaction.cursor().execute(query.get_sql())
-        return True
+        cursor = transaction.cursor()
+        cursor.execute(query.get_sql())
+        return {"lastrowid": cursor.lastrowid}
 
     # Fetch and return all results for the SQL query.
     def fetch_all(self, query):
         with self.connect() as connection:
             connection.row_factory = sqlite3.Row
-            connection.cursor().execute(query.get_sql())
-            return connection.cursor().fetchall()
+            cursor = connection.cursor()
+            cursor.execute(query.get_sql())
+            return cursor.fetchall()
 
     # Fetch and return a single result for the SQL query.
     def fetch(self, query):
@@ -98,12 +80,12 @@ class Database:
             return cursor.fetchone()[0]
 
     # Load the given columns (array) from the database into a pandas dataframe
-    def to_pandas_dataframe(self, *columns):
+    def to_dataframe(self, query):
         connection = sqlite3.connect(
             self.file_path, isolation_level=None, detect_types=sqlite3.PARSE_COLNAMES
         )
 
-        dataframe = pandas.read_sql(self.select(*columns).get_sql(), connection)
+        dataframe = pandas.read_sql(query.get_sql(), connection)
 
         connection.close()
 

@@ -3,8 +3,10 @@ import json
 from pymaybe import maybe
 from bs4 import BeautifulSoup
 import pandas as pd
-from database import Database, Column, Field, Order
-from helpers.get_scraped_database import get_scraped_database
+from database import Database, Table, Column, Field, Order
+from helpers.get_urls_table_from_scraped_database import (
+    get_urls_table_from_scraped_database,
+)
 from helpers.is_binary_string import is_binary_string
 from helpers.find_sdg_keywords_in_text import find_sdg_keywords_in_text
 from helpers.save_result import save_result
@@ -15,33 +17,39 @@ PIPELINE = Path(__file__).stem
 def run_pipeline(domain, url, reset):
     # Create database
     db = Database("sdgs")
-    db.create(
+
+    db.table("urls").create(
         Column("id", "integer", nullable=False),
         Column("domain", "text", nullable=False),
         Column("url", "text", nullable=False),
+        Column("word_count", "integer", nullable=False),
+    ).primary_key("id").unique("url").if_not_exists().execute()
+
+    db.table("matches").create(
+        Column("id", "integer", nullable=False),
+        Column("url_id", "text", nullable=False),
         Column("sdg", "text", nullable=False),
         Column("keyword", "text", nullable=False),
         Column("context", "text", nullable=False),
         Column("tag", "text", nullable=False),
-        Column("url_word_count", "integer", nullable=False),
-        Column("CHECK(domain <> '')"),
-        Column("CHECK(url <> '')"),
         Column("CHECK(sdg <> '')"),
         Column("CHECK(keyword <> '')"),
         Column("CHECK(context <> '')"),
-    ).if_not_exists().primary_key("id").execute()
+    ).foreign_key("url_id", references="urls (id)", on_delete="CASCADE").primary_key(
+        "id"
+    ).if_not_exists().execute()
 
     # Clear records for domain/url
     if reset:
-        db.delete().where(
+        db.table("urls").delete().where(
             Field("domain").glob_unless_none(domain)
             & Field("url").glob_unless_none(url)
         ).execute()
 
     # Fetch IDs for domain/url from scrape database
-    scraped_db = get_scraped_database()
+    scraped_urls = get_urls_table_from_scraped_database()
     ids_of_scraped_records = (
-        scraped_db.select("id")
+        scraped_urls.select("id")
         .where(
             Field("domain").glob_unless_none(domain)
             & Field("url").glob_unless_none(url)
@@ -53,12 +61,12 @@ def run_pipeline(domain, url, reset):
     )
 
     # Fetch analyzed URLs
-    analyzed_urls = db.select("url").distinct().fetch_values()
+    analyzed_urls = db.table("urls").select("url").fetch_values()
 
     # Analyze each HTML snippet in database
-    for scraped_record_id in ids_of_scraped_records:
+    for index, scraped_record_id in enumerate(ids_of_scraped_records):
         scraped_record = (
-            scraped_db.select("id", "domain", "url", "html")
+            scraped_urls.select("id", "domain", "url", "html")
             .where(Field("id") == scraped_record_id)
             .fetch()
         )
@@ -78,7 +86,13 @@ def run_pipeline(domain, url, reset):
             continue
 
         print(
-            "Searching for keywords in scraped HTML for", url, end=" ... ", flush=True
+            "({current}/{total})".format(
+                current=index, total=len(ids_of_scraped_records)
+            ),
+            "Searching for keywords in scraped HTML for",
+            url,
+            end=" ... ",
+            flush=True,
         )
 
         # Prepare text extraction from HTML
@@ -135,15 +149,18 @@ def run_pipeline(domain, url, reset):
 
         # Write matches to database
         with db.start_transaction() as transaction:
+            new_url = (
+                db.table("urls")
+                .insert(domain=domain, url=url, word_count=word_count)
+                .execute_in_transaction(transaction)
+            )
             for match in matches:
-                db.insert(
-                    domain=domain,
-                    url=url,
+                db.table("matches").insert(
+                    url_id=new_url["lastrowid"],
                     sdg=match["sdg"],
                     keyword=match["keyword"],
                     context=match["context"],
                     tag=match["tag"],
-                    url_word_count=word_count,
                 ).execute_in_transaction(transaction)
 
             transaction.commit()
@@ -153,13 +170,19 @@ def run_pipeline(domain, url, reset):
     print("Exporting to dataframe...")
 
     # Get data
-    df = db.to_pandas_dataframe("domain", "url", "sdg", "url_word_count")
+    df = (
+        db.table("urls")
+        .join(Table("matches"))
+        .on(Table("urls").id == Table("matches").url_id)
+        .select("domain", "url", "word_count", Table("matches").sdg)
+        .to_dataframe()
+    )
 
     # Prepare aggregating by URL
     def aggregate_rows_by_url(row):
         d = {}
 
-        d["word_count"] = row["url_word_count"].max()
+        d["word_count"] = row["word_count"].max()
 
         # Count SDG matches
         sdg_keys = list("sdg" + str(i) for i in range(1, 18))

@@ -35,3 +35,6 @@ class QueryBuilder:
 
     def fetch_value(self):
         return self.database.fetch_value(self)
+
+    def to_dataframe(self):
+        return self.database.to_dataframe(self)
