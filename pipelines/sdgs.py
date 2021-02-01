@@ -134,7 +134,7 @@ def run_pipeline(domain, url, reset):
         )
 
         # Prepare text extraction from HTML
-        soup = BeautifulSoup(html, "html.parser")
+        soup = BeautifulSoup(html, "lxml")
         word_count = len(soup.get_text(separator=" ", strip=True).split())
 
         # Search for matches in the HTML

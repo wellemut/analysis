@@ -1,6 +1,7 @@
 import os
 import importlib
 from pathlib import Path
+import time
 import argparse
 from helpers.glob_match import glob_match
 
@@ -49,9 +50,16 @@ for pipeline in pipelines_to_run:
     run_pipeline = getattr(module, "run_pipeline")
 
     # Run the pipeline
+    start = time.perf_counter()
     run_pipeline(domain=args.domain, url=args.url, reset=args.reset)
 
-    print("Running pipeline", pipeline, "...", "Done! :)")
+    print(
+        "Running pipeline",
+        pipeline,
+        "...",
+        "Done!",
+        "(%.2fs)" % (time.perf_counter() - start),
+    )
 
 
 # pipeline = "sdgs"
