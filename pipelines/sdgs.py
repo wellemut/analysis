@@ -35,7 +35,7 @@ def run_pipeline(domain, url, reset):
         Column("CHECK(sdg <> '')"),
         Column("CHECK(keyword <> '')"),
         Column("CHECK(context <> '')"),
-    ).foreign_key("url_id", references="urls (id)", on_delete="CASCADE").primary_key(
+    ).foreign_key("url_id", references="urls (id)").primary_key(
         "id"
     ).if_not_exists().execute()
 
@@ -79,10 +79,23 @@ def run_pipeline(domain, url, reset):
 
     # Clear records for domain/url
     if reset:
-        db.table("urls").delete().where(
-            Field("domain").glob_unless_none(domain)
-            & Field("url").glob_unless_none(url)
-        ).execute()
+        with db.start_transaction() as transaction:
+            db.table("matches").delete().where(
+                Table("matches").url_id.isin(
+                    db.table("urls")
+                    .select("id")
+                    .where(
+                        Field("domain").glob_unless_none(domain)
+                        & Field("url").glob_unless_none(url)
+                    )
+                )
+            ).execute_in_transaction(transaction)
+            db.table("urls").delete().where(
+                Field("domain").glob_unless_none(domain)
+                & Field("url").glob_unless_none(url)
+            ).execute_in_transaction(transaction)
+
+            transaction.commit()
 
     # Fetch IDs for domain/url from scrape database
     scraped_urls = get_urls_table_from_scraped_database()
