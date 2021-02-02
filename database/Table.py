@@ -10,6 +10,9 @@ class Table(PypikaTable):
 
     # Start a new insertion query
     def insert(self, **kwargs):
+        # Filter values with None (-> NULL)
+        kwargs = dict(filter(lambda x: x[1] is not None, kwargs.items()))
+
         return (
             QueryBuilder(self.database)
             .into(self.name)
