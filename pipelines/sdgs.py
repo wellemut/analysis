@@ -257,5 +257,12 @@ def run_pipeline(domain, url, reset):
     # Sort
     df = df.sort_values(by=["domain"])
 
+    # Calculate %
+    for column in df.columns:
+        if column.endswith("matches_count"):
+            df[column.replace("count", "percent")] = round(
+                df[column] / df["word_count"] * 100, 2
+            )
+
     # Save as JSON
     save_result(PIPELINE, df)
