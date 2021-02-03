@@ -157,7 +157,7 @@ def run_pipeline(domain, url, reset):
         matches = []
 
         # Search page title
-        title = maybe(soup.head).find("title").or_none()
+        title = maybe(soup.head).find("title").or_else(None)
         if title:
             matches.extend(
                 find_sdg_keywords_in_text(
@@ -167,7 +167,9 @@ def run_pipeline(domain, url, reset):
             title.decompose()
 
         # Search page meta description
-        description = maybe(soup.head).select_one('meta[name="description"]').or_none()
+        description = (
+            maybe(soup.head).select_one('meta[name="description"]').or_else(None)
+        )
         if description:
             matches.extend(
                 find_sdg_keywords_in_text(
