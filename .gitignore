@@ -1,5 +1,6 @@
 # Ignore SQLite database
 /databases/*.sqlite
+/databases/*.sqlite-journal
 
 # Ignore exports
 export/
