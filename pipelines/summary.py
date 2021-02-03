@@ -86,8 +86,28 @@ def run_pipeline(domain, url, reset):
             .or_else(None)
         )
 
+        # Search meta og:description
+        if not description:
+            description = (
+                maybe(soup.head)
+                .select_one('meta[property="og:description"]')["content"]
+                .strip()
+                .or_else(None)
+            )
+
+        # Search meta og:description
+        if not description:
+            description = (
+                maybe(soup.head)
+                .select_one('meta[name="twitter:description"]')["content"]
+                .strip()
+                .or_else(None)
+            )
+
         # Write summary to database
-        db.table("domains").insert(domain=domain, summary=description).execute()
+        db.table("domains").insert(
+            domain=domain, summary=(description or None)
+        ).execute()
 
         print("Done")
         # NOTE: We currently have duplicate domains in our scraped dataset, so
@@ -109,6 +129,8 @@ def run_pipeline(domain, url, reset):
 
     # Sort
     df = df.sort_values(by=["domain"])
+
+    print("Found", df["summary"].count(), "/", len(df.index), "summaries")
 
     # Save as JSON
     save_result(PIPELINE, df)

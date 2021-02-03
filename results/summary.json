@@ -49,7 +49,7 @@
   },
   {
     "domain":"circ.com",
-    "summary":""
+    "summary":null
   },
   {
     "domain":"circular.berlin",
@@ -61,7 +61,7 @@
   },
   {
     "domain":"cirplus.com",
-    "summary":null
+    "summary":"The global marketplace for circular plastics."
   },
   {
     "domain":"connctd.com",
@@ -81,7 +81,7 @@
   },
   {
     "domain":"dach.climate-kic.org",
-    "summary":null
+    "summary":"Das Büro von EIT Climate-KIC Germany treibt mit seinen Programmen und seiner Gemeinschaft aus innovativen Unternehmen, Forschern, Start-ups und Studenten die Entwicklung skalierbarer, nachhaltiger Lösungen für den Klimaschutz voran. Mit Sitz im Herzen Berlins am EUREF-Campus, einem historischen Industriestandort, der zu einem Innovations-Campus für eine kohlenstoffarme Zukunft ausgebaut wurde, unterstützt EIT Climate-KIC Germany sechs Core-Partner […]"
   },
   {
     "domain":"de.simplemobility.org",
@@ -121,7 +121,7 @@
   },
   {
     "domain":"esgconference.com",
-    "summary":null
+    "summary":"Dear participants, in view of pandemic situation our 5th ESG Investments & Sustainable Finance Forum Series will go DIGITAL, taking place on November 10th, 2020, 17.00-20.30. our speakers Laurent Babikian Director Investor Engagement Europe, CDP Linkedin Karl Ludwig Brockmann Group Sustainability Director, KfW Linkedin Maya Hennerkes ESG Sector Lead for Financial Intermediaries, EBRD Linkedin Stefan …"
   },
   {
     "domain":"euref.de",
@@ -173,7 +173,7 @@
   },
   {
     "domain":"liqd.net",
-    "summary":""
+    "summary":"Our mission is to promote the advantages of online participation in all kinds of contexts, from international organisations to small local initiatives."
   },
   {
     "domain":"loadster.org",
@@ -181,7 +181,7 @@
   },
   {
     "domain":"maker-faire.de",
-    "summary":null
+    "summary":"Messe der Macher Basteln, Entdecken, Erfinden & Lernen, und vieles mehr … Die Maker Faire ist eine generationsübergreifende Technik- und Wissenschaftsmesse voller Inspiration, Kreativität und Innovation. Gemeinsam Spaß haben, sich austauschen und neue Dinge entdecken stehen im Vordergrund..."
   },
   {
     "domain":"maschinenraum.io",
@@ -321,7 +321,7 @@
   },
   {
     "domain":"watergenics.tech",
-    "summary":null
+    "summary":"Real-time water-quality sensor for aquafarming"
   },
   {
     "domain":"wattx.io",
@@ -329,7 +329,7 @@
   },
   {
     "domain":"wermutham.com",
-    "summary":null
+    "summary":"Creating value in the green industrialrevolution Green growth fund 2 Resurs 4 our story Incubated as a family office in 1999, WAM has evolved into an asset manager with a focus on high risk-adjusted financial returns alongside positive environmental impact. Identifying macro trends and developing know how to be able to benefit from it, resulted […]"
   },
   {
     "domain":"www.adlershof.de",
@@ -445,7 +445,7 @@
   },
   {
     "domain":"www.civocracy.org",
-    "summary":""
+    "summary":null
   },
   {
     "domain":"www.cleantech-innovationcenter.de",
@@ -489,7 +489,7 @@
   },
   {
     "domain":"www.dstgb.de",
-    "summary":""
+    "summary":null
   },
   {
     "domain":"www.dwr-eco.com",
@@ -537,7 +537,7 @@
   },
   {
     "domain":"www.fgf-ev.de",
-    "summary":null
+    "summary":"Aktuell Das Frühjahrstreffen 2020 war wieder ein voller Erfolg und endete mit einem durchweg positiven Feedback und dem klaren Votum, das nächste Frühjahrstreffen wieder als gemeinsame Veranstaltung der beiden FGF-Arbeitskreise (Sustainable- und Social Entrepreneurship) durchzuführen. Das kombinierte Format (Paper Development Workshop plus Forscher-Praktiker-Forum) war sehr gelungen und soll in dieser Kombination wiederholt werden. Der einzige… Read More »"
   },
   {
     "domain":"www.fraunhofer.de",
@@ -617,7 +617,7 @@
   },
   {
     "domain":"www.idz.de",
-    "summary":""
+    "summary":"Founded in 1968, the International Design Center Berlin (IDZ) is a leading, independent German design institution. We promote design as a driver for business and social innovation."
   },
   {
     "domain":"www.iku-innovationspreis.de",
@@ -701,7 +701,7 @@
   },
   {
     "domain":"www.netpipe.io",
-    "summary":null
+    "summary":"Die App zur Aufnahme von Netzanschlüssen"
   },
   {
     "domain":"www.nextbike.de",
@@ -713,7 +713,7 @@
   },
   {
     "domain":"www.opes-solutions.com",
-    "summary":""
+    "summary":null
   },
   {
     "domain":"www.pik-potsdam.de",
@@ -769,7 +769,7 @@
   },
   {
     "domain":"www.smart-city-berlin.de",
-    "summary":""
+    "summary":"Hier entsteht Zukunft!"
   },
   {
     "domain":"www.smart-city-hub.com",
@@ -785,7 +785,7 @@
   },
   {
     "domain":"www.staedtetag.de",
-    "summary":null
+    "summary":"Der Deutsche Städtetag ist die Stimme der Städte und der kommunale Spitzenverband der kreisfreien sowie der meisten kreisangehörigen deutschen Städte."
   },
   {
     "domain":"www.stiftung2grad.de",
