@@ -138,7 +138,7 @@ def run_pipeline(domain, url, reset):
         # Search for links to Twitter, Facebook, or LinkedIn
         socials = []
         twitter_regex = re.compile(
-            r"^(?:https?:)?\/\/(?:www\.)?twitter.com\/(?!(?:intent|privacy|hashtag|home|search)\b)(?:#!\/)?(?P<handle>[A-Za-z0-9_]+)\/?",
+            r"^(?:https?:)?\/\/(?:www\.)?twitter.com\/(?:#!\/)?(?!(?:intent|(?:[a-z]{2}\/)?privacy|hashtag|home|search|share|account|personalization)\b)(?P<handle>[A-Za-z0-9_]+)\/?",
             flags=re.IGNORECASE,
         )
 

@@ -270,11 +270,6 @@
     "handle":"enpal_official"
   },
   {
-    "domain":"www.enelx.com",
-    "type":"twitter",
-    "handle":"share"
-  },
-  {
     "domain":"www.emo-berlin.de",
     "type":"twitter",
     "handle":"emobilityberlin"
@@ -293,11 +288,6 @@
     "domain":"www.ecodesigncircle.eu",
     "type":"twitter",
     "handle":"ecodesigncircle"
-  },
-  {
-    "domain":"www.ecf-farmsystems.com",
-    "type":"twitter",
-    "handle":"de"
   },
   {
     "domain":"www.dwr-eco.com",
@@ -343,11 +333,6 @@
     "domain":"www.dbu.de",
     "type":"twitter",
     "handle":"umweltstiftung"
-  },
-  {
-    "domain":"www.cist.de",
-    "type":"twitter",
-    "handle":"account"
   },
   {
     "domain":"www.circulareconomy.tu-berlin.de",
@@ -585,11 +570,6 @@
     "handle":"mobimeomobility"
   },
   {
-    "domain":"meenergy.earth",
-    "type":"twitter",
-    "handle":"de"
-  },
-  {
     "domain":"maschinenraum.io",
     "type":"twitter",
     "handle":"maschinenraum"
@@ -667,7 +647,7 @@
   {
     "domain":"dach.climate-kic.org",
     "type":"twitter",
-    "handle":"search"
+    "handle":"climatekic_at"
   },
   {
     "domain":"creativeclimatecities.org",
@@ -702,7 +682,7 @@
   {
     "domain":"ccre.org",
     "type":"twitter",
-    "handle":"share"
+    "handle":"ccrecemr"
   },
   {
     "domain":"c2c-ev.de",
