@@ -97,22 +97,30 @@ def run_pipeline(domain, url, reset):
 
             transaction.commit()
 
-    # Fetch IDs for domain/url from scrape database
-    scraped_urls = get_urls_table_from_scraped_database()
-    ids_of_scraped_records = (
-        scraped_urls.select("id")
-        .where(
-            Field("domain").glob_unless_none(domain)
-            & Field("url").glob_unless_none(url)
-            & Field("html").notnull()
-        )
-        .orderby("domain", order=Order.desc)
-        .orderby("id")
-        .fetch_values()
+    # Fetch IDs for domain/url from scrape database, ignoring URLs already
+    # scraped
+    print(
+        "Skipping",
+        db.table("urls").count("id").fetch_value(),
+        "URLs already analyzed...",
     )
 
-    # Fetch analyzed URLs
-    analyzed_urls = db.table("urls").select("url").fetch_values()
+    scraped_urls = get_urls_table_from_scraped_database()
+    with scraped_urls.database.start_transaction() as transaction:
+        scraped_urls.database.attach(db, name="analysis", transaction=transaction)
+
+        ids_of_scraped_records = (
+            scraped_urls.select("id")
+            .where(
+                Field("domain").glob_unless_none(domain)
+                & Field("url").glob_unless_none(url)
+                & Field("html").notnull()
+                & Field("url").notin(db.table("urls").schema("analysis").select("url"))
+            )
+            .orderby("domain", order=Order.desc)
+            .orderby("id")
+            .fetch_values(transaction=transaction)
+        )
 
     # Analyze each HTML snippet in database
     for index, scraped_record_id in enumerate(ids_of_scraped_records, start=1):
@@ -126,14 +134,10 @@ def run_pipeline(domain, url, reset):
         url = scraped_record["url"]
         html = scraped_record["html"]
 
-        # If this URL has already been analyzed, let's skip it.
-        if analyzed_urls.count(url) >= 1:
-            print("Skipping", url, "...", "Already done")
-            continue
-
         # If this URL contains binary text, let's skip it
         if is_binary_string(html):
             print("Skipping", url, "...", "Binary file detected")
+            db.table("urls").insert(domain=domain, url=url, word_count=0).execute()
             continue
 
         print(

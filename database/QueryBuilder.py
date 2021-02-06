@@ -34,8 +34,8 @@ class QueryBuilder:
     def fetch(self):
         return self.database.fetch(self)
 
-    def fetch_values(self):
-        return self.database.fetch_values(self)
+    def fetch_values(self, *args, **kwargs):
+        return self.database.fetch_values(self, *args, **kwargs)
 
     def fetch_value(self):
         return self.database.fetch_value(self)

@@ -38,6 +38,13 @@ class Database:
         with self.connect() as connection:
             yield connection
 
+    # Attach another SQLite database instance
+    def attach(self, external_db, name, transaction):
+        self.execute_sql_in_transaction(
+            transaction=transaction,
+            sql="""ATTACH DATABASE "%s" AS %s""" % (external_db.file_path, name),
+        )
+
     # Execute raw SQL. Return last inserted row ID, if available.
     def execute_sql(self, sql):
         with self.start_transaction() as transaction:
@@ -64,7 +71,7 @@ class Database:
     def execute_sql_in_transaction(self, transaction=None, sql=None):
         cursor = transaction.cursor()
         cursor.execute(sql)
-        return {"lastrowid": cursor.lastrowid}
+        return {"lastrowid": cursor.lastrowid, "cursor": cursor}
 
     # Fetch and return all results for the SQL query.
     def fetch_all(self, query):
@@ -83,11 +90,15 @@ class Database:
             return cursor.fetchone()
 
     # Fetch and return an array of single values for the SQL query.
-    def fetch_values(self, query):
-        with self.connect() as connection:
-            cursor = connection.cursor()
-            cursor.execute(query.get_sql())
-            return list(map(lambda x: x[0], cursor.fetchall()))
+    def fetch_values(self, query, transaction=None):
+        if transaction is not None:
+            result = self.execute_sql_in_transaction(
+                sql=query.get_sql(), transaction=transaction
+            )
+        else:
+            result = self.execute_sql(query.get_sql())
+
+        return list(map(lambda x: x[0], result["cursor"].fetchall()))
 
     # Fetch and return a single value for the SQL query.
     def fetch_value(self, query):

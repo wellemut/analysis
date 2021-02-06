@@ -1,5 +1,5 @@
 from .QueryBuilder import QueryBuilder
-from pypika import Table as PypikaTable
+from pypika import Table as PypikaTable, Schema, functions as fn
 
 
 class Table(PypikaTable):
@@ -8,6 +8,7 @@ class Table(PypikaTable):
         self.name = name
         self.database = database
         self.table_alias = None
+        self.schema_name = None
 
     # Start a new insertion query
     def insert(self, **kwargs):
@@ -25,9 +26,15 @@ class Table(PypikaTable):
         self.table_alias = table_alias
         return self
 
+    def schema(self, schema_name):
+        self.schema_name = schema_name
+        return self
+
     @property
     def table(self):
-        if self.table_alias:
+        if self.schema_name:
+            return getattr(Schema(self.schema_name), self.name)
+        elif self.table_alias:
             return PypikaTable(self.name).as_(self.table_alias)
         else:
             return PypikaTable(self.name)
@@ -39,6 +46,14 @@ class Table(PypikaTable):
     # Start a new select query
     def select(self, *args, **kwargs):
         return QueryBuilder(self.database).from_(self.table).select(*args, **kwargs)
+
+    # Start a new count query
+    def count(self, *args, **kwargs):
+        return (
+            QueryBuilder(self.database)
+            .from_(self.table)
+            .select(fn.Count(*args, **kwargs))
+        )
 
     # Create the table in the database with the given columns
     def create(self, *args, **kwargs):
