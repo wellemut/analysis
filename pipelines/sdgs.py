@@ -225,39 +225,38 @@ def run_pipeline(domain, url, reset):
     # Get data
     df = db.view("results").select("domain", "url", "word_count", "sdg").to_dataframe()
 
-    # Prepare aggregating by URL
-    def aggregate_rows_by_url(row):
-        d = {}
+    # Count sdgs
+    sdgs_counts = (
+        df.groupby(["domain", "sdg"])
+        .size()
+        .reset_index()
+        .rename(columns={0: "count"})
+        .pivot(index="domain", columns="sdg", values="count")
+        .reset_index()
+    )
 
-        d["word_count"] = row["word_count"].max()
+    # Order sdg columns from 1 to 17
+    sdgs_counts = sdgs_counts[["domain", "sdgs", *[f"sdg{i}" for i in range(1, 18)]]]
 
-        # Count SDG matches
-        sdg_keys = list("sdg" + str(i) for i in range(1, 18))
-        for key in ["sdgs", *sdg_keys]:
-            d[key + "_matches_count"] = (row["sdg"] == key).sum()
+    # Count words
+    word_counts = (
+        df.groupby(["domain", "url"])
+        .head(1)
+        .groupby(["domain"])
+        .sum()
+        .reset_index()[["domain", "word_count"]]
+    )
 
-        return pd.Series(d)
+    # Merge sdg counts and word counts
+    del df
+    df = word_counts.merge(sdgs_counts, left_on="domain", right_on="domain")
 
-    # Aggregate by URL
-    df = df.groupby(by=["domain", "url"]).apply(aggregate_rows_by_url)
-    df = df.reset_index()
-
-    # Prepare aggregating by domain
-    def aggregate_rows_by_domain(row):
-        d = {}
-
-        for column in row.columns:
-            if column.endswith("_matches_count") or column == "word_count":
-                d[column] = row[column].sum()
-
-        return pd.Series(d)
-
-    # Aggregate by domain
-    df = df.groupby(by=["domain"]).apply(aggregate_rows_by_domain)
-    df = df.reset_index()
-
-    # Sort
-    df = df.sort_values(by=["domain"])
+    # Rename sdg columns: sdg9 -> sdg9_matches_count
+    old_names = df.filter(regex="sdg").columns.tolist()
+    new_names = []
+    for name in old_names:
+        new_names.append(name + "_matches_count")
+    df = df.rename(columns=dict(zip(old_names, new_names)))
 
     # Calculate %
     for column in df.columns:
@@ -265,6 +264,30 @@ def run_pipeline(domain, url, reset):
             df[column.replace("count", "percent")] = round(
                 df[column] / df["word_count"] * 100, 2
             )
+
+    # Calculate scores
+    for column in df.filter(regex="_percent").columns:
+        bound = None
+        if column == "sdgs_matches_percent":
+            bound = 2.5
+        elif column.endswith("matches_percent"):
+            bound = 10.0
+
+        df[column.replace("percent", "score")] = round(
+            df[column] / bound * 100, 2
+        ).clip(upper=100)
+
+    # Remove scores below 4
+    for column in df.filter(regex="_score").columns:
+        df[column] = df[column].mask(df[column] < 4)
+
+    # Calculate total score
+    df["total_score"] = round(
+        df.filter(regex="_score").sum(axis=1) / 500 * 100, 2
+    ).clip(upper=100)
+
+    # Sort by total score, descending
+    df = df.sort_values(by=["total_score"], ascending=False)
 
     # Save as JSON
     save_result(PIPELINE, df)
