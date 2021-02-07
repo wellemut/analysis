@@ -25,87 +25,68 @@ class Database:
         return self.table(*args, **kwargs)
 
     @contextmanager
-    def connect(self):
+    def start_transaction(self):
         try:
             connection = sqlite3.connect(self.file_path)
             connection.execute("PRAGMA foreign_keys = ON")
+            connection.row_factory = sqlite3.Row
             yield connection
         finally:
+            connection.commit()
             connection.close()
 
+    # Continue an existing transaction or a start a new one
     @contextmanager
-    def start_transaction(self):
-        with self.connect() as connection:
-            yield connection
+    def continue_or_start_transaction(self, transaction=None):
+        if transaction:
+            yield transaction
+            return
+
+        with self.start_transaction() as transaction:
+            yield transaction
 
     # Attach another SQLite database instance
     def attach(self, external_db, name, transaction):
-        self.execute_sql_in_transaction(
+        self.execute_sql(
             transaction=transaction,
             sql="""ATTACH DATABASE "%s" AS %s""" % (external_db.file_path, name),
         )
 
-    # Execute raw SQL. Return last inserted row ID, if available.
-    def execute_sql(self, sql):
-        with self.start_transaction() as transaction:
-            result = self.execute_sql_in_transaction(transaction=transaction, sql=sql)
-            transaction.commit()
-            return result
+    # Execute raw SQL. Return last inserted row ID and cursor object.
+    def execute_sql(self, sql, transaction=None, callback=None):
+        with self.continue_or_start_transaction(transaction) as t:
+            cursor = t.cursor()
+            cursor.execute(sql)
 
-    # Execute a SQL query. Return last inserted row ID, if available.
-    def execute(self, query):
-        with self.start_transaction() as transaction:
-            result = self.execute_in_transaction(transaction=transaction, query=query)
-            transaction.commit()
-            return result
+            # Set default callback
+            if not callback:
+                callback = lambda cursor: {"lastrowid": cursor.lastrowid}
 
-    # Execute a SQL query within a transaction, without committing.
-    # Return last inserted row ID, if available.
-    def execute_in_transaction(self, transaction=None, query=None):
-        return self.execute_sql_in_transaction(
-            transaction=transaction, sql=query.get_sql()
-        )
+            return callback(cursor)
 
-    # Execute raw SQL within a transaction, without committing.
-    # Return last inserted row ID, if available.
-    def execute_sql_in_transaction(self, transaction=None, sql=None):
-        cursor = transaction.cursor()
-        cursor.execute(sql)
-        return {"lastrowid": cursor.lastrowid, "cursor": cursor}
+    # Execute a SQL query.
+    def execute(self, query, **kwargs):
+        return self.execute_sql(sql=query.get_sql(), **kwargs)
 
     # Fetch and return all results for the SQL query.
-    def fetch_all(self, query):
-        with self.connect() as connection:
-            connection.row_factory = sqlite3.Row
-            cursor = connection.cursor()
-            cursor.execute(query.get_sql())
-            return cursor.fetchall()
+    def fetch_all(self, query, **kwargs):
+        callback = lambda cursor: cursor.fetchall()
+        return self.execute(query=query, callback=callback, **kwargs)
 
     # Fetch and return a single result for the SQL query.
-    def fetch(self, query):
-        with self.connect() as connection:
-            connection.row_factory = sqlite3.Row
-            cursor = connection.cursor()
-            cursor.execute(query.get_sql())
-            return cursor.fetchone()
+    def fetch(self, query, **kwargs):
+        callback = lambda cursor: cursor.fetchone()
+        return self.execute(query=query, callback=callback, **kwargs)
 
     # Fetch and return an array of single values for the SQL query.
-    def fetch_values(self, query, transaction=None):
-        if transaction is not None:
-            result = self.execute_sql_in_transaction(
-                sql=query.get_sql(), transaction=transaction
-            )
-        else:
-            result = self.execute_sql(query.get_sql())
-
-        return list(map(lambda x: x[0], result["cursor"].fetchall()))
+    def fetch_values(self, query, **kwargs):
+        callback = lambda cursor: list(map(lambda x: x[0], cursor.fetchall()))
+        return self.execute(query=query, callback=callback, **kwargs)
 
     # Fetch and return a single value for the SQL query.
-    def fetch_value(self, query):
-        with self.connect() as connection:
-            cursor = connection.cursor()
-            cursor.execute(query.get_sql())
-            return cursor.fetchone()[0]
+    def fetch_value(self, query, **kwargs):
+        callback = lambda cursor: cursor.fetchone()[0]
+        return self.execute(query=query, callback=callback, **kwargs)
 
     # Load the given columns (array) from the database into a pandas dataframe
     def to_dataframe(self, query):

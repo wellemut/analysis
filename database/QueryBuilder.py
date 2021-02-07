@@ -22,23 +22,20 @@ class QueryBuilder:
     def nodes_(self, *args, **kwargs):
         return self.query.nodes_(*args, **kwargs)
 
-    def execute(self):
-        return self.database.execute(self)
+    def execute(self, **kwargs):
+        return self.database.execute(query=self, **kwargs)
 
-    def execute_in_transaction(self, transaction):
-        return self.database.execute_in_transaction(transaction=transaction, query=self)
+    def fetch_all(self, **kwargs):
+        return self.database.fetch_all(query=self, **kwargs)
 
-    def fetch_all(self):
-        return self.database.fetch_all(self)
+    def fetch(self, **kwargs):
+        return self.database.fetch(query=self, **kwargs)
 
-    def fetch(self):
-        return self.database.fetch(self)
+    def fetch_values(self, **kwargs):
+        return self.database.fetch_values(query=self, **kwargs)
 
-    def fetch_values(self, *args, **kwargs):
-        return self.database.fetch_values(self, *args, **kwargs)
-
-    def fetch_value(self):
-        return self.database.fetch_value(self)
+    def fetch_value(self, **kwargs):
+        return self.database.fetch_value(query=self, **kwargs)
 
     def to_dataframe(self):
         return self.database.to_dataframe(self)

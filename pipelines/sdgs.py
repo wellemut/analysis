@@ -89,13 +89,11 @@ def run_pipeline(domain, url, reset):
                         & Field("url").glob_unless_none(url)
                     )
                 )
-            ).execute_in_transaction(transaction)
+            ).execute(transaction=transaction)
             db.table("urls").delete().where(
                 Field("domain").glob_unless_none(domain)
                 & Field("url").glob_unless_none(url)
-            ).execute_in_transaction(transaction)
-
-            transaction.commit()
+            ).execute(transaction=transaction)
 
     # Fetch IDs for domain/url from scrape database, ignoring URLs already
     # scraped
@@ -206,21 +204,21 @@ def run_pipeline(domain, url, reset):
 
         # Write matches to database
         with db.start_transaction() as transaction:
-            new_url = (
+            new_url_id = (
                 db.table("urls")
                 .insert(domain=domain, url=url, word_count=word_count)
-                .execute_in_transaction(transaction)
+                .execute(
+                    transaction=transaction, callback=lambda cursor: cursor.lastrowid
+                )
             )
             for match in matches:
                 db.table("matches").insert(
-                    url_id=new_url["lastrowid"],
+                    url_id=new_url_id,
                     sdg=match["sdg"],
                     keyword=match["keyword"],
                     context=match["context"],
                     tag=match["tag"],
-                ).execute_in_transaction(transaction)
-
-            transaction.commit()
+                ).execute(transaction=transaction)
 
         print("Done")
 

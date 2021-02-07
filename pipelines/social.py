@@ -67,11 +67,11 @@ def run_pipeline(domain, url, reset):
                         & Field("url").glob_unless_none(url)
                     )
                 )
-            ).execute_in_transaction(transaction)
+            ).execute(transaction=transaction)
             db.table("urls").delete().where(
                 Field("domain").glob_unless_none(domain)
                 & Field("url").glob_unless_none(url)
-            ).execute_in_transaction(transaction)
+            ).execute(transaction=transaction)
 
             transaction.commit()
 
@@ -160,18 +160,20 @@ def run_pipeline(domain, url, reset):
 
         # Write socials to database
         with db.start_transaction() as transaction:
-            new_url = (
+            new_url_id = (
                 db.table("urls")
                 .insert(domain=domain, url=url)
-                .execute_in_transaction(transaction)
+                .execute(
+                    transaction=transaction, callback=lambda cursor: cursor.lastrowid
+                )
             )
             for social in socials:
                 db.table("socials").insert(
-                    url_id=new_url["lastrowid"],
+                    url_id=new_url_id,
                     type=social["type"],
                     href=social["href"],
                     handle=social["handle"],
-                ).execute_in_transaction(transaction)
+                ).execute(transaction=transaction)
 
             transaction.commit()
 
