@@ -99,7 +99,7 @@ def run_pipeline(domain, url, reset):
     # scraped
     print(
         "Skipping",
-        db.table("urls").count("id").fetch_value(),
+        db.table("urls").count("id").value(),
         "URLs already analyzed...",
     )
 
@@ -117,7 +117,7 @@ def run_pipeline(domain, url, reset):
             )
             .orderby("domain", order=Order.desc)
             .orderby("id")
-            .fetch_values(transaction=transaction)
+            .values(transaction=transaction)
         )
 
     # Analyze each HTML snippet in database
@@ -125,7 +125,7 @@ def run_pipeline(domain, url, reset):
         scraped_record = (
             scraped_urls.select("id", "domain", "url", "html")
             .where(Field("id") == scraped_record_id)
-            .fetch()
+            .first()
         )
         id = scraped_record["id"]
         domain = scraped_record["domain"]

@@ -1,7 +1,7 @@
 from pypika import Query
 
 # A wrapper around pypika Query, that allows executing the generated SQL on the
-# database by calling .execute() or .fetch() or .fetch_all()
+# database by calling .execute() or .first() or .all()
 class QueryBuilder:
     def __init__(self, database):
         self.database = database
@@ -22,20 +22,17 @@ class QueryBuilder:
     def nodes_(self, *args, **kwargs):
         return self.query.nodes_(*args, **kwargs)
 
-    def execute(self, **kwargs):
-        return self.database.execute(query=self, **kwargs)
-
-    def fetch_all(self, **kwargs):
-        return self.database.fetch_all(query=self, **kwargs)
-
-    def fetch(self, **kwargs):
-        return self.database.fetch(query=self, **kwargs)
-
-    def fetch_values(self, **kwargs):
-        return self.database.fetch_values(query=self, **kwargs)
-
-    def fetch_value(self, **kwargs):
-        return self.database.fetch_value(query=self, **kwargs)
-
     def to_dataframe(self):
         return self.database.to_dataframe(self)
+
+
+# Delegate several methods to the database
+def generate_delegator(func):
+    def delegator(self, **kwargs):
+        return getattr(self.database, func)(query=self, **kwargs)
+
+    return delegator
+
+
+for func in ["execute", "all", "first", "values", "value"]:
+    setattr(QueryBuilder, func, generate_delegator(func))

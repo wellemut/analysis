@@ -69,22 +69,22 @@ class Database:
         return self.execute_sql(sql=query.get_sql(), **kwargs)
 
     # Fetch and return all results for the SQL query.
-    def fetch_all(self, query, **kwargs):
+    def all(self, query, **kwargs):
         callback = lambda cursor: cursor.fetchall()
         return self.execute(query=query, callback=callback, **kwargs)
 
     # Fetch and return a single result for the SQL query.
-    def fetch(self, query, **kwargs):
+    def first(self, query, **kwargs):
         callback = lambda cursor: cursor.fetchone()
         return self.execute(query=query, callback=callback, **kwargs)
 
     # Fetch and return an array of single values for the SQL query.
-    def fetch_values(self, query, **kwargs):
+    def values(self, query, **kwargs):
         callback = lambda cursor: list(map(lambda x: x[0], cursor.fetchall()))
         return self.execute(query=query, callback=callback, **kwargs)
 
     # Fetch and return a single value for the SQL query.
-    def fetch_value(self, query, **kwargs):
+    def value(self, query, **kwargs):
         callback = lambda cursor: cursor.fetchone()[0]
         return self.execute(query=query, callback=callback, **kwargs)
 

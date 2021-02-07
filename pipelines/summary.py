@@ -38,18 +38,18 @@ def run_pipeline(domain, url, reset):
         )
         .orderby("domain", order=Order.desc)
         .orderby("id")
-        .fetch_values()
+        .values()
     )
 
     # Fetch analyzed URLs
-    analyzed_domains = db.table("domains").select("domain").fetch_values()
+    analyzed_domains = db.table("domains").select("domain").values()
 
     # Analyze each HTML snippet in database
     for index, scraped_record_id in enumerate(ids_of_scraped_records, start=1):
         scraped_record = (
             scraped_urls.select("id", "domain", "url", "html")
             .where(Field("id") == scraped_record_id)
-            .fetch()
+            .first()
         )
         id = scraped_record["id"]
         domain = scraped_record["domain"]

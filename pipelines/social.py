@@ -73,8 +73,6 @@ def run_pipeline(domain, url, reset):
                 & Field("url").glob_unless_none(url)
             ).execute(transaction=transaction)
 
-            transaction.commit()
-
     # Fetch IDs for first 10 URLs for each domain
     scraped_urls = get_urls_table_from_scraped_database()
     ids_of_scraped_records = (
@@ -94,18 +92,18 @@ def run_pipeline(domain, url, reset):
         )
         .orderby("domain", order=Order.desc)
         .orderby("id")
-        .fetch_values()
+        .values()
     )
 
     # Fetch analyzed URLs
-    analyzed_urls = db.table("urls").select("url").fetch_values()
+    analyzed_urls = db.table("urls").select("url").values()
 
     # Analyze each HTML snippet in database
     for index, scraped_record_id in enumerate(ids_of_scraped_records, start=1):
         scraped_record = (
             scraped_urls.select("id", "domain", "url", "html")
             .where(Field("id") == scraped_record_id)
-            .fetch()
+            .first()
         )
         id = scraped_record["id"]
         domain = scraped_record["domain"]
@@ -174,8 +172,6 @@ def run_pipeline(domain, url, reset):
                     href=social["href"],
                     handle=social["handle"],
                 ).execute(transaction=transaction)
-
-            transaction.commit()
 
         print("Done")
 
