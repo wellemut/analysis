@@ -13,6 +13,8 @@ pymaybe = "*"
 filetype = "*"
 lxml = "*"
 snakeviz = "*"
+progressbar2 = "*"
+python-utils = "*"
 
 [requires]
 python_version = "3.8"

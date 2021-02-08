@@ -3,6 +3,7 @@ from pymaybe import maybe
 from bs4 import BeautifulSoup
 import pandas as pd
 from database import Database, Table, Column, Field, Order
+from models import PipelineProgressBar
 from helpers.get_urls_table_from_scraped_database import (
     get_urls_table_from_scraped_database,
 )
@@ -45,7 +46,8 @@ def run_pipeline(domain, url, reset):
     analyzed_domains = db.table("domains").select("domain").values()
 
     # Analyze each HTML snippet in database
-    for index, scraped_record_id in enumerate(ids_of_scraped_records, start=1):
+    progress = PipelineProgressBar(PIPELINE)
+    for scraped_record_id in progress.iterate(ids_of_scraped_records):
         scraped_record = (
             scraped_urls.select("id", "domain", "url", "html")
             .where(Field("id") == scraped_record_id)
@@ -56,20 +58,12 @@ def run_pipeline(domain, url, reset):
         url = scraped_record["url"]
         html = scraped_record["html"]
 
+        progress.set_current_url(url)
+
         # If this domain has already been analyzed, let's skip it.
         if analyzed_domains.count(domain) >= 1:
-            print("Skipping", domain, "...", "Already done")
+            progress.print("Skipping", domain, "...", "Already done")
             continue
-
-        print(
-            "({current}/{total})".format(
-                current=index, total=len(ids_of_scraped_records)
-            ),
-            "Searching for meta description in scraped HTML for",
-            domain,
-            end=" ... ",
-            flush=True,
-        )
 
         # Prepare text extraction from HTML
         soup = BeautifulSoup(html, "lxml")
@@ -109,7 +103,6 @@ def run_pipeline(domain, url, reset):
             domain=domain, summary=(description or None)
         ).execute()
 
-        print("Done")
         # NOTE: We currently have duplicate domains in our scraped dataset, so
         # we need to add finished domains here, so we skip them on the second
         # round (otherwise, we get a non-unique domain error).

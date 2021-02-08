@@ -4,6 +4,7 @@ from pymaybe import maybe
 from bs4 import BeautifulSoup
 import pandas as pd
 from database import Database, Table, Column, Field, Order
+from models import PipelineProgressBar
 from helpers.get_urls_table_from_scraped_database import (
     get_urls_table_from_scraped_database,
 )
@@ -121,7 +122,8 @@ def run_pipeline(domain, url, reset):
         )
 
     # Analyze each HTML snippet in database
-    for index, scraped_record_id in enumerate(ids_of_scraped_records, start=1):
+    progress = PipelineProgressBar(PIPELINE)
+    for scraped_record_id in progress.iterate(ids_of_scraped_records):
         scraped_record = (
             scraped_urls.select("id", "domain", "url", "html")
             .where(Field("id") == scraped_record_id)
@@ -132,21 +134,13 @@ def run_pipeline(domain, url, reset):
         url = scraped_record["url"]
         html = scraped_record["html"]
 
+        progress.set_current_url(url)
+
         # If this URL contains binary text, let's skip it
         if is_binary_string(html):
-            print("Skipping", url, "...", "Binary file detected")
+            progress.print("Skipping", url, "...", "Binary file detected")
             db.table("urls").insert(domain=domain, url=url, word_count=0).execute()
             continue
-
-        print(
-            "({current}/{total})".format(
-                current=index, total=len(ids_of_scraped_records)
-            ),
-            "Searching for keywords in scraped HTML for",
-            url,
-            end=" ... ",
-            flush=True,
-        )
 
         # Prepare text extraction from HTML
         soup = BeautifulSoup(html, "lxml")
@@ -219,8 +213,6 @@ def run_pipeline(domain, url, reset):
                     context=match["context"],
                     tag=match["tag"],
                 ).execute(transaction=transaction)
-
-        print("Done")
 
     print("Exporting to dataframe...")
 

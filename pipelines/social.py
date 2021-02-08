@@ -4,6 +4,7 @@ from pymaybe import maybe
 from bs4 import BeautifulSoup
 import pandas as pd
 from database import Database, Table, Column, Field, Order
+from models import PipelineProgressBar
 from helpers.get_urls_table_from_scraped_database import (
     get_urls_table_from_scraped_database,
 )
@@ -99,7 +100,8 @@ def run_pipeline(domain, url, reset):
     analyzed_urls = db.table("urls").select("url").values()
 
     # Analyze each HTML snippet in database
-    for index, scraped_record_id in enumerate(ids_of_scraped_records, start=1):
+    progress = PipelineProgressBar(PIPELINE)
+    for scraped_record_id in progress.iterate(ids_of_scraped_records):
         scraped_record = (
             scraped_urls.select("id", "domain", "url", "html")
             .where(Field("id") == scraped_record_id)
@@ -110,25 +112,17 @@ def run_pipeline(domain, url, reset):
         url = scraped_record["url"]
         html = scraped_record["html"]
 
+        progress.set_current_url(url)
+
         # If this URL has already been analyzed, let's skip it.
         if analyzed_urls.count(url) >= 1:
-            print("Skipping", url, "...", "Already done")
+            progress.print("Skipping", url, "...", "Already done")
             continue
 
         # If this URL contains binary text, let's skip it
         if is_binary_string(html):
-            print("Skipping", url, "...", "Binary file detected")
+            progress.print("Skipping", url, "...", "Binary file detected")
             continue
-
-        print(
-            "({current}/{total})".format(
-                current=index, total=len(ids_of_scraped_records)
-            ),
-            "Searching for social accounts in scraped HTML for",
-            url,
-            end=" ... ",
-            flush=True,
-        )
 
         # Prepare text extraction from HTML
         soup = BeautifulSoup(html, "lxml")
@@ -172,8 +166,6 @@ def run_pipeline(domain, url, reset):
                     href=social["href"],
                     handle=social["handle"],
                 ).execute(transaction=transaction)
-
-        print("Done")
 
     print("Exporting to dataframe...")
 
