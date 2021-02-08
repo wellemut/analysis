@@ -1,4 +1,4 @@
-from progressbar import ProgressBar
+from .ProgressBar import ProgressBar
 import shutil
 import math
 import sys

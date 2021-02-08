@@ -1,1 +1,1 @@
-from models.PipelineProgressBar import PipelineProgressBar
+from .PipelineProgressBar import PipelineProgressBar
