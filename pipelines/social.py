@@ -74,30 +74,38 @@ def run_pipeline(domain, url, reset):
                 & Field("url").glob_unless_none(url)
             ).execute(transaction=transaction)
 
-    # Fetch IDs for first 10 URLs for each domain
-    scraped_urls = get_urls_table_from_scraped_database()
-    ids_of_scraped_records = (
-        scraped_urls.as_("a")
-        .select("id")
-        .where(
-            Field("domain").glob_unless_none(domain)
-            & Field("url").glob_unless_none(url)
-            & Field("html").notnull()
-            & Field("id").isin(
-                scraped_urls.as_("b")
-                .select("id")
-                .where(Field("domain") == Table("a").domain)
-                .orderby("id")
-                .limit(10)
-            )
-        )
-        .orderby("domain", order=Order.desc)
-        .orderby("id")
-        .values()
+    # Fetch IDs for first 10 URLs for each domain, ignoring URLs already
+    # scraped
+    print(
+        "Skipping",
+        db.table("urls").count("id").value(),
+        "URLs already analyzed...",
     )
 
-    # Fetch analyzed URLs
-    analyzed_urls = db.table("urls").select("url").values()
+    scraped_urls = get_urls_table_from_scraped_database()
+    with scraped_urls.database.start_transaction() as transaction:
+        scraped_urls.database.attach(db, name="analysis", transaction=transaction)
+
+        ids_of_scraped_records = (
+            scraped_urls.as_("a")
+            .select("id")
+            .where(
+                Field("domain").glob_unless_none(domain)
+                & Field("url").glob_unless_none(url)
+                & Field("html").notnull()
+                & Field("id").isin(
+                    scraped_urls.as_("b")
+                    .select("id")
+                    .where(Field("domain") == Table("a").domain)
+                    .orderby("id")
+                    .limit(10)
+                )
+                & Field("url").notin(db.table("urls").schema("analysis").select("url"))
+            )
+            .orderby("domain", order=Order.desc)
+            .orderby("id")
+            .values(transaction=transaction)
+        )
 
     # Analyze each HTML snippet in database
     progress = PipelineProgressBar(PIPELINE)
@@ -113,11 +121,6 @@ def run_pipeline(domain, url, reset):
         html = scraped_record["html"]
 
         progress.set_current_url(url)
-
-        # If this URL has already been analyzed, let's skip it.
-        if analyzed_urls.count(url) >= 1:
-            progress.print("Skipping", url, "...", "Already done")
-            continue
 
         # If this URL contains binary text, let's skip it
         if is_binary_string(html):
