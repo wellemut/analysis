@@ -1,0 +1,882 @@
+[
+  {
+    "domain":"zukunftsorte.berlin",
+    "name":"Zukunftsorte Berlin"
+  },
+  {
+    "domain":"www.wista.de",
+    "name":"Wista GmbH"
+  },
+  {
+    "domain":"www.windnode.de",
+    "name":"Windnode"
+  },
+  {
+    "domain":"www.wegweiser-kommune.de",
+    "name":"Wegweiser Kummune"
+  },
+  {
+    "domain":"www.we-share.io",
+    "name":"WeShare"
+  },
+  {
+    "domain":"www.viessmann.de",
+    "name":"Viessmann Werke"
+  },
+  {
+    "domain":"www.vattenfall.de",
+    "name":"Vattenfall"
+  },
+  {
+    "domain":"www.unternehmensgruen.de",
+    "name":"UnternehmensGrün"
+  },
+  {
+    "domain":"www.umweltbundesamt.de",
+    "name":"Umweltbundesamt"
+  },
+  {
+    "domain":"www.ubitricity.com",
+    "name":"ubitricity"
+  },
+  {
+    "domain":"www.tu-berlin.de",
+    "name":"Zentrum Technik und Gesellschaft \/ TU Berlin"
+  },
+  {
+    "domain":"www.tracksfortrucks.com",
+    "name":"Tracks for Trucks"
+  },
+  {
+    "domain":"www.tier.app",
+    "name":"Tier Mobility"
+  },
+  {
+    "domain":"www.teraki.com",
+    "name":"Teraki"
+  },
+  {
+    "domain":"www.technologiestiftung-berlin.de",
+    "name":"Technologiestiftung Berlin"
+  },
+  {
+    "domain":"www.stromnetz.berlin",
+    "name":"Stromnetz Berlin GmbH"
+  },
+  {
+    "domain":"www.stiftung2grad.de",
+    "name":"Stiftung 2˚"
+  },
+  {
+    "domain":"www.staedtetag.de",
+    "name":"Association of German Cities"
+  },
+  {
+    "domain":"www.stadtfarm.de",
+    "name":"Stadtfarm"
+  },
+  {
+    "domain":"www.solmove.com",
+    "name":"Solmove"
+  },
+  {
+    "domain":"www.smart-city-hub.com",
+    "name":"Smart City Hub"
+  },
+  {
+    "domain":"www.smart-city-berlin.de",
+    "name":"Smart City Berlin"
+  },
+  {
+    "domain":"www.sle-berlin.de",
+    "name":"Center for Rural Development"
+  },
+  {
+    "domain":"www.sensefinity.com",
+    "name":"Sesefinity"
+  },
+  {
+    "domain":"www.sensafety.org",
+    "name":"Sensaftey"
+  },
+  {
+    "domain":"www.selux.com",
+    "name":"Selux"
+  },
+  {
+    "domain":"www.scrooser.com",
+    "name":"Scrooser"
+  },
+  {
+    "domain":"www.salt-software.de",
+    "name":"M2MGo"
+  },
+  {
+    "domain":"www.relok.de",
+    "name":"Relok"
+  },
+  {
+    "domain":"www.regenwasseragentur.berlin",
+    "name":"Berliner Regenwasseragentur"
+  },
+  {
+    "domain":"www.purpleorange.com",
+    "name":"Purple Orange ventures"
+  },
+  {
+    "domain":"www.polyteia.de",
+    "name":"Polyteia"
+  },
+  {
+    "domain":"www.polidia.de",
+    "name":"Polidia"
+  },
+  {
+    "domain":"www.plugsurfing.com",
+    "name":"Plugsurfing"
+  },
+  {
+    "domain":"www.pik-potsdam.de",
+    "name":"Potsdam Institute for Climate Impact Research"
+  },
+  {
+    "domain":"www.opes-solutions.com",
+    "name":"Opes Solutions"
+  },
+  {
+    "domain":"www.nuventura.com",
+    "name":"Nuventura"
+  },
+  {
+    "domain":"www.nextbike.de",
+    "name":"Nextbike"
+  },
+  {
+    "domain":"www.netpipe.io",
+    "name":"Netpipe GmbH"
+  },
+  {
+    "domain":"www.nestpick.com",
+    "name":"Nestpick"
+  },
+  {
+    "domain":"www.nachhaltigkeitsrat.de",
+    "name":"Rat für Nachhaltige Entwicklung"
+  },
+  {
+    "domain":"www.n-i-k.net",
+    "name":"NIK - Netwerk Innovation & Gründung im Klimawandel"
+  },
+  {
+    "domain":"www.mxc.org",
+    "name":"MXC Foundation"
+  },
+  {
+    "domain":"www.mtcontrols.de",
+    "name":"Move & Traffic Controls"
+  },
+  {
+    "domain":"www.mowea.world",
+    "name":"Mowea"
+  },
+  {
+    "domain":"www.motor-ai.com",
+    "name":"MotorAI"
+  },
+  {
+    "domain":"www.mint-engineering.de",
+    "name":"MINT Engineering"
+  },
+  {
+    "domain":"www.milkthesun.com",
+    "name":"Milk The Sun"
+  },
+  {
+    "domain":"www.meetup.com",
+    "name":"Berlin Future Mobility Meetup"
+  },
+  {
+    "domain":"www.matchx.io",
+    "name":"MatchX"
+  },
+  {
+    "domain":"www.lesan.ai",
+    "name":"Lesan.ai"
+  },
+  {
+    "domain":"www.lawio.de",
+    "name":"Lawio"
+  },
+  {
+    "domain":"www.landkreistag.de",
+    "name":"German County Association"
+  },
+  {
+    "domain":"www.kopernikusauto.com",
+    "name":"Kopernikus Automotive"
+  },
+  {
+    "domain":"www.konetik.com",
+    "name":"Konetik"
+  },
+  {
+    "domain":"www.keck-atlas.de",
+    "name":"KECK"
+  },
+  {
+    "domain":"www.innoenergy.com",
+    "name":"EIT Inno Energy"
+  },
+  {
+    "domain":"www.imaginecargo.com",
+    "name":"Imagine Cargo"
+  },
+  {
+    "domain":"www.iku-innovationspreis.de",
+    "name":"IKU - German Innovation Prize for Climate and Environment"
+  },
+  {
+    "domain":"www.idz.de",
+    "name":"International Design Centre Berlin"
+  },
+  {
+    "domain":"www.ice-gateway.com",
+    "name":"ICE Gateway"
+  },
+  {
+    "domain":"www.ibvogt.com",
+    "name":"iB Vogt"
+  },
+  {
+    "domain":"www.ibb.de",
+    "name":"IBB Berlin"
+  },
+  {
+    "domain":"www.iav.com",
+    "name":"IAV GmbH Ingenieurgesellschaft Auto und Verkehr"
+  },
+  {
+    "domain":"www.iass-potsdam.de",
+    "name":"Institute for Advanced Sustainability Studies"
+  },
+  {
+    "domain":"www.hotsplots.de",
+    "name":"Hotsplots"
+  },
+  {
+    "domain":"www.homepowersolutions.de",
+    "name":"Home Power Solutions"
+  },
+  {
+    "domain":"www.here.com",
+    "name":"HERE"
+  },
+  {
+    "domain":"www.helmholtz-berlin.de",
+    "name":"Helmholtz Zentrum Berlin"
+  },
+  {
+    "domain":"www.greenpack.de",
+    "name":"Greenpack"
+  },
+  {
+    "domain":"www.greenmeberlin.com",
+    "name":"Green Me Berlin"
+  },
+  {
+    "domain":"www.greenadapt.de",
+    "name":"Green Adapt"
+  },
+  {
+    "domain":"www.giz.de",
+    "name":"GIZ"
+  },
+  {
+    "domain":"www.getfresh.energy",
+    "name":"Fresh Energy"
+  },
+  {
+    "domain":"www.fz-juelich.de",
+    "name":"FZ Juelich"
+  },
+  {
+    "domain":"www.futuremobility.network",
+    "name":"Future Mobility Network"
+  },
+  {
+    "domain":"www.futurecityincubator.com",
+    "name":"Future City Incubator"
+  },
+  {
+    "domain":"www.fu-berlin.de",
+    "name":"SCHOOLS@UNIVERSITY FOR SUSTAINABILITY + CLIMATE PROTECTION FU Berlin"
+  },
+  {
+    "domain":"www.fraunhofer.de",
+    "name":"Fraunhofer Institut"
+  },
+  {
+    "domain":"www.fgf-ev.de",
+    "name":"FGF"
+  },
+  {
+    "domain":"www.escpeurope.eu",
+    "name":"ESCP Berlin"
+  },
+  {
+    "domain":"www.enpal.de",
+    "name":"Enpal"
+  },
+  {
+    "domain":"www.enelx.com",
+    "name":"Enel X"
+  },
+  {
+    "domain":"www.emo-berlin.de",
+    "name":"Berlin Agency for Electromobility"
+  },
+  {
+    "domain":"www.emnify.de",
+    "name":"Emnify"
+  },
+  {
+    "domain":"www.elomobility.com",
+    "name":"ELO Mobility"
+  },
+  {
+    "domain":"www.econsense.de",
+    "name":"econsense"
+  },
+  {
+    "domain":"www.ecologic.eu",
+    "name":"Ecologic Institute"
+  },
+  {
+    "domain":"www.ecoligo.investments",
+    "name":"ecoligo.investments"
+  },
+  {
+    "domain":"www.ecodesigncircle.eu",
+    "name":"Eco Design Circle"
+  },
+  {
+    "domain":"www.ecf-farmsystems.com",
+    "name":"ECF Farmsystems"
+  },
+  {
+    "domain":"www.ebee.berlin",
+    "name":"Ebee Smart Technologies"
+  },
+  {
+    "domain":"www.dwr-eco.com",
+    "name":"DWR Eco"
+  },
+  {
+    "domain":"www.dstgb.de",
+    "name":"German Association of Towns and Municipalities"
+  },
+  {
+    "domain":"www.door2door.io",
+    "name":"Door2Door"
+  },
+  {
+    "domain":"www.domilabs.io",
+    "name":"Domi"
+  },
+  {
+    "domain":"www.dnr.de",
+    "name":"DNR - GERMAN NATURE CONSERVATION RING"
+  },
+  {
+    "domain":"www.dlr.de",
+    "name":"Deutsche Luft & Raumfahrt"
+  },
+  {
+    "domain":"www.dkn-future-earth.org",
+    "name":"Deutsches Komitee für Nachhaltigkeitsforschung in Future Earth (DKN)"
+  },
+  {
+    "domain":"www.diw.de",
+    "name":"Deutsches Institut für Wirtschaftsforschung \/"
+  },
+  {
+    "domain":"www.die-gdi.de",
+    "name":"German Sustainable Development Solutions Network (SDSN Germany)"
+  },
+  {
+    "domain":"www.dfki.de",
+    "name":"German Research Centre for AI"
+  },
+  {
+    "domain":"www.dena.de",
+    "name":"Deutsche Energie Agentur"
+  },
+  {
+    "domain":"www.dbu.de",
+    "name":"German Environmental Foundation"
+  },
+  {
+    "domain":"www.cosuno.de",
+    "name":"Cosuno"
+  },
+  {
+    "domain":"www.cleantech-innovationcenter.de",
+    "name":"CleanTech Innovation Centre"
+  },
+  {
+    "domain":"www.civocracy.org",
+    "name":"Civocracy"
+  },
+  {
+    "domain":"www.cist.de",
+    "name":"Center for Innovation and Sustainability in Tourism"
+  },
+  {
+    "domain":"www.circulareconomy.tu-berlin.de",
+    "name":"Fachgebiet Kreislaufwirtschaft und Recyclingtechnologie Tu Berlin"
+  },
+  {
+    "domain":"www.chargomat.de",
+    "name":"Chargomat"
+  },
+  {
+    "domain":"www.bwb.de",
+    "name":"Berliner Wasserbetriebe"
+  },
+  {
+    "domain":"www.bvg.de",
+    "name":"BVG"
+  },
+  {
+    "domain":"www.bund.net",
+    "name":"BUND \/ Friends of The Earth"
+  },
+  {
+    "domain":"www.bsr.de",
+    "name":"Berliner Stadtreinigung (BSR)"
+  },
+  {
+    "domain":"www.bsdconsulting.com",
+    "name":"BSD Consulting"
+  },
+  {
+    "domain":"www.borderstep.org",
+    "name":"Borderstep Institute"
+  },
+  {
+    "domain":"www.borderstep.de",
+    "name":"Borderstep Institut"
+  },
+  {
+    "domain":"www.bmwi.de",
+    "name":"Bundesministerium für Wirtschaft"
+  },
+  {
+    "domain":"www.bmbf.de",
+    "name":"Ministerium für Bildung und Forschung"
+  },
+  {
+    "domain":"www.bird.co",
+    "name":"Bird"
+  },
+  {
+    "domain":"www.bertelsmann-stiftung.de",
+    "name":"Bertelsmann Stiftung"
+  },
+  {
+    "domain":"www.berlintxl.de",
+    "name":"Berlin TXL The Urban Tech Republic"
+  },
+  {
+    "domain":"www.berliner-e-agentur.de",
+    "name":"Berliner E Agentur"
+  },
+  {
+    "domain":"www.berlin-partner.de",
+    "name":"Berlin Partner"
+  },
+  {
+    "domain":"www.berlin-innovation-agency.com",
+    "name":"Berlin Innovation Agency (BIA)"
+  },
+  {
+    "domain":"www.bee-ev.de",
+    "name":"Bundesverband Erneurbare Energie"
+  },
+  {
+    "domain":"www.beanair.com",
+    "name":"Beanair"
+  },
+  {
+    "domain":"www.bde.de",
+    "name":"BDE e.v."
+  },
+  {
+    "domain":"www.bbsr.bund.de",
+    "name":"German Federal Institute for Research on Building, Urban Affairs and Spatial Development"
+  },
+  {
+    "domain":"www.baywa-re.de",
+    "name":"BayWa r.e."
+  },
+  {
+    "domain":"www.bahn.de",
+    "name":"Deutsche Bahn"
+  },
+  {
+    "domain":"www.bacb.de",
+    "name":"Business Angels Club Berlin Branderburg"
+  },
+  {
+    "domain":"www.alba.info",
+    "name":"Alba Group"
+  },
+  {
+    "domain":"www.agora-energiewende.de",
+    "name":"Agora Energiewende"
+  },
+  {
+    "domain":"www.adlershof.de",
+    "name":"Adlershof"
+  },
+  {
+    "domain":"wermutham.com",
+    "name":"Wermuth Assetmanagement"
+  },
+  {
+    "domain":"wattx.io",
+    "name":"WattX"
+  },
+  {
+    "domain":"watergenics.tech",
+    "name":"Watergenics"
+  },
+  {
+    "domain":"warehousing1.com",
+    "name":"Warehousing1"
+  },
+  {
+    "domain":"visionhealthpioneers.de",
+    "name":"Vision Health Pioneers"
+  },
+  {
+    "domain":"thedrivery.com",
+    "name":"The Drivery"
+  },
+  {
+    "domain":"swobbee.de",
+    "name":"Swobee"
+  },
+  {
+    "domain":"sustainable-design-center.de",
+    "name":"Sustainable Design Centre"
+  },
+  {
+    "domain":"start-green.net",
+    "name":"Start Green"
+  },
+  {
+    "domain":"sonnenrepublik.de",
+    "name":"Sonnenrepublik"
+  },
+  {
+    "domain":"sirplus.de",
+    "name":"Sirplus"
+  },
+  {
+    "domain":"sensorberg.com",
+    "name":"Sensorberg"
+  },
+  {
+    "domain":"sensical.de",
+    "name":"Sensical"
+  },
+  {
+    "domain":"relayr.io",
+    "name":"relayr"
+  },
+  {
+    "domain":"regional-engagiert.de",
+    "name":"Regional Engagiert"
+  },
+  {
+    "domain":"ree.technology",
+    "name":"Ree Technology"
+  },
+  {
+    "domain":"qrcobble.com",
+    "name":"QR Cobble"
+  },
+  {
+    "domain":"protellus.de",
+    "name":"Protellus"
+  },
+  {
+    "domain":"plantix.net",
+    "name":"plantix"
+  },
+  {
+    "domain":"pi.pe",
+    "name":"Pipe"
+  },
+  {
+    "domain":"perto.de",
+    "name":"Perto"
+  },
+  {
+    "domain":"parcellab.com",
+    "name":"ParcelLab"
+  },
+  {
+    "domain":"opensourceecology.de",
+    "name":"Opensource Ecology e.v"
+  },
+  {
+    "domain":"onpurpose.org",
+    "name":"On Purpose"
+  },
+  {
+    "domain":"onomotion.com",
+    "name":"ONO"
+  },
+  {
+    "domain":"objectbox.io",
+    "name":"ObjectBox"
+  },
+  {
+    "domain":"new.siemens.com",
+    "name":"Siemens"
+  },
+  {
+    "domain":"nebenan.de",
+    "name":"Nebenan"
+  },
+  {
+    "domain":"nachhaltigkeit.bvng.org",
+    "name":"Bundesverband für Nachhaltigkeit"
+  },
+  {
+    "domain":"mybus.gmbh",
+    "name":"MyBus"
+  },
+  {
+    "domain":"motionlab.berlin",
+    "name":"Motion Lab"
+  },
+  {
+    "domain":"motion-tag.com",
+    "name":"MotionTag"
+  },
+  {
+    "domain":"moeco.io",
+    "name":"Moeco"
+  },
+  {
+    "domain":"mobimeo.com",
+    "name":"Mobimeo"
+  },
+  {
+    "domain":"mieterengel.de",
+    "name":"Mieter Engel"
+  },
+  {
+    "domain":"meenergy.earth",
+    "name":"ME Energy"
+  },
+  {
+    "domain":"maschinenraum.io",
+    "name":"Maschienenraum"
+  },
+  {
+    "domain":"maker-faire.de",
+    "name":"Maker Faire Berlin"
+  },
+  {
+    "domain":"loadster.org",
+    "name":"citkar"
+  },
+  {
+    "domain":"live-eo.com",
+    "name":"LiveEO"
+  },
+  {
+    "domain":"liqd.net",
+    "name":"Liquid Democracy EV"
+  },
+  {
+    "domain":"leaftech.de",
+    "name":"Leaftech"
+  },
+  {
+    "domain":"infralab.berlin",
+    "name":"Infra Lab"
+  },
+  {
+    "domain":"iclei-europe.org",
+    "name":"ICLEI Europe"
+  },
+  {
+    "domain":"heartbeatinvestments.com",
+    "name":"Heart Beat Investments"
+  },
+  {
+    "domain":"greencitysolutions.de",
+    "name":"Green City Solutions"
+  },
+  {
+    "domain":"greenbuzzberlin.de",
+    "name":"Greenbuzz Berlin"
+  },
+  {
+    "domain":"get-a-way.com",
+    "name":"Get a way"
+  },
+  {
+    "domain":"fslci.org",
+    "name":"Forum For Sustainability through Lifecycle Innovation"
+  },
+  {
+    "domain":"frequenz.com",
+    "name":"Frequenz.io"
+  },
+  {
+    "domain":"foodlabs.de",
+    "name":"Atlantic Food Labs"
+  },
+  {
+    "domain":"fixmyberlin.de",
+    "name":"FixMyBerlin"
+  },
+  {
+    "domain":"euref.de",
+    "name":"EUREF"
+  },
+  {
+    "domain":"esgconference.com",
+    "name":"Global Sustain"
+  },
+  {
+    "domain":"eon-agile.com",
+    "name":"E.ON: agile"
+  },
+  {
+    "domain":"enway.ai",
+    "name":"Enway"
+  },
+  {
+    "domain":"enviosystems.com",
+    "name":"Envio Systems"
+  },
+  {
+    "domain":"enbreeze.com",
+    "name":"enbreeze GmbH"
+  },
+  {
+    "domain":"emmy-sharing.de",
+    "name":"Emmy"
+  },
+  {
+    "domain":"ekaros.io",
+    "name":"Ekaros"
+  },
+  {
+    "domain":"difu.de",
+    "name":"Deutsches Instiut für Urbanistik"
+  },
+  {
+    "domain":"demos-deutschland.de",
+    "name":"Demos"
+  },
+  {
+    "domain":"de.simplemobility.org",
+    "name":"SimpleMobility GmbH"
+  },
+  {
+    "domain":"dach.climate-kic.org",
+    "name":"EIT Climate KIC"
+  },
+  {
+    "domain":"creativeclimatecities.org",
+    "name":"Creative Climate Cities"
+  },
+  {
+    "domain":"crclr.org",
+    "name":"Crclr"
+  },
+  {
+    "domain":"corenetix.com",
+    "name":"CoreNetiX"
+  },
+  {
+    "domain":"connctd.com",
+    "name":"IoT connctd GmbH"
+  },
+  {
+    "domain":"cirplus.com",
+    "name":"Cirplus"
+  },
+  {
+    "domain":"circulareconomytours.com",
+    "name":"Circular Economy Tours"
+  },
+  {
+    "domain":"circular.berlin",
+    "name":"Circular City E.v."
+  },
+  {
+    "domain":"circ.com",
+    "name":"Circ"
+  },
+  {
+    "domain":"chargery.de",
+    "name":"Chargery"
+  },
+  {
+    "domain":"changers.com",
+    "name":"Blacksquared GmbH"
+  },
+  {
+    "domain":"ccre.org",
+    "name":"Council of European Municipalities and Regions \/ German Association"
+  },
+  {
+    "domain":"cabinspacey.com",
+    "name":"Cabin Spacey"
+  },
+  {
+    "domain":"c2c-ev.de",
+    "name":"Cradle to Cradle e.v"
+  },
+  {
+    "domain":"bp-consultants.de",
+    "name":"Berndt+Partner Consultants GmbH"
+  },
+  {
+    "domain":"bmw-foundation.org",
+    "name":"BMW Foundation"
+  },
+  {
+    "domain":"bliq.ai",
+    "name":"Bliq"
+  },
+  {
+    "domain":"berlin.impacthub.net",
+    "name":"Impact Hub"
+  },
+  {
+    "domain":"alcemy.tech",
+    "name":"Alcemy"
+  },
+  {
+    "domain":"airelo.me",
+    "name":"AiRelo"
+  },
+  {
+    "domain":"aiderly.de",
+    "name":"aiderly.de"
+  },
+  {
+    "domain":"Crate.io",
+    "name":"Crate.io"
+  }
+]

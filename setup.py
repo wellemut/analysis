@@ -20,13 +20,15 @@ for i in range(1, 18):
 db.table("domains").create(
     Column("id", "integer", nullable=False),
     Column("domain", "text", nullable=False),
+    Column("url", "text", nullable=False),
+    Column("name", "text", nullable=True),
     Column("total_score", "integer", nullable=True),
     *sdgs_score_columns,
     Column("twitter_handle", "text", nullable=True),
     Column("summary", "text", nullable=True),
     Column("word_count", "integer", nullable=True),
     *sdgs_count_columns,
-).primary_key("id").unique("domain").if_not_exists().execute()
+).primary_key("id").unique("domain").unique("url").if_not_exists().execute()
 
 count_before = db.table("domains").count("domain").value()
 
@@ -35,12 +37,14 @@ scraped_urls = get_urls_table_from_scraped_database()
 with db.start_transaction() as transaction:
     db.attach(scraped_urls.database, name="scraped", transaction=transaction)
 
-    # NOTE: We currently use .distinct() due to duplicate domains in scraped.sqlite
-    db.table("domains").insert_in_columns("domain").from_(
+    # NOTE: We currently use .groupby() due to duplicate domains in scraped.sqlite
+    db.table("domains").insert_in_columns("domain", "url").from_(
         scraped_urls.schema("scraped").table
-    ).select("domain").distinct().where(
+    ).select("domain", "url").where(
         (Field("level") == 0)
         & Field("domain").notin(db.table("domains").select("domain"))
+    ).groupby(
+        "domain"
     ).execute(
         transaction=transaction
     )

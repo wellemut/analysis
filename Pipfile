@@ -15,6 +15,7 @@ lxml = "*"
 snakeviz = "*"
 progressbar2 = "*"
 python-utils = "*"
+pandas = "*"
 
 [requires]
 python_version = "3.8"
