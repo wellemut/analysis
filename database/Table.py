@@ -15,12 +15,24 @@ class Table(PypikaTable):
         # Filter values with None (-> NULL)
         kwargs = dict(filter(lambda x: x[1] is not None, kwargs.items()))
 
-        return (
-            QueryBuilder(self.database)
-            .into(self.name)
-            .columns(*kwargs.keys())
-            .insert(*kwargs.values())
-        )
+        return self.insert_in_columns(*kwargs.keys()).insert(*kwargs.values())
+
+    # Start a new insertion query
+    def insert_in_columns(self, *columns):
+        return QueryBuilder(self.database).into(self.name).columns(*columns)
+
+    # Start a new update query
+    def set(self, **kwargs):
+        # Filter values with None (-> NULL)
+        kwargs = dict(filter(lambda x: x[1] is not None, kwargs.items()))
+
+        query = QueryBuilder(self.database).update(self.name)
+
+        # Run set for each key-value pair
+        for key, value in kwargs.items():
+            query.set(key, value)
+
+        return query
 
     def as_(self, table_alias):
         self.table_alias = table_alias

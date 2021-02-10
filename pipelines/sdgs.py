@@ -10,6 +10,7 @@ from helpers.get_urls_table_from_scraped_database import (
 )
 from helpers.is_binary_string import is_binary_string
 from helpers.find_sdg_keywords_in_text import find_sdg_keywords_in_text
+from helpers.update_analysis_database import update_analysis_database
 from helpers.save_result import save_result
 
 PIPELINE = Path(__file__).stem
@@ -214,7 +215,7 @@ def run_pipeline(domain, url, reset):
                     tag=match["tag"],
                 ).execute(transaction=transaction)
 
-    print("Exporting to dataframe...")
+    print("Analyzing results...")
 
     # Get data
     df = db.view("results").select("domain", "url", "word_count", "sdg").to_dataframe()
@@ -249,22 +250,21 @@ def run_pipeline(domain, url, reset):
     old_names = df.filter(regex="sdg").columns.tolist()
     new_names = []
     for name in old_names:
-        new_names.append(name + "_matches_count")
+        new_names.append(name + "_count")
     df = df.rename(columns=dict(zip(old_names, new_names)))
 
     # Calculate %
-    for column in df.columns:
-        if column.endswith("matches_count"):
-            df[column.replace("count", "percent")] = round(
-                df[column] / df["word_count"] * 100, 2
-            )
+    for column in df.filter(regex="sdg").columns:
+        df[column.replace("count", "percent")] = round(
+            df[column] / df["word_count"] * 100, 2
+        )
 
     # Calculate scores
     for column in df.filter(regex="_percent").columns:
         bound = None
-        if column == "sdgs_matches_percent":
+        if column == "sdgs_percent":
             bound = 2.5
-        elif column.endswith("matches_percent"):
+        elif column.endswith("_percent"):
             bound = 10.0
 
         df[column.replace("percent", "score")] = round(
@@ -282,6 +282,19 @@ def run_pipeline(domain, url, reset):
 
     # Sort by total score, descending
     df = df.sort_values(by=["total_score"], ascending=False)
+
+    # Write to analysis database
+    update_analysis_database(
+        df[
+            [
+                "domain",
+                "total_score",
+                "word_count",
+                *df.filter(regex="sdg.+_score").columns,
+                *df.filter(regex="sdg.+_count").columns,
+            ]
+        ]
+    )
 
     # Save as JSON
     save_result(PIPELINE, df)

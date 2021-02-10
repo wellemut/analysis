@@ -9,6 +9,7 @@ from helpers.get_urls_table_from_scraped_database import (
     get_urls_table_from_scraped_database,
 )
 from helpers.is_binary_string import is_binary_string
+from helpers.update_analysis_database import update_analysis_database
 from helpers.save_result import save_result
 
 PIPELINE = Path(__file__).stem
@@ -170,7 +171,7 @@ def run_pipeline(domain, url, reset):
                     handle=social["handle"],
                 ).execute(transaction=transaction)
 
-    print("Exporting to dataframe...")
+    print("Analyzing results...")
 
     # Get data
     df = db.view("results").select("domain", "url", "type", "handle").to_dataframe()
@@ -191,6 +192,15 @@ def run_pipeline(domain, url, reset):
 
     # Ignore count
     df = df.drop(columns=["count"])
+
+    # Unstack type into columns, so that we have one row per domain
+    df = df.set_index(["domain", "type"]).unstack(level=-1).reset_index()
+
+    # Rename columns
+    df.columns = ["_".join(reversed(col)).strip("_") for col in df.columns]
+
+    # Write to analysis database
+    update_analysis_database(df[["domain", "twitter_handle"]])
 
     # Save as JSON
     save_result(PIPELINE, df)

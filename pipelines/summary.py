@@ -7,6 +7,7 @@ from models import PipelineProgressBar
 from helpers.get_urls_table_from_scraped_database import (
     get_urls_table_from_scraped_database,
 )
+from helpers.update_analysis_database import update_analysis_database
 from helpers.save_result import save_result
 
 PIPELINE = Path(__file__).stem
@@ -119,8 +120,6 @@ def run_pipeline(domain, url, reset):
         # round (otherwise, we get a non-unique domain error).
         analyzed_domains.append(domain)
 
-    print("Exporting to dataframe...")
-
     # Get data
     df = (
         db.table("domains")
@@ -135,6 +134,9 @@ def run_pipeline(domain, url, reset):
     df = df.sort_values(by=["domain"])
 
     print("Found", df["summary"].count(), "/", len(df.index), "summaries")
+
+    # Write to analysis database
+    update_analysis_database(df[["domain", "summary"]])
 
     # Save as JSON
     save_result(PIPELINE, df)
