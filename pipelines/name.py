@@ -17,7 +17,7 @@ PIPELINE = Path(__file__).stem
 def run_pipeline(domain, url, reset):
     # Load the CSV file of names, by domain
     names = pd.read_csv(
-        Path(os.path.join(__file__, "..", "..", "inputs", "names.csv")).resolve()
+        Path(os.path.join(__file__, "..", "..", "files", "names.csv")).resolve()
     )
 
     # Load all domains

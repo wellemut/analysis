@@ -16,6 +16,7 @@ snakeviz = "*"
 progressbar2 = "*"
 python-utils = "*"
 pandas = "*"
+twitterapi = "*"
 
 [requires]
 python_version = "3.8"

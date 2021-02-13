@@ -4,3 +4,12 @@
 
 # Ignore exports
 export/
+
+# Ignore scraped logos
+files/logos/*
+
+# Ignore environment variables
+.env
+
+# Never ignore keep files
+!**/*.keep
