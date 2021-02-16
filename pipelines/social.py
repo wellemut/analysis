@@ -174,30 +174,41 @@ def run_pipeline(domain, url, reset):
     print("Analyzing results...")
 
     # Get data
-    df = db.view("results").select("domain", "url", "type", "handle").to_dataframe()
+    handles = (
+        db.view("results").select("domain", "url", "type", "handle").to_dataframe()
+    )
 
     # Count number of hrefs for each type and domain
-    df = (
-        df.groupby(["domain", "type", "handle"])
+    handles = (
+        handles.groupby(["domain", "type", "handle"])
         .size()
         .reset_index()
         .rename(columns={0: "count"})
     )
 
     # Sort dataset
-    df = df.sort_values(by=["domain", "type", "count"], ascending=False)
+    handles = handles.sort_values(by=["domain", "type", "count"], ascending=False)
 
     # Keep top 1-row for each hit
-    df = df.groupby(["domain", "type"]).head(1)
+    handles = handles.groupby(["domain", "type"]).head(1)
 
     # Ignore count
-    df = df.drop(columns=["count"])
+    # handles = handles.drop(columns=["count"])
 
     # Unstack type into columns, so that we have one row per domain
-    df = df.set_index(["domain", "type"]).unstack(level=-1).reset_index()
+    handles = handles.set_index(["domain", "type"]).unstack(level=-1).reset_index()
 
     # Rename columns
-    df.columns = ["_".join(reversed(col)).strip("_") for col in df.columns]
+    handles.columns = ["_".join(reversed(col)).strip("_") for col in handles.columns]
+
+    # Count number of analyzed URLs for each type and domain
+    urls = db.table("urls").select("domain", "url").to_dataframe()
+    url_count = (
+        urls.groupby(["domain"]).size().reset_index().rename(columns={0: "url_count"})
+    )
+
+    # Merge handles and url counts
+    df = handles.merge(url_count, left_on="domain", right_on="domain")
 
     # Write to analysis database
     update_analysis_database(df[["domain", "twitter_handle"]])

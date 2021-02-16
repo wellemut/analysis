@@ -1,574 +1,860 @@
 [
   {
     "domain":"Crate.io",
-    "twitter_handle":"crateio"
+    "twitter_handle":"crateio",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"airelo.me",
-    "twitter_handle":"airelome"
+    "twitter_handle":"airelome",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"berlin.impacthub.net",
-    "twitter_handle":"impacthubbln"
+    "twitter_handle":"impacthubbln",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"bmw-foundation.org",
-    "twitter_handle":"bmwfoundation"
+    "twitter_handle":"bmwfoundation",
+    "twitter_count":22,
+    "url_count":10
   },
   {
     "domain":"bp-consultants.de",
-    "twitter_handle":"bp__consultants"
+    "twitter_handle":"bp__consultants",
+    "twitter_count":6,
+    "url_count":8
   },
   {
     "domain":"c2c-ev.de",
-    "twitter_handle":"c2c_ngo"
+    "twitter_handle":"c2c_ngo",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"ccre.org",
-    "twitter_handle":"ccrecemr"
+    "twitter_handle":"ccrecemr",
+    "twitter_count":16,
+    "url_count":10
   },
   {
     "domain":"changers.com",
-    "twitter_handle":"changerscom"
+    "twitter_handle":"changerscom",
+    "twitter_count":7,
+    "url_count":10
   },
   {
     "domain":"circ.com",
-    "twitter_handle":"circ"
+    "twitter_handle":"circ",
+    "twitter_count":5,
+    "url_count":5
   },
   {
     "domain":"cirplus.com",
-    "twitter_handle":"cir_plus"
+    "twitter_handle":"cir_plus",
+    "twitter_count":8,
+    "url_count":10
   },
   {
     "domain":"connctd.com",
-    "twitter_handle":"iotconnctd"
+    "twitter_handle":"iotconnctd",
+    "twitter_count":9,
+    "url_count":9
   },
   {
     "domain":"crclr.org",
-    "twitter_handle":"crclrhouse"
+    "twitter_handle":"crclrhouse",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"creativeclimatecities.org",
-    "twitter_handle":"climatecities"
+    "twitter_handle":"climatecities",
+    "twitter_count":78,
+    "url_count":10
   },
   {
     "domain":"dach.climate-kic.org",
-    "twitter_handle":"climatekic_at"
+    "twitter_handle":"climatekic_at",
+    "twitter_count":22,
+    "url_count":10
   },
   {
     "domain":"demos-deutschland.de",
-    "twitter_handle":"demosbird"
+    "twitter_handle":"demosbird",
+    "twitter_count":7,
+    "url_count":7
   },
   {
     "domain":"difu.de",
-    "twitter_handle":"difu_d"
+    "twitter_handle":"difu_d",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"emmy-sharing.de",
-    "twitter_handle":"emmy_sharing"
+    "twitter_handle":"emmy_sharing",
+    "twitter_count":20,
+    "url_count":10
   },
   {
     "domain":"enviosystems.com",
-    "twitter_handle":"enviosystems"
+    "twitter_handle":"enviosystems",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"eon-agile.com",
-    "twitter_handle":"eon_se_en"
+    "twitter_handle":"eon_se_en",
+    "twitter_count":1,
+    "url_count":1
   },
   {
     "domain":"esgconference.com",
-    "twitter_handle":"glsustain"
+    "twitter_handle":"glsustain",
+    "twitter_count":2,
+    "url_count":10
   },
   {
     "domain":"euref.de",
-    "twitter_handle":"euref"
+    "twitter_handle":"euref",
+    "twitter_count":20,
+    "url_count":10
   },
   {
     "domain":"fslci.org",
-    "twitter_handle":"lcic2020"
+    "twitter_handle":"lcic2020",
+    "twitter_count":66,
+    "url_count":10
   },
   {
     "domain":"greenbuzzberlin.de",
-    "twitter_handle":"sustainberlin"
+    "twitter_handle":"sustainberlin",
+    "twitter_count":20,
+    "url_count":10
   },
   {
     "domain":"greencitysolutions.de",
-    "twitter_handle":"mycitytree"
+    "twitter_handle":"mycitytree",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"iclei-europe.org",
-    "twitter_handle":"iclei_europe"
+    "twitter_handle":"iclei_europe",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"infralab.berlin",
-    "twitter_handle":"infralabberlin"
+    "twitter_handle":"infralabberlin",
+    "twitter_count":33,
+    "url_count":10
   },
   {
     "domain":"liqd.net",
-    "twitter_handle":"liqd_de"
+    "twitter_handle":"liqd_de",
+    "twitter_count":12,
+    "url_count":10
   },
   {
     "domain":"maker-faire.de",
-    "twitter_handle":"makerfairedach"
+    "twitter_handle":"makerfairedach",
+    "twitter_count":20,
+    "url_count":10
   },
   {
     "domain":"maschinenraum.io",
-    "twitter_handle":"maschinenraum"
+    "twitter_handle":"maschinenraum",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"mobimeo.com",
-    "twitter_handle":"mobimeomobility"
+    "twitter_handle":"mobimeomobility",
+    "twitter_count":18,
+    "url_count":9
   },
   {
     "domain":"moeco.io",
-    "twitter_handle":"moeco_io"
+    "twitter_handle":"moeco_io",
+    "twitter_count":6,
+    "url_count":6
   },
   {
     "domain":"motion-tag.com",
-    "twitter_handle":"motiontag"
+    "twitter_handle":"motiontag",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"mybus.gmbh",
-    "twitter_handle":"mybusgmbh"
+    "twitter_handle":"mybusgmbh",
+    "twitter_count":5,
+    "url_count":6
   },
   {
     "domain":"nachhaltigkeit.bvng.org",
-    "twitter_handle":"bvngberlin"
+    "twitter_handle":"bvngberlin",
+    "twitter_count":12,
+    "url_count":10
   },
   {
     "domain":"nebenan.de",
-    "twitter_handle":"nebenan_de"
+    "twitter_handle":"nebenan_de",
+    "twitter_count":1,
+    "url_count":10
   },
   {
     "domain":"objectbox.io",
-    "twitter_handle":"objectbox_io"
+    "twitter_handle":"objectbox_io",
+    "twitter_count":7,
+    "url_count":10
   },
   {
     "domain":"onomotion.com",
-    "twitter_handle":"ono_motion"
+    "twitter_handle":"ono_motion",
+    "twitter_count":6,
+    "url_count":10
   },
   {
     "domain":"onpurpose.org",
-    "twitter_handle":"onpurposede"
+    "twitter_handle":"onpurposede",
+    "twitter_count":8,
+    "url_count":10
   },
   {
     "domain":"opensourceecology.de",
-    "twitter_handle":"osegermany"
+    "twitter_handle":"osegermany",
+    "twitter_count":4,
+    "url_count":8
   },
   {
     "domain":"parcellab.com",
-    "twitter_handle":"parcellab_en"
+    "twitter_handle":"parcellab_en",
+    "twitter_count":9,
+    "url_count":10
   },
   {
     "domain":"perto.de",
-    "twitter_handle":"perto_gmbh"
+    "twitter_handle":"perto_gmbh",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"plantix.net",
-    "twitter_handle":"plantixapp"
+    "twitter_handle":"plantixapp",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"protellus.de",
-    "twitter_handle":"protellus"
+    "twitter_handle":"protellus",
+    "twitter_count":6,
+    "url_count":3
   },
   {
     "domain":"regional-engagiert.de",
-    "twitter_handle":"reg_engagiert"
+    "twitter_handle":"reg_engagiert",
+    "twitter_count":20,
+    "url_count":10
   },
   {
     "domain":"relayr.io",
-    "twitter_handle":"relayr_iot"
+    "twitter_handle":"relayr_iot",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"sensorberg.com",
-    "twitter_handle":"sensorberg"
+    "twitter_handle":"sensorberg",
+    "twitter_count":4,
+    "url_count":10
   },
   {
     "domain":"sirplus.de",
-    "twitter_handle":"sirplus_de"
+    "twitter_handle":"sirplus_de",
+    "twitter_count":8,
+    "url_count":8
   },
   {
     "domain":"start-green.net",
-    "twitter_handle":"start_green_"
+    "twitter_handle":"start_green_",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"swobbee.de",
-    "twitter_handle":"swobbee"
+    "twitter_handle":"swobbee",
+    "twitter_count":1,
+    "url_count":10
   },
   {
     "domain":"visionhealthpioneers.de",
-    "twitter_handle":"maren_lesche"
+    "twitter_handle":"maren_lesche",
+    "twitter_count":1,
+    "url_count":10
   },
   {
     "domain":"watergenics.tech",
-    "twitter_handle":"cerbivore"
+    "twitter_handle":"cerbivore",
+    "twitter_count":2,
+    "url_count":4
   },
   {
     "domain":"wattx.io",
-    "twitter_handle":"wattxberlin"
+    "twitter_handle":"wattxberlin",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"wermutham.com",
-    "twitter_handle":"wermutham"
+    "twitter_handle":"wermutham",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.adlershof.de",
-    "twitter_handle":"berlinscience"
+    "twitter_handle":"berlinscience",
+    "twitter_count":3,
+    "url_count":10
   },
   {
     "domain":"www.agora-energiewende.de",
-    "twitter_handle":"agoraew"
+    "twitter_handle":"agoraew",
+    "twitter_count":78,
+    "url_count":10
   },
   {
     "domain":"www.alba.info",
-    "twitter_handle":"albagroup"
+    "twitter_handle":"albagroup",
+    "twitter_count":25,
+    "url_count":10
   },
   {
     "domain":"www.bacb.de",
-    "twitter_handle":"bacb_ev"
+    "twitter_handle":"bacb_ev",
+    "twitter_count":1,
+    "url_count":1
   },
   {
     "domain":"www.bahn.de",
-    "twitter_handle":"db_bahn"
+    "twitter_handle":"db_bahn",
+    "twitter_count":6,
+    "url_count":10
   },
   {
     "domain":"www.bde.de",
-    "twitter_handle":"bde_presse"
+    "twitter_handle":"bde_presse",
+    "twitter_count":9,
+    "url_count":9
   },
   {
     "domain":"www.beanair.com",
-    "twitter_handle":"beanair"
+    "twitter_handle":"beanair",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.bee-ev.de",
-    "twitter_handle":"beemerkenswert"
+    "twitter_handle":"beemerkenswert",
+    "twitter_count":5,
+    "url_count":10
   },
   {
     "domain":"www.berlin-innovation-agency.com",
-    "twitter_handle":"biahubs"
+    "twitter_handle":"biahubs",
+    "twitter_count":2,
+    "url_count":1
   },
   {
     "domain":"www.berlin-partner.de",
-    "twitter_handle":"berlinpartner"
+    "twitter_handle":"berlinpartner",
+    "twitter_count":12,
+    "url_count":10
   },
   {
     "domain":"www.berliner-e-agentur.de",
-    "twitter_handle":"bea_energie"
+    "twitter_handle":"bea_energie",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.berlintxl.de",
-    "twitter_handle":"b_txl"
+    "twitter_handle":"b_txl",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.bertelsmann-stiftung.de",
-    "twitter_handle":"bertelsmannst"
+    "twitter_handle":"bertelsmannst",
+    "twitter_count":12,
+    "url_count":10
   },
   {
     "domain":"www.bird.co",
-    "twitter_handle":"birdride"
+    "twitter_handle":"birdride",
+    "twitter_count":2,
+    "url_count":10
   },
   {
     "domain":"www.bmbf.de",
-    "twitter_handle":"bmbf_bund"
+    "twitter_handle":"bmbf_bund",
+    "twitter_count":16,
+    "url_count":10
   },
   {
     "domain":"www.bmwi.de",
-    "twitter_handle":"bmwi_bund"
+    "twitter_handle":"bmwi_bund",
+    "twitter_count":13,
+    "url_count":10
   },
   {
     "domain":"www.bsdconsulting.com",
-    "twitter_handle":"bsdconsulting"
+    "twitter_handle":"bsdconsulting",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.bsr.de",
-    "twitter_handle":"bsr_de"
+    "twitter_handle":"bsr_de",
+    "twitter_count":9,
+    "url_count":10
   },
   {
     "domain":"www.bund.net",
-    "twitter_handle":"bund_net"
+    "twitter_handle":"bund_net",
+    "twitter_count":36,
+    "url_count":10
   },
   {
     "domain":"www.bvg.de",
-    "twitter_handle":"bvg_kampagne"
+    "twitter_handle":"bvg_kampagne",
+    "twitter_count":2,
+    "url_count":10
   },
   {
     "domain":"www.bwb.de",
-    "twitter_handle":"wasserbetriebe"
+    "twitter_handle":"wasserbetriebe",
+    "twitter_count":9,
+    "url_count":10
   },
   {
     "domain":"www.chargomat.de",
-    "twitter_handle":"chargomat"
+    "twitter_handle":"chargomat",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.circulareconomy.tu-berlin.de",
-    "twitter_handle":"umweltrat"
+    "twitter_handle":"umweltrat",
+    "twitter_count":1,
+    "url_count":10
   },
   {
     "domain":"www.dbu.de",
-    "twitter_handle":"umweltstiftung"
+    "twitter_handle":"umweltstiftung",
+    "twitter_count":20,
+    "url_count":10
   },
   {
     "domain":"www.dena.de",
-    "twitter_handle":"dena_news"
+    "twitter_handle":"dena_news",
+    "twitter_count":45,
+    "url_count":10
   },
   {
     "domain":"www.dfki.de",
-    "twitter_handle":"dfki"
+    "twitter_handle":"dfki",
+    "twitter_count":50,
+    "url_count":10
   },
   {
     "domain":"www.die-gdi.de",
-    "twitter_handle":"die_gdi"
+    "twitter_handle":"die_gdi",
+    "twitter_count":9,
+    "url_count":10
   },
   {
     "domain":"www.diw.de",
-    "twitter_handle":"diw_berlin"
+    "twitter_handle":"diw_berlin",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.dlr.de",
-    "twitter_handle":"dlr_de"
+    "twitter_handle":"dlr_de",
+    "twitter_count":33,
+    "url_count":10
   },
   {
     "domain":"www.door2door.io",
-    "twitter_handle":"door2doorhq"
+    "twitter_handle":"door2doorhq",
+    "twitter_count":1,
+    "url_count":1
   },
   {
     "domain":"www.dstgb.de",
-    "twitter_handle":"gemeindebund"
+    "twitter_handle":"gemeindebund",
+    "twitter_count":20,
+    "url_count":10
   },
   {
     "domain":"www.dwr-eco.com",
-    "twitter_handle":"dwr_eco"
+    "twitter_handle":"dwr_eco",
+    "twitter_count":11,
+    "url_count":9
   },
   {
     "domain":"www.ecodesigncircle.eu",
-    "twitter_handle":"ecodesigncircle"
+    "twitter_handle":"ecodesigncircle",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.ecologic.eu",
-    "twitter_handle":"ecologicberlin"
+    "twitter_handle":"ecologicberlin",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.emnify.de",
-    "twitter_handle":"emnify"
+    "twitter_handle":"emnify",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.emo-berlin.de",
-    "twitter_handle":"emobilityberlin"
+    "twitter_handle":"emobilityberlin",
+    "twitter_count":12,
+    "url_count":10
   },
   {
     "domain":"www.enpal.de",
-    "twitter_handle":"enpal_official"
+    "twitter_handle":"enpal_official",
+    "twitter_count":8,
+    "url_count":10
   },
   {
     "domain":"www.escpeurope.eu",
-    "twitter_handle":"escp_bs"
+    "twitter_handle":"escp_bs",
+    "twitter_count":1,
+    "url_count":1
   },
   {
     "domain":"www.fgf-ev.de",
-    "twitter_handle":"fgf_ev"
+    "twitter_handle":"fgf_ev",
+    "twitter_count":9,
+    "url_count":9
   },
   {
     "domain":"www.fu-berlin.de",
-    "twitter_handle":"fu_berlin"
+    "twitter_handle":"fu_berlin",
+    "twitter_count":6,
+    "url_count":10
   },
   {
     "domain":"www.fz-juelich.de",
-    "twitter_handle":"fz_juelich"
+    "twitter_handle":"fz_juelich",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.getfresh.energy",
-    "twitter_handle":"_freshenergy"
+    "twitter_handle":"_freshenergy",
+    "twitter_count":1,
+    "url_count":1
   },
   {
     "domain":"www.giz.de",
-    "twitter_handle":"giz_gmbh"
+    "twitter_handle":"giz_gmbh",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.greenmeberlin.com",
-    "twitter_handle":"greenmebln"
+    "twitter_handle":"greenmebln",
+    "twitter_count":14,
+    "url_count":10
   },
   {
     "domain":"www.greenpack.de",
-    "twitter_handle":"greenpackenergy"
+    "twitter_handle":"greenpackenergy",
+    "twitter_count":1,
+    "url_count":10
   },
   {
     "domain":"www.here.com",
-    "twitter_handle":"here"
+    "twitter_handle":"here",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.iass-potsdam.de",
-    "twitter_handle":"iass_potsdam"
+    "twitter_handle":"iass_potsdam",
+    "twitter_count":20,
+    "url_count":10
   },
   {
     "domain":"www.iav.com",
-    "twitter_handle":"iav_de"
+    "twitter_handle":"iav_de",
+    "twitter_count":2,
+    "url_count":2
   },
   {
     "domain":"www.ibb.de",
-    "twitter_handle":"pr_ibb"
+    "twitter_handle":"pr_ibb",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.idz.de",
-    "twitter_handle":"idzberlin"
+    "twitter_handle":"idzberlin",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.iku-innovationspreis.de",
-    "twitter_handle":"iku_preis"
+    "twitter_handle":"iku_preis",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.imaginecargo.com",
-    "twitter_handle":"imaginecargo"
+    "twitter_handle":"imaginecargo",
+    "twitter_count":1,
+    "url_count":2
   },
   {
     "domain":"www.innoenergy.com",
-    "twitter_handle":"innoenergyeu"
+    "twitter_handle":"innoenergyeu",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.landkreistag.de",
-    "twitter_handle":"dltonline"
+    "twitter_handle":"dltonline",
+    "twitter_count":20,
+    "url_count":10
   },
   {
     "domain":"www.lawio.de",
-    "twitter_handle":"lawio_de"
+    "twitter_handle":"lawio_de",
+    "twitter_count":1,
+    "url_count":10
   },
   {
     "domain":"www.lesan.ai",
-    "twitter_handle":"lesan_ai"
+    "twitter_handle":"lesan_ai",
+    "twitter_count":2,
+    "url_count":3
   },
   {
     "domain":"www.matchx.io",
-    "twitter_handle":"matchx_iot"
+    "twitter_handle":"matchx_iot",
+    "twitter_count":11,
+    "url_count":10
   },
   {
     "domain":"www.meetup.com",
-    "twitter_handle":"meetup"
+    "twitter_handle":"meetup",
+    "twitter_count":9,
+    "url_count":9
   },
   {
     "domain":"www.mint-engineering.de",
-    "twitter_handle":"algaemakers"
+    "twitter_handle":"algaemakers",
+    "twitter_count":2,
+    "url_count":10
   },
   {
     "domain":"www.mowea.world",
-    "twitter_handle":"moweawind"
+    "twitter_handle":"moweawind",
+    "twitter_count":9,
+    "url_count":9
   },
   {
     "domain":"www.mxc.org",
-    "twitter_handle":"mxcfoundation"
+    "twitter_handle":"mxcfoundation",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.nachhaltigkeitsrat.de",
-    "twitter_handle":"rne_de"
+    "twitter_handle":"rne_de",
+    "twitter_count":32,
+    "url_count":10
   },
   {
     "domain":"www.nestpick.com",
-    "twitter_handle":"nestpick"
+    "twitter_handle":"nestpick",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.nextbike.de",
-    "twitter_handle":"nextbike"
+    "twitter_handle":"nextbike",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.opes-solutions.com",
-    "twitter_handle":"opes_solutions"
+    "twitter_handle":"opes_solutions",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.pik-potsdam.de",
-    "twitter_handle":"pik_klima"
+    "twitter_handle":"pik_klima",
+    "twitter_count":20,
+    "url_count":10
   },
   {
     "domain":"www.polidia.de",
-    "twitter_handle":"polidiagmbh"
+    "twitter_handle":"polidiagmbh",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.polyteia.de",
-    "twitter_handle":"polyteia"
+    "twitter_handle":"polyteia",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.sensafety.org",
-    "twitter_handle":"sensafety_org"
+    "twitter_handle":"sensafety_org",
+    "twitter_count":1,
+    "url_count":10
   },
   {
     "domain":"www.sensefinity.com",
-    "twitter_handle":"sensefinity"
+    "twitter_handle":"sensefinity",
+    "twitter_count":1,
+    "url_count":10
   },
   {
     "domain":"www.sle-berlin.de",
-    "twitter_handle":"sleberlin"
+    "twitter_handle":"sleberlin",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.smart-city-berlin.de",
-    "twitter_handle":"berlinpartner"
+    "twitter_handle":"berlinpartner",
+    "twitter_count":1,
+    "url_count":10
   },
   {
     "domain":"www.smart-city-hub.com",
-    "twitter_handle":"biahubs"
+    "twitter_handle":"biahubs",
+    "twitter_count":2,
+    "url_count":2
   },
   {
     "domain":"www.solmove.com",
-    "twitter_handle":"solmove1"
+    "twitter_handle":"solmove1",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.stadtfarm.de",
-    "twitter_handle":"newurbanfarming"
+    "twitter_handle":"newurbanfarming",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.staedtetag.de",
-    "twitter_handle":"staedtetag"
+    "twitter_handle":"staedtetag",
+    "twitter_count":54,
+    "url_count":10
   },
   {
     "domain":"www.stiftung2grad.de",
-    "twitter_handle":"stiftung2grad"
+    "twitter_handle":"stiftung2grad",
+    "twitter_count":68,
+    "url_count":10
   },
   {
     "domain":"www.stromnetz.berlin",
-    "twitter_handle":"stromnetzbln"
+    "twitter_handle":"stromnetzbln",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.technologiestiftung-berlin.de",
-    "twitter_handle":"tsbberlin"
+    "twitter_handle":"tsbberlin",
+    "twitter_count":21,
+    "url_count":10
   },
   {
     "domain":"www.teraki.com",
-    "twitter_handle":"teraki_iot"
+    "twitter_handle":"teraki_iot",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.tier.app",
-    "twitter_handle":"tierscooters"
+    "twitter_handle":"tierscooters",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.tu-berlin.de",
-    "twitter_handle":"tuberlin"
+    "twitter_handle":"tuberlin",
+    "twitter_count":4,
+    "url_count":8
   },
   {
     "domain":"www.ubitricity.com",
-    "twitter_handle":"ubitricity"
+    "twitter_handle":"ubitricity",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.umweltbundesamt.de",
-    "twitter_handle":"umweltbundesamt"
+    "twitter_handle":"umweltbundesamt",
+    "twitter_count":44,
+    "url_count":10
   },
   {
     "domain":"www.unternehmensgruen.de",
-    "twitter_handle":"unternehmensgru"
+    "twitter_handle":"unternehmensgru",
+    "twitter_count":1,
+    "url_count":1
   },
   {
     "domain":"www.viessmann.de",
-    "twitter_handle":"viessmann"
+    "twitter_handle":"viessmann",
+    "twitter_count":11,
+    "url_count":10
   },
   {
     "domain":"www.wegweiser-kommune.de",
-    "twitter_handle":"wegweiskommune"
+    "twitter_handle":"wegweiskommune",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.windnode.de",
-    "twitter_handle":"windnode"
+    "twitter_handle":"windnode",
+    "twitter_count":10,
+    "url_count":10
   },
   {
     "domain":"www.wista.de",
-    "twitter_handle":"berlinstart"
+    "twitter_handle":"berlinstart",
+    "twitter_count":2,
+    "url_count":10
   },
   {
     "domain":"zukunftsorte.berlin",
-    "twitter_handle":"zukunftsorte"
+    "twitter_handle":"zukunftsorte",
+    "twitter_count":2,
+    "url_count":10
   }
 ]
