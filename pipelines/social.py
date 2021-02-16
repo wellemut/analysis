@@ -22,9 +22,13 @@ FACEBOOK_REGEX = re.compile(
     r"^(?:https?:)?\/\/(?:(?:www|m|mobile|touch|mbasic)\.)?(?:facebook|fb)\.(?:com|me)\/(?!(?:sharer|share|login|ads|policy|policies|settings|about|hashtag|help|events|groups|(?:v[0-9]+\.[0-9]+\/dialog))\b)(?:pg\/|pages\/(?:[^\/]+\/)*)?(?P<handle>[^\/_\?#@]+)\/?",
     flags=re.IGNORECASE,
 )
+LINKEDIN_REGEX = re.compile(
+    r"(?:https?:)?\/\/(?:[a-z]{2,3}\.)?linkedin.com\/company/(?P<handle>[^\/\?#]+)\/?"
+)
 REGEXES = {
     "twitter": TWITTER_REGEX,
     "facebook": FACEBOOK_REGEX,
+    "linkedin": LINKEDIN_REGEX,
 }
 
 
@@ -221,7 +225,9 @@ def run_pipeline(domain, url, reset):
     df = handles.merge(url_count, left_on="domain", right_on="domain")
 
     # Write to analysis database
-    update_analysis_database(df[["domain", "twitter_handle", "facebook_handle"]])
+    update_analysis_database(
+        df[["domain", "twitter_handle", "facebook_handle", "linkedin_handle"]]
+    )
 
     # Save as JSON
     save_result(PIPELINE, df)

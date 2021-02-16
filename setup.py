@@ -27,6 +27,7 @@ db.table("domains").create(
     Column("logo", "text", nullable=True),
     Column("twitter_handle", "text", nullable=True),
     Column("facebook_handle", "text", nullable=True),
+    Column("linkedin_handle", "text", nullable=True),
     Column("summary", "text", nullable=True),
     Column("word_count", "integer", nullable=True),
     *sdgs_count_columns,
