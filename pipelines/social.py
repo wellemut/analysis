@@ -14,6 +14,19 @@ from helpers.save_result import save_result
 
 PIPELINE = Path(__file__).stem
 
+TWITTER_REGEX = re.compile(
+    r"^(?:https?:)?\/\/(?:www\.)?twitter.com\/(?:#!\/)?(?!(?:intent|(?:[a-z]{2}\/)?privacy|hashtag|home|search|share|account|personalization)\b)(?P<handle>[A-Za-z0-9_]+)\/?",
+    flags=re.IGNORECASE,
+)
+FACEBOOK_REGEX = re.compile(
+    r"^(?:https?:)?\/\/(?:(?:www|m|mobile|touch|mbasic)\.)?(?:facebook|fb)\.(?:com|me)\/(?!(?:sharer|share|login|ads|policy|policies|settings|about|hashtag|help|events|groups|(?:v[0-9]+\.[0-9]+\/dialog))\b)(?:pg\/|pages\/(?:[^\/]+\/)*)?(?P<handle>[^\/_\?#@]+)\/?",
+    flags=re.IGNORECASE,
+)
+REGEXES = {
+    "twitter": TWITTER_REGEX,
+    "facebook": FACEBOOK_REGEX,
+}
+
 
 def run_pipeline(domain, url, reset):
     # Create database
@@ -133,10 +146,6 @@ def run_pipeline(domain, url, reset):
 
         # Search for links to Twitter, Facebook, or LinkedIn
         socials = []
-        twitter_regex = re.compile(
-            r"^(?:https?:)?\/\/(?:www\.)?twitter.com\/(?:#!\/)?(?!(?:intent|(?:[a-z]{2}\/)?privacy|hashtag|home|search|share|account|personalization)\b)(?P<handle>[A-Za-z0-9_]+)\/?",
-            flags=re.IGNORECASE,
-        )
 
         # Find all anchor tags and extract hrefs
         links = soup.find_all("a")
@@ -144,15 +153,16 @@ def run_pipeline(domain, url, reset):
 
         # Search each href
         for href in hrefs:
-            match = twitter_regex.match(href)
-            if match:
-                socials.append(
-                    {
-                        "type": "twitter",
-                        "href": href,
-                        "handle": match.group("handle").lower(),
-                    }
-                )
+            for type, regex in REGEXES.items():
+                match = regex.match(href)
+                if match:
+                    socials.append(
+                        {
+                            "type": type,
+                            "href": href,
+                            "handle": match.group("handle").lower(),
+                        }
+                    )
 
         # Write socials to database
         with db.start_transaction() as transaction:
@@ -211,7 +221,7 @@ def run_pipeline(domain, url, reset):
     df = handles.merge(url_count, left_on="domain", right_on="domain")
 
     # Write to analysis database
-    update_analysis_database(df[["domain", "twitter_handle"]])
+    update_analysis_database(df[["domain", "twitter_handle", "facebook_handle"]])
 
     # Save as JSON
     save_result(PIPELINE, df)

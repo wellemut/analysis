@@ -1,860 +1,1282 @@
 [
   {
     "domain":"Crate.io",
+    "facebook_handle":null,
     "twitter_handle":"crateio",
-    "twitter_count":10,
+    "facebook_count":null,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"airelo.me",
+    "facebook_handle":"airelome",
     "twitter_handle":"airelome",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"berlin.impacthub.net",
+    "facebook_handle":"impacthubberlin",
     "twitter_handle":"impacthubbln",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"bmw-foundation.org",
+    "facebook_handle":"bmwfoundation",
     "twitter_handle":"bmwfoundation",
-    "twitter_count":22,
+    "facebook_count":20.0,
+    "twitter_count":22.0,
     "url_count":10
   },
   {
     "domain":"bp-consultants.de",
+    "facebook_handle":null,
     "twitter_handle":"bp__consultants",
-    "twitter_count":6,
+    "facebook_count":null,
+    "twitter_count":6.0,
     "url_count":8
   },
   {
     "domain":"c2c-ev.de",
+    "facebook_handle":null,
     "twitter_handle":"c2c_ngo",
-    "twitter_count":10,
+    "facebook_count":null,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
+    "domain":"cabinspacey.com",
+    "facebook_handle":"cabinspacey",
+    "twitter_handle":null,
+    "facebook_count":1.0,
+    "twitter_count":null,
+    "url_count":1
+  },
+  {
     "domain":"ccre.org",
+    "facebook_handle":null,
     "twitter_handle":"ccrecemr",
-    "twitter_count":16,
+    "facebook_count":null,
+    "twitter_count":16.0,
     "url_count":10
   },
   {
     "domain":"changers.com",
+    "facebook_handle":"changerscom",
     "twitter_handle":"changerscom",
-    "twitter_count":7,
+    "facebook_count":7.0,
+    "twitter_count":7.0,
     "url_count":10
   },
   {
     "domain":"circ.com",
+    "facebook_handle":"circ",
     "twitter_handle":"circ",
-    "twitter_count":5,
+    "facebook_count":5.0,
+    "twitter_count":5.0,
     "url_count":5
   },
   {
+    "domain":"circular.berlin",
+    "facebook_handle":"circular-berlin-2384025751631846",
+    "twitter_handle":null,
+    "facebook_count":10.0,
+    "twitter_count":null,
+    "url_count":10
+  },
+  {
+    "domain":"circulareconomytours.com",
+    "facebook_handle":"circulareconomytours",
+    "twitter_handle":null,
+    "facebook_count":30.0,
+    "twitter_count":null,
+    "url_count":10
+  },
+  {
     "domain":"cirplus.com",
+    "facebook_handle":"cirplus",
     "twitter_handle":"cir_plus",
-    "twitter_count":8,
+    "facebook_count":8.0,
+    "twitter_count":8.0,
     "url_count":10
   },
   {
     "domain":"connctd.com",
+    "facebook_handle":null,
     "twitter_handle":"iotconnctd",
-    "twitter_count":9,
+    "facebook_count":null,
+    "twitter_count":9.0,
     "url_count":9
   },
   {
     "domain":"crclr.org",
+    "facebook_handle":"crclrhouse",
     "twitter_handle":"crclrhouse",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"creativeclimatecities.org",
+    "facebook_handle":"192382937459528",
     "twitter_handle":"climatecities",
-    "twitter_count":78,
+    "facebook_count":1.0,
+    "twitter_count":78.0,
     "url_count":10
   },
   {
     "domain":"dach.climate-kic.org",
+    "facebook_handle":"ckicaustria",
     "twitter_handle":"climatekic_at",
-    "twitter_count":22,
+    "facebook_count":20.0,
+    "twitter_count":22.0,
     "url_count":10
   },
   {
+    "domain":"de.simplemobility.org",
+    "facebook_handle":"simpleemobility",
+    "twitter_handle":null,
+    "facebook_count":7.0,
+    "twitter_count":null,
+    "url_count":7
+  },
+  {
     "domain":"demos-deutschland.de",
+    "facebook_handle":"demosgmbh",
     "twitter_handle":"demosbird",
-    "twitter_count":7,
+    "facebook_count":7.0,
+    "twitter_count":7.0,
     "url_count":7
   },
   {
     "domain":"difu.de",
+    "facebook_handle":"difu.de",
     "twitter_handle":"difu_d",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"emmy-sharing.de",
+    "facebook_handle":null,
     "twitter_handle":"emmy_sharing",
-    "twitter_count":20,
+    "facebook_count":null,
+    "twitter_count":20.0,
+    "url_count":10
+  },
+  {
+    "domain":"enbreeze.com",
+    "facebook_handle":"enbreeze.gmbh",
+    "twitter_handle":null,
+    "facebook_count":30.0,
+    "twitter_count":null,
     "url_count":10
   },
   {
     "domain":"enviosystems.com",
+    "facebook_handle":"enviosystems",
     "twitter_handle":"enviosystems",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"eon-agile.com",
+    "facebook_handle":"eon",
     "twitter_handle":"eon_se_en",
-    "twitter_count":1,
+    "facebook_count":1.0,
+    "twitter_count":1.0,
     "url_count":1
   },
   {
     "domain":"esgconference.com",
+    "facebook_handle":"globalsustain",
     "twitter_handle":"glsustain",
-    "twitter_count":2,
+    "facebook_count":2.0,
+    "twitter_count":2.0,
     "url_count":10
   },
   {
     "domain":"euref.de",
+    "facebook_handle":"eurefcampus",
     "twitter_handle":"euref",
-    "twitter_count":20,
+    "facebook_count":20.0,
+    "twitter_count":20.0,
     "url_count":10
   },
   {
     "domain":"fslci.org",
+    "facebook_handle":"fslci",
     "twitter_handle":"lcic2020",
-    "twitter_count":66,
+    "facebook_count":19.0,
+    "twitter_count":66.0,
     "url_count":10
   },
   {
     "domain":"greenbuzzberlin.de",
+    "facebook_handle":"sustainabilitydrinksberlin",
     "twitter_handle":"sustainberlin",
-    "twitter_count":20,
+    "facebook_count":21.0,
+    "twitter_count":20.0,
     "url_count":10
   },
   {
     "domain":"greencitysolutions.de",
+    "facebook_handle":"mygcs",
     "twitter_handle":"mycitytree",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"iclei-europe.org",
+    "facebook_handle":null,
     "twitter_handle":"iclei_europe",
-    "twitter_count":10,
+    "facebook_count":null,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"infralab.berlin",
+    "facebook_handle":"infralabberlin",
     "twitter_handle":"infralabberlin",
-    "twitter_count":33,
+    "facebook_count":11.0,
+    "twitter_count":33.0,
     "url_count":10
   },
   {
     "domain":"liqd.net",
+    "facebook_handle":"liqdev",
     "twitter_handle":"liqd_de",
-    "twitter_count":12,
+    "facebook_count":12.0,
+    "twitter_count":12.0,
     "url_count":10
   },
   {
     "domain":"maker-faire.de",
+    "facebook_handle":"makerfairedeutschland",
     "twitter_handle":"makerfairedach",
-    "twitter_count":20,
+    "facebook_count":20.0,
+    "twitter_count":20.0,
     "url_count":10
   },
   {
     "domain":"maschinenraum.io",
+    "facebook_handle":"maschinenraum.io",
     "twitter_handle":"maschinenraum",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
+    "url_count":10
+  },
+  {
+    "domain":"mieterengel.de",
+    "facebook_handle":"mieterengel",
+    "twitter_handle":null,
+    "facebook_count":5.0,
+    "twitter_count":null,
     "url_count":10
   },
   {
     "domain":"mobimeo.com",
+    "facebook_handle":null,
     "twitter_handle":"mobimeomobility",
-    "twitter_count":18,
+    "facebook_count":null,
+    "twitter_count":18.0,
     "url_count":9
   },
   {
     "domain":"moeco.io",
+    "facebook_handle":"moecoio",
     "twitter_handle":"moeco_io",
-    "twitter_count":6,
+    "facebook_count":6.0,
+    "twitter_count":6.0,
     "url_count":6
   },
   {
     "domain":"motion-tag.com",
+    "facebook_handle":"motiontag",
     "twitter_handle":"motiontag",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
+    "url_count":10
+  },
+  {
+    "domain":"motionlab.berlin",
+    "facebook_handle":"motionlabberlin",
+    "twitter_handle":null,
+    "facebook_count":10.0,
+    "twitter_count":null,
     "url_count":10
   },
   {
     "domain":"mybus.gmbh",
+    "facebook_handle":"mybus-gmbh-141232225925451",
     "twitter_handle":"mybusgmbh",
-    "twitter_count":5,
+    "facebook_count":5.0,
+    "twitter_count":5.0,
     "url_count":6
   },
   {
     "domain":"nachhaltigkeit.bvng.org",
+    "facebook_handle":"739109036205561",
     "twitter_handle":"bvngberlin",
-    "twitter_count":12,
+    "facebook_count":10.0,
+    "twitter_count":12.0,
     "url_count":10
   },
   {
     "domain":"nebenan.de",
+    "facebook_handle":"nebenan.de",
     "twitter_handle":"nebenan_de",
-    "twitter_count":1,
+    "facebook_count":1.0,
+    "twitter_count":1.0,
     "url_count":10
   },
   {
     "domain":"objectbox.io",
+    "facebook_handle":"objectboxteam",
     "twitter_handle":"objectbox_io",
-    "twitter_count":7,
+    "facebook_count":6.0,
+    "twitter_count":7.0,
     "url_count":10
   },
   {
     "domain":"onomotion.com",
+    "facebook_handle":"onomotion",
     "twitter_handle":"ono_motion",
-    "twitter_count":6,
+    "facebook_count":9.0,
+    "twitter_count":6.0,
     "url_count":10
   },
   {
     "domain":"onpurpose.org",
+    "facebook_handle":"onpurposeberlin",
     "twitter_handle":"onpurposede",
-    "twitter_count":8,
+    "facebook_count":8.0,
+    "twitter_count":8.0,
     "url_count":10
   },
   {
     "domain":"opensourceecology.de",
+    "facebook_handle":"osegermany",
     "twitter_handle":"osegermany",
-    "twitter_count":4,
+    "facebook_count":5.0,
+    "twitter_count":4.0,
     "url_count":8
   },
   {
     "domain":"parcellab.com",
+    "facebook_handle":"parcellab",
     "twitter_handle":"parcellab_en",
-    "twitter_count":9,
+    "facebook_count":9.0,
+    "twitter_count":9.0,
     "url_count":10
   },
   {
     "domain":"perto.de",
+    "facebook_handle":"perto.service",
     "twitter_handle":"perto_gmbh",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"plantix.net",
+    "facebook_handle":"plantix",
     "twitter_handle":"plantixapp",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"protellus.de",
+    "facebook_handle":"protellusconsult",
     "twitter_handle":"protellus",
-    "twitter_count":6,
+    "facebook_count":6.0,
+    "twitter_count":6.0,
     "url_count":3
   },
   {
     "domain":"regional-engagiert.de",
+    "facebook_handle":"regionalengagiert",
     "twitter_handle":"reg_engagiert",
-    "twitter_count":20,
+    "facebook_count":20.0,
+    "twitter_count":20.0,
     "url_count":10
   },
   {
     "domain":"relayr.io",
+    "facebook_handle":"relayr",
     "twitter_handle":"relayr_iot",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"sensorberg.com",
+    "facebook_handle":"sensorberg",
     "twitter_handle":"sensorberg",
-    "twitter_count":4,
+    "facebook_count":4.0,
+    "twitter_count":4.0,
     "url_count":10
   },
   {
     "domain":"sirplus.de",
+    "facebook_handle":"sirplus.de",
     "twitter_handle":"sirplus_de",
-    "twitter_count":8,
+    "facebook_count":8.0,
+    "twitter_count":8.0,
     "url_count":8
   },
   {
+    "domain":"sonnenrepublik.de",
+    "facebook_handle":"sonnenrepublik.de",
+    "twitter_handle":null,
+    "facebook_count":10.0,
+    "twitter_count":null,
+    "url_count":10
+  },
+  {
     "domain":"start-green.net",
+    "facebook_handle":"startgreenatschool",
     "twitter_handle":"start_green_",
-    "twitter_count":10,
+    "facebook_count":1.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"swobbee.de",
+    "facebook_handle":"swobbee-we-share-batteries-2066974296683070",
     "twitter_handle":"swobbee",
-    "twitter_count":1,
+    "facebook_count":11.0,
+    "twitter_count":1.0,
     "url_count":10
   },
   {
     "domain":"visionhealthpioneers.de",
+    "facebook_handle":null,
     "twitter_handle":"maren_lesche",
-    "twitter_count":1,
+    "facebook_count":null,
+    "twitter_count":1.0,
     "url_count":10
   },
   {
+    "domain":"warehousing1.com",
+    "facebook_handle":"warehousing1",
+    "twitter_handle":null,
+    "facebook_count":9.0,
+    "twitter_count":null,
+    "url_count":9
+  },
+  {
     "domain":"watergenics.tech",
+    "facebook_handle":null,
     "twitter_handle":"cerbivore",
-    "twitter_count":2,
+    "facebook_count":null,
+    "twitter_count":2.0,
     "url_count":4
   },
   {
     "domain":"wattx.io",
+    "facebook_handle":"wattx",
     "twitter_handle":"wattxberlin",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"wermutham.com",
+    "facebook_handle":"wermutham",
     "twitter_handle":"wermutham",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.adlershof.de",
+    "facebook_handle":"adlershof",
     "twitter_handle":"berlinscience",
-    "twitter_count":3,
+    "facebook_count":4.0,
+    "twitter_count":3.0,
     "url_count":10
   },
   {
     "domain":"www.agora-energiewende.de",
+    "facebook_handle":null,
     "twitter_handle":"agoraew",
-    "twitter_count":78,
+    "facebook_count":null,
+    "twitter_count":78.0,
     "url_count":10
   },
   {
     "domain":"www.alba.info",
+    "facebook_handle":"albagroup",
     "twitter_handle":"albagroup",
-    "twitter_count":25,
+    "facebook_count":17.0,
+    "twitter_count":25.0,
     "url_count":10
   },
   {
     "domain":"www.bacb.de",
+    "facebook_handle":"businessangelsclubberlinbrandenburg",
     "twitter_handle":"bacb_ev",
-    "twitter_count":1,
+    "facebook_count":1.0,
+    "twitter_count":1.0,
     "url_count":1
   },
   {
     "domain":"www.bahn.de",
+    "facebook_handle":"dbpersonenverkehr",
     "twitter_handle":"db_bahn",
-    "twitter_count":6,
+    "facebook_count":6.0,
+    "twitter_count":6.0,
     "url_count":10
   },
   {
     "domain":"www.bde.de",
+    "facebook_handle":"bdeev",
     "twitter_handle":"bde_presse",
-    "twitter_count":9,
+    "facebook_count":9.0,
+    "twitter_count":9.0,
     "url_count":9
   },
   {
     "domain":"www.beanair.com",
+    "facebook_handle":"beanair",
     "twitter_handle":"beanair",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.bee-ev.de",
+    "facebook_handle":null,
     "twitter_handle":"beemerkenswert",
-    "twitter_count":5,
+    "facebook_count":null,
+    "twitter_count":5.0,
     "url_count":10
   },
   {
     "domain":"www.berlin-innovation-agency.com",
+    "facebook_handle":"biahubs",
     "twitter_handle":"biahubs",
-    "twitter_count":2,
+    "facebook_count":2.0,
+    "twitter_count":2.0,
     "url_count":1
   },
   {
     "domain":"www.berlin-partner.de",
+    "facebook_handle":"berlinpartner",
     "twitter_handle":"berlinpartner",
-    "twitter_count":12,
+    "facebook_count":10.0,
+    "twitter_count":12.0,
     "url_count":10
   },
   {
     "domain":"www.berliner-e-agentur.de",
+    "facebook_handle":"berlinerenergieagentur",
     "twitter_handle":"bea_energie",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.berlintxl.de",
+    "facebook_handle":null,
     "twitter_handle":"b_txl",
-    "twitter_count":10,
+    "facebook_count":null,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.bertelsmann-stiftung.de",
+    "facebook_handle":"bertelsmannstiftung",
     "twitter_handle":"bertelsmannst",
-    "twitter_count":12,
+    "facebook_count":12.0,
+    "twitter_count":12.0,
     "url_count":10
   },
   {
     "domain":"www.bird.co",
+    "facebook_handle":null,
     "twitter_handle":"birdride",
-    "twitter_count":2,
+    "facebook_count":null,
+    "twitter_count":2.0,
     "url_count":10
   },
   {
     "domain":"www.bmbf.de",
+    "facebook_handle":"bmbf.de",
     "twitter_handle":"bmbf_bund",
-    "twitter_count":16,
+    "facebook_count":1.0,
+    "twitter_count":16.0,
     "url_count":10
   },
   {
     "domain":"www.bmwi.de",
+    "facebook_handle":"bundeswirtschaftsministerium",
     "twitter_handle":"bmwi_bund",
-    "twitter_count":13,
+    "facebook_count":13.0,
+    "twitter_count":13.0,
     "url_count":10
   },
   {
     "domain":"www.bsdconsulting.com",
+    "facebook_handle":"22363935106",
     "twitter_handle":"bsdconsulting",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.bsr.de",
+    "facebook_handle":"berlinerstadtreinigung",
     "twitter_handle":"bsr_de",
-    "twitter_count":9,
+    "facebook_count":9.0,
+    "twitter_count":9.0,
     "url_count":10
   },
   {
     "domain":"www.bund.net",
+    "facebook_handle":"bund.bundesverband",
     "twitter_handle":"bund_net",
-    "twitter_count":36,
+    "facebook_count":2.0,
+    "twitter_count":36.0,
     "url_count":10
   },
   {
     "domain":"www.bvg.de",
+    "facebook_handle":"weilwirdichlieben",
     "twitter_handle":"bvg_kampagne",
-    "twitter_count":2,
+    "facebook_count":2.0,
+    "twitter_count":2.0,
     "url_count":10
   },
   {
     "domain":"www.bwb.de",
+    "facebook_handle":"wasserbetriebe",
     "twitter_handle":"wasserbetriebe",
-    "twitter_count":9,
+    "facebook_count":9.0,
+    "twitter_count":9.0,
     "url_count":10
   },
   {
     "domain":"www.chargomat.de",
+    "facebook_handle":"672925786185883",
     "twitter_handle":"chargomat",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.circulareconomy.tu-berlin.de",
+    "facebook_handle":null,
     "twitter_handle":"umweltrat",
-    "twitter_count":1,
+    "facebook_count":null,
+    "twitter_count":1.0,
     "url_count":10
   },
   {
     "domain":"www.dbu.de",
+    "facebook_handle":"deutschebundesstiftungumwelt",
     "twitter_handle":"umweltstiftung",
-    "twitter_count":20,
+    "facebook_count":20.0,
+    "twitter_count":20.0,
     "url_count":10
   },
   {
     "domain":"www.dena.de",
+    "facebook_handle":"startupenergytransition",
     "twitter_handle":"dena_news",
-    "twitter_count":45,
+    "facebook_count":2.0,
+    "twitter_count":45.0,
     "url_count":10
   },
   {
     "domain":"www.dfki.de",
+    "facebook_handle":"dfki.gmbh",
     "twitter_handle":"dfki",
-    "twitter_count":50,
+    "facebook_count":50.0,
+    "twitter_count":50.0,
     "url_count":10
   },
   {
     "domain":"www.die-gdi.de",
+    "facebook_handle":"die.bonn",
     "twitter_handle":"die_gdi",
-    "twitter_count":9,
+    "facebook_count":9.0,
+    "twitter_count":9.0,
     "url_count":10
   },
   {
     "domain":"www.diw.de",
+    "facebook_handle":"diw.de",
     "twitter_handle":"diw_berlin",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.dlr.de",
+    "facebook_handle":"dlrde",
     "twitter_handle":"dlr_de",
-    "twitter_count":33,
+    "facebook_count":9.0,
+    "twitter_count":33.0,
     "url_count":10
   },
   {
     "domain":"www.door2door.io",
+    "facebook_handle":"door2doorhq",
     "twitter_handle":"door2doorhq",
-    "twitter_count":1,
+    "facebook_count":1.0,
+    "twitter_count":1.0,
     "url_count":1
   },
   {
     "domain":"www.dstgb.de",
+    "facebook_handle":"dstgb",
     "twitter_handle":"gemeindebund",
-    "twitter_count":20,
+    "facebook_count":20.0,
+    "twitter_count":20.0,
     "url_count":10
   },
   {
     "domain":"www.dwr-eco.com",
+    "facebook_handle":"1967555870122702",
     "twitter_handle":"dwr_eco",
-    "twitter_count":11,
+    "facebook_count":26.0,
+    "twitter_count":11.0,
     "url_count":9
   },
   {
+    "domain":"www.ebee.berlin",
+    "facebook_handle":"ebeesmarttechnologies",
+    "twitter_handle":null,
+    "facebook_count":10.0,
+    "twitter_count":null,
+    "url_count":10
+  },
+  {
+    "domain":"www.ecf-farmsystems.com",
+    "facebook_handle":"ecf.farmsystems",
+    "twitter_handle":null,
+    "facebook_count":5.0,
+    "twitter_count":null,
+    "url_count":5
+  },
+  {
     "domain":"www.ecodesigncircle.eu",
+    "facebook_handle":"disainikeskus",
     "twitter_handle":"ecodesigncircle",
-    "twitter_count":10,
+    "facebook_count":3.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.ecologic.eu",
+    "facebook_handle":"ecologic.institute",
     "twitter_handle":"ecologicberlin",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.emnify.de",
+    "facebook_handle":null,
     "twitter_handle":"emnify",
-    "twitter_count":10,
+    "facebook_count":null,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.emo-berlin.de",
+    "facebook_handle":null,
     "twitter_handle":"emobilityberlin",
-    "twitter_count":12,
+    "facebook_count":null,
+    "twitter_count":12.0,
     "url_count":10
   },
   {
+    "domain":"www.enelx.com",
+    "facebook_handle":"enelxglobal",
+    "twitter_handle":null,
+    "facebook_count":9.0,
+    "twitter_count":null,
+    "url_count":9
+  },
+  {
     "domain":"www.enpal.de",
+    "facebook_handle":"enpal.de",
     "twitter_handle":"enpal_official",
-    "twitter_count":8,
+    "facebook_count":8.0,
+    "twitter_count":8.0,
     "url_count":10
   },
   {
     "domain":"www.escpeurope.eu",
+    "facebook_handle":"escpberlincampus",
     "twitter_handle":"escp_bs",
-    "twitter_count":1,
+    "facebook_count":1.0,
+    "twitter_count":1.0,
     "url_count":1
   },
   {
     "domain":"www.fgf-ev.de",
+    "facebook_handle":"fgf-f%c3%b6rderkreis-gr%c3%bcndungs-forschung-ev-1601347830150022",
     "twitter_handle":"fgf_ev",
-    "twitter_count":9,
+    "facebook_count":9.0,
+    "twitter_count":9.0,
     "url_count":9
   },
   {
-    "domain":"www.fu-berlin.de",
-    "twitter_handle":"fu_berlin",
-    "twitter_count":6,
+    "domain":"www.fraunhofer.de",
+    "facebook_handle":"fraunhofer.karriere",
+    "twitter_handle":null,
+    "facebook_count":1.0,
+    "twitter_count":null,
     "url_count":10
   },
   {
+    "domain":"www.fu-berlin.de",
+    "facebook_handle":"440012036071209",
+    "twitter_handle":"fu_berlin",
+    "facebook_count":3.0,
+    "twitter_count":6.0,
+    "url_count":10
+  },
+  {
+    "domain":"www.futurecityincubator.com",
+    "facebook_handle":"biahubs",
+    "twitter_handle":null,
+    "facebook_count":4.0,
+    "twitter_count":null,
+    "url_count":4
+  },
+  {
     "domain":"www.fz-juelich.de",
+    "facebook_handle":"forschungszentrum.juelich",
     "twitter_handle":"fz_juelich",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.getfresh.energy",
+    "facebook_handle":"freshenergyapp",
     "twitter_handle":"_freshenergy",
-    "twitter_count":1,
+    "facebook_count":1.0,
+    "twitter_count":1.0,
     "url_count":1
   },
   {
     "domain":"www.giz.de",
+    "facebook_handle":null,
     "twitter_handle":"giz_gmbh",
-    "twitter_count":10,
+    "facebook_count":null,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.greenmeberlin.com",
+    "facebook_handle":"greenmeguide",
     "twitter_handle":"greenmebln",
-    "twitter_count":14,
+    "facebook_count":16.0,
+    "twitter_count":14.0,
     "url_count":10
   },
   {
     "domain":"www.greenpack.de",
+    "facebook_handle":"gpbsys",
     "twitter_handle":"greenpackenergy",
-    "twitter_count":1,
+    "facebook_count":1.0,
+    "twitter_count":1.0,
     "url_count":10
   },
   {
     "domain":"www.here.com",
+    "facebook_handle":"here",
     "twitter_handle":"here",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
+    "domain":"www.homepowersolutions.de",
+    "facebook_handle":"homepowersolutions",
+    "twitter_handle":null,
+    "facebook_count":9.0,
+    "twitter_count":null,
+    "url_count":9
+  },
+  {
     "domain":"www.iass-potsdam.de",
+    "facebook_handle":null,
     "twitter_handle":"iass_potsdam",
-    "twitter_count":20,
+    "facebook_count":null,
+    "twitter_count":20.0,
     "url_count":10
   },
   {
     "domain":"www.iav.com",
+    "facebook_handle":"iavkarriere",
     "twitter_handle":"iav_de",
-    "twitter_count":2,
+    "facebook_count":2.0,
+    "twitter_count":2.0,
     "url_count":2
   },
   {
     "domain":"www.ibb.de",
+    "facebook_handle":null,
     "twitter_handle":"pr_ibb",
-    "twitter_count":10,
+    "facebook_count":null,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.idz.de",
+    "facebook_handle":"idzberlin",
     "twitter_handle":"idzberlin",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.iku-innovationspreis.de",
+    "facebook_handle":null,
     "twitter_handle":"iku_preis",
-    "twitter_count":10,
+    "facebook_count":null,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.imaginecargo.com",
+    "facebook_handle":"imaginecargo",
     "twitter_handle":"imaginecargo",
-    "twitter_count":1,
+    "facebook_count":1.0,
+    "twitter_count":1.0,
     "url_count":2
   },
   {
     "domain":"www.innoenergy.com",
+    "facebook_handle":"innoenergyeu",
     "twitter_handle":"innoenergyeu",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
+    "domain":"www.konetik.com",
+    "facebook_handle":"konetik.io",
+    "twitter_handle":null,
+    "facebook_count":6.0,
+    "twitter_count":null,
+    "url_count":6
+  },
+  {
     "domain":"www.landkreistag.de",
+    "facebook_handle":null,
     "twitter_handle":"dltonline",
-    "twitter_count":20,
+    "facebook_count":null,
+    "twitter_count":20.0,
     "url_count":10
   },
   {
     "domain":"www.lawio.de",
+    "facebook_handle":"lawio.de",
     "twitter_handle":"lawio_de",
-    "twitter_count":1,
+    "facebook_count":10.0,
+    "twitter_count":1.0,
     "url_count":10
   },
   {
     "domain":"www.lesan.ai",
+    "facebook_handle":null,
     "twitter_handle":"lesan_ai",
-    "twitter_count":2,
+    "facebook_count":null,
+    "twitter_count":2.0,
     "url_count":3
   },
   {
     "domain":"www.matchx.io",
+    "facebook_handle":"matchx.io",
     "twitter_handle":"matchx_iot",
-    "twitter_count":11,
+    "facebook_count":11.0,
+    "twitter_count":11.0,
     "url_count":10
   },
   {
     "domain":"www.meetup.com",
+    "facebook_handle":"meetup",
     "twitter_handle":"meetup",
-    "twitter_count":9,
+    "facebook_count":9.0,
+    "twitter_count":9.0,
     "url_count":9
   },
   {
     "domain":"www.mint-engineering.de",
+    "facebook_handle":"mintengineering",
     "twitter_handle":"algaemakers",
-    "twitter_count":2,
+    "facebook_count":2.0,
+    "twitter_count":2.0,
     "url_count":10
   },
   {
     "domain":"www.mowea.world",
+    "facebook_handle":"moweaenergy",
     "twitter_handle":"moweawind",
-    "twitter_count":9,
+    "facebook_count":9.0,
+    "twitter_count":9.0,
     "url_count":9
   },
   {
     "domain":"www.mxc.org",
+    "facebook_handle":"mxcfoundation",
     "twitter_handle":"mxcfoundation",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.nachhaltigkeitsrat.de",
+    "facebook_handle":null,
     "twitter_handle":"rne_de",
-    "twitter_count":32,
+    "facebook_count":null,
+    "twitter_count":32.0,
     "url_count":10
   },
   {
     "domain":"www.nestpick.com",
+    "facebook_handle":"nestpick",
     "twitter_handle":"nestpick",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.nextbike.de",
+    "facebook_handle":"nextbike",
     "twitter_handle":"nextbike",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.opes-solutions.com",
+    "facebook_handle":"opessolutionsgmbh",
     "twitter_handle":"opes_solutions",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.pik-potsdam.de",
+    "facebook_handle":null,
     "twitter_handle":"pik_klima",
-    "twitter_count":20,
+    "facebook_count":null,
+    "twitter_count":20.0,
     "url_count":10
   },
   {
     "domain":"www.polidia.de",
+    "facebook_handle":null,
     "twitter_handle":"polidiagmbh",
-    "twitter_count":10,
+    "facebook_count":null,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.polyteia.de",
+    "facebook_handle":null,
     "twitter_handle":"polyteia",
-    "twitter_count":10,
+    "facebook_count":null,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.sensafety.org",
+    "facebook_handle":null,
     "twitter_handle":"sensafety_org",
-    "twitter_count":1,
+    "facebook_count":null,
+    "twitter_count":1.0,
     "url_count":10
   },
   {
     "domain":"www.sensefinity.com",
+    "facebook_handle":"sensefinity",
     "twitter_handle":"sensefinity",
-    "twitter_count":1,
+    "facebook_count":1.0,
+    "twitter_count":1.0,
     "url_count":10
   },
   {
     "domain":"www.sle-berlin.de",
+    "facebook_handle":"sleberlin",
     "twitter_handle":"sleberlin",
-    "twitter_count":10,
+    "facebook_count":20.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.smart-city-berlin.de",
+    "facebook_handle":"berlinpartner",
     "twitter_handle":"berlinpartner",
-    "twitter_count":1,
+    "facebook_count":1.0,
+    "twitter_count":1.0,
     "url_count":10
   },
   {
     "domain":"www.smart-city-hub.com",
+    "facebook_handle":"biahubs",
     "twitter_handle":"biahubs",
-    "twitter_count":2,
+    "facebook_count":2.0,
+    "twitter_count":2.0,
     "url_count":2
   },
   {
     "domain":"www.solmove.com",
+    "facebook_handle":"solarstrasse",
     "twitter_handle":"solmove1",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.stadtfarm.de",
+    "facebook_handle":"stadtfarm.de",
     "twitter_handle":"newurbanfarming",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.staedtetag.de",
+    "facebook_handle":null,
     "twitter_handle":"staedtetag",
-    "twitter_count":54,
+    "facebook_count":null,
+    "twitter_count":54.0,
     "url_count":10
   },
   {
     "domain":"www.stiftung2grad.de",
+    "facebook_handle":"237489916338433",
     "twitter_handle":"stiftung2grad",
-    "twitter_count":68,
+    "facebook_count":42.0,
+    "twitter_count":68.0,
     "url_count":10
   },
   {
     "domain":"www.stromnetz.berlin",
+    "facebook_handle":null,
     "twitter_handle":"stromnetzbln",
-    "twitter_count":10,
+    "facebook_count":null,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.technologiestiftung-berlin.de",
+    "facebook_handle":"365487140221125",
     "twitter_handle":"tsbberlin",
-    "twitter_count":21,
+    "facebook_count":20.0,
+    "twitter_count":21.0,
     "url_count":10
   },
   {
     "domain":"www.teraki.com",
+    "facebook_handle":null,
     "twitter_handle":"teraki_iot",
-    "twitter_count":10,
+    "facebook_count":null,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.tier.app",
+    "facebook_handle":"tier.scooter",
     "twitter_handle":"tierscooters",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.tu-berlin.de",
+    "facebook_handle":"tu.berlin",
     "twitter_handle":"tuberlin",
-    "twitter_count":4,
+    "facebook_count":6.0,
+    "twitter_count":4.0,
     "url_count":8
   },
   {
     "domain":"www.ubitricity.com",
+    "facebook_handle":"ubitricity",
     "twitter_handle":"ubitricity",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.umweltbundesamt.de",
+    "facebook_handle":"umweltbundesamt.de",
     "twitter_handle":"umweltbundesamt",
-    "twitter_count":44,
+    "facebook_count":30.0,
+    "twitter_count":44.0,
     "url_count":10
   },
   {
     "domain":"www.unternehmensgruen.de",
+    "facebook_handle":"unternehmensgruen",
     "twitter_handle":"unternehmensgru",
-    "twitter_count":1,
+    "facebook_count":1.0,
+    "twitter_count":1.0,
     "url_count":1
   },
   {
+    "domain":"www.vattenfall.de",
+    "facebook_handle":"vattenfall.de",
+    "twitter_handle":null,
+    "facebook_count":10.0,
+    "twitter_count":null,
+    "url_count":10
+  },
+  {
     "domain":"www.viessmann.de",
+    "facebook_handle":"viessmann",
     "twitter_handle":"viessmann",
-    "twitter_count":11,
+    "facebook_count":10.0,
+    "twitter_count":11.0,
     "url_count":10
   },
   {
     "domain":"www.wegweiser-kommune.de",
+    "facebook_handle":"bertelsmannstiftung.wegweiserkommune",
     "twitter_handle":"wegweiskommune",
-    "twitter_count":10,
+    "facebook_count":10.0,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.windnode.de",
+    "facebook_handle":null,
     "twitter_handle":"windnode",
-    "twitter_count":10,
+    "facebook_count":null,
+    "twitter_count":10.0,
     "url_count":10
   },
   {
     "domain":"www.wista.de",
+    "facebook_handle":null,
     "twitter_handle":"berlinstart",
-    "twitter_count":2,
+    "facebook_count":null,
+    "twitter_count":2.0,
     "url_count":10
   },
   {
     "domain":"zukunftsorte.berlin",
+    "facebook_handle":null,
     "twitter_handle":"zukunftsorte",
-    "twitter_count":2,
+    "facebook_count":null,
+    "twitter_count":2.0,
     "url_count":10
   }
 ]
