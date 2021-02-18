@@ -1,4 +1,4 @@
-from database import Database
+from models.Database import Database
 
 
 def get_domains_table_from_analysis_database():

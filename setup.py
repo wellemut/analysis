@@ -1,4 +1,4 @@
-from database import Database, Table, Column, Field
+from models.Database import Database, Table, Column, Field
 from helpers.get_urls_table_from_scraped_database import (
     get_urls_table_from_scraped_database,
 )

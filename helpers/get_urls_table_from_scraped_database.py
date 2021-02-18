@@ -1,4 +1,4 @@
-from database import Database
+from models.Database import Database
 
 
 def get_urls_table_from_scraped_database():

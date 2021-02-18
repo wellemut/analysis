@@ -2,12 +2,10 @@ import os
 from pathlib import Path
 from contextlib import contextmanager
 import sqlite3
+import pandas
+from config import DATABASES_DIR
 from .Table import Table
 from .QueryBuilder import QueryBuilder
-import pandas
-
-# Configuration
-DATABASES_FOLDER = Path(os.path.join(__file__, "..", "..", "databases")).resolve()
 
 
 class Database:
@@ -16,7 +14,7 @@ class Database:
 
     @property
     def file_path(self):
-        return os.path.join(DATABASES_FOLDER, self.name + ".sqlite")
+        return os.path.join(DATABASES_DIR, self.name + ".sqlite")
 
     def table(self, name):
         return Table(database=self, name=name)

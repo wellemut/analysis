@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 import urllib.request
-from database import Database, Table, Column, Field, Order
+from models.Database import Database, Table, Column, Field, Order
 from models import PipelineProgressBar
 from models import TwitterClient
 from helpers.get_domains_table_from_analysis_database import (

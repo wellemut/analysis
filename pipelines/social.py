@@ -3,7 +3,7 @@ import re
 from pymaybe import maybe
 from bs4 import BeautifulSoup
 import pandas as pd
-from database import Database, Table, Column, Field, Order
+from models.Database import Database, Table, Column, Field, Order
 from models import PipelineProgressBar
 from helpers.get_urls_table_from_scraped_database import (
     get_urls_table_from_scraped_database,

@@ -1,4 +1,4 @@
-from database import Database, Field
+from models.Database import Database, Field
 import numpy as np
 
 analysis_db = Database("analysis")
