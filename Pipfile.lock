@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "f351f5c4bce3e226d3fc74db68d370d87670f8474ac8bb370d05bd5317de691a"
+            "sha256": "1c216d7795b481d3c94b1a93fb55afe5c7f922a6755290a368415610b56372be"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -47,6 +47,13 @@
             ],
             "version": "==4.0.0"
         },
+        "filelock": {
+            "hashes": [
+                "sha256:18d82244ee114f543149c66a6e0c14e9c4f8a1044b5cdaadd0f82159d6a6ff59",
+                "sha256:929b7d63ec5b7d6b71b0fa5ac14e030b3f70b75747cef1b10da9b879fef15836"
+            ],
+            "version": "==3.0.12"
+        },
         "filetype": {
             "hashes": [
                 "sha256:353369948bb1c09b8b3ea3d78390b5586e9399bff9aab894a1dff954e31a66f6",
@@ -54,6 +61,13 @@
             ],
             "index": "pypi",
             "version": "==1.0.7"
+        },
+        "googlemaps": {
+            "hashes": [
+                "sha256:8e13cbecc9b5b0462d53a78074c166753027be285db0c9fff70f5b40241ce500"
+            ],
+            "index": "pypi",
+            "version": "==4.4.2"
         },
         "idna": {
             "hashes": [
@@ -183,10 +197,10 @@
         },
         "pypika": {
             "hashes": [
-                "sha256:61cb1718f3167ebf834d63253c4a878049089f13981a09ae6ca5439f91929634"
+                "sha256:faaa029693f238d58d6887f9822c109c5fee9a1d1798fbeb7f766792369f3e04"
             ],
             "index": "pypi",
-            "version": "==0.47.5"
+            "version": "==0.47.7"
         },
         "python-dateutil": {
             "hashes": [
@@ -217,6 +231,13 @@
             ],
             "version": "==2.25.1"
         },
+        "requests-file": {
+            "hashes": [
+                "sha256:07d74208d3389d01c38ab89ef403af0cfec63957d53a0081d8eca738d0247d8e",
+                "sha256:dfe5dae75c12481f68ba353183c53a65e6044c923e64c24b2209f6c7570ca953"
+            ],
+            "version": "==1.5.1"
+        },
         "requests-oauthlib": {
             "hashes": [
                 "sha256:7f71572defaecd16372f9006f33c2ec8c077c3cfa6f5911a9a90202beb513f3d",
@@ -246,6 +267,14 @@
             ],
             "markers": "python_version >= '3.0'",
             "version": "==2.2"
+        },
+        "tldextract": {
+            "hashes": [
+                "sha256:cfae9bc8bda37c3e8c7c8639711ad20e95dc85b207a256b60b0b23d7ff5540ea",
+                "sha256:e57f22b6d00a28c21673d2048112f1bdcb6a14d4711568305f6bb96cf5bb53a1"
+            ],
+            "index": "pypi",
+            "version": "==3.1.0"
         },
         "tornado": {
             "hashes": [
@@ -295,10 +324,10 @@
         },
         "twitterapi": {
             "hashes": [
-                "sha256:2044b60160654be8a50d8cfddf215cf3b1b05d604e611c831924923c2fae14c7"
+                "sha256:8b6e2102d896be7376bee6aeca578675490ece6790df7c67554ca4089fbdba4c"
             ],
             "index": "pypi",
-            "version": "==2.6.5"
+            "version": "==2.6.6"
         },
         "urllib3": {
             "hashes": [

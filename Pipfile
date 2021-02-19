@@ -17,6 +17,8 @@ progressbar2 = "*"
 python-utils = "*"
 pandas = "*"
 twitterapi = "*"
+googlemaps = "*"
+tldextract = "*"
 
 [requires]
 python_version = "3.8"

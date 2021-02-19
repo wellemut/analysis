@@ -32,7 +32,7 @@ args = program.parse_args()
 
 
 # Find all available pipelines
-pipelines = [Path(file).stem for file in os.listdir("pipelines")]
+pipelines = [Path(file).stem for file in os.listdir("analyses")]
 
 # Find pipelines to run, based on the user provided glob
 pipeline_glob = args.pipeline or "*"
@@ -43,10 +43,10 @@ for pipeline in pipelines:
 
 # Run each pipeline
 for pipeline in pipelines_to_run:
-    print("Running pipeline", pipeline, "...")
+    print("Running analysis", pipeline, "...")
 
     # Load the pipeline
-    module = importlib.import_module("." + pipeline, "pipelines")
+    module = importlib.import_module("." + pipeline, "analyses")
     run_pipeline = getattr(module, "run_pipeline")
 
     # Run the pipeline
@@ -54,19 +54,9 @@ for pipeline in pipelines_to_run:
     run_pipeline(domain=args.domain, url=args.url, reset=args.reset)
 
     print(
-        "Running pipeline",
+        "Running analysis",
         pipeline,
         "...",
         "Done!",
         "(%.2fs)" % (time.perf_counter() - start),
     )
-
-
-# pipeline = "sdgs"
-#
-# # Load the pipeline
-# module = importlib.import_module("." + pipeline, "pipelines")
-# run_pipeline = getattr(module, "run_pipeline")
-
-# Run the pipeline
-# run_pipeline(domain=args.domain, url=args.url, reset=False)

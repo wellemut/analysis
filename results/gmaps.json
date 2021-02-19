@@ -1,0 +1,902 @@
+[
+  {
+    "domain":"airelo.me",
+    "name":"AiRelo",
+    "address":"Ritterstraße 24, 10969 Berlin, Germany",
+    "phone":"+49 30 56795499"
+  },
+  {
+    "domain":"alcemy.tech",
+    "name":"alcemy",
+    "address":"Choriner Str. 83, 10119 Berlin, Germany",
+    "phone":"+49 30 20848677"
+  },
+  {
+    "domain":"berlin.impacthub.net",
+    "name":"Impact Hub Berlin",
+    "address":"Friedrichstraße 246, 10969 Berlin, Germany",
+    "phone":"+49 30 25925725"
+  },
+  {
+    "domain":"bliq.ai",
+    "name":"Bliq GmbH",
+    "address":"c\/o The Drivery, Mariendorfer Damm 1, 12099 Berlin, Germany",
+    "phone":null
+  },
+  {
+    "domain":"bmw-foundation.org",
+    "name":"BMW Stiftung Herbert Quandt",
+    "address":"Reinhardtstraße 58, 10117 Berlin, Germany",
+    "phone":"+49 30 33963500"
+  },
+  {
+    "domain":"ccre.org",
+    "name":"CEMR - Council of European Municipalities and Regions",
+    "address":"Square de Meeûs 1, 1000 Bruxelles, Belgium",
+    "phone":"+32 2 511 74 77"
+  },
+  {
+    "domain":"changers.com",
+    "name":"Blacksquared GmbH",
+    "address":"Bleibtreustraße 53, 10623 Berlin, Germany",
+    "phone":"+49 30 609839680"
+  },
+  {
+    "domain":"circ.com",
+    "name":"Circ - Electric Scooter",
+    "address":"Zimmerstraße 78, 10117 Berlin, Germany",
+    "phone":null
+  },
+  {
+    "domain":"circular.berlin",
+    "name":"Circular Berlin",
+    "address":"Luckenwalder Str. 6b, 10963 Berlin, Germany",
+    "phone":null
+  },
+  {
+    "domain":"cirplus.com",
+    "name":"cirplus GmbH",
+    "address":"Eifflerstraße 43, 22769 Hamburg, Germany",
+    "phone":"+49 40 226375250"
+  },
+  {
+    "domain":"connctd.com",
+    "name":"IoT connctd GmbH",
+    "address":"Hardenbergstraße 32, 10623 Berlin, Germany",
+    "phone":"+49 170 9009647"
+  },
+  {
+    "domain":"corenetix.com",
+    "name":"CoreNetiX GmbH",
+    "address":"Charlottenstraße 17, 10117 Berlin, Germany",
+    "phone":"+49 30 24338146"
+  },
+  {
+    "domain":"crclr.org",
+    "name":"CRCLR House",
+    "address":"Rollbergstraße 26, 12053 Berlin, Germany",
+    "phone":"+49 30 403669624"
+  },
+  {
+    "domain":"creativeclimatecities.org",
+    "name":"Creative Climate Cities",
+    "address":"Köpenicker Str. 10, 10997 Berlin, Germany",
+    "phone":null
+  },
+  {
+    "domain":"demos-deutschland.de",
+    "name":"DEMOS E-Partizipation GmbH",
+    "address":"Panoramastraße 1, 10178 Berlin, Germany",
+    "phone":"+49 30 278784600"
+  },
+  {
+    "domain":"difu.de",
+    "name":"gGmbH German Institute of Urban Affairs (Difu)",
+    "address":"Zimmerstraße 13, 10969 Berlin, Germany",
+    "phone":"+49 30 390010"
+  },
+  {
+    "domain":"emmy-sharing.de",
+    "name":"emmy-sharing",
+    "address":"Alboinstraße 17-23, 12103 Berlin, Germany",
+    "phone":"+49 30 22012440"
+  },
+  {
+    "domain":"enbreeze.com",
+    "name":"enbreeze GmbH",
+    "address":"Marzahner Str. 34, 13053 Berlin, Germany",
+    "phone":"+49 30 98612710"
+  },
+  {
+    "domain":"enviosystems.com",
+    "name":"Envio Systems",
+    "address":"Neue Grünstraße 19, 10179 Berlin, Germany",
+    "phone":"+1 604-417-7223"
+  },
+  {
+    "domain":"enway.ai",
+    "name":"ENWAY",
+    "address":"c\/o The Drivery, Mariendorfer Damm 1, 12099 Berlin, Germany",
+    "phone":"+49 30 20318651"
+  },
+  {
+    "domain":"eon-agile.com",
+    "name":":agile accelerator GmbH",
+    "address":"Völklinger Str. 4, 40219 Düsseldorf, Germany",
+    "phone":"+49 211 45790"
+  },
+  {
+    "domain":"euref.de",
+    "name":"EUREF",
+    "address":"EUREF-Campus 1-25, 10829 Berlin, Germany",
+    "phone":"+49 30 26476720"
+  },
+  {
+    "domain":"fslci.org",
+    "name":"FSLCI - Forum for Sustainability through Life Cycle Innovation e.V.",
+    "address":"Neue Promenade 7, 10178 Berlin, Germany",
+    "phone":"+49 30 60987799"
+  },
+  {
+    "domain":"greencitysolutions.de",
+    "name":"Green City Solutions",
+    "address":"Fernstraße 27, 15741 Bestensee, Germany",
+    "phone":"+49 33763 222144"
+  },
+  {
+    "domain":"iclei-europe.org",
+    "name":"ICLEI European Secretariat GmbH (ICLEI Europasekretariat GmbH)",
+    "address":"Leopoldring 3, 79098 Freiburg im Breisgau, Germany",
+    "phone":"+49 761 368920"
+  },
+  {
+    "domain":"infralab.berlin",
+    "name":"InfraLab Berlin e.V.",
+    "address":"Wilhelm-Kabus-Straße 24, 10829 Berlin, Germany",
+    "phone":"+49 030"
+  },
+  {
+    "domain":"liqd.net",
+    "name":"Liquid Democracy e.V.",
+    "address":"Am Sudhaus 2, 12053 Berlin, Germany",
+    "phone":"+49 30 629335530"
+  },
+  {
+    "domain":"maschinenraum.io",
+    "name":"Maschinenraum GmbH",
+    "address":"Zionskirchstraße 73a, 10119 Berlin, Germany",
+    "phone":"+49 30 206138250"
+  },
+  {
+    "domain":"meenergy.earth",
+    "name":"ME Energy – Liquid Electricity GmbH",
+    "address":"Schmiedestraße 2A, 15745 Wildau, Germany",
+    "phone":"+49 3375 5263976"
+  },
+  {
+    "domain":"mobimeo.com",
+    "name":"Mobimeo GmbH",
+    "address":"Hallesches Ufer 60, 10963 Berlin, Germany",
+    "phone":"+49 30 403646620"
+  },
+  {
+    "domain":"motion-tag.com",
+    "name":"MOTIONTAG GmbH",
+    "address":"Rudolf-Breitscheid-Straße 162, 14482 Potsdam, Germany",
+    "phone":null
+  },
+  {
+    "domain":"motionlab.berlin",
+    "name":"MotionLab.Berlin",
+    "address":"Bouchéstraße 12\/Halle 20, 12435 Berlin, Germany",
+    "phone":"+49 30 12082028"
+  },
+  {
+    "domain":"nachhaltigkeit.bvng.org",
+    "name":"Bundesvereinigung Nachhaltigkeit e.V.",
+    "address":"c\/o Pulsraum, Liebenwalder Str. 33, 13347 Berlin, Germany",
+    "phone":"+49 30 91904278"
+  },
+  {
+    "domain":"new.siemens.com",
+    "name":"Siemens AG",
+    "address":"Dynamostraße 4, 68165 Mannheim, Germany",
+    "phone":"+49 621 4560"
+  },
+  {
+    "domain":"onomotion.com",
+    "name":"ONO (ONOMOTION GmbH)",
+    "address":"Halle 20 12, Bouchéstraße, 12435 Berlin, Germany",
+    "phone":"+49 30 403631410"
+  },
+  {
+    "domain":"onpurpose.org",
+    "name":"On Purpose Berlin",
+    "address":"Paul-Lincke-Ufer 41, 10999 Berlin, Germany",
+    "phone":null
+  },
+  {
+    "domain":"opensourceecology.de",
+    "name":"Open Source Ecology Germany e.V.",
+    "address":"Knobelsdorffstraße 22, 14059 Berlin, Germany",
+    "phone":"+49 30 92282426"
+  },
+  {
+    "domain":"parcellab.com",
+    "name":"parcelLab",
+    "address":"Kapellenweg 6, 81371 München, Germany",
+    "phone":"+49 89 32890907"
+  },
+  {
+    "domain":"pi.pe",
+    "name":"pi.pe GmbH",
+    "address":"Rheinsberger Str. 76-77, 10115 Berlin, Germany",
+    "phone":null
+  },
+  {
+    "domain":"protellus.de",
+    "name":"Protellus",
+    "address":"Charlottenburger Ufer 9, 10587 Berlin, Germany",
+    "phone":"+49 30 98408377"
+  },
+  {
+    "domain":"qrcobble.com",
+    "name":"QR Cobble",
+    "address":"Unter den Linden 16, 10117 Berlin, Germany",
+    "phone":"+49 30 28884360"
+  },
+  {
+    "domain":"ree.technology",
+    "name":"REE Technology GmbH",
+    "address":"Mariendorfer Damm 1, 12099 Berlin, Germany",
+    "phone":null
+  },
+  {
+    "domain":"relayr.io",
+    "name":"relayr",
+    "address":"Bergmannstraße 102\/103, 10961 Berlin, Germany",
+    "phone":"+49 30 20847375"
+  },
+  {
+    "domain":"sensorberg.com",
+    "name":"Sensorberg GmbH",
+    "address":"Mauerstraße 78-80, 10117 Berlin, Germany",
+    "phone":"+49 30 62208073"
+  },
+  {
+    "domain":"sirplus.de",
+    "name":"SIRPLUS Rettermarkt Steglitz",
+    "address":"Schloßstraße 94, 12163 Berlin, Germany",
+    "phone":null
+  },
+  {
+    "domain":"sonnenrepublik.de",
+    "name":"SEG Sonnenrepublik Energie GmbH",
+    "address":"Kaiserdamm 14, 14057 Berlin, Germany",
+    "phone":"+49 30 55570283"
+  },
+  {
+    "domain":"sustainable-design-center.de",
+    "name":"sustainable design center e.V.",
+    "address":"Hobrechtstraße 67, 12047 Berlin, Germany",
+    "phone":"+49 30 69818645"
+  },
+  {
+    "domain":"swobbee.de",
+    "name":"Swobbee GmbH",
+    "address":"Johann-Hittorf-Straße 8, 12489 Berlin, Germany",
+    "phone":"+49 30 639287250"
+  },
+  {
+    "domain":"thedrivery.com",
+    "name":"The Drivery GmbH",
+    "address":"Mariendorfer Damm 1, 12099 Berlin, Germany",
+    "phone":null
+  },
+  {
+    "domain":"wattx.io",
+    "name":"wattx GmbH",
+    "address":"Zionskirchstraße 73a, 10119 Berlin, Germany",
+    "phone":null
+  },
+  {
+    "domain":"wermutham.com",
+    "name":"Wermuth Asset Management GmbH",
+    "address":"Johannisstraße 3, 10117 Berlin, Germany",
+    "phone":"+49 30 27890920"
+  },
+  {
+    "domain":"www.agora-energiewende.de",
+    "name":"Agora Energiewende",
+    "address":"Anna-Louisa-Karsch-Straße 2, 10178 Berlin, Germany",
+    "phone":"+49 30 7001435000"
+  },
+  {
+    "domain":"www.alba.info",
+    "name":"ALBA Facility Solutions GmbH",
+    "address":"Jaraczewskystraße 5, 99096 Erfurt, Germany",
+    "phone":"+49 361 3460713"
+  },
+  {
+    "domain":"www.bacb.de",
+    "name":"Business Angels Club Berlin Brandenburg e.V.",
+    "address":"Otto-Suhr-Allee 25, 10585 Berlin, Germany",
+    "phone":"+49 30 25785869"
+  },
+  {
+    "domain":"www.baywa-re.de",
+    "name":"BayWa r.e. Clean Energy Sourcing GmbH",
+    "address":"Katharinenstraße 6, 04109 Leipzig, Germany",
+    "phone":"+49 341 30860600"
+  },
+  {
+    "domain":"www.bbsr.bund.de",
+    "name":"Bundesamt für Verbraucherschutz und Lebensmittelsicherheit",
+    "address":"Bundesallee 35, 38116 Braunschweig, Germany",
+    "phone":"+49 531 214970"
+  },
+  {
+    "domain":"www.bde.de",
+    "name":"BDE Bundesverband der Deutschen Entsorgungs-, Wasser- und Rohstoffwirtschaft e.V.",
+    "address":"Von-der-Heydt-Straße 2, 10785 Berlin, Germany",
+    "phone":"+49 30 59003350"
+  },
+  {
+    "domain":"www.beanair.com",
+    "name":"Beanair GmbH",
+    "address":"Wolfener Straße 32 - 34, 12681 Berlin, Germany",
+    "phone":"+49 30 98366680"
+  },
+  {
+    "domain":"www.bee-ev.de",
+    "name":"German Renewable Energy Federation e.V. (BEE)",
+    "address":"EUREF-Campus 16, 10829 Berlin, Germany",
+    "phone":"+49 30 27581700"
+  },
+  {
+    "domain":"www.berlin-innovation-agency.com",
+    "name":"BIA Berlin Innovation Agency",
+    "address":"Torstraße 203, 10115 Berlin, Germany",
+    "phone":null
+  },
+  {
+    "domain":"www.berlin-partner.de",
+    "name":"Berlin Partner of Economics and Technology GmbH",
+    "address":"Fasanenstraße 85, 10623 Berlin, Germany",
+    "phone":"+49 30 46302500"
+  },
+  {
+    "domain":"www.berliner-e-agentur.de",
+    "name":"Berliner Energieagentur GmbH",
+    "address":"Französische Straße 23, 10117 Berlin, Germany",
+    "phone":"+49 30 2933300"
+  },
+  {
+    "domain":"www.berlintxl.de",
+    "name":"Tegel Projekt GmbH",
+    "address":"Lietzenburger Str. 107, 10707 Berlin, Germany",
+    "phone":"+49 30 577047018"
+  },
+  {
+    "domain":"www.bmbf.de",
+    "name":"Bundesministerium für Bildung und Forschung",
+    "address":"Heinemannstraße 2, 53175 Bonn, Germany",
+    "phone":"+49 228 99570"
+  },
+  {
+    "domain":"www.bmwi.de",
+    "name":"BMWi | Bundesministerium für Wirtschaft und Energie",
+    "address":"Scharnhorststraße 35, 10115 Berlin, Germany",
+    "phone":"+49 30 186150"
+  },
+  {
+    "domain":"www.borderstep.de",
+    "name":"Borderstep Institut für Innovation und Nachhaltigkeit gemeinnützige GmbH",
+    "address":"Clayallee 323, 14169 Berlin, Germany",
+    "phone":"+49 30 306451000"
+  },
+  {
+    "domain":"www.bsdconsulting.com",
+    "name":"BSD Consulting Business Sustainability Development",
+    "address":"Hufgasse 17, 8024 Zürich, Switzerland",
+    "phone":"+41 44 260 60 65"
+  },
+  {
+    "domain":"www.bsr.de",
+    "name":"BSR Recyclinghof Gradestraße",
+    "address":"Gradestraße 77, 12347 Berlin, Germany",
+    "phone":"+49 30 75924900"
+  },
+  {
+    "domain":"www.bund.net",
+    "name":"Bund für Umwelt und Naturschutz Deutschland e.V.",
+    "address":"Promenadenweg 41, 75015 Bretten, Germany",
+    "phone":"+49 7252 7998"
+  },
+  {
+    "domain":"www.bvg.de",
+    "name":"BVG Fundbüro",
+    "address":"Rudolfstraße 1-8, 10245 Berlin, Germany",
+    "phone":"+49 30 19449"
+  },
+  {
+    "domain":"www.bwb.de",
+    "name":"Berliner Wasserbetriebe",
+    "address":"Neue Jüdenstraße 1, 10179 Berlin, Germany",
+    "phone":"+49 800 2927587"
+  },
+  {
+    "domain":"www.chargomat.de",
+    "name":"chargomat GmbH",
+    "address":"Alt-Blankenburg 1D, 13129 Berlin, Germany",
+    "phone":"+49 30 55573072"
+  },
+  {
+    "domain":"www.circulareconomy.tu-berlin.de",
+    "name":"Berlin Institute of Technology",
+    "address":"Straße des 17. Juni 135, 10623 Berlin, Germany",
+    "phone":"+49 30 3140"
+  },
+  {
+    "domain":"www.cist.de",
+    "name":"CIST",
+    "address":"Am Weidendamm 1A, 10117 Berlin, Germany",
+    "phone":"+49 30 72625470"
+  },
+  {
+    "domain":"www.civocracy.org",
+    "name":"Civocracy",
+    "address":"Oldenburger Str. 6, 10551 Berlin, Germany",
+    "phone":"+49 1573 3408652"
+  },
+  {
+    "domain":"www.cleantech-innovationcenter.de",
+    "name":"CleanTech Innovation Center",
+    "address":"Wolfener Str. 32-34, 12681 Berlin, Germany",
+    "phone":"+49 16414"
+  },
+  {
+    "domain":"www.cosuno.de",
+    "name":"Cosuno Ventures GmbH",
+    "address":"Brunnenstraße 24, 10119 Berlin, Germany",
+    "phone":"+49 30 896778739"
+  },
+  {
+    "domain":"www.dbu.de",
+    "name":"DBU Center for Environmental Communication",
+    "address":"An der Bornau 2, 49090 Osnabrück, Germany",
+    "phone":"+49 541 9633911"
+  },
+  {
+    "domain":"www.dena.de",
+    "name":"German Energy Agency (dena)",
+    "address":"Chausseestraße 128A, 10115 Berlin, Germany",
+    "phone":"+49 30 667770"
+  },
+  {
+    "domain":"www.dfki.de",
+    "name":"DFKI - Deutsche Forschungszentrum für Künstliche Intelligenz GmbH",
+    "address":"Marie-Curie-Straße 1, 26129 Oldenburg, Germany",
+    "phone":"+49 441 36116520"
+  },
+  {
+    "domain":"www.die-gdi.de",
+    "name":"Deutsches Institut für Entwicklungspolitik gGmbH",
+    "address":"Tulpenfeld 6, 53113 Bonn, Germany",
+    "phone":"+49 228 949270"
+  },
+  {
+    "domain":"www.diw.de",
+    "name":"DIW Berlin",
+    "address":"Mohrenstraße 58, 10117 Berlin, Germany",
+    "phone":"+49 30 897890"
+  },
+  {
+    "domain":"www.dlr.de",
+    "name":"Deutsches Zentrum für Luft- und Raumfahrt (DLR)",
+    "address":"Bunsenstraße 10, 37073 Göttingen, Germany",
+    "phone":"+49 551 7090"
+  },
+  {
+    "domain":"www.dnr.de",
+    "name":"Deutscher Naturschutzring e.V.",
+    "address":"Marienstraße 19-20, 10117 Berlin, Germany",
+    "phone":"+49 30 678177570"
+  },
+  {
+    "domain":"www.door2door.io",
+    "name":"door2door GmbH",
+    "address":"Torstraße 109, 10119 Berlin, Germany",
+    "phone":"+49 30 89378135"
+  },
+  {
+    "domain":"www.dstgb.de",
+    "name":"Deutscher Städte- und Gemeindebund",
+    "address":"Marienstraße 6, 12207 Berlin, Germany",
+    "phone":"+49 228 9596221"
+  },
+  {
+    "domain":"www.dwr-eco.com",
+    "name":"DWR eco GmbH",
+    "address":"Albrechtstraße 22, 10117 Berlin, Germany",
+    "phone":"+49 30 609819500"
+  },
+  {
+    "domain":"www.ebee.berlin",
+    "name":"Ebee Smart Technologies Charging Station",
+    "address":"Torgauer Str. 12, 10829 Berlin, Germany",
+    "phone":"+49 4930 60983710"
+  },
+  {
+    "domain":"www.ecf-farmsystems.com",
+    "name":"ECF Farm Systems GmbH",
+    "address":"Bessemerstraße 20, 12103 Berlin, Germany",
+    "phone":"+49 30 75514840"
+  },
+  {
+    "domain":"www.ecologic.eu",
+    "name":"Ecologic Institute",
+    "address":"Pfalzburger Str. 43-44, 10717 Berlin, Germany",
+    "phone":"+49 30 868800"
+  },
+  {
+    "domain":"www.elomobility.com",
+    "name":"ELO Mobility",
+    "address":"Torgauer Straße 12-15 EUREF Campus 4, 5, 10829 Berlin, Germany",
+    "phone":"+49 30 55570194"
+  },
+  {
+    "domain":"www.emo-berlin.de",
+    "name":"Berliner Agentur für Elektromobilität eMO",
+    "address":"Fasanenstraße 85, 10623 Berlin, Germany",
+    "phone":"+49 30 46302351"
+  },
+  {
+    "domain":"www.enpal.de",
+    "name":"Enpal GmbH",
+    "address":"Boxhagener Str. 80, 10245 Berlin, Germany",
+    "phone":"+49 30 30808052"
+  },
+  {
+    "domain":"www.fgf-ev.de",
+    "name":"FGF Förderkreis Gründungs- Forschung e.V.",
+    "address":"Gartenstraße 86, 47798 Krefeld, Germany",
+    "phone":"+49 2151 777508"
+  },
+  {
+    "domain":"www.fraunhofer.de",
+    "name":"Fraunhofer-Gesellschaft zur Förderung der angewandten Forschung e.V.",
+    "address":"Winterbergstraße 28, 01277 Dresden, Germany",
+    "phone":"+49 351 253730"
+  },
+  {
+    "domain":"www.fu-berlin.de",
+    "name":"Freie Universität Berlin",
+    "address":"Kaiserswerther Str. 16-18, 14195 Berlin, Germany",
+    "phone":"+49 30 8381"
+  },
+  {
+    "domain":"www.fz-juelich.de",
+    "name":"Forschungszentrum Jülich",
+    "address":"Wilhelm-Johnen-Straße, 52428 Jülich, Germany",
+    "phone":"+49 2461 610"
+  },
+  {
+    "domain":"www.giz.de",
+    "name":"Deutsche Gesellschaft für Internationale Zusammenarbeit (GIZ) GmbH",
+    "address":"Dag-Hammarskjöld-Weg 1-5, 65760 Eschborn, Germany",
+    "phone":"+49 6196 790"
+  },
+  {
+    "domain":"www.greenadapt.de",
+    "name":"GreenAdapt Gesellschaft für Klimaanpassung mbH",
+    "address":"Luisenstraße 53, 10117 Berlin, Germany",
+    "phone":"+49 30 12085035"
+  },
+  {
+    "domain":"www.greenpack.de",
+    "name":"GreenPack Charging Station",
+    "address":"Johann-Hittorf-Straße 8, 12489 Berlin, Germany",
+    "phone":"+49 30 639287250"
+  },
+  {
+    "domain":"www.helmholtz-berlin.de",
+    "name":"Helmholtz-Zentrum Berlin für Materialien und Energie",
+    "address":"Albert-Einstein-Straße 15, 12489 Berlin, Germany",
+    "phone":"+49 30 80620"
+  },
+  {
+    "domain":"www.homepowersolutions.de",
+    "name":"HPS Home Power Solutions GmbH",
+    "address":"Carl-Scheele-Straße 16, 12489 Berlin, Germany",
+    "phone":"+49 30 235914000"
+  },
+  {
+    "domain":"www.hotsplots.de",
+    "name":"hotsplots GmbH",
+    "address":"Rotherstraße 22, 10245 Berlin, Germany",
+    "phone":"+49 30 29773480"
+  },
+  {
+    "domain":"www.iass-potsdam.de",
+    "name":"Institute For Advanced Sustainability Studies e.V.",
+    "address":"Berliner Str. 130, 14467 Potsdam, Germany",
+    "phone":"+49 331 28822300"
+  },
+  {
+    "domain":"www.iav.com",
+    "name":"IAV GmbH, Dresden",
+    "address":"Manfred-von-Ardenne-Ring 20, 01099 Dresden, Germany",
+    "phone":"+49 351 26710500"
+  },
+  {
+    "domain":"www.ibb.de",
+    "name":"Investitionsbank Berlin | IBB",
+    "address":"Bundesallee 210, 10719 Berlin, Germany",
+    "phone":"+49 30 21250"
+  },
+  {
+    "domain":"www.ibvogt.com",
+    "name":"ib vogt GmbH",
+    "address":"Helmholtzstraße 2-9, 10587 Berlin, Germany",
+    "phone":"+49 30 3974400"
+  },
+  {
+    "domain":"www.ice-gateway.com",
+    "name":"ICE Gateway GmbH",
+    "address":"Am Studio 2, 12489 Berlin, Germany",
+    "phone":"+49 30 639280416"
+  },
+  {
+    "domain":"www.idz.de",
+    "name":"International Design Center Berlin",
+    "address":"Hagelberger Str. 52, 10965 Berlin, Germany",
+    "phone":"+49 30 61623210"
+  },
+  {
+    "domain":"www.imaginecargo.com",
+    "name":"ImagineCargo Deutschland",
+    "address":"Friedrichstraße 246, 10969 Berlin, Germany",
+    "phone":"+49 30 692021300"
+  },
+  {
+    "domain":"www.innoenergy.com",
+    "name":"KIC-InnoEnergy",
+    "address":"John F Kennedylaan 2, 5612 AB Eindhoven, Netherlands",
+    "phone":null
+  },
+  {
+    "domain":"www.konetik.com",
+    "name":"Konetik Deutschland GmbH",
+    "address":"Akazienstraße 3\/A, 10823 Berlin, Germany",
+    "phone":"+49 162 2548583"
+  },
+  {
+    "domain":"www.kopernikusauto.com",
+    "name":"Kopernikus Automotive GmbH",
+    "address":"Spinnereistraße 7, 04179 Leipzig, Germany",
+    "phone":"+49 341 98975280"
+  },
+  {
+    "domain":"www.lesan.ai",
+    "name":"Lesan AI",
+    "address":"Lohmühlenstraße 65, 12435 Berlin, Germany",
+    "phone":"+49 176 57756309"
+  },
+  {
+    "domain":"www.matchx.io",
+    "name":"MatchX GmbH",
+    "address":"Brückenstraße 4, 10179 Berlin, Germany",
+    "phone":"+49 30 54908830"
+  },
+  {
+    "domain":"www.milkthesun.com",
+    "name":"Milk the Sun GmbH",
+    "address":"Elsenstraße 106, 12435 Berlin, Germany",
+    "phone":"+49 30 469990330"
+  },
+  {
+    "domain":"www.mint-engineering.de",
+    "name":"MINT Engineering GmbH",
+    "address":"Am Torfmoor 1b, 01109 Dresden, Germany",
+    "phone":"+49 171 9705809"
+  },
+  {
+    "domain":"www.motor-ai.com",
+    "name":"MOTOR AI",
+    "address":"Rheinsberger Str. 76\/77, 10115 Berlin, Germany",
+    "phone":null
+  },
+  {
+    "domain":"www.mowea.world",
+    "name":"MOWEA GmbH",
+    "address":"Storkower Str. 115A, 10407 Berlin, Germany",
+    "phone":"+49 30 23526111"
+  },
+  {
+    "domain":"www.mtcontrols.de",
+    "name":"Move & Traffic Controls GmbH",
+    "address":"Plauener Str. 163-165, 13053 Berlin, Germany",
+    "phone":"+49 30 53216863"
+  },
+  {
+    "domain":"www.mxc.org",
+    "name":"MXC Foundation",
+    "address":"Brückenstraße 4, 10179 Berlin, Germany",
+    "phone":"+49 30 40364399"
+  },
+  {
+    "domain":"www.nachhaltigkeitsrat.de",
+    "name":"Rat für Nachhaltige Entwicklung",
+    "address":"Potsdamer Platz 10, 10785 Berlin, Germany",
+    "phone":"+49 30 408190121"
+  },
+  {
+    "domain":"www.netpipe.io",
+    "name":"Netpipe Gmbh",
+    "address":"Crusemarkstraße 9, 13187 Berlin, Germany",
+    "phone":"+49 30 120766221"
+  },
+  {
+    "domain":"www.nextbike.de",
+    "name":"nextbike Alt-Waldau",
+    "address":"Waldau, 34123 Kassel, Germany",
+    "phone":null
+  },
+  {
+    "domain":"www.nuventura.com",
+    "name":"Nuventura",
+    "address":"Jablonskistraße 21, 10405 Berlin, Germany",
+    "phone":"+49 30 120875290"
+  },
+  {
+    "domain":"www.opes-solutions.com",
+    "name":"OPES Solutions",
+    "address":"Chausseestraße 22, 10115 Berlin, Germany",
+    "phone":"+49 30 28423780"
+  },
+  {
+    "domain":"www.pik-potsdam.de",
+    "name":"Potsdam Institute for Climate Impact Research",
+    "address":"Telegrafenberg, 14473 Potsdam, Germany",
+    "phone":"+49 331 2882500"
+  },
+  {
+    "domain":"www.polidia.de",
+    "name":"polidia GmbH",
+    "address":"Mühlenstraße 40, 10243 Berlin, Germany",
+    "phone":"+49 30 97006355"
+  },
+  {
+    "domain":"www.polyteia.de",
+    "name":"Polyteia GmbH",
+    "address":"Lobeckstraße 35, 10969 Berlin, Germany",
+    "phone":"+49 30 54908320"
+  },
+  {
+    "domain":"www.purpleorange.com",
+    "name":"Purple Orange Ventures GmbH",
+    "address":"Prenzlauer Berg, 10119 Berlin, Germany",
+    "phone":null
+  },
+  {
+    "domain":"www.scrooser.com",
+    "name":"SCROOSER",
+    "address":"Bouchéstraße 12, Halle 20, 12435 Berlin, Germany",
+    "phone":"+49 30 2218367900"
+  },
+  {
+    "domain":"www.selux.com",
+    "name":"Selux AG",
+    "address":"Motzener Str. 34, 12277 Berlin, Germany",
+    "phone":"+49 30 720010"
+  },
+  {
+    "domain":"www.sensefinity.com",
+    "name":"Sensefinity - Everything Connects",
+    "address":"Breite Str. 1, 10178 Berlin, Germany",
+    "phone":"+351 963 928 004"
+  },
+  {
+    "domain":"www.solmove.com",
+    "name":"Solmove GmbH",
+    "address":"Rudolf-Breitscheid-Straße 162, 14482 Potsdam, Germany",
+    "phone":null
+  },
+  {
+    "domain":"www.stadtfarm.de",
+    "name":"Stadtfarm.de - Urban Farming Markttag \/Wochenmarkt \/ Fisch & Gemüsebox - frischer Fisch, Salate, Kräuter",
+    "address":"Allee der Kosmonauten 16, 10315 Berlin, Germany",
+    "phone":"+49 30 120764907"
+  },
+  {
+    "domain":"www.staedtetag.de",
+    "name":"Deutscher Städtetag",
+    "address":"Hausvogteipl. 1, 10117 Berlin, Germany",
+    "phone":"+49 30 377110"
+  },
+  {
+    "domain":"www.stromnetz.berlin",
+    "name":"Stromnetz Berlin",
+    "address":"Wildmeisterdamm 245, 12353 Berlin, Germany",
+    "phone":"+49 800 2112525"
+  },
+  {
+    "domain":"www.technologiestiftung-berlin.de",
+    "name":"Technologiestiftung Berlin",
+    "address":"Grunewaldstraße 61-62, 10825 Berlin, Germany",
+    "phone":"+49 30 20969990"
+  },
+  {
+    "domain":"www.teraki.com",
+    "name":"TERAKI GmbH",
+    "address":"Von-der-Heydt-Straße 2, 10785 Berlin, Germany",
+    "phone":"+49 30 23327456"
+  },
+  {
+    "domain":"www.tier.app",
+    "name":"Tier Mobility ( Moped)",
+    "address":"Plauener Str. 163-165, 13053 Berlin, Germany",
+    "phone":"+49 30 56838651"
+  },
+  {
+    "domain":"www.tracksfortrucks.com",
+    "name":"Tracks GmbH",
+    "address":"The Drivery, c\/o Tracks GmbH, Mariendorfer Damm 1, 12099 Berlin, Germany",
+    "phone":"+49 1522 6318286"
+  },
+  {
+    "domain":"www.tu-berlin.de",
+    "name":"Berlin Institute of Technology",
+    "address":"Straße des 17. Juni 135, 10623 Berlin, Germany",
+    "phone":"+49 30 3140"
+  },
+  {
+    "domain":"www.ubitricity.com",
+    "name":"ubitricity Charging Station",
+    "address":"EUREF-Campus 7-8, 10829 Berlin, Germany",
+    "phone":"+49 30 364288300"
+  },
+  {
+    "domain":"www.umweltbundesamt.de",
+    "name":"Umweltbundesamt",
+    "address":"Wörlitzer Pl. 1, 06844 Dessau-Roßlau, Germany",
+    "phone":"+49 340 21030"
+  },
+  {
+    "domain":"www.unternehmensgruen.de",
+    "name":"UnternehmensGrün, Bundesverband der grünen Wirtschaft e.V.",
+    "address":"Unterbaumstraße 4, 10117 Berlin, Germany",
+    "phone":"+49 30 32599683"
+  },
+  {
+    "domain":"www.vattenfall.de",
+    "name":"Vattenfall Europe Sales GmbH",
+    "address":"Chausseestraße 23, 10115 Berlin, Germany",
+    "phone":"+49 30 657988000"
+  },
+  {
+    "domain":"www.viessmann.de",
+    "name":"Viessmann Werke",
+    "address":"Viessmannstraße 1, 35108 Allendorf (Eder), Germany",
+    "phone":"+49 6452 700"
+  },
+  {
+    "domain":"www.we-share.io",
+    "name":"UMI Urban Mobility International GmbH",
+    "address":"Mollstraße 1, 10178 Berlin, Germany",
+    "phone":"+49 30 24020210"
+  },
+  {
+    "domain":"www.windnode.de",
+    "name":"WindNODE",
+    "address":"Heidestraße 2, 10557 Berlin, Germany",
+    "phone":"+49 30 51502805"
+  },
+  {
+    "domain":"www.wista.de",
+    "name":"WISTA",
+    "address":"Rudower Chaussee 17, 12489 Berlin, Germany",
+    "phone":"+49 30 63922200"
+  }
+]
