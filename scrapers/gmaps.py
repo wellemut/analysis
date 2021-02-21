@@ -25,6 +25,8 @@ def run_pipeline(domain, url, reset):
         Column("name", "text", nullable=True),
         Column("address", "text", nullable=True),
         Column("phone", "text", nullable=True),
+        Column("latitude", "text", nullable=True),
+        Column("longitude", "text", nullable=True),
     ).primary_key("id").unique("domain").if_not_exists().execute()
 
     # Clear records for domain/url
@@ -97,6 +99,7 @@ def run_pipeline(domain, url, reset):
                     # http://microformats.org/wiki/adr
                     # "adr_address",
                     "international_phone_number",
+                    "geometry",
                 ],
                 language="en",
             )["result"]
@@ -114,17 +117,14 @@ def run_pipeline(domain, url, reset):
             address=result.get("formatted_address", None),
             name=result.get("name", None),
             phone=result.get("international_phone_number", None),
+            latitude=result.get("geometry", {}).get("location", {}).get("lat", None),
+            longitude=result.get("geometry", {}).get("location", {}).get("lng", None),
         ).execute()
 
     # Get data
     df = (
         db.table("domains")
-        .select(
-            "domain",
-            "name",
-            "address",
-            "phone",
-        )
+        .select("domain", "name", "address", "phone", "latitude", "longitude")
         .to_dataframe()
     )
 
