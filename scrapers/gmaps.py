@@ -136,5 +136,10 @@ def run_pipeline(domain, url, reset):
     # Sort
     df = df.sort_values(by=["domain"])
 
+    # NOTE: This is temporary only. Scrapers should not update the analysis
+    # database. An analysis pipeline should be taking care of performing the
+    # update of the analysis database with address and latitude/longitude info
+    update_analysis_database(df[["domain", "address", "latitude", "longitude"]])
+
     # Save as JSON
     save_result(PIPELINE, df)

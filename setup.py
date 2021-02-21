@@ -29,6 +29,9 @@ db.table("domains").create(
     Column("facebook_handle", "text", nullable=True),
     Column("linkedin_handle", "text", nullable=True),
     Column("summary", "text", nullable=True),
+    Column("address", "text", nullable=True),
+    Column("latitude", "text", nullable=True),
+    Column("longitude", "text", nullable=True),
     Column("word_count", "integer", nullable=True),
     *sdgs_count_columns,
 ).primary_key("id").unique("domain").unique("url").if_not_exists().execute()
