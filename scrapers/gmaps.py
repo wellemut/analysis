@@ -3,12 +3,12 @@ from pathlib import Path
 import urllib.request
 from urllib.parse import urlparse
 import googlemaps
-import tldextract
 from models.Database import Database, Table, Column, Field, Order
 from models import PipelineProgressBar
 from helpers.get_urls_table_from_scraped_database import (
     get_urls_table_from_scraped_database,
 )
+from helpers.get_registered_domain import get_registered_domain
 from helpers.update_analysis_database import update_analysis_database
 from helpers.save_result import save_result
 
@@ -71,7 +71,7 @@ def run_pipeline(domain, url, reset):
         progress.set_current_url(domain)
 
         # Normalized domain
-        normalized_domain = tldextract.extract(domain).registered_domain
+        normalized_domain = get_registered_domain(domain)
         result = {}
 
         # Find place
@@ -101,9 +101,9 @@ def run_pipeline(domain, url, reset):
                 language="en",
             )["result"]
 
-            normalized_candidate_domain = tldextract.extract(
+            normalized_candidate_domain = get_registered_domain(
                 match.get("website", "")
-            ).registered_domain
+            )
 
             if normalized_domain == normalized_candidate_domain:
                 result = match
