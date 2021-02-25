@@ -1,4 +1,4 @@
-from pypika import Query
+from pypika import PostgreSQLQuery as Query
 
 # A wrapper around pypika Query, that allows executing the generated SQL on the
 # database by calling .execute() or .first() or .all()

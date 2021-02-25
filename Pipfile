@@ -19,6 +19,8 @@ pandas = "*"
 twitterapi = "*"
 googlemaps = "*"
 tldextract = "*"
+scrapy = "*"
+billiard = "*"
 
 [requires]
 python_version = "3.8"
