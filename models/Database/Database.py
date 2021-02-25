@@ -30,7 +30,11 @@ class Database:
             connection.execute("PRAGMA foreign_keys = ON")
             connection.row_factory = sqlite3.Row
             yield connection
-        finally:
+        except:
+            connection.rollback()
+            connection.close()
+            raise
+        else:
             connection.commit()
             connection.close()
 
