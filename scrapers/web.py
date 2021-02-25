@@ -86,13 +86,13 @@ def run_pipeline(domain, url, reset):
 
             # If we are not scraping level 0, then we are still working on the last
             # domain
-            if level != 0:
-                domains_done -= 1
+            if level == 0:
+                domains_done += 1
 
             print(
                 "Scraping",
                 "D",
-                str(domains_done + 1) + "/" + str(total_domains),
+                str(domains_done) + "/" + str(total_domains),
                 "I",
                 str(items_done + 1) + "/" + str(total_items),
                 "L",
