@@ -7,11 +7,11 @@
 
 import scrapy
 
+
 class Website(scrapy.Item):
     html = scrapy.Field()
+    links = scrapy.Field()
+
 
 class Error(scrapy.Item):
     message = scrapy.Field()
-
-class Link(scrapy.Item):
-    url = scrapy.Field()

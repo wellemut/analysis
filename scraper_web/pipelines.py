@@ -17,21 +17,25 @@ class WriteWebsitePipeline(object):
         domain = spider.domain
         level = spider.level
 
-        # Add scraped HTML to the database
         if item_class == "Website":
-            db.table("urls").set(
-                html=item["html"].decode("UTF-8"), scraped_at=datetime.datetime.utcnow()
-            ).where(Field("url") == url).execute()
+            with db.start_transaction() as transaction:
+                # Add scraped HTML to the database
+                db.table("urls").set(
+                    html=item["html"].decode("UTF-8"),
+                    scraped_at=datetime.datetime.utcnow(),
+                ).where(Field("url") == url).execute(transaction=transaction)
 
-        # Add collected links to the database
-        elif item_class == "Link":
-            table = db.table("urls")
-            table.insert(
-                url=item["url"],
-                domain=domain,
-                level=level + 1,
-                created_at=datetime.datetime.utcnow(),
-            ).on_conflict(table.url).do_nothing().execute()
+                # Add collected links to the database
+                table = db.table("urls")
+                for link in item["links"]:
+                    table.insert(
+                        url=link,
+                        domain=domain,
+                        level=level + 1,
+                        created_at=datetime.datetime.utcnow(),
+                    ).on_conflict(table.url).do_nothing().execute(
+                        transaction=transaction
+                    )
 
         # Add error to the database
         elif item_class == "Error":

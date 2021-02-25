@@ -3,7 +3,7 @@ import traceback
 import scrapy
 import twisted
 from pprint import pprint
-from ..items import Website, Link, Error
+from ..items import Website, Error
 from scrapy.linkextractors import LinkExtractor
 from helpers.extract_text_from import extract_text_from
 
@@ -21,12 +21,16 @@ class WebsiteSpider(scrapy.Spider):
     def parse(self, response):
         try:
             # Extract page HTML
-            yield Website(html=response.body)
+            html = response.body
 
             # Extract links to other pages of this domain
+            links = []
             for link in self.extract_links(response):
                 link_url = response.urljoin(link.url)
-                yield Link(url=link_url)
+                links.append(link_url)
+
+            # Push to pipeline
+            yield Website(html=html, links=links)
 
         except Exception as error:
             traceback_str = "".join(traceback.format_tb(error.__traceback__))
