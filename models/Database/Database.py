@@ -2,6 +2,7 @@ import os
 from pathlib import Path
 from contextlib import contextmanager
 import sqlite3
+from pymaybe import maybe
 import pandas
 from config import DATABASES_DIR
 from .Table import Table
@@ -83,7 +84,7 @@ class Database:
 
     # Fetch and return a single value for the SQL query.
     def value(self, query, **kwargs):
-        callback = lambda cursor: cursor.fetchone()[0]
+        callback = lambda cursor: maybe(cursor.fetchone())[0].or_else(None)
         return self.execute(query=query, callback=callback, **kwargs)
 
     # Load the given columns (array) from the database into a pandas dataframe

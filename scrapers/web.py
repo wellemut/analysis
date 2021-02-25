@@ -39,22 +39,14 @@ def run_pipeline(domain, url, reset):
     if MAX_LEVEL:
         search_conditions = search_conditions & Field("level") <= MAX_LEVEL
 
-    while url_object := (
+    while domain := (
         db.table("urls")
-        .select("*")
+        .select("domain")
         .where(search_conditions)
         .orderby(f"domain = '{last_domain_scraped}'", order=Order.desc)
-        .first()
+        .limit(1)
+        .value()
     ):
-        id = url_object["id"]
-        url = url_object["url"]
-        domain = url_object["domain"]
-        level = url_object["level"]
-
-        # Print progress:
-        # - Domain (x out of all)
-        # - Item (out of all URLs for this domain)
-        # - Level
         domains_done = (
             db.table("urls")
             .count("domain")
@@ -64,51 +56,69 @@ def run_pipeline(domain, url, reset):
         total_domains = (
             db.table("urls").count("domain").where(Field("level") == 0).value()
         )
-        items_done = (
+        urls = (
             db.table("urls")
-            .count("url")
-            .where(Field("scraped_at").notnull() & Field("domain") == domain)
-            .value()
+            .select("id", "url", "level")
+            .where((Field("domain") == domain) & (Field("scraped_at").isnull()))
+            .all()
         )
-        total_items = (
-            db.table("urls")
-            .count("url")
-            .where((Field("domain") == domain) & (Field("level") <= MAX_LEVEL))
-            .value()
-        )
+        for url_object in urls:
+            id = url_object["id"]
+            url = url_object["url"]
+            level = url_object["level"]
 
-        # If we are not scraping level 0, then we are still working on the last
-        # domain
-        if level != 0:
-            domains_done -= 1
+            # Print progress:
+            # - Domain (x out of all)
+            # - Item (out of all URLs for this domain)
+            # - Level
+            items_done = (
+                db.table("urls")
+                .count("url")
+                .where(Field("scraped_at").notnull() & Field("domain") == domain)
+                .value()
+            )
+            total_items = (
+                db.table("urls")
+                .count("url")
+                .where((Field("domain") == domain) & (Field("level") <= MAX_LEVEL))
+                .value()
+            )
 
-        print(
-            "Scraping",
-            "D",
-            str(domains_done + 1) + "/" + str(total_domains),
-            "I",
-            str(items_done + 1) + "/" + str(total_items),
-            "L",
-            str(level),
-            ":",
-            url,
-            end=" ... ",
-            flush=True,
-        )
+            # If we are not scraping level 0, then we are still working on the last
+            # domain
+            if level != 0:
+                domains_done -= 1
 
-        SpiderRunner.run(
-            "Website Spider",
-            start_urls=[url],
-            allowed_domains=[domain],
-            # Manually pass the url, because redirects and other effects
-            # may lead to a different URL being scraped
-            url=url,
-            domain=domain,
-            level=level,
-            settings={
-                "ITEM_PIPELINES": {"scraper_web.pipelines.WriteWebsitePipeline": 100}
-            },
-        )
+            print(
+                "Scraping",
+                "D",
+                str(domains_done + 1) + "/" + str(total_domains),
+                "I",
+                str(items_done + 1) + "/" + str(total_items),
+                "L",
+                str(level),
+                ":",
+                url,
+                end=" ... ",
+                flush=True,
+            )
 
-        print("Done!")
+            SpiderRunner.run(
+                "Website Spider",
+                start_urls=[url],
+                allowed_domains=[domain],
+                # Manually pass the url, because redirects and other effects
+                # may lead to a different URL being scraped
+                url=url,
+                domain=domain,
+                level=level,
+                settings={
+                    "ITEM_PIPELINES": {
+                        "scraper_web.pipelines.WriteWebsitePipeline": 100
+                    }
+                },
+            )
+
+            print("Done!")
+
         last_domain_scraped = domain
