@@ -8,13 +8,21 @@ from models.Database import Database, Column
 db = Database(MAIN_DATABASE)
 
 # Setup database
+sdgs_score_columns = [Column("sdgs_score", "integer", nullable=True)]
+for i in range(1, 18):
+    sdgs_score_columns.append(Column(f"sdg{i}_score", "integer", nullable=True))
+
+
 db.table("domain").create(
     Column("id", "integer", nullable=False),
     Column("domain", "text", nullable=False),
     Column("homepage", "text", nullable=False),
+    Column("total_score", "integer", nullable=True),
+    *sdgs_score_columns,
     Column("first_scraped_at", "timestamp", nullable=True),
     Column("scraped_at", "timestamp", nullable=True),
     Column("analyzed_at", "timestamp", nullable=True),
+    Column("scored_at", "timestamp", nullable=True),
 ).primary_key("id").unique("domain").if_not_exists().execute()
 
 db.table("url").create(
@@ -49,6 +57,9 @@ db.execute_sql(
 )
 
 # Add index on timestamps
+db.execute_sql("CREATE INDEX IF NOT EXISTS domain_scraped_at ON domain (scraped_at)")
+db.execute_sql("CREATE INDEX IF NOT EXISTS domain_analyzed_at ON domain (analyzed_at)")
+db.execute_sql("CREATE INDEX IF NOT EXISTS domain_scored_at ON domain (scored_at)")
 db.execute_sql("CREATE INDEX IF NOT EXISTS url_scraped_at ON url (scraped_at)")
 db.execute_sql("CREATE INDEX IF NOT EXISTS url_analyzed_at ON url (analyzed_at)")
 
