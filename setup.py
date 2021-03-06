@@ -1,29 +1,33 @@
-from models.Database import Database, Table, Column, Field
-from helpers.get_urls_table_from_scraped_database import (
-    get_urls_table_from_scraped_database,
-)
+from config import MAIN_DATABASE
+from models.Database import Database, Table, Column
 
-# Set up the overall analysis database. Each pipeline exports their findings
-# into this database.
+# Set up the overall database. Most pipelines export their findings into this
+# database.
 
 # Create database
-db = Database("analysis")
+db = Database(MAIN_DATABASE)
 
+# Setup database
 sdgs_score_columns = [Column("sdgs_score", "integer", nullable=True)]
 for i in range(1, 18):
     sdgs_score_columns.append(Column(f"sdg{i}_score", "integer", nullable=True))
 
-sdgs_count_columns = [Column("sdgs_count", "integer", nullable=True)]
-for i in range(1, 18):
-    sdgs_count_columns.append(Column(f"sdg{i}_count", "integer", nullable=True))
-
-db.table("domains").create(
+db.table("domain").create(
     Column("id", "integer", nullable=False),
     Column("domain", "text", nullable=False),
-    Column("url", "text", nullable=False),
-    Column("name", "text", nullable=True),
+    Column("homepage", "text", nullable=False),
     Column("total_score", "integer", nullable=True),
     *sdgs_score_columns,
+    Column("first_scraped_at", "timestamp", nullable=True),
+    Column("scraped_at", "timestamp", nullable=True),
+    Column("analyzed_at", "timestamp", nullable=True),
+    Column("scored_at", "timestamp", nullable=True),
+).primary_key("id").unique("domain").if_not_exists().execute()
+
+db.table("organization").create(
+    Column("id", "integer", nullable=False),
+    Column("domain_id", "integer", nullable=False),
+    Column("name", "text", nullable=True),
     Column("logo", "text", nullable=True),
     Column("twitter_handle", "text", nullable=True),
     Column("facebook_handle", "text", nullable=True),
@@ -32,31 +36,69 @@ db.table("domains").create(
     Column("address", "text", nullable=True),
     Column("latitude", "text", nullable=True),
     Column("longitude", "text", nullable=True),
+).foreign_key("domain_id", references="domain (id)").primary_key("id").unique(
+    "domain_id"
+).if_not_exists().execute()
+
+db.table("url").create(
+    Column("id", "integer", nullable=False),
+    Column("domain_id", "integer", nullable=False),
+    Column("url", "text", nullable=False),
+    Column("level", "int", nullable=False),
+    Column("html", "text", nullable=True),
+    Column("error", "text", nullable=True),
     Column("word_count", "integer", nullable=True),
-    *sdgs_count_columns,
-).primary_key("id").unique("domain").unique("url").if_not_exists().execute()
+    Column("scraped_at", "timestamp", nullable=True),
+    Column("analyzed_at", "timestamp", nullable=True),
+).foreign_key("domain_id", references="domain (id)").primary_key("id").unique(
+    "url"
+).if_not_exists().execute()
 
-count_before = db.table("domains").count("domain").value()
+db.table("keyword_match").create(
+    Column("id", "integer", nullable=False),
+    Column("url_id", "integer", nullable=False),
+    Column("sdg", "text", nullable=False),
+    Column("keyword", "text", nullable=False),
+    Column("context", "text", nullable=False),
+    Column("tag", "text", nullable=False),
+).foreign_key("url_id", references="url (id)").primary_key(
+    "id"
+).if_not_exists().execute()
 
-# Write domains to database
-scraped_urls = get_urls_table_from_scraped_database()
-with db.start_transaction() as transaction:
-    db.attach(scraped_urls.database, name="scraped", transaction=transaction)
+# Add index on foreign keys
+db.execute_sql(
+    "CREATE INDEX IF NOT EXISTS organization_domain_id ON organization (domain_id)"
+)
+db.execute_sql("CREATE INDEX IF NOT EXISTS url_domain_id ON url (domain_id)")
+db.execute_sql(
+    "CREATE INDEX IF NOT EXISTS keyword_match_url_id ON keyword_match (url_id)"
+)
 
-    # NOTE: We currently use .groupby() due to duplicate domains in scraped.sqlite
-    db.table("domains").insert_in_columns("domain", "url").from_(
-        scraped_urls.schema("scraped").table
-    ).select("domain", "url").where(
-        (Field("level") == 0)
-        & Field("domain").notin(db.table("domains").select("domain"))
-    ).groupby(
-        "domain"
-    ).execute(
-        transaction=transaction
+# Add index on timestamps
+db.execute_sql("CREATE INDEX IF NOT EXISTS domain_scraped_at ON domain (scraped_at)")
+db.execute_sql("CREATE INDEX IF NOT EXISTS domain_analyzed_at ON domain (analyzed_at)")
+db.execute_sql("CREATE INDEX IF NOT EXISTS domain_scored_at ON domain (scored_at)")
+db.execute_sql("CREATE INDEX IF NOT EXISTS url_scraped_at ON url (scraped_at)")
+db.execute_sql("CREATE INDEX IF NOT EXISTS url_analyzed_at ON url (analyzed_at)")
+
+# Create views
+db.execute_sql(
+    "CREATE VIEW IF NOT EXISTS organization_with_domain AS {query}".format(
+        query=db.table("organization")
+        .select("*")
+        .join(Table("domain"))
+        .on(Table("organization").domain_id == Table("domain").id)
+        .get_sql()
     )
+)
 
-count_after = db.table("domains").count("domain").value()
+# Seed the database
+db.table("domain").insert(domain="dgvn.de", homepage="https://dgvn.de/").execute()
+db.table("domain").insert(
+    domain="die-gdi.de", homepage="https://www.die-gdi.de"
+).execute()
 
 print("Database", f"{db.name}.sqlite", "was successfully set up ✅")
-print("Added", (count_after - count_before), "new domains")
-print("Total domains in database:", count_after)
+# TODO: Insert initial domains
+# print("Added", (count_after - count_before), "new domains")
+# print("Total domains in database:", count_after)

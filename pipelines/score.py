@@ -54,21 +54,35 @@ def run_pipeline(domain, url, reset):
 
         # Calculate scores
         df["target"] = df["sdg"].apply(lambda x: 2.5 if x == "sdgs" else 10.0)
-        df["score"] = round(df["percent"] / df["target"] * 100, 2).clip(upper=100)
-
-        # Remove scores below minimum score threshold
-        df = df[df["score"] >= 4]
+        df["minimum"] = df["sdg"].apply(lambda x: 0.1 if x == "sdgs" else 0.4)
+        df["score"] = round(
+            (df["percent"] - df["minimum"]) / (df["target"] - df["minimum"]) * 100, 2
+        ).clip(upper=100, lower=0)
 
         # Pivot
         df = df[["sdg", "score"]].set_index("sdg").T
 
         # Calculate total score
-        df["total"] = round(df.sum(axis=1) / 500 * 100, 2).clip(upper=100)
+        total_score = round(df.sum(axis=1) / 500 * 100, 2).clip(upper=100)[0]
 
         # Rename all columns to end with _score
         df = df.rename(columns=lambda x: x + "_score")
 
         # Write results to database
-        db.table("domain").set(
-            **df.to_dict(orient="records")[0], scored_at=datetime.utcnow()
-        ).where(Field("id") == domain_id).execute()
+        with db.start_transaction() as transaction:
+            db.table("domain").set(
+                total_score=total_score,
+                scored_at=datetime.utcnow(),
+                **df.to_dict(orient="records")[0],
+            ).where(Field("id") == domain_id).execute(transaction=transaction)
+
+            # Add or remove from organization table
+            organization = db.table("organization")
+            if total_score > 0:
+                organization.insert(domain_id=domain_id,).on_conflict(
+                    organization.domain_id
+                ).do_nothing().execute(transaction=transaction)
+            else:
+                organization.delete().where(Field("domain_id") == domain_id).execute(
+                    transaction=transaction
+                )
