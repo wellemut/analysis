@@ -5,11 +5,15 @@ import time
 import argparse
 from helpers.glob_match import glob_match
 
+PIPELINES = ["web", "keywords", "score"]
+
 program = argparse.ArgumentParser(description="Run a pipeline")
 
 program.add_argument(
-    "pipeline",
-    help="the pipeline to run",
+    "pipelines",
+    nargs="*",
+    default=PIPELINES,
+    help="the pipeline(s) to run",
 )
 
 # TODO: Add support for domain, url, and reset options
@@ -31,21 +35,24 @@ program.add_argument(
 
 args = program.parse_args()
 
-pipeline = args.pipeline
-print("Running scraper", pipeline, "...")
+# Find pipelines to run, based on the user provided glob
+pipelines_to_run = args.pipelines
 
-# Load the pipeline
-module = importlib.import_module("." + pipeline, "pipelines")
-run_pipeline = getattr(module, "run_pipeline")
+for pipeline in pipelines_to_run:
+    print("Running scraper", pipeline, "...")
 
-# Run the pipeline
-start = time.perf_counter()
-run_pipeline(domain=None, url=None, reset=False)
+    # Load the pipeline
+    module = importlib.import_module("." + pipeline, "pipelines")
+    run_pipeline = getattr(module, "run_pipeline")
 
-print(
-    "Running pipeline",
-    pipeline,
-    "...",
-    "Done!",
-    "(%.2fs)" % (time.perf_counter() - start),
-)
+    # Run the pipeline
+    start = time.perf_counter()
+    run_pipeline(domain=None, url=None, reset=False)
+
+    print(
+        "Running pipeline",
+        pipeline,
+        "...",
+        "Done!",
+        "(%.2fs)" % (time.perf_counter() - start),
+    )
