@@ -1,90 +1,98 @@
 from .ProgressBar import ProgressBar
+from .Controller import Controller
 import shutil
 import math
 import sys
 
+
+def move_to_previous_line():
+    sys.stdout.write("\033[A")
+
+
+def clear_current_line():
+    sys.stdout.write("\r\033[K")
+
+
 # A simple wrapper around progressbar2's ProgressBar
 class PipelineProgressBar:
-    def __init__(self, pipeline_name):
-        self.pipeline_name = pipeline_name
-        self.max_value = None
+    def __init__(self, name, max_value=None, handler=None):
         self.status = None
-        self.bar = None
+        self._max_value = max_value
+        self.bar = ProgressBar(
+            max_value=max_value,
+            prefix=f"{name.upper()} ",
+            redirect_stdout=False,
+        )
         self.current = 0
+        self.handler = handler or Controller()
+        self.handler.add_bar(self)
+
+    def add_bar(self, *args, **kwargs):
+        kwargs["handler"] = self.handler
+        return self.__class__(*args, **kwargs)
+
+    @property
+    def max_value(self):
+        return self._max_value
+
+    @max_value.setter
+    def max_value(self, value):
+        self.bar.max_value = value
+        self._max_value = value
+        self.update_bar()
 
     # Start the progressbar
     def iterate(self, array):
         self.max_value = len(array)
-        self.init_bar()
-        self.start()
         while self.current < self.max_value:
             yield array[self.current]
             self.item_complete()
-
-        # Clear the current line (progressbar)
-        self.clear_current_line()
-        self.clear_status()
         self.finish()
 
-    # Initialize the progressbar2 object
-    def init_bar(self):
-        self.bar = ProgressBar(
-            max_value=self.max_value,
-            prefix=f"{self.pipeline_name.upper()} ",
-            redirect_stdout=True,
-        )
+    def set_status(self, status):
+        self.handler.clear()
+        self.status = status
+        self.handler.render()
 
+    # DEPRECATED
     def set_current_url(self, url):
-        # Clear previous URL
-        self.clear_status()
+        self.set_status(f"Analyzing: {url}")
 
-        # Print new URL
-        self.status = f"Analyzing: {url}"
-        self.print_status()
-
-    # Print a note above the current URL being analyzed
+    # Print a note
     def print(self, *args):
-        self.clear_status()
-        print(*args)
-        self.print_status()
+        self.handler.print(*args)
+
+    def _print_status(self):
+        if self.status is None:
+            return
+
+        sys.stdout.write(self.status)
+        sys.stdout.write("\n")
+
+    def _clear(self):
+        clear_current_line()
+        self._clear_status()
 
     # Clear the current status from the screen
-    def clear_status(self):
-        if not self.status:
+    def _clear_status(self):
+        if self.status is None:
             return
 
         last_url_length = len(self.status)
         terminal_width = shutil.get_terminal_size().columns
         lines_occupied = math.ceil(last_url_length / terminal_width)
         for _ in range(lines_occupied):
-            self.move_to_previous_line()
-            self.clear_current_line()
-
-    def print_status(self):
-        if not self.status:
-            return
-
-        print(self.status)
-        self.update_bar()
-
-    def move_to_previous_line(self):
-        sys.stdout.write("\033[A")
-
-    def clear_current_line(self):
-        sys.stdout.write("\r\033[K")
-
-    # Start the progress bar
-    def start(self):
-        self.bar.start()
-
-    # Finish the progress bar
-    def finish(self):
-        self.bar.finish()
+            move_to_previous_line()
+            clear_current_line()
 
     def update_bar(self):
-        self.bar.update(self.current, force=True)
+        self.handler.update_bars()
 
     # Mark item as complete and move progress forward
     def item_complete(self):
         self.current += 1
         self.update_bar()
+
+    # Finish the progress bar
+    def finish(self):
+        self.handler.finish_bar(self)

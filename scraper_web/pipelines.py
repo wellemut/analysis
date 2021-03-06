@@ -2,37 +2,33 @@ import os
 import datetime
 from models.Database import Database, Field
 
-# from database.add_scraped_html import add_scraped_html
-# from database.create_url import create_url
-# from database.add_scrape_error import add_scrape_error
-
-db = Database("scraped")
-
 
 class WriteWebsitePipeline(object):
     def process_item(self, item, spider):
         item_class = type(item).__name__
 
+        db = Database(spider.database_name)
+        id = spider.url_id
         url = spider.url
+        domain_id = spider.domain_id
         domain = spider.domain
         level = spider.level
 
         if item_class == "Website":
             with db.start_transaction() as transaction:
                 # Add scraped HTML to the database
-                db.table("urls").set(
+                db.table("url").set(
                     html=item["html"].decode("UTF-8"),
                     scraped_at=datetime.datetime.utcnow(),
-                ).where(Field("url") == url).execute(transaction=transaction)
+                ).where(Field("id") == id).execute(transaction=transaction)
 
                 # Add collected links to the database
-                table = db.table("urls")
+                table = db.table("url")
                 for link in item["links"]:
                     table.insert(
                         url=link,
-                        domain=domain,
+                        domain_id=domain_id,
                         level=level + 1,
-                        created_at=datetime.datetime.utcnow(),
                     ).on_conflict(table.url).do_nothing().execute(
                         transaction=transaction
                     )
@@ -40,9 +36,9 @@ class WriteWebsitePipeline(object):
         # Add error to the database
         elif item_class == "Error":
             print(item["message"])
-            db.table("urls").set(
+            db.table("url").set(
                 error=item["message"], scraped_at=datetime.datetime.utcnow()
-            ).where(Field("url") == url).execute()
+            ).where(Field("id") == id).execute()
 
         # Return nothing
         # With large arrays, we run into an issue when trying to pass it from
