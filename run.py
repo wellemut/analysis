@@ -5,7 +5,7 @@ import time
 import argparse
 from helpers.glob_match import glob_match
 
-PIPELINES = ["web", "keywords", "score", "links"]
+PIPELINES = ["web", "keywords", "score", "links", "socials"]
 
 program = argparse.ArgumentParser(description="Run a pipeline")
 
