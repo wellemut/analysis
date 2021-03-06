@@ -1,0 +1,205 @@
+from pathlib import Path
+from datetime import datetime
+from operator import itemgetter
+from pymaybe import maybe
+from bs4 import BeautifulSoup
+from config import MAIN_DATABASE
+from models.Database import Database, Table, Field
+from models import PipelineProgressBar
+from helpers.is_binary_string import is_binary_string
+from helpers.find_sdg_keywords_in_text import find_sdg_keywords_in_text
+
+PIPELINE = Path(__file__).stem
+
+
+def run_pipeline(domain, url, reset):
+    db = Database(MAIN_DATABASE)
+
+    # Create view: combination of urls and matches
+    # db.execute_sql(
+    #     "CREATE VIEW IF NOT EXISTS results AS {query}".format(
+    #         query=db.table("urls")
+    #         .select(
+    #             "domain",
+    #             "url",
+    #             "word_count",
+    #             Table("matches").sdg,
+    #             Table("matches").keyword,
+    #             Table("matches").context,
+    #         )
+    #         .join(Table("matches"))
+    #         .on(Table("urls").id == Table("matches").url_id)
+    #         .get_sql()
+    #     )
+    # )
+
+    # Create view: URLs without any matches
+    # db.execute_sql(
+    #     "CREATE VIEW IF NOT EXISTS urls_without_matches AS {query}".format(
+    #         query=db.table("urls")
+    #         .select(
+    #             "domain",
+    #             "url",
+    #         )
+    #         .where(
+    #             Table("urls").id.notin(db.table("matches").select("url_id").distinct())
+    #         )
+    #         .get_sql()
+    #     )
+    # )
+
+    # Clear records for domain/url
+    # TODO: Enable support for reset
+    # if reset:
+    #     with db.start_transaction() as transaction:
+    #         db.table("matches").delete().where(
+    #             Table("matches").url_id.isin(
+    #                 db.table("urls")
+    #                 .select("id")
+    #                 .where(
+    #                     Field("domain").glob_unless_none(domain)
+    #                     & Field("url").glob_unless_none(url)
+    #                 )
+    #             )
+    #         ).execute(transaction=transaction)
+    #         db.table("urls").delete().where(
+    #             Field("domain").glob_unless_none(domain)
+    #             & Field("url").glob_unless_none(url)
+    #         ).execute(transaction=transaction)
+
+    # Get domain IDs to analyze
+    domain_ids = (
+        db.table("domain")
+        .select("id")
+        .where(
+            (
+                Table("domain").scraped_at.notnull()
+                & Table("domain").analyzed_at.isnull()
+            )
+            | (Table("domain").analyzed_at < Table("domain").scraped_at)
+        )
+        .values()
+    )
+
+    progress = PipelineProgressBar(f"{PIPELINE}: DOMAINS")
+    for domain_id in progress.iterate(domain_ids):
+        # Get domain
+        domain = (
+            db.table("domain").select("domain").where(Field("id") == domain_id).value()
+        )
+
+        # Get url IDs to analyze
+        url_ids = (
+            db.table("url")
+            .select("id")
+            .where(Field("domain_id") == domain_id)
+            .where(
+                (Table("url").analyzed_at < Table("url").scraped_at)
+                | (
+                    Table("url").scraped_at.notnull()
+                    & Table("url").analyzed_at.isnull()
+                )
+            )
+            .values()
+        )
+
+        url_progress = progress.add_bar(domain)
+        for url_id in url_progress.iterate(url_ids):
+            url, html = itemgetter("url", "html")(
+                db.table("url")
+                .select("url", "html")
+                .where(Field("id") == url_id)
+                .first()
+            )
+
+            url_progress.set_status(f"Analyzing {url}")
+
+            # If this URL contains binary text, let's skip it
+            if is_binary_string(html):
+                progress.print("Skipping", url, "...", "Binary file detected")
+                db.table("url").set(
+                    word_count=0, analyzed_at=datetime.utcnow()
+                ).execute()
+                continue
+
+            # Prepare text extraction from HTML
+            soup = BeautifulSoup(html, "lxml")
+            word_count = len(soup.get_text(separator=" ", strip=True).split())
+
+            # Search for matches in the HTML
+            # After an item is parsed/searced, we remove the item with decompose(),
+            # so that we avoid duplicates (if one tag is nested inside another, for
+            # example)
+            matches = []
+
+            # Search page title
+            title = maybe(soup.head).find("title").or_else(None)
+            if title:
+                matches.extend(
+                    find_sdg_keywords_in_text(
+                        title.get_text(separator=" ").strip(), tag="title"
+                    )
+                )
+                title.decompose()
+
+            # Search page meta description
+            description = (
+                maybe(soup.head).select_one('meta[name="description"]').or_else(None)
+            )
+            if description:
+                matches.extend(
+                    find_sdg_keywords_in_text(
+                        description.get("content", "").strip(),
+                        tag="meta description",
+                    )
+                )
+                description.decompose()
+
+            # Search body
+            SEARCH_TAGS = [
+                "h1",
+                "h2",
+                "h3",
+                "h4",
+                "h5",
+                "h6",
+                "p",
+            ]
+            for tag in SEARCH_TAGS:
+                for item in maybe(soup.body).find_all(tag).or_else([]):
+                    matches.extend(
+                        find_sdg_keywords_in_text(
+                            item.get_text(separator=" ").strip(), tag
+                        )
+                    )
+                    item.decompose()
+
+            matches.extend(
+                find_sdg_keywords_in_text(
+                    soup.get_text(separator=" ").strip(), tag="other"
+                )
+            )
+
+            # Write matches to database
+            with db.start_transaction() as transaction:
+                # Delete existing matches
+                db.table("keyword_match").delete().where(
+                    Field("url_id") == url_id
+                ).execute(transaction=transaction)
+                # Write new matches
+                for match in matches:
+                    db.table("keyword_match").insert(
+                        url_id=url_id,
+                        sdg=match["sdg"],
+                        keyword=match["keyword"],
+                        context=match["context"],
+                        tag=match["tag"],
+                    ).execute(transaction=transaction)
+                # Update word count
+                db.table("url").set(
+                    word_count=word_count, analyzed_at=datetime.utcnow()
+                ).where(Field("id") == url_id).execute(transaction=transaction)
+
+        db.table("domain").set(analyzed_at=datetime.utcnow()).where(
+            Field("id") == domain_id
+        ).execute()

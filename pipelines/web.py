@@ -1,4 +1,5 @@
 from pathlib import Path
+from datetime import datetime
 from operator import itemgetter
 from config import MAIN_DATABASE
 from models.Database import Database, Column, Field, Order, Table, functions as fn
@@ -78,14 +79,14 @@ def run_pipeline(domain, url, reset):
             if len(urls_to_scrape) == 0:
                 url_progress.finish()
                 table = db.table("url")
-                scraped_at = (
+                first_scraped_at = (
                     table.select(fn.Min(table.scraped_at))
                     .where(Field("domain_id") == domain_id)
                     .value()
                 )
-                db.table("domain").set(scraped_at=scraped_at).where(
-                    Field("id") == domain_id
-                ).execute()
+                db.table("domain").set(
+                    first_scraped_at=first_scraped_at, scraped_at=datetime.now()
+                ).where(Field("id") == domain_id).execute()
                 break
 
             url_progress.max_value += len(urls_to_scrape)
