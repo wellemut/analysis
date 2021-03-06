@@ -1,3 +1,21 @@
+# Getting Started
+
+## Installation
+
+Set up Python 3.8 with `pipenv`. After cloning this repository, run `pipenv install` to set up the virtual environment and install all required dependencies. All Python commands mentioned below should be run inside the pipenv shell (activate with `pipenv shell`).
+
+## Environment variables
+
+Copy `.env.sample` to `.env` and fill in the required API keys.
+
+## Setting up the databases
+
+Run `python setup.py` to set up the SQLite databases needed and seed them with an initial list of organizations.
+
+## Performing the analysis
+
+To run the analysis, just start `python run.py`. It automatically starts one pipeline after the other, beginning with web scraping, moving on to keyword matching, and then to metadata collection. All pipelines are listed in the `pipelines` directory.
+
 # Notes
 
 ## Scraping Organizations' Facebook profiles
