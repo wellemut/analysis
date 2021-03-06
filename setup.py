@@ -4,6 +4,15 @@ from models.Database import Database, Table, Column
 # Set up the overall database. Most pipelines export their findings into this
 # database.
 
+# Helper method for adding an INDEX to a table on a given column
+def add_index(database, table, column):
+    database.execute_sql(
+        "CREATE INDEX IF NOT EXISTS {table}_{column} ON {table} ({column})".format(
+            table=table, column=column
+        )
+    )
+
+
 # Create database
 db = Database(MAIN_DATABASE)
 
@@ -20,7 +29,7 @@ db.table("domain").create(
     *sdgs_score_columns,
     Column("first_scraped_at", "timestamp", nullable=True),
     Column("scraped_at", "timestamp", nullable=True),
-    Column("analyzed_at", "timestamp", nullable=True),
+    Column("keywords_extracted_at", "timestamp", nullable=True),
     Column("scored_at", "timestamp", nullable=True),
 ).primary_key("id").unique("domain").if_not_exists().execute()
 
@@ -36,6 +45,7 @@ db.table("organization").create(
     Column("address", "text", nullable=True),
     Column("latitude", "text", nullable=True),
     Column("longitude", "text", nullable=True),
+    Column("links_extracted_at", "timestamp", nullable=True),
 ).foreign_key("domain_id", references="domain (id)").primary_key("id").unique(
     "domain_id"
 ).if_not_exists().execute()
@@ -49,7 +59,8 @@ db.table("url").create(
     Column("error", "text", nullable=True),
     Column("word_count", "integer", nullable=True),
     Column("scraped_at", "timestamp", nullable=True),
-    Column("analyzed_at", "timestamp", nullable=True),
+    Column("keywords_extracted_at", "timestamp", nullable=True),
+    Column("links_extracted_at", "timestamp", nullable=True),
 ).foreign_key("domain_id", references="domain (id)").primary_key("id").unique(
     "url"
 ).if_not_exists().execute()
@@ -65,21 +76,29 @@ db.table("keyword_match").create(
     "id"
 ).if_not_exists().execute()
 
+db.table("link").create(
+    Column("id", "integer", nullable=False),
+    Column("url_id", "integer", nullable=False),
+    Column("target_domain", "text", nullable=False),
+    Column("target_url", "text", nullable=False),
+).foreign_key("url_id", references="url (id)").primary_key(
+    "id"
+).if_not_exists().execute()
+
 # Add index on foreign keys
-db.execute_sql(
-    "CREATE INDEX IF NOT EXISTS organization_domain_id ON organization (domain_id)"
-)
-db.execute_sql("CREATE INDEX IF NOT EXISTS url_domain_id ON url (domain_id)")
-db.execute_sql(
-    "CREATE INDEX IF NOT EXISTS keyword_match_url_id ON keyword_match (url_id)"
-)
+add_index(db, table="organization", column="domain_id")
+add_index(db, table="url", column="domain_id")
+add_index(db, table="keyword_match", column="url_id")
+add_index(db, table="link", column="url_id")
 
 # Add index on timestamps
-db.execute_sql("CREATE INDEX IF NOT EXISTS domain_scraped_at ON domain (scraped_at)")
-db.execute_sql("CREATE INDEX IF NOT EXISTS domain_analyzed_at ON domain (analyzed_at)")
-db.execute_sql("CREATE INDEX IF NOT EXISTS domain_scored_at ON domain (scored_at)")
-db.execute_sql("CREATE INDEX IF NOT EXISTS url_scraped_at ON url (scraped_at)")
-db.execute_sql("CREATE INDEX IF NOT EXISTS url_analyzed_at ON url (analyzed_at)")
+add_index(db, table="organization", column="links_extracted_at")
+add_index(db, table="domain", column="scraped_at")
+add_index(db, table="domain", column="keywords_extracted_at")
+add_index(db, table="domain", column="scored_at")
+add_index(db, table="url", column="scraped_at")
+add_index(db, table="url", column="keywords_extracted_at")
+add_index(db, table="url", column="links_extracted_at")
 
 # Create views
 db.execute_sql(

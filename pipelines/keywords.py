@@ -72,11 +72,8 @@ def run_pipeline(domain, url, reset):
         db.table("domain")
         .select("id")
         .where(
-            (
-                Table("domain").scraped_at.notnull()
-                & Table("domain").analyzed_at.isnull()
-            )
-            | (Table("domain").analyzed_at < Table("domain").scraped_at)
+            (Field("scraped_at").notnull() & Field("keywords_extracted_at").isnull())
+            | (Field("keywords_extracted_at") < Field("scraped_at"))
         )
         .values()
     )
@@ -94,10 +91,10 @@ def run_pipeline(domain, url, reset):
             .select("id")
             .where(Field("domain_id") == domain_id)
             .where(
-                (Table("url").analyzed_at < Table("url").scraped_at)
+                (Field("keywords_extracted_at") < Field("scraped_at"))
                 | (
-                    Table("url").scraped_at.notnull()
-                    & Table("url").analyzed_at.isnull()
+                    Field("scraped_at").notnull()
+                    & Field("keywords_extracted_at").isnull()
                 )
             )
             .values()
@@ -118,7 +115,7 @@ def run_pipeline(domain, url, reset):
             if is_binary_string(html):
                 progress.print("Skipping", url, "...", "Binary file detected")
                 db.table("url").set(
-                    word_count=0, analyzed_at=datetime.utcnow()
+                    word_count=0, keywords_extracted_at=datetime.utcnow()
                 ).execute()
                 continue
 
@@ -197,9 +194,9 @@ def run_pipeline(domain, url, reset):
                     ).execute(transaction=transaction)
                 # Update word count
                 db.table("url").set(
-                    word_count=word_count, analyzed_at=datetime.utcnow()
+                    word_count=word_count, keywords_extracted_at=datetime.utcnow()
                 ).where(Field("id") == url_id).execute(transaction=transaction)
 
-        db.table("domain").set(analyzed_at=datetime.utcnow()).where(
+        db.table("domain").set(keywords_extracted_at=datetime.utcnow()).where(
             Field("id") == domain_id
         ).execute()

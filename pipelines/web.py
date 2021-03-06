@@ -18,14 +18,6 @@ PIPELINE = Path(__file__).stem
 def run_pipeline(domain, url, reset):
     db = Database(MAIN_DATABASE)
 
-    # Fetch IDs for domain/url from scrape database, ignoring URLs already
-    # scraped
-    print(
-        "Skipping",
-        db.table("domain").count("id").where(Field("scraped_at").notnull()).value(),
-        "domains already analyzed...",
-    )
-
     # Get last scraped domain, so we can continue where we left of
     last_domain_scraped = (
         db.table("url")
