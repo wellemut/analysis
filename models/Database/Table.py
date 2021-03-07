@@ -12,9 +12,6 @@ class Table(PypikaTable):
 
     # Start a new insertion query
     def insert(self, **kwargs):
-        # Filter values with None (-> NULL)
-        kwargs = dict(filter(lambda x: x[1] is not None, kwargs.items()))
-
         return self.insert_in_columns(*kwargs.keys()).insert(*kwargs.values())
 
     # Start a new insertion query
@@ -23,9 +20,6 @@ class Table(PypikaTable):
 
     # Start a new update query
     def set(self, **kwargs):
-        # Filter values with None (-> NULL)
-        kwargs = dict(filter(lambda x: x[1] is not None, kwargs.items()))
-
         query = QueryBuilder(self.database).update(self.name)
 
         # Run set for each key-value pair
