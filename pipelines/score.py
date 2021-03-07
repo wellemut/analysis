@@ -15,7 +15,10 @@ def run_pipeline(domain, url, reset):
         db.table("domain")
         .select("id")
         .where(
-            (Table("domain").analyzed_at.notnull() & Table("domain").scored_at.isnull())
+            (
+                Table("domain").keywords_extracted_at.notnull()
+                & Table("domain").scored_at.isnull()
+            )
             | (Table("domain").scored_at < Table("domain").analyzed_at)
         )
         .values()
