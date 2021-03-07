@@ -11,7 +11,7 @@
 
 BOT_NAME = "global_goals_directory_scraper"
 
-SPIDER_MODULES = ["scraper_web.spiders"]
+SPIDER_MODULES = ["scrapy_web.spiders"]
 NEWSPIDER_MODULE = "spiders"
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent

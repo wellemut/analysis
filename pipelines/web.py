@@ -105,7 +105,7 @@ def run_pipeline(domain, url, reset):
                     level=level,
                     settings={
                         "ITEM_PIPELINES": {
-                            "scraper_web.pipelines.WriteWebsitePipeline": 100
+                            "scrapy_web.pipelines.WriteWebsitePipeline": 100
                         }
                     },
                 )
