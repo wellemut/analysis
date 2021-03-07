@@ -47,6 +47,7 @@ db.table("organization").create(
     Column("longitude", "text", nullable=True),
     Column("links_extracted_at", "timestamp", nullable=True),
     Column("socials_extracted_at", "timestamp", nullable=True),
+    Column("address_extracted_at", "timestamp", nullable=True),
 ).foreign_key("domain_id", references="domain (id)").primary_key("id").unique(
     "domain_id"
 ).if_not_exists().execute()
@@ -95,6 +96,7 @@ add_index(db, table="link", column="url_id")
 # Add index on timestamps
 add_index(db, table="organization", column="links_extracted_at")
 add_index(db, table="organization", column="socials_extracted_at")
+add_index(db, table="organization", column="address_extracted_at")
 add_index(db, table="domain", column="scraped_at")
 add_index(db, table="domain", column="keywords_extracted_at")
 add_index(db, table="domain", column="scored_at")
