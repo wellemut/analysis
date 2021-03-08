@@ -5,7 +5,16 @@ import time
 import argparse
 from helpers.glob_match import glob_match
 
-PIPELINES = ["web", "keywords", "score", "links", "socials", "address", "logo"]
+PIPELINES = [
+    "web",
+    "keywords",
+    "score",
+    "links",
+    "socials",
+    "address",
+    "logo",
+    "summary",
+]
 
 program = argparse.ArgumentParser(description="Run a pipeline")
 
@@ -39,7 +48,7 @@ args = program.parse_args()
 pipelines_to_run = args.pipelines
 
 for pipeline in pipelines_to_run:
-    print("Running scraper", pipeline, "...")
+    print("Running pipeline", pipeline, "...")
 
     # Load the pipeline
     module = importlib.import_module("." + pipeline, "pipelines")
