@@ -2,7 +2,7 @@ from pathlib import Path
 from datetime import datetime
 from operator import itemgetter
 from config import MAIN_DATABASE
-from models.Database import Database, Table, Field, functions as fn
+from models.Database import Database, Field
 from models import PipelineProgressBar
 from models.GoogleMapsAPI import GoogleMapsAPI
 
