@@ -33,20 +33,7 @@ class GoogleMapsAPI:
         # candidate domain
         for candidate in candidates:
             match, cached_at = itemgetter("result", "cached_at")(
-                self.__place(
-                    candidate["place_id"],
-                    fields=[
-                        "name",
-                        "website",
-                        "formatted_address",
-                        # Returns address in adr microformat:
-                        # http://microformats.org/wiki/adr
-                        # "adr_address",
-                        "international_phone_number",
-                        "geometry",
-                    ],
-                    language="en",
-                )
+                self.find_by_id(candidate["place_id"])
             )
 
             normalized_candidate_domain = get_registered_domain(
@@ -60,6 +47,23 @@ class GoogleMapsAPI:
         # domain only
         if normalized_target_domain != normalized_url:
             return self.find_by_url(normalized_target_domain)
+
+    def find_by_id(self, place_id):
+        return self.__place(
+            place_id,
+            fields=[
+                "place_id",
+                "name",
+                "website",
+                "formatted_address",
+                # Returns address in adr microformat:
+                # http://microformats.org/wiki/adr
+                # "adr_address",
+                "international_phone_number",
+                "geometry",
+            ],
+            language="en",
+        )
 
     def __find_place(self, *args, **kwargs):
         cache = Cache(self.name, "find_place", *args, **kwargs)

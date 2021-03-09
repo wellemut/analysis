@@ -42,6 +42,7 @@ def run_pipeline(domain, url, reset):
 
         # Write to table
         db.table("organization").set(
+            googlemaps_id=result.get("place_id", None),
             address=result.get("formatted_address", None),
             latitude=result.get("geometry", {}).get("location", {}).get("lat", None),
             longitude=result.get("geometry", {}).get("location", {}).get("lng", None),

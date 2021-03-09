@@ -12,6 +12,7 @@ PIPELINES = [
     "links",
     "socials",
     "address",
+    "name",
     "logo",
     "summary",
 ]

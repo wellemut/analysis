@@ -18,9 +18,8 @@ class TwitterAPI:
         return self.__class__.__name__
 
     def get_profile(self, handle):
-        return self.__request(
-            f"users/by/username/:{handle}?user.fields=profile_image_url"
-        )
+        fields = ",".join(["name", "description", "profile_image_url"])
+        return self.__request(f"users/by/username/:{handle}?user.fields={fields}")
 
     def __request(self, url):
         cache = Cache(self.name, "request", url)
