@@ -1,12 +1,12 @@
-# Ignore SQLite database
-/databases/*.sqlite
-/databases/*.sqlite-journal
-
 # Ignore exports
 export/
 
+# Ignore SQLite database
+assets/databases/*.sqlite
+assets/databases/*.sqlite-journal
+
 # Ignore scraped logos
-files/logos/*
+assets/logos/*
 
 # Ignore environment variables
 .env

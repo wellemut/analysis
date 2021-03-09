@@ -1,7 +1,8 @@
 import os
 
 # Folder for all our database files (.sqlite)
-DATABASES_DIR = os.path.join("databases")
-LOGOS_DIR = os.path.join("files", "logos")
+ASSETS_DIR = os.path.join("assets")
+DATABASES_DIR = os.path.join(ASSETS_DIR, "databases")
+LOGOS_DIR = os.path.join(ASSETS_DIR, "logos")
 
 MAIN_DATABASE = "main"
