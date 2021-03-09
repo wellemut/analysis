@@ -49,9 +49,12 @@ db.table("organization").create(
     Column("links_extracted_at", "timestamp", nullable=True),
     Column("socials_extracted_at", "timestamp", nullable=True),
     Column("address_extracted_at", "timestamp", nullable=True),
-    Column("named_at", "timestamp", nullable=True),
+    Column("address_cached_at", "timestamp", nullable=True),
+    Column("name_extracted_at", "timestamp", nullable=True),
+    Column("name_cached_at", "timestamp", nullable=True),
     Column("logo_extracted_at", "timestamp", nullable=True),
-    Column("summarized_at", "timestamp", nullable=True),
+    Column("logo_cached_at", "timestamp", nullable=True),
+    Column("summary_extracted_at", "timestamp", nullable=True),
 ).foreign_key("domain_id", references="domain (id)").primary_key("id").unique(
     "domain_id"
 ).if_not_exists().execute()
@@ -101,9 +104,12 @@ add_index(db, table="link", column="url_id")
 add_index(db, table="organization", column="links_extracted_at")
 add_index(db, table="organization", column="socials_extracted_at")
 add_index(db, table="organization", column="address_extracted_at")
-add_index(db, table="organization", column="named_at")
+add_index(db, table="organization", column="address_cached_at")
+add_index(db, table="organization", column="name_extracted_at")
+add_index(db, table="organization", column="name_cached_at")
 add_index(db, table="organization", column="logo_extracted_at")
-add_index(db, table="organization", column="summarized_at")
+add_index(db, table="organization", column="logo_cached_at")
+add_index(db, table="organization", column="summary_extracted_at")
 add_index(db, table="domain", column="scraped_at")
 add_index(db, table="domain", column="keywords_extracted_at")
 add_index(db, table="domain", column="scored_at")

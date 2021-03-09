@@ -46,7 +46,7 @@ def run_pipeline(domain, url, reset):
 
         # Get logo url
         file_name = None
-        logo_extracted_at = datetime.utcnow()
+        logo_cached_at = None
         if twitter_handle is not None:
             profile = twitter.get_profile(twitter_handle)
 
@@ -60,9 +60,11 @@ def run_pipeline(domain, url, reset):
                 file_name = f"{twitter_handle}.{image_url.split('.')[-1]}"
                 file_path = os.path.join(LOGOS_DIR, file_name)
                 urllib.request.urlretrieve(image_url, file_path)
-                logo_extracted_at = profile["cached_at"]
+                logo_cached_at = profile["cached_at"]
 
         # Write logo to database
         db.table("organization").set(
-            logo=file_name, logo_extracted_at=logo_extracted_at
+            logo=file_name,
+            logo_extracted_at=datetime.utcnow(),
+            logo_cached_at=logo_cached_at,
         ).where(Field("domain_id") == domain_id).execute()

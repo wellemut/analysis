@@ -25,9 +25,9 @@ def run_pipeline(domain, url, reset):
             & Field("address_extracted_at").notnull()
         )
         .where(
-            (Field("named_at").isnull())
-            | (Field("named_at") < Field("socials_extracted_at"))
-            | (Field("named_at") < Field("address_extracted_at"))
+            (Field("name_extracted_at").isnull())
+            | (Field("name_extracted_at") < Field("socials_extracted_at"))
+            | (Field("name_extracted_at") < Field("address_extracted_at"))
         )
         .values()
     )
@@ -48,13 +48,13 @@ def run_pipeline(domain, url, reset):
         progress.set_status(f"Naming {domain}")
 
         name = None
-        named_at = None
+        name_cached_at = None
 
         # Check Google maps for name
         if googlemaps_id is not None:
             place = gmaps.find_by_id(googlemaps_id)
             name = place["result"]["name"]
-            named_at = place["cached_at"]
+            name_cached_at = place["cached_at"]
 
         # Check Twitter for name
         if name is None and twitter_handle is not None:
@@ -64,9 +64,11 @@ def run_pipeline(domain, url, reset):
                 progress.print(profile["error"]["detail"])
             else:
                 name = profile["data"]["name"]
-                named_at = profile["cached_at"]
+                name_cached_at = profile["cached_at"]
 
         # Write name to database
-        db.table("organization").set(name=name, named_at=named_at).where(
-            Field("domain_id") == domain_id
-        ).execute()
+        db.table("organization").set(
+            name=name,
+            name_extracted_at=datetime.utcnow(),
+            name_cached_at=name_cached_at,
+        ).where(Field("domain_id") == domain_id).execute()

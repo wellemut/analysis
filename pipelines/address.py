@@ -46,5 +46,6 @@ def run_pipeline(domain, url, reset):
             address=result.get("formatted_address", None),
             latitude=result.get("geometry", {}).get("location", {}).get("lat", None),
             longitude=result.get("geometry", {}).get("location", {}).get("lng", None),
-            address_extracted_at=result.get("cached_at", datetime.utcnow()),
+            address_extracted_at=datetime.utcnow(),
+            address_cached_at=result.get("cached_at", None),
         ).where(Field("domain_id") == domain_id).execute()

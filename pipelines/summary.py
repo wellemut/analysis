@@ -20,8 +20,8 @@ def run_pipeline(domain, url, reset):
         .as_("organization")
         .select("domain_id")
         .where(
-            (Field("summarized_at").isnull())
-            | (Field("summarized_at") < Field("scraped_at"))
+            (Field("summary_extracted_at").isnull())
+            | (Field("summary_extracted_at") < Field("scraped_at"))
         )
         .values()
     )
@@ -75,5 +75,5 @@ def run_pipeline(domain, url, reset):
         # Write to table
         db.table("organization").set(
             summary=description,
-            summarized_at=datetime.utcnow(),
+            summary_extracted_at=datetime.utcnow(),
         ).where(Field("domain_id") == domain_id).execute()
