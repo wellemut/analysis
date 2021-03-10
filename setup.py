@@ -1,5 +1,9 @@
-from config import MAIN_DATABASE
+import os
+import sys
+import pandas as pd
+from config import MAIN_DATABASE, ASSETS_DIR
 from models.Database import Database, Table, Column
+from helpers.get_registered_domain import get_registered_domain
 
 # Set up the overall database. Most pipelines export their findings into this
 # database.
@@ -128,13 +132,22 @@ db.execute_sql(
     )
 )
 
-# Seed the database
-db.table("domain").insert(domain="dgvn.de", homepage="https://dgvn.de/").execute()
-db.table("domain").insert(
-    domain="die-gdi.de", homepage="https://www.die-gdi.de"
-).execute()
+# Seed the database from CSV file
+seed = pd.read_csv(os.path.join(ASSETS_DIR, "seed-urls.csv"))
+seed["url"] = seed["url"].apply(
+    lambda url: f"http://{url}"
+    if (not url.startswith("http://") and not url.startswith("https://"))
+    else url
+)
+seed["domain"] = seed["url"].apply(lambda url: get_registered_domain(url))
+
+# Insert domains into the database
+with db.start_transaction() as transaction:
+    for index, row in seed.iterrows():
+        sys.stdout.write("Seeding " + row["url"] + " ... ")
+        db.table("domain").insert(domain=row["domain"], homepage=row["url"]).execute(
+            transaction=transaction
+        )
+        print("✅")
 
 print("Database", f"{db.name}.sqlite", "was successfully set up ✅")
-# TODO: Insert initial domains
-# print("Added", (count_after - count_before), "new domains")
-# print("Total domains in database:", count_after)
