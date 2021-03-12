@@ -1,24 +1,36 @@
 # Export analysis database to CSV file
 import os
 from pathlib import Path
-from models.Database import Database, Order
+from config import MAIN_DATABASE
+from models.Database import Database, Field, Order
 
 EXPORT_PATH = Path(os.path.join(__file__, "..", "export", "database.csv")).resolve()
 
-db = Database("analysis")
+db = Database(MAIN_DATABASE)
 
-print("Exporting", f"{db.name}.sqlite", "to CSV", end="... ", flush=True)
+print("Exporting organizations to CSV", end="... ", flush=True)
 
 # Load from SQLite
+SCORES = ["total_score", "sdgs_score", *[f"sdg{i}_score" for i in range(1, 18)]]
+HANDLES = [f"{social}_handle" for social in ["twitter", "facebook", "linkedin"]]
+
 df = (
-    db.table("domains")
-    .select("*")
+    db.view("organization_with_domain")
+    .select(
+        "domain",
+        Field("homepage").as_("url"),
+        "name",
+        *SCORES,
+        "logo",
+        *HANDLES,
+        "summary",
+        "address",
+        "latitude",
+        "longitude",
+    )
     .orderby("total_score", order=Order.desc)
     .to_dataframe()
 )
-
-# Drop index
-df = df.drop(columns=["id"])
 
 # Save
 df.to_csv(EXPORT_PATH, index=False)
