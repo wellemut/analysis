@@ -76,7 +76,7 @@ def run_pipeline(domain, url, reset):
             db.table("domain").set(
                 total_score=total_score,
                 scored_at=datetime.utcnow(),
-                **df.to_dict(orient="records")[0],
+                **next(iter(df.to_dict(orient="records")), {}),
             ).where(Field("id") == domain_id).execute(transaction=transaction)
 
             # Add or remove from organization table
