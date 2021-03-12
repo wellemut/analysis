@@ -21,7 +21,7 @@ class WebsiteSpider(scrapy.Spider):
     def parse(self, response):
         try:
             # Extract page HTML
-            html = response.body
+            html = response.text
 
             # Extract links to other pages of this domain
             links = []

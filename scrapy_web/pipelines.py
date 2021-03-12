@@ -18,7 +18,7 @@ class WriteWebsitePipeline(object):
             with db.start_transaction() as transaction:
                 # Add scraped HTML to the database
                 db.table("url").set(
-                    html=item["html"].decode("UTF-8"),
+                    html=item["html"],
                     scraped_at=datetime.datetime.utcnow(),
                 ).where(Field("id") == id).execute(transaction=transaction)
 
