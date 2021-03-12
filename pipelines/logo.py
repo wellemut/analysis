@@ -50,8 +50,9 @@ def run_pipeline(domain, url, reset):
         if twitter_handle is not None:
             profile = twitter.get_profile(twitter_handle)
 
-            if "error" in profile:
-                progress.print(profile["error"]["detail"])
+            if "errors" in profile:
+                for error in profile["errors"]:
+                    progress.print(error["detail"])
             else:
                 # Download image
                 image_url = profile["data"]["profile_image_url"].replace(
