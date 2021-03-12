@@ -15,15 +15,16 @@ def clear_current_line():
 
 # A simple wrapper around progressbar2's ProgressBar
 class PipelineProgressBar:
-    def __init__(self, name, max_value=None, handler=None):
+    def __init__(self, name, max_value=None, handler=None, current=0):
         self.status = None
         self._max_value = max_value
         self.bar = ProgressBar(
+            current=current,
             max_value=max_value,
             prefix=f"{name.upper()} ",
             redirect_stdout=False,
         )
-        self.current = 0
+        self.current = current
         self.handler = handler or Controller()
         self.handler.add_bar(self)
 

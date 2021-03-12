@@ -11,6 +11,8 @@ from helpers.spider_runner import SpiderRunner
 # level 2 = two clicks away
 # etc...
 MAX_LEVEL = 1
+# Set the maximum number of pages/urls to scrape per domain
+MAX_PAGES = 100
 
 PIPELINE = Path(__file__).stem
 
@@ -53,7 +55,17 @@ def run_pipeline(domain, url, reset):
             table.url
         ).do_nothing().execute()
 
-        url_progress = progress.add_bar(domain, max_value=0)
+        urls_done = (
+            db.table("url")
+            .count("id")
+            .where(Field("scraped_at").notnull() & Field("domain_id") == domain_id)
+            .value()
+        )
+        url_progress = progress.add_bar(
+            domain,
+            max_value=urls_done,
+            current=urls_done,
+        )
 
         while True:
             # Fetch the URLs to scrape for this domain
@@ -63,9 +75,12 @@ def run_pipeline(domain, url, reset):
             if MAX_LEVEL is not None:
                 criteria = criteria & (Field("level") <= MAX_LEVEL)
 
-            urls_to_scrape = (
-                db.table("url").select("id", "url", "level").where(criteria).all()
-            )
+            query = db.table("url").select("id", "url", "level").where(criteria)
+
+            if MAX_PAGES is not None:
+                query = query.limit(max(MAX_PAGES - url_progress.current, 0))
+
+            urls_to_scrape = query.all()
 
             # If no URLs are left, mark domain as done
             if len(urls_to_scrape) == 0:
@@ -77,7 +92,7 @@ def run_pipeline(domain, url, reset):
                     .value()
                 )
                 db.table("domain").set(
-                    first_scraped_at=first_scraped_at, scraped_at=datetime.now()
+                    first_scraped_at=first_scraped_at, scraped_at=datetime.utcnow()
                 ).where(Field("id") == domain_id).execute()
                 break
 
