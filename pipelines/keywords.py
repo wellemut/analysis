@@ -97,6 +97,7 @@ def run_pipeline(domain, url, reset):
                     & Field("keywords_extracted_at").isnull()
                 )
             )
+            .where(Field("html").notnull())
             .values()
         )
 

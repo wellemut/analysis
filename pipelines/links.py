@@ -66,6 +66,7 @@ def run_pipeline(domain, url, reset):
                 (Field("links_extracted_at") < Field("scraped_at"))
                 | (Field("scraped_at").notnull() & Field("links_extracted_at").isnull())
             )
+            .where(Field("html").notnull())
             .values()
         )
 
