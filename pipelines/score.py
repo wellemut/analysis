@@ -19,7 +19,7 @@ def run_pipeline(domain, url, reset):
                 Table("domain").keywords_extracted_at.notnull()
                 & Table("domain").scored_at.isnull()
             )
-            | (Table("domain").scored_at < Table("domain").analyzed_at)
+            | (Table("domain").scored_at < Table("domain").keywords_extracted_at)
         )
         .values()
     )
