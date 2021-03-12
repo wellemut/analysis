@@ -84,6 +84,13 @@ def run_pipeline(domain, url, reset):
             right_on="domain",
         )
 
+        # No socials found, skip this domain
+        if len(df.index) == 0:
+            db.table("organization").set(
+                socials_extracted_at=datetime.utcnow(),
+            ).where(Field("domain_id") == domain_id).execute()
+            continue
+
         # Apply the appropriate regex to each row
         def get_handle(row):
             regex = next(
@@ -113,5 +120,5 @@ def run_pipeline(domain, url, reset):
         # Write results to database
         db.table("organization").set(
             socials_extracted_at=datetime.utcnow(),
-            **df.to_dict(orient="records")[0],
+            **next(iter(df.to_dict(orient="records")), {}),
         ).where(Field("domain_id") == domain_id).execute()
