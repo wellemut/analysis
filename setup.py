@@ -134,6 +134,25 @@ db.execute_sql(
         .get_sql()
     )
 )
+db.execute_sql(
+    "CREATE VIEW IF NOT EXISTS domain_with_keyword_matches AS {query}".format(
+        query=db.table("keyword_match")
+        .select(
+            "id",
+            Table("domain").domain,
+            Table("url").url,
+            "sdg",
+            "keyword",
+            "context",
+            "tag",
+        )
+        .join(Table("url"))
+        .on(Table("keyword_match").url_id == Table("url").id)
+        .join(Table("domain"))
+        .on(Table("url").domain_id == Table("domain").id)
+        .get_sql()
+    )
+)
 
 # Seed the database from CSV file
 seed = pd.read_csv(os.path.join(ASSETS_DIR, "seed-urls.csv"))
