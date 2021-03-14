@@ -29,9 +29,11 @@ db.table("domain").create(
     Column("id", "integer", nullable=False),
     Column("domain", "text", nullable=False),
     Column("homepage", "text", nullable=False),
+    Column("selected", "boolean", nullable=True),
     Column("total_score", "integer", nullable=True),
     *sdgs_score_columns,
     Column("first_scraped_at", "timestamp", nullable=True),
+    Column("selected_at", "timestamp", nullable=True),
     Column("scraped_at", "timestamp", nullable=True),
     Column("keywords_extracted_at", "timestamp", nullable=True),
     Column("scored_at", "timestamp", nullable=True),
@@ -114,6 +116,7 @@ add_index(db, table="organization", column="name_cached_at")
 add_index(db, table="organization", column="logo_extracted_at")
 add_index(db, table="organization", column="logo_cached_at")
 add_index(db, table="organization", column="summary_extracted_at")
+add_index(db, table="domain", column="selected_at")
 add_index(db, table="domain", column="scraped_at")
 add_index(db, table="domain", column="keywords_extracted_at")
 add_index(db, table="domain", column="scored_at")

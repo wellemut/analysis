@@ -21,6 +21,7 @@ googlemaps = "*"
 tldextract = "*"
 scrapy = "*"
 billiard = "*"
+pycountry = "*"
 
 [requires]
 python_version = "3.8"

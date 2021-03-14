@@ -35,7 +35,7 @@ def run_pipeline(domain, url, reset):
     domain_ids_to_scrape = (
         db.table("domain")
         .select("id")
-        .where(Field("scraped_at").isnull())
+        .where(Field("scraped_at").isnull() & Field("selected") == True)
         .orderby(Field("id") == last_domain_scraped, order=Order.desc)
         .values()
     )

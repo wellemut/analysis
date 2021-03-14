@@ -19,34 +19,42 @@ class GoogleMapsAPI:
         normalized_url = get_normalized_url(url)
         normalized_target_domain = get_registered_domain(url)
 
-        # Identify candidates
-        candidates = self.__find_place(
-            normalized_url,
-            "textquery",
-            fields=["name", "formatted_address", "place_id"],
-            language="en",
-            # middle of Germany
-            location_bias="point:51.1657,10.4515",
-        )["candidates"]
+        # Queries to run: url and domain, first in quotes and then without
+        QUERIES = [
+            # To be exhaustive, we'd need to run all variations of this query
+            # with different location biases. But that would be costly.
+            f'"{normalized_url}"',
+            f'"{normalized_target_domain}"',
+            # normalized_url,
+            # normalized_target_domain,
+        ]
 
-        # Analyze each candidate, looking for match between search domain and
-        # candidate domain
-        for candidate in candidates:
-            match, cached_at = itemgetter("result", "cached_at")(
-                self.find_by_id(candidate["place_id"])
-            )
+        for query in QUERIES:
+            # Identify candidates
+            candidates = self.__find_place(
+                query,
+                "textquery",
+                fields=["place_id"],
+                language="en",
+                # middle of Germany
+                location_bias="point:51.1657,10.4515",
+                # surrounds Germany
+                # location_bias="rectangle:47.3,5.99|54.98,15.02",
+            )["candidates"]
 
-            normalized_candidate_domain = get_registered_domain(
-                match.get("website", "")
-            )
+            # Analyze each candidate, looking for match between search domain and
+            # candidate domain
+            for candidate in candidates:
+                match, cached_at = itemgetter("result", "cached_at")(
+                    self.find_by_id(candidate["place_id"])
+                )
 
-            if normalized_target_domain == normalized_candidate_domain:
-                return {**match, "cached_at": cached_at}
+                normalized_candidate_domain = get_registered_domain(
+                    match.get("website", "")
+                )
 
-        # If we still have no candidate, let's attempt search with the registered
-        # domain only
-        if normalized_target_domain != normalized_url:
-            return self.find_by_url(normalized_target_domain)
+                if normalized_target_domain == normalized_candidate_domain:
+                    return {**match, "cached_at": cached_at}
 
     def find_by_id(self, place_id):
         return self.__place(
@@ -55,6 +63,7 @@ class GoogleMapsAPI:
                 "place_id",
                 "name",
                 "website",
+                "address_component",
                 "formatted_address",
                 # Returns address in adr microformat:
                 # http://microformats.org/wiki/adr

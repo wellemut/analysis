@@ -6,6 +6,7 @@ import argparse
 from helpers.glob_match import glob_match
 
 PIPELINES = [
+    "selection",
     "web",
     "keywords",
     "score",
