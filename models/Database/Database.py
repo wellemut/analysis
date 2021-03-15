@@ -63,7 +63,7 @@ class Database:
 
             # Set default callback
             if not callback:
-                callback = lambda cursor: {"lastrowid": cursor.lastrowid}
+                callback = lambda cursor: {"lastrowid": cursor.lastrowid or None}
 
             return callback(cursor)
 

@@ -65,10 +65,10 @@ def run_pipeline(domain, url, reset):
 
         # Get links
         links = (
-            db.table("link")
+            db.view("link_with_target_domain")
             .select("target_url", "target_domain", fn.Count("id").as_("count"))
             .join(Table("url"))
-            .on(Table("link").url_id == Table("url").id)
+            .on(Table("link_with_target_domain").url_id == Table("url").id)
             .where(Field("domain_id") == domain_id)
             .where(Field("target_domain").isin(SOCIAL_DOMAINS))
             .groupby(Field("target_url"))

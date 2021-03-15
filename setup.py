@@ -94,9 +94,11 @@ db.table("keyword_match").create(
 db.table("link").create(
     Column("id", "integer", nullable=False),
     Column("url_id", "integer", nullable=False),
-    Column("target_domain", "text", nullable=False),
+    Column("target_domain_id", "integer", nullable=True),
     Column("target_url", "text", nullable=False),
-).foreign_key("url_id", references="url (id)").primary_key(
+).foreign_key("url_id", references="url (id)").foreign_key(
+    "target_domain_id", references="domain (id)"
+).primary_key(
     "id"
 ).if_not_exists().execute()
 
@@ -105,6 +107,7 @@ add_index(db, table="organization", column="domain_id")
 add_index(db, table="url", column="domain_id")
 add_index(db, table="keyword_match", column="url_id")
 add_index(db, table="link", column="url_id")
+add_index(db, table="link", column="target_domain_id")
 
 # Add index on timestamps
 add_index(db, table="organization", column="links_extracted_at")
@@ -150,6 +153,20 @@ db.execute_sql(
         .on(Table("keyword_match").url_id == Table("url").id)
         .join(Table("domain"))
         .on(Table("url").domain_id == Table("domain").id)
+        .get_sql()
+    )
+)
+db.execute_sql(
+    "CREATE VIEW IF NOT EXISTS link_with_target_domain AS {query}".format(
+        query=db.table("link")
+        .select(
+            "id",
+            "url_id",
+            "target_url",
+            Table("domain").domain.as_("target_domain"),
+        )
+        .join(Table("domain"))
+        .on(Table("link").target_domain_id == Table("domain").id)
         .get_sql()
     )
 )

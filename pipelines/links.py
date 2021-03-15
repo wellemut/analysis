@@ -2,6 +2,7 @@ from pathlib import Path
 from datetime import datetime
 from operator import itemgetter
 import re
+from urllib.parse import urlparse
 from bs4 import BeautifulSoup
 from config import MAIN_DATABASE
 from models.Database import Database, Table, Column, Field, Order
@@ -50,6 +51,8 @@ def run_pipeline(domain, url, reset):
         .values()
     )
 
+    # Mapping of domains to domain ID in the database
+    DOMAIN_MAP = {}
     progress = PipelineProgressBar(f"{PIPELINE}: DOMAINS")
     for domain_id in progress.iterate(domain_ids):
         # Get domain
@@ -102,7 +105,15 @@ def run_pipeline(domain, url, reset):
 
             # Identify link domain
             for href in hrefs:
-                links.append({"url": href, "domain": get_registered_domain(href)})
+                scheme = urlparse(href).scheme
+                links.append(
+                    {
+                        "url": href,
+                        "domain": get_registered_domain(href)
+                        if scheme in ["http", "https"]
+                        else None,
+                    }
+                )
 
             # Ignore links to the same domain
             registered_domain = get_registered_domain(url)
@@ -116,13 +127,36 @@ def run_pipeline(domain, url, reset):
                 db.table("link").delete().where(Field("url_id") == url_id).execute(
                     transaction=transaction
                 )
+
                 # Write new matches
                 for link in links:
+                    target_domain_id = DOMAIN_MAP.get(link["domain"], None)
+                    if link["domain"] and not target_domain_id:
+                        parsed = urlparse(link["url"])
+                        target_domain_id = (
+                            db.table("domain")
+                            .insert(
+                                domain=link["domain"],
+                                homepage=f"{parsed.scheme}://{parsed.netloc}",
+                            )
+                            .on_conflict(Table("domain").domain)
+                            .do_nothing()
+                            .execute(transaction=transaction)
+                        )
+                        target_domain_id = (
+                            db.table("domain")
+                            .select("id")
+                            .where(Field("domain") == link["domain"])
+                            .value(transaction=transaction)
+                        )
+                        DOMAIN_MAP[link["domain"]] = target_domain_id
+
                     db.table("link").insert(
                         url_id=url_id,
-                        target_domain=link["domain"],
+                        target_domain_id=target_domain_id,
                         target_url=link["url"],
                     ).execute(transaction=transaction)
+
                 # Update timestamp
                 db.table("url").set(links_extracted_at=datetime.utcnow()).where(
                     Field("id") == url_id
