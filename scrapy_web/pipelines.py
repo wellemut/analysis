@@ -1,5 +1,6 @@
 import os
 import datetime
+import traceback
 from models.Database import Database, Field
 
 
@@ -15,23 +16,31 @@ class WriteWebsitePipeline(object):
         level = spider.level
 
         if item_class == "Website":
-            with db.start_transaction() as transaction:
-                # Add scraped HTML to the database
-                db.table("url").set(
-                    html=item["html"],
-                    scraped_at=datetime.datetime.utcnow(),
-                ).where(Field("id") == id).execute(transaction=transaction)
+            try:
+                with db.start_transaction() as transaction:
+                    # Add scraped HTML to the database
+                    db.table("url").set(
+                        html=item["html"],
+                        scraped_at=datetime.datetime.utcnow(),
+                    ).where(Field("id") == id).execute(transaction=transaction)
 
-                # Add collected links to the database
-                table = db.table("url")
-                for link in item["links"]:
-                    table.insert(
-                        url=link,
-                        domain_id=domain_id,
-                        level=level + 1,
-                    ).on_conflict(table.url).do_nothing().execute(
-                        transaction=transaction
-                    )
+                    # Add collected links to the database
+                    table = db.table("url")
+                    for link in item["links"]:
+                        table.insert(
+                            url=link,
+                            domain_id=domain_id,
+                            level=level + 1,
+                        ).on_conflict(table.url).do_nothing().execute(
+                            transaction=transaction
+                        )
+            except Exception as error:
+                traceback_str = "".join(traceback.format_tb(error.__traceback__))
+                failure = repr(str(error) + "\n" + traceback_str)
+                print(failure)
+                db.table("url").set(
+                    error=failure, scraped_at=datetime.datetime.utcnow()
+                ).where(Field("id") == id).execute()
 
         # Add error to the database
         elif item_class == "Error":
