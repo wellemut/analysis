@@ -33,10 +33,11 @@ def run_pipeline(domain, url, reset):
 
     # Get domains to scrape
     domain_ids_to_scrape = (
-        db.table("domain")
+        db.table("domain_with_inbound_referrals")
         .select("id")
         .where(Field("scraped_at").isnull() & Field("selected") == True)
         .orderby(Field("id") == last_domain_scraped, order=Order.desc)
+        .orderby(Field("inbound_referral_count"), order=Order.desc)
         .values()
     )
 

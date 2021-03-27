@@ -4,7 +4,7 @@ from operator import itemgetter
 import pycountry
 from config import MAIN_DATABASE
 from models.GoogleMapsAPI import GoogleMapsAPI
-from models.Database import Database, Table, Field, functions as fn
+from models.Database import Database, Table, Field, functions as fn, Order
 from models import PipelineProgressBar
 
 PIPELINE = Path(__file__).stem
@@ -21,7 +21,11 @@ def run_pipeline(domain, url, reset):
 
     # Get domain IDs to select or reject
     domain_ids = (
-        db.table("domain").select("id").where(Field("selected_at").isnull()).values()
+        db.view("domain_with_inbound_referrals")
+        .select("id")
+        .where(Field("selected_at").isnull())
+        .orderby(Field("inbound_referral_count"), order=Order.desc)
+        .values()
     )
 
     CC_TLDS = [country.alpha_2 for country in pycountry.countries]

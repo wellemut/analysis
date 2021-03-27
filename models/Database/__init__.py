@@ -4,4 +4,5 @@ from .QueryBuilder import QueryBuilder
 from .CreateQueryBuilder import CreateQueryBuilder
 from .Field import Field
 from .Criterion import Criterion
-from pypika import Column, Order, functions
+from .functions import functions
+from pypika import Column, Order

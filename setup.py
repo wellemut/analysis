@@ -2,7 +2,7 @@ import os
 import sys
 import pandas as pd
 from config import MAIN_DATABASE, ASSETS_DIR
-from models.Database import Database, Table, Column
+from models.Database import Database, Table, Column, Field, functions as fn
 from helpers.get_registered_domain import get_registered_domain
 
 # Set up the overall database. Most pipelines export their findings into this
@@ -168,6 +168,61 @@ db.execute_sql(
         )
         .join(Table("domain"))
         .on(Table("link").target_domain_id == Table("domain").id)
+        .get_sql()
+    )
+)
+source_url = Table("url").as_("source_url").table
+source_domain = Table("domain").as_("source_domain").table
+target_domain = Table("domain").as_("target_domain").table
+db.execute_sql(
+    "CREATE VIEW IF NOT EXISTS link_with_source_and_target AS {query}".format(
+        query=db.table("link")
+        .select(
+            "id",
+            source_domain.id.as_("source_domain_id"),
+            source_domain.domain.as_("source_domain"),
+            source_url.url.as_("source_url"),
+            target_domain.id.as_("target_domain_id"),
+            target_domain.domain.as_("target_domain"),
+            "target_url",
+        )
+        .join(source_url)
+        .on(Table("link").url_id == source_url.id)
+        .join(source_domain)
+        .on(source_url.domain_id == source_domain.id)
+        .join(target_domain)
+        .on(Table("link").target_domain_id == target_domain.id)
+        .get_sql()
+    )
+)
+db.execute_sql(
+    "CREATE VIEW IF NOT EXISTS referral AS {query}".format(
+        query=db.view("link_with_source_and_target")
+        .select(
+            "source_domain_id", "source_domain", "target_domain_id", "target_domain"
+        )
+        .distinct()
+        .join(Table("organization"))
+        .on(
+            Table("link_with_source_and_target").source_domain_id
+            == Table("organization").domain_id
+        )
+        .orderby("source_domain")
+        .orderby("target_domain")
+        .get_sql()
+    )
+)
+db.execute_sql(
+    "CREATE VIEW IF NOT EXISTS domain_with_inbound_referrals AS {query}".format(
+        query=db.table("domain")
+        .select(
+            Table("domain").star,
+            fn.Count(Field("source_domain_id")).as_("inbound_referral_count"),
+            fn.GroupConcat(Field("source_domain")).as_("inbound_referrals"),
+        )
+        .left_join(Table("referral"))
+        .on(Table("domain").id == Table("referral").target_domain_id)
+        .groupby("id")
         .get_sql()
     )
 )
