@@ -105,15 +105,18 @@ def run_pipeline(domain, url, reset):
 
             # Identify link domain
             for href in hrefs:
-                scheme = urlparse(href).scheme
-                links.append(
-                    {
-                        "url": href,
-                        "domain": get_registered_domain(href)
-                        if scheme in ["http", "https"]
-                        else None,
-                    }
-                )
+                try:
+                    scheme = urlparse(href).scheme
+                    links.append(
+                        {
+                            "url": href,
+                            "domain": get_registered_domain(href)
+                            if scheme in ["http", "https"]
+                            else None,
+                        }
+                    )
+                except ValueError as e:
+                    progress.print(e, href)
 
             # Ignore links to the same domain
             registered_domain = get_registered_domain(url)
