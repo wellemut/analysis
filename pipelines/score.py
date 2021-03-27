@@ -52,6 +52,10 @@ def run_pipeline(domain, url, reset):
             .to_dataframe()
         )
 
+        # Is SDG champion? (aka at least one mention of SDGs)
+        sdgs_count = df.set_index("sdg")["count"].to_dict().get("sdgs", 0)
+        is_sdg_champion = sdgs_count >= 1
+
         # Calculate percentages
         df["percent"] = round(df["count"] / word_count * 100, 2)
 
@@ -74,6 +78,7 @@ def run_pipeline(domain, url, reset):
         # Write results to database
         with db.start_transaction() as transaction:
             db.table("domain").set(
+                sdg_champion=is_sdg_champion,
                 total_score=total_score,
                 scored_at=datetime.utcnow(),
                 **next(iter(df.to_dict(orient="records")), {}),
@@ -81,7 +86,7 @@ def run_pipeline(domain, url, reset):
 
             # Add or remove from organization table
             organization = db.table("organization")
-            if total_score > 0:
+            if is_sdg_champion:
                 organization.insert(domain_id=domain_id,).on_conflict(
                     organization.domain_id
                 ).do_nothing().execute(transaction=transaction)

@@ -30,6 +30,7 @@ db.table("domain").create(
     Column("domain", "text", nullable=False),
     Column("homepage", "text", nullable=False),
     Column("selected", "boolean", nullable=True),
+    Column("sdg_champion", "boolean", nullable=True),
     Column("total_score", "integer", nullable=True),
     *sdgs_score_columns,
     Column("first_scraped_at", "timestamp", nullable=True),
