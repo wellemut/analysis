@@ -21,15 +21,19 @@ class GoogleMapsAPI:
 
         # Queries to run: url and domain, first in quotes and then without
         QUERIES = [
-            # To be exhaustive, we'd need to run all variations of this query
-            # with different location biases. But that would be costly.
+            # To be exhaustive, we need to run all variations of this query
+            # with different location biases. The Maps API does not charge for
+            # find place queries that return only an ID. So we can try all of
+            # these variations.
             f'"{normalized_url}"',
             f'"{normalized_target_domain}"',
+            f'"https://{normalized_url}"',
+            f'"https://{normalized_target_domain}"',
             # normalized_url,
             # normalized_target_domain,
         ]
 
-        for query in QUERIES:
+        for query in list(set(QUERIES)):
             # Identify candidates
             candidates = self.__find_place(
                 query,
