@@ -1,10 +1,8 @@
 # Export analysis database to CSV file
 import os
 from pathlib import Path
-from config import MAIN_DATABASE
+from config import MAIN_DATABASE, EXPORT_DIR
 from models.Database import Database, Field, Order
-
-EXPORT_PATH = Path(os.path.join(__file__, "..", "export", "database.csv")).resolve()
 
 db = Database(MAIN_DATABASE)
 

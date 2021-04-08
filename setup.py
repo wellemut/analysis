@@ -1,9 +1,14 @@
 import os
 import sys
+from pathlib import Path
 import pandas as pd
-from config import MAIN_DATABASE, ASSETS_DIR
+from config import MAIN_DATABASE, ASSETS_DIR, EXPORT_DIR, EXPORT_GRAPHS_DIR
 from models.Database import Database, Table, Column, Field, functions as fn
 from helpers.get_registered_domain import get_registered_domain
+
+# Set up export folders
+Path(EXPORT_DIR).mkdir(parents=True, exist_ok=True)
+Path(EXPORT_GRAPHS_DIR).mkdir(parents=True, exist_ok=True)
 
 # Set up the overall database. Most pipelines export their findings into this
 # database.
@@ -223,6 +228,20 @@ db.execute_sql(
         .left_join(Table("referral"))
         .on(Table("domain").id == Table("referral").target_domain_id)
         .groupby("id")
+        .get_sql()
+    )
+)
+# View for listing connections between organizations
+db.execute_sql(
+    "CREATE VIEW IF NOT EXISTS connection AS {query}".format(
+        query=db.view("referral")
+        .select(
+            "source_domain_id", "source_domain", "target_domain_id", "target_domain"
+        )
+        .join(Table("organization"))
+        .on(Table("referral").target_domain_id == Table("organization").domain_id)
+        .orderby("source_domain")
+        .orderby("target_domain")
         .get_sql()
     )
 )

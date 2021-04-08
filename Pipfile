@@ -22,6 +22,7 @@ tldextract = "*"
 scrapy = "*"
 billiard = "*"
 pycountry = "*"
+graphviz = "*"
 
 [requires]
 python_version = "3.8"
