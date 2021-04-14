@@ -26,6 +26,10 @@ LOG_LEVEL = "WARNING"
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 # CONCURRENT_REQUESTS = 32
 
+# Time out downloads after x seconds
+DOWNLOAD_TIMOUT = 30
+DNS_TIMEOUT = 30
+
 # Configure a delay for requests for the same website (default: 0)
 # See https://doc.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
