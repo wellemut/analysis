@@ -50,6 +50,7 @@ db.table("organization").create(
     Column("domain_id", "integer", nullable=False),
     Column("name", "text", nullable=True),
     Column("logo", "text", nullable=True),
+    Column("logo_hash", "text", nullable=True),
     Column("twitter_handle", "text", nullable=True),
     Column("facebook_handle", "text", nullable=True),
     Column("linkedin_handle", "text", nullable=True),

@@ -23,6 +23,7 @@ scrapy = "*"
 billiard = "*"
 pycountry = "*"
 graphviz = "*"
+cloudinary = "*"
 
 [requires]
 python_version = "3.8"

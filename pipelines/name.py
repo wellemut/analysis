@@ -3,7 +3,7 @@ from pathlib import Path
 from datetime import datetime
 from operator import itemgetter
 import urllib.request
-from config import MAIN_DATABASE, LOGOS_DIR
+from config import MAIN_DATABASE
 from models.Database import Database, Field
 from models import PipelineProgressBar
 from models.TwitterAPI import TwitterAPI
