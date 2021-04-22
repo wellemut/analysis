@@ -8,8 +8,33 @@ from models.Database import Database, Table, Field
 from models import PipelineProgressBar
 from helpers.is_binary_string import is_binary_string
 from helpers.find_sdg_keywords_in_text import find_sdg_keywords_in_text
+from helpers.should_ignore_url import should_ignore_url
 
 PIPELINE = Path(__file__).stem
+
+
+# Write matches to database
+def commit_to_database(database, url_id, word_count, matches, ignored):
+    with database.start_transaction() as transaction:
+        # Delete existing matches
+        database.table("keyword_match").delete().where(
+            Field("url_id") == url_id
+        ).execute(transaction=transaction)
+        # Write new matches
+        for match in matches:
+            database.table("keyword_match").insert(
+                url_id=url_id,
+                sdg=match["sdg"],
+                keyword=match["keyword"],
+                context=match["context"],
+                tag=match["tag"],
+            ).execute(transaction=transaction)
+        # Update word count
+        database.table("url").set(
+            word_count=word_count,
+            ignored=ignored,
+            keywords_extracted_at=datetime.utcnow(),
+        ).where(Field("id") == url_id).execute(transaction=transaction)
 
 
 def run_pipeline(domain, url, reset):
@@ -112,12 +137,27 @@ def run_pipeline(domain, url, reset):
 
             url_progress.set_status(f"Analyzing {url}")
 
+            # If this is a non-content URL, let's ignore it
+            if should_ignore_url(url):
+                commit_to_database(
+                    database=db,
+                    url_id=url_id,
+                    word_count=None,
+                    matches=[],
+                    ignored=True,
+                )
+                continue
+
             # If this URL contains binary text, let's skip it
             if is_binary_string(html):
                 progress.print("Skipping", url, "...", "Binary file detected")
-                db.table("url").set(
-                    word_count=0, keywords_extracted_at=datetime.utcnow()
-                ).execute()
+                commit_to_database(
+                    database=db,
+                    url_id=url_id,
+                    word_count=0,
+                    matches=[],
+                    ignored=False,
+                )
                 continue
 
             # Prepare text extraction from HTML
@@ -178,25 +218,13 @@ def run_pipeline(domain, url, reset):
                 )
             )
 
-            # Write matches to database
-            with db.start_transaction() as transaction:
-                # Delete existing matches
-                db.table("keyword_match").delete().where(
-                    Field("url_id") == url_id
-                ).execute(transaction=transaction)
-                # Write new matches
-                for match in matches:
-                    db.table("keyword_match").insert(
-                        url_id=url_id,
-                        sdg=match["sdg"],
-                        keyword=match["keyword"],
-                        context=match["context"],
-                        tag=match["tag"],
-                    ).execute(transaction=transaction)
-                # Update word count
-                db.table("url").set(
-                    word_count=word_count, keywords_extracted_at=datetime.utcnow()
-                ).where(Field("id") == url_id).execute(transaction=transaction)
+            commit_to_database(
+                database=db,
+                url_id=url_id,
+                word_count=word_count,
+                matches=matches,
+                ignored=False,
+            )
 
         db.table("domain").set(keywords_extracted_at=datetime.utcnow()).where(
             Field("id") == domain_id

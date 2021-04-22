@@ -80,6 +80,7 @@ db.table("url").create(
     Column("html", "text", nullable=True),
     Column("error", "text", nullable=True),
     Column("word_count", "integer", nullable=True),
+    Column("ignored", "boolean", nullable=True),
     Column("scraped_at", "timestamp", nullable=True),
     Column("keywords_extracted_at", "timestamp", nullable=True),
     Column("links_extracted_at", "timestamp", nullable=True),
