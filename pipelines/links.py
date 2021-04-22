@@ -87,7 +87,9 @@ def run_pipeline(domain, url, reset):
             # If this URL contains binary text, let's skip it
             if is_binary_string(html):
                 progress.print("Skipping", url, "...", "Binary file detected")
-                db.table("url").set(links_extracted_at=datetime.utcnow()).execute()
+                db.table("url").set(links_extracted_at=datetime.utcnow()).where(
+                    Field("id") == url_id
+                ).execute()
                 continue
 
             # Prepare text extraction from HTML
