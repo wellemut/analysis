@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2b53e0c115bb10bf3377f13718fc6dcf0e2e37e9c25650b38dd2a74ed5b238a2"
+            "sha256": "c61021fdcc5e91b72889eec4441ba72886d608b8c112970a94734d8cccb9cc3b"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -149,6 +149,13 @@
             ],
             "version": "==1.1.0"
         },
+        "faunadb": {
+            "hashes": [
+                "sha256:0a048838ef44f5cee653aadbc4302e48609d01dcaa795341c7ce049991a547f1"
+            ],
+            "index": "pypi",
+            "version": "==4.1.0"
+        },
         "filelock": {
             "hashes": [
                 "sha256:18d82244ee114f543149c66a6e0c14e9c4f8a1044b5cdaadd0f82159d6a6ff59",
@@ -163,6 +170,12 @@
             ],
             "index": "pypi",
             "version": "==1.0.7"
+        },
+        "future": {
+            "hashes": [
+                "sha256:b1bead90b70cf6ec3f0710ae53a525360fa360d306a86583adc6bf83a4db537d"
+            ],
+            "version": "==0.18.2"
         },
         "googlemaps": {
             "hashes": [
@@ -192,6 +205,11 @@
                 "sha256:8eec9c1f4bfae3408a3f30500261f7e6a65912dc138526ea054f9ad98892e9d2"
             ],
             "version": "==3.0.0"
+        },
+        "hyper": {
+            "editable": true,
+            "git": "https://github.com/GlobalGoalsDirectory/hyper.git",
+            "ref": "19a5d02d650505676a411ac70c7dd7da83bdb8b6"
         },
         "hyperframe": {
             "hashes": [
@@ -227,6 +245,13 @@
                 "sha256:bc3af051d7d14b2ee5ef9969666def0cd1a000e121eaea580d4a313df4b37f32"
             ],
             "version": "==1.1.1"
+        },
+        "iso8601": {
+            "hashes": [
+                "sha256:8aafd56fa0290496c5edbb13c311f78fa3a241f0853540da09d9363eae3ebd79",
+                "sha256:e7e1122f064d626e17d47cd5106bed2c620cb38fe464999e0ddae2b6d2de6004"
+            ],
+            "version": "==0.1.14"
         },
         "itemadapter": {
             "hashes": [
