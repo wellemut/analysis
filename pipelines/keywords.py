@@ -9,6 +9,7 @@ from models import PipelineProgressBar
 from helpers.is_binary_string import is_binary_string
 from helpers.find_sdg_keywords_in_text import find_sdg_keywords_in_text
 from helpers.should_ignore_url import should_ignore_url
+from helpers.read_gzipped_asset import read_gzipped_asset
 
 PIPELINE = Path(__file__).stem
 
@@ -122,15 +123,15 @@ def run_pipeline(domain, url, reset):
                     & Field("keywords_extracted_at").isnull()
                 )
             )
-            .where(Field("html").notnull())
+            .where(Field("html_file").notnull())
             .values()
         )
 
         url_progress = progress.add_bar(domain)
         for url_id in url_progress.iterate(url_ids):
-            url, html = itemgetter("url", "html")(
+            url, html_file = itemgetter("url", "html_file")(
                 db.table("url")
-                .select("url", "html")
+                .select("url", "html_file")
                 .where(Field("id") == url_id)
                 .first()
             )
@@ -147,6 +148,9 @@ def run_pipeline(domain, url, reset):
                     ignored=True,
                 )
                 continue
+
+            # Load html
+            html = read_gzipped_asset(html_file)
 
             # If this URL contains binary text, let's skip it
             if is_binary_string(html):

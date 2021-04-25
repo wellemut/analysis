@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 from config import MAIN_DATABASE
 from models.Database import Database, Field
 from models import PipelineProgressBar
+from helpers.read_gzipped_asset import read_gzipped_asset
 
 PIPELINE = Path(__file__).stem
 
@@ -29,15 +30,17 @@ def run_pipeline(domain, url, reset):
     progress = PipelineProgressBar(PIPELINE)
     for domain_id in progress.iterate(domain_ids):
         # Get root-level HTML
-        url, html = itemgetter("url", "html")(
+        url, html_file = itemgetter("url", "html_file")(
             db.table("url")
-            .select("url", "html")
+            .select("url", "html_file")
             .where(Field("domain_id") == domain_id)
             .where(Field("level") == 0)
             .limit(1)
             .first()
         )
         progress.set_status(f"Summarizing {url}")
+
+        html = read_gzipped_asset(html_file)
 
         # Prepare text extraction from HTML
         soup = BeautifulSoup(html, "lxml")

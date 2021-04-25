@@ -9,6 +9,7 @@ from models.Database import Database, Table, Column, Field, Order
 from models import PipelineProgressBar
 from helpers.is_binary_string import is_binary_string
 from helpers.get_registered_domain import get_registered_domain
+from helpers.read_gzipped_asset import read_gzipped_asset
 
 PIPELINE = Path(__file__).stem
 
@@ -69,20 +70,23 @@ def run_pipeline(domain, url, reset):
                 (Field("links_extracted_at") < Field("scraped_at"))
                 | (Field("scraped_at").notnull() & Field("links_extracted_at").isnull())
             )
-            .where(Field("html").notnull())
+            .where(Field("html_file").notnull())
             .values()
         )
 
         url_progress = progress.add_bar(domain)
         for url_id in url_progress.iterate(url_ids):
-            url, html = itemgetter("url", "html")(
+            url, html_file = itemgetter("url", "html_file")(
                 db.table("url")
-                .select("url", "html")
+                .select("url", "html_file")
                 .where(Field("id") == url_id)
                 .first()
             )
 
             url_progress.set_status(f"Analyzing {url}")
+
+            # Load html
+            html = read_gzipped_asset(html_file)
 
             # If this URL contains binary text, let's skip it
             if is_binary_string(html):

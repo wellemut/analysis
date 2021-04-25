@@ -77,7 +77,7 @@ db.table("url").create(
     Column("domain_id", "integer", nullable=False),
     Column("url", "text", nullable=False),
     Column("level", "int", nullable=False),
-    Column("html", "text", nullable=True),
+    Column("html_file", "text", nullable=True),
     Column("error", "text", nullable=True),
     Column("word_count", "integer", nullable=True),
     Column("ignored", "boolean", nullable=True),

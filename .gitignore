@@ -5,8 +5,8 @@ export/
 assets/databases/*.sqlite
 assets/databases/*.sqlite-journal
 
-# Ignore scraped logos
-assets/logos/*
+# Ignore scraped HTML
+assets/html/*
 
 # Ignore environment variables
 .env
