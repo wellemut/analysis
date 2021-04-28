@@ -5,6 +5,7 @@ from config import MAIN_DATABASE, EXPORT_DIR
 from models.Database import Database, Field, Order
 
 db = Database(MAIN_DATABASE)
+EXPORT_PATH = Path(os.path.join(EXPORT_DIR, "database.csv")).resolve()
 
 print("Exporting organizations to CSV", end="... ", flush=True)
 
@@ -23,6 +24,8 @@ df = (
         *HANDLES,
         "summary",
         "address",
+        "state",
+        "country",
         "latitude",
         "longitude",
     )

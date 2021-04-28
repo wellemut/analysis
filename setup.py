@@ -56,6 +56,8 @@ db.table("organization").create(
     Column("linkedin_handle", "text", nullable=True),
     Column("summary", "text", nullable=True),
     Column("address", "text", nullable=True),
+    Column("state", "text", nullable=True),
+    Column("country", "text", nullable=True),
     Column("latitude", "text", nullable=True),
     Column("longitude", "text", nullable=True),
     Column("googlemaps_id", "text", nullable=True),
