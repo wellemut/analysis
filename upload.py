@@ -1,4 +1,5 @@
 import os
+from datetime import datetime
 from faunadb import query as q
 from faunadb.objects import Ref
 from faunadb.client import FaunaClient
@@ -84,6 +85,9 @@ for organization_id in progress.iterate(organization_ids):
                         "domain": domain,
                         "last_extraction_data": data,
                         "last_extraction_data_hash": data_hash,
+                        "created_at": datetime.utcnow()
+                        .replace(microsecond=0)
+                        .isoformat(),
                     }
                 },
             )
