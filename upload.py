@@ -31,10 +31,12 @@ for organization_id in progress.iterate(organization_ids):
             *SCORES,
             "logo",
             *HANDLES,
-            "summary",
+            "about",
             "address",
             "latitude",
             "longitude",
+            "state",
+            "country",
         )
         .where(Field("id") == organization_id)
         .first()

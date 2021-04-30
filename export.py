@@ -22,7 +22,7 @@ df = (
         *SCORES,
         "logo",
         *HANDLES,
-        "summary",
+        "about",
         "address",
         "state",
         "country",

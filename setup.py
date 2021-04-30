@@ -54,7 +54,7 @@ db.table("organization").create(
     Column("twitter_handle", "text", nullable=True),
     Column("facebook_handle", "text", nullable=True),
     Column("linkedin_handle", "text", nullable=True),
-    Column("summary", "text", nullable=True),
+    Column("about", "text", nullable=True),
     Column("address", "text", nullable=True),
     Column("state", "text", nullable=True),
     Column("country", "text", nullable=True),
@@ -69,7 +69,7 @@ db.table("organization").create(
     Column("name_cached_at", "timestamp", nullable=True),
     Column("logo_extracted_at", "timestamp", nullable=True),
     Column("logo_cached_at", "timestamp", nullable=True),
-    Column("summary_extracted_at", "timestamp", nullable=True),
+    Column("about_extracted_at", "timestamp", nullable=True),
 ).foreign_key("domain_id", references="domain (id)").primary_key("id").unique(
     "domain_id"
 ).if_not_exists().execute()
@@ -128,7 +128,7 @@ add_index(db, table="organization", column="name_extracted_at")
 add_index(db, table="organization", column="name_cached_at")
 add_index(db, table="organization", column="logo_extracted_at")
 add_index(db, table="organization", column="logo_cached_at")
-add_index(db, table="organization", column="summary_extracted_at")
+add_index(db, table="organization", column="about_extracted_at")
 add_index(db, table="domain", column="selected_at")
 add_index(db, table="domain", column="scraped_at")
 add_index(db, table="domain", column="keywords_extracted_at")

@@ -15,7 +15,7 @@ PIPELINES = [
     "address",
     "name",
     "logo",
-    "summary",
+    "about",
 ]
 
 program = argparse.ArgumentParser(description="Run a pipeline")
