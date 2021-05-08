@@ -6,6 +6,7 @@ from faunadb.objects import Ref
 from faunadb.client import FaunaClient
 import hashlib
 import json
+import copy
 from config import MAIN_DATABASE
 from models.Database import Database, Field, Order
 from models import PipelineProgressBar
@@ -55,10 +56,16 @@ for organization_id in progress.iterate(organization_ids):
     del data["domain"]
     data["alt_commitment_urls"] = json.loads(data["alt_commitment_urls"])
 
-    # Create deterministic data hash
+    # Create deterministic data hash: This hash can be used to determine whether
+    # the extracted data for an organization has changed.
+    KEYS_TO_SKIP = ["alt_commitment_urls"]
+    data_to_hash = copy.deepcopy(data)
+    for key in KEYS_TO_SKIP:
+        del data_to_hash[key]
+
     data_hash = hashlib.sha256(
         bytes(
-            json.dumps(data),
+            json.dumps(data_to_hash),
             encoding="utf-8",
         )
     ).hexdigest()
