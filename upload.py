@@ -67,17 +67,40 @@ for organization_id in progress.iterate(organization_ids):
     exists = fauna.query(q.exists(q.match(q.index("organization_by_domain"), domain)))
     if exists:
         fauna.query(
-            q.update(
-                q.select(
-                    "ref", q.get(q.match(q.index("organization_by_domain"), domain))
-                ),
+            q.let(
                 {
-                    "data": {
-                        "last_extraction_data": data,
-                        "last_extraction_data_hash": data_hash,
-                    }
+                    "ref": q.select(
+                        "ref",
+                        q.get(q.match(q.index("organization_by_domain"), domain)),
+                    )
                 },
-            )
+                q.do(
+                    # Clear last extraction data object, then set new extraction
+                    # data. Essentially, this serves as a replace operation.
+                    # By default, q.update will merge the properties of two objects,
+                    # so if we did not clear it first, we'd end up with old/stale
+                    # data in the object.
+                    # See https://forums.fauna.com/t/replace-by-path/169/2 for
+                    # context.
+                    q.update(
+                        q.var("ref"),
+                        {
+                            "data": {
+                                "last_extraction_data": None,
+                            }
+                        },
+                    ),
+                    q.update(
+                        q.var("ref"),
+                        {
+                            "data": {
+                                "last_extraction_data": data,
+                                "last_extraction_data_hash": data_hash,
+                            }
+                        },
+                    ),
+                ),
+            ),
         )
 
     else:
