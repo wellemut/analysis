@@ -1,5 +1,6 @@
 import os
 from datetime import datetime
+import json
 from faunadb import query as q
 from faunadb.objects import Ref
 from faunadb.client import FaunaClient
@@ -29,6 +30,8 @@ for organization_id in progress.iterate(organization_ids):
             "domain",
             "homepage",
             "name",
+            "commitment_url",
+            "alt_commitment_urls",
             *SCORES,
             "logo",
             *HANDLES,
@@ -50,6 +53,7 @@ for organization_id in progress.iterate(organization_ids):
     # Prepare data
     data = dict(organization)
     del data["domain"]
+    data["alt_commitment_urls"] = json.loads(data["alt_commitment_urls"])
 
     # Create deterministic data hash
     data_hash = hashlib.sha256(

@@ -49,6 +49,8 @@ db.table("organization").create(
     Column("id", "integer", nullable=False),
     Column("domain_id", "integer", nullable=False),
     Column("name", "text", nullable=True),
+    Column("commitment_url", "text", nullable=True),
+    Column("alt_commitment_urls", "text", nullable=True),
     Column("logo", "text", nullable=True),
     Column("logo_hash", "text", nullable=True),
     Column("twitter_handle", "text", nullable=True),
@@ -61,6 +63,7 @@ db.table("organization").create(
     Column("latitude", "text", nullable=True),
     Column("longitude", "text", nullable=True),
     Column("googlemaps_id", "text", nullable=True),
+    Column("commitment_extracted_at", "timestamp", nullable=True),
     Column("links_extracted_at", "timestamp", nullable=True),
     Column("socials_extracted_at", "timestamp", nullable=True),
     Column("address_extracted_at", "timestamp", nullable=True),
@@ -120,6 +123,7 @@ add_index(db, table="link", column="url_id")
 add_index(db, table="link", column="target_domain_id")
 
 # Add index on timestamps
+add_index(db, table="organization", column="commitment_extracted_at")
 add_index(db, table="organization", column="links_extracted_at")
 add_index(db, table="organization", column="socials_extracted_at")
 add_index(db, table="organization", column="address_extracted_at")

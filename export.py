@@ -19,6 +19,7 @@ df = (
         "domain",
         Field("homepage").as_("url"),
         "name",
+        "commitment_url",
         *SCORES,
         "logo",
         *HANDLES,

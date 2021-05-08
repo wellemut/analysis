@@ -10,6 +10,7 @@ PIPELINES = [
     "web",
     "keywords",
     "score",
+    "commitment",
     "links",
     "socials",
     "address",

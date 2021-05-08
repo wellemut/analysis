@@ -5,4 +5,4 @@ from .CreateQueryBuilder import CreateQueryBuilder
 from .Field import Field
 from .Criterion import Criterion
 from .functions import functions
-from pypika import Column, Order
+from pypika import Column, Order, AliasedQuery, analytics

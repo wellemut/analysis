@@ -20,6 +20,9 @@ class Database:
     def table(self, name):
         return Table(database=self, name=name)
 
+    def with_(self, *args, **kwargs):
+        return QueryBuilder(self).with_(*args, **kwargs)
+
     def view(self, *args, **kwargs):
         return self.table(*args, **kwargs)
 
