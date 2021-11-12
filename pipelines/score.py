@@ -72,6 +72,11 @@ def run_pipeline(domain, url, reset):
         # Calculate total score
         total_score = round(df.sum(axis=1) / 500 * 100, 2).clip(upper=100)[0]
 
+        # Add missing SDGs (set to none)
+        for goal in range(1, 18):
+            if f"sdg{goal}" not in df.columns:
+                df[f"sdg{goal}"] = None
+
         # Rename all columns to end with _score
         df = df.rename(columns=lambda x: x + "_score")
 
