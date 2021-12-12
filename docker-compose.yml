@@ -1,0 +1,58 @@
+version: "3.9"
+services:
+  api:
+    build:
+      context: .
+      target: development
+    volumes:
+      - ./:/app
+    ports:
+      - "8000:80"
+    environment:
+      - DATABASE_URL=postgresql://postgres:docker@database:5432/analysisdb
+    depends_on:
+      - database
+  database:
+    image: "postgres"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    expose:
+      - 5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=analysisdb
+
+  api-test:
+    build:
+      context: .
+      target: development
+    command: bash -c "alembic upgrade head && ptw"
+    volumes:
+      - ./:/app
+    environment:
+      - DATABASE_URL=postgresql://postgres:docker@database-test:5432/testdb
+    depends_on:
+      - database-test
+    networks:
+      - test
+    profiles:
+      - test
+  database-test:
+    image: "postgres"
+    expose:
+      - 5432
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=testdb
+    networks:
+      - test
+    profiles:
+      - test
+
+volumes:
+  postgres_data:
+
+networks:
+  test:
