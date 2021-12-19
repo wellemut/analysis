@@ -1,6 +1,7 @@
 import enum
 from sqlalchemy import MetaData, inspect
 from sqlalchemy.orm import declarative_base, declared_attr
+from sqlalchemy.sql.expression import and_
 from sqlalchemy_mixins import AllFeaturesMixin, TimestampsMixin
 from sqlalchemy_mixins.utils import classproperty
 from sqlalchemy_utils import force_auto_coercion
@@ -31,6 +32,17 @@ class BaseModel(Base, AllFeaturesMixin, TimestampsMixin):
     @declared_attr
     def __tablename__(cls) -> str:
         return cls.__name__.lower()
+
+    # Find a record that matches the given attributes
+    @classmethod
+    def find_by(cls, **kwargs):
+        query = [getattr(cls, attr).__eq__(value) for attr, value in kwargs.items()]
+        return cls.query.filter(and_(*query)).first()
+
+    # Find a record that matches the given attributes or create it
+    @classmethod
+    def find_by_or_create(cls, **kwargs):
+        return cls.find_by(**kwargs) or cls.create(**kwargs)
 
     # Overwrite the session property to get the current session or start a new
     # one. Sessions are created using contextvars, so they are local to each
