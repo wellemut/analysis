@@ -21,6 +21,7 @@ Development Goals using natural language processing (NLP).
     - [Hot Reloading](#hot-reloading)
     - [Managing dependencies](#managing-dependencies)
     - [Managing migrations](#managing-migrations)
+    - [Accessing the database](#accessing-the-database)
   - [Testing](#testing)
 
 ## Deployment
@@ -257,6 +258,21 @@ $ alembic revision --autogenerate -m "create accounts"
 
 The database has a dedicated volume mounted, so the database is persisted even
 when the container is destroyed/recreated.
+
+### Accessing the database
+
+You can access the database by entering the database container:
+
+```
+$ docker-compose exec database bash
+$ psql -U postgres -d analysisdb
+```
+
+From there, you can run arbitrary SQL queries:
+
+```
+SELECT * FROM websites;
+```
 
 ## Testing
 
