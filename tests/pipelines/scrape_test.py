@@ -41,7 +41,9 @@ def limit_to_5_pages(mocker):
 
 def test_it_scrapes_pages_of_domain():
     ScrapePipeline.process("17ziele.de")
-    assert len(Website.find_by(domain="17ziele.de").webpages) == 5
+    website = Website.find_by(domain="17ziele.de")
+    assert len(website.webpages) == 5
+    assert website.homepage.content.find("©2021 ENGAGEMENT GLOBAL") > 0
 
 
 def test_it_retains_existing_pages_in_the_database():

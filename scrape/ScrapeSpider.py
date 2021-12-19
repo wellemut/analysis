@@ -1,3 +1,6 @@
+import os
+import gzip
+import uuid
 import scrapy
 from scrapy.linkextractors import LinkExtractor
 
@@ -18,9 +21,18 @@ class ScrapeSpider(scrapy.Spider):
             allow_domains=self.allowed_domains, canonicalize=True
         ).extract_links(response)
 
+    # Write HTML response to file (compressed/gzipped)
+    def write_to_file(self, response):
+        asset_path = os.path.join(self.asset_path, f"{uuid.uuid4()}.gz")
+        with gzip.open(asset_path, "wt") as file:
+            file.write(response.text)
+        return asset_path
+
     def parse(self, response):
         depth = response.meta.get("depth", 0)
-        yield {"url": response.url, "depth": depth}
+
+        asset_path = self.write_to_file(response)
+        yield {"url": response.url, "depth": depth, "asset_path": asset_path}
 
         for link in self.extract_links(response):
             yield response.follow(

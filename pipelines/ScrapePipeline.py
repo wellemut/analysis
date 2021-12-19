@@ -1,3 +1,5 @@
+import os
+import shutil
 import tempfile
 from multiprocessing import Process
 import csv
@@ -17,53 +19,78 @@ class ScrapePipeline:
         # the very end. This allows us to wrap the database insert/updates into
         # a single transaction and ensure that our database remains in a good
         # state, even if this pipeline crashes at some point.
-        with tempfile.NamedTemporaryFile(suffix=".csv") as file:
+        with tempfile.TemporaryDirectory() as tmp_dir:
+            # URLs are exported to the following CSV files and later transferred
+            # to the database
+            csv_path = os.path.join(tmp_dir, "pages.csv")
 
             # Run crawler inside a multiprocess. Otherwise, scrapy will complain
             # about not being restartable
-            p = Process(target=ScrapePipeline.scrape, args=(domain, file.name))
+            p = Process(
+                target=ScrapePipeline.scrape,
+                kwargs={
+                    "domain": domain,
+                    "csv_path": csv_path,
+                    "asset_path": tmp_dir,
+                },
+            )
             p.start()
             p.join()
 
-            # Read scraped URLs and update the database
-            with open(file.name, "r") as file:
-                reader = csv.DictReader(file)
+            # Wrap database actions in a transaction
+            with Website.session.begin():
+                website = Website.find_by_or_create(domain=domain)
 
-                # Wrap database actions in a transaction
-                with Website.session.begin():
-                    website = Website.find_by_or_create(domain=domain)
+                # Reset attributes for all pages of this websites
+                Webpage.query.filter(Webpage.website_id == website.id).update(
+                    {"depth": None}
+                )
 
-                    # Reset attributes for all pages of this websites
-                    Webpage.query.filter(Webpage.website_id == website.id).update(
-                        {"depth": None}
-                    )
+                # Read scraped URLs and update the database
+                with open(csv_path, "r") as file:
+                    reader = csv.DictReader(file)
 
                     # Write each webpage into the database
-                    page_count = 0
+                    webpages = []
                     for row in reader:
-                        Webpage.find_by_or_create(
-                            website_id=website.id, url=row["url"]
-                        ).update(depth=row["depth"])
-                        page_count += 1
+                        webpage = Webpage.find_by_or_create(
+                            website=website, url=row["url"]
+                        )
+                        webpage.update(depth=row["depth"])
+                        webpage.tmp_asset_path = row["asset_path"]
+                        webpages.append(webpage)
 
                         # Scrapy will not exactly observe the MAX_PAGES limit
                         # because it will finish any pending requests that it
                         # has already started. To get the desired maximum, we
                         # stop processing pages after the maximum is reached.
-                        if page_count >= cls.MAX_PAGES:
+                        if len(webpages) >= cls.MAX_PAGES:
                             break
 
+                # Move all HTML content files from the temporary directory to
+                # persistent storage
+                for webpage in webpages:
+                    # Create directory unless exists
+                    os.makedirs(os.path.dirname(webpage.asset_path), exist_ok=True)
+                    # We have to use shutil.move rather than os.move because
+                    # the asset folder is a Docker volume and is considered
+                    # a different device
+                    shutil.move(webpage.tmp_asset_path, webpage.asset_path)
+
     @staticmethod
-    def scrape(domain, file_path):
+    def scrape(domain, csv_path, asset_path):
         process = CrawlerProcess(
             settings={
                 **get_project_settings().copy_to_dict(),
                 "CLOSESPIDER_ITEMCOUNT": ScrapePipeline.MAX_PAGES,
-                "FEEDS": {f"{file_path}": {"format": "csv"}},
+                "FEEDS": {f"{csv_path}": {"format": "csv"}},
             }
         )
         process.crawl(
-            ScrapeSpider, start_urls=[f"http://{domain}"], allowed_domains=[domain]
+            ScrapeSpider,
+            start_urls=[f"http://{domain}"],
+            allowed_domains=[domain],
+            asset_path=asset_path,
         )
         process.start()
         process.join()

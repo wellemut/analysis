@@ -36,6 +36,9 @@ ENV \
 # Set up path
 ENV PATH="$POETRY_HOME/bin:$VENV_PATH/bin:$PATH"
 
+# Set up /var/lib application directory
+RUN mkdir /var/lib/globalgoalsdirectory
+
 # Install poetry and dependencies
 FROM base as builder
 
@@ -64,6 +67,7 @@ COPY --from=builder-dev $VENV_PATH-dev $VENV_PATH
 
 # Switch to non-root user (for generating migrations inside container)
 RUN useradd -m -u 1000 -o -s /bin/bash user
+RUN chown -R user:user /var/lib/globalgoalsdirectory
 USER user
 
 WORKDIR /app
