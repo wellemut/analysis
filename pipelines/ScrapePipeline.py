@@ -1,5 +1,4 @@
 import os
-import shutil
 import tempfile
 from multiprocessing import Process
 import csv
@@ -41,9 +40,9 @@ class ScrapePipeline:
             with Website.session.begin():
                 website = Website.find_by_or_create(domain=domain)
 
-                # Reset attributes for all pages of this websites
+                # Reset attributes for all pages of this website
                 Webpage.query.filter(Webpage.website_id == website.id).update(
-                    {"depth": None}
+                    {"depth": None, "file_name": None}
                 )
 
                 # Read scraped URLs and update the database
@@ -51,31 +50,21 @@ class ScrapePipeline:
                     reader = csv.DictReader(file)
 
                     # Write each webpage into the database
-                    webpages = []
+                    page_count = 0
                     for row in reader:
                         webpage = Webpage.find_by_or_create(
                             website=website, url=row["url"]
                         )
-                        webpage.update(depth=row["depth"])
-                        webpage.tmp_asset_path = row["asset_path"]
-                        webpages.append(webpage)
+                        with open(row["asset_path"], "r") as f:
+                            webpage.update(depth=row["depth"], content=f.read())
 
                         # Scrapy will not exactly observe the MAX_PAGES limit
                         # because it will finish any pending requests that it
                         # has already started. To get the desired maximum, we
                         # stop processing pages after the maximum is reached.
-                        if len(webpages) >= cls.MAX_PAGES:
+                        page_count += 1
+                        if page_count >= cls.MAX_PAGES:
                             break
-
-                # Move all HTML content files from the temporary directory to
-                # persistent storage
-                for webpage in webpages:
-                    # Create directory unless exists
-                    os.makedirs(os.path.dirname(webpage.asset_path), exist_ok=True)
-                    # We have to use shutil.move rather than os.move because
-                    # the asset folder is a Docker volume and is considered
-                    # a different device
-                    shutil.move(webpage.tmp_asset_path, webpage.asset_path)
 
     @staticmethod
     def scrape(domain, csv_path, asset_path):

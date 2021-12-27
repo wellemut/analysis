@@ -49,8 +49,12 @@ def test_it_scrapes_pages_of_domain():
 def test_it_retains_existing_pages_in_the_database():
     website = Website.create(domain="17ziele.de")
     webpage = Webpage.create(
-        website=website, url="https://17ziele.de/my-page.html", depth=5
+        website=website,
+        url="https://17ziele.de/my-page.html",
+        depth=5,
+        file_name="abcdef",
     )
     ScrapePipeline.process("17ziele.de")
     assert len(website.webpages) == 6
     assert webpage.reload().depth == None
+    assert webpage.file_name == None

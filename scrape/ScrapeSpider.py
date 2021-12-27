@@ -1,6 +1,5 @@
 import os
-import gzip
-import uuid
+from uuid import uuid4
 import scrapy
 from scrapy.linkextractors import LinkExtractor
 
@@ -23,8 +22,8 @@ class ScrapeSpider(scrapy.Spider):
 
     # Write HTML response to file (compressed/gzipped)
     def write_to_file(self, response):
-        asset_path = os.path.join(self.asset_path, f"{uuid.uuid4()}.gz")
-        with gzip.open(asset_path, "wt") as file:
+        asset_path = os.path.join(self.asset_path, f"{uuid4()}.txt")
+        with open(asset_path, "w") as file:
             file.write(response.text)
         return asset_path
 
