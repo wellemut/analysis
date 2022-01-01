@@ -23,6 +23,7 @@ pytest-only = "^1.2.2"
 pytest-icdiff = "^0.5"
 pytest-mock = "^3.6.1"
 pytest-describe = "^2.0.1"
+pytest-recording = "^0.12.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]

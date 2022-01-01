@@ -26,3 +26,9 @@ def reset_application_data():
                 shutil.rmtree(file_path)
         except Exception as e:
             print("Failed to delete %s. Reason: %s" % (file_path, e))
+
+
+@pytest.fixture(scope="session")
+def vcr_config():
+    # Change record_mode to "once" to temporarily record new casettes/requests
+    return {"record_mode": "none"}
