@@ -2,6 +2,8 @@ import os
 import shutil
 import pytest
 from sqlalchemy.orm import close_all_sessions
+from vcr import use_cassette
+import tldextract
 from config import APPLICATION_DATA_PATH
 from models import BaseModel
 
@@ -26,6 +28,22 @@ def reset_application_data():
                 shutil.rmtree(file_path)
         except Exception as e:
             print("Failed to delete %s. Reason: %s" % (file_path, e))
+
+
+# Make a request with TLD extract to cache the Public Suffix List (PLS)
+# See: https://github.com/john-kurkowski/tldextract#note-about-caching
+@pytest.fixture(autouse=True, scope="session")
+def cache_tld_extract():
+    with use_cassette(
+        os.path.join(
+            os.path.dirname(__file__),
+            "casettes",
+            "conftest",
+            "cache_tld_extract.yaml",
+        ),
+        record_mode="once",
+    ):
+        tldextract.extract("example.com")
 
 
 @pytest.fixture(scope="session")
