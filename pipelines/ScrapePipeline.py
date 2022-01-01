@@ -1,4 +1,5 @@
 import os
+import logging
 import tempfile
 from multiprocessing import Process
 import csv
@@ -75,6 +76,10 @@ class ScrapePipeline:
                 "FEEDS": {f"{csv_path}": {"format": "csv"}},
             }
         )
+        # Filter out error messages related to max download size being exceeded
+        for log in ["scrapy.core.scraper", "scrapy.core.downloader.handlers.http11"]:
+            logging.getLogger(log).addFilter(DownloadSizeFilter())
+
         process.crawl(
             ScrapeSpider,
             start_urls=[f"http://{domain}"],
@@ -83,3 +88,13 @@ class ScrapePipeline:
         )
         process.start()
         process.join()
+
+
+class DownloadSizeFilter(logging.Filter):
+    def filter(self, record):
+        # Filter out errors related to max download size being exceeded
+        msg = record.getMessage()
+        if msg.startswith("Error downloading") or msg.startswith("Cancelling download"):
+            return False
+
+        return True
