@@ -1,4 +1,3 @@
-import os
 import logging
 import tempfile
 from multiprocessing import Process
@@ -10,7 +9,10 @@ from models import Website, Webpage
 
 
 class ScrapePipeline:
+    # Limit scraping to first 100 pages
     MAX_PAGES = 100
+    # Do not scrape pages bigger than 10MB
+    MAX_PAGE_SIZE = int(10 * 1e6)
 
     @classmethod
     def process(cls, domain):
@@ -19,19 +21,14 @@ class ScrapePipeline:
         # the very end. This allows us to wrap the database insert/updates into
         # a single transaction and ensure that our database remains in a good
         # state, even if this pipeline crashes at some point.
-        with tempfile.TemporaryDirectory() as tmp_dir:
-            # URLs are exported to the following CSV files and later transferred
-            # to the database
-            csv_path = os.path.join(tmp_dir, "pages.csv")
-
+        with tempfile.NamedTemporaryFile(mode="r") as csv_file:
             # Run crawler inside a multiprocess. Otherwise, scrapy will complain
             # about not being restartable
             p = Process(
                 target=ScrapePipeline.scrape,
                 kwargs={
                     "domain": domain,
-                    "csv_path": csv_path,
-                    "asset_path": tmp_dir,
+                    "csv_path": csv_file.name,
                 },
             )
             p.start()
@@ -43,37 +40,39 @@ class ScrapePipeline:
 
                 # Reset attributes for all pages of this website
                 Webpage.query.filter(Webpage.website_id == website.id).update(
-                    {"depth": None, "file_name": None}
+                    {"depth": None, "content": None}
                 )
 
-                # Read scraped URLs and update the database
-                with open(csv_path, "r") as file:
-                    reader = csv.DictReader(file)
+                # Increase the CSV field size limit to the allowed maximum
+                # page size to avoid field size error.
+                # See: https://stackoverflow.com/a/15063941/6451879
+                csv.field_size_limit(ScrapePipeline.MAX_PAGE_SIZE)
+                reader = csv.DictReader(csv_file)
 
-                    # Write each webpage into the database
-                    page_count = 0
-                    for row in reader:
-                        webpage = Webpage.find_by_or_create(
-                            website=website, url=row["url"]
-                        )
-                        with open(row["asset_path"], "r") as f:
-                            webpage.update(depth=row["depth"], content=f.read())
+                # Write each webpage into the database
+                page_count = 0
+                for row in reader:
+                    webpage = Webpage.find_by_or_create(website=website, url=row["url"])
+                    webpage.update(depth=row["depth"], content=row["content"])
 
-                        # Scrapy will not exactly observe the MAX_PAGES limit
-                        # because it will finish any pending requests that it
-                        # has already started. To get the desired maximum, we
-                        # stop processing pages after the maximum is reached.
-                        page_count += 1
-                        if page_count >= cls.MAX_PAGES:
-                            break
+                    # Scrapy will not exactly observe the MAX_PAGES limit
+                    # because it will finish any pending requests that it
+                    # has already started. To get the desired maximum, we
+                    # stop processing pages after the maximum is reached.
+                    page_count += 1
+                    if page_count >= cls.MAX_PAGES:
+                        break
 
     @staticmethod
-    def scrape(domain, csv_path, asset_path):
+    def scrape(domain, csv_path):
         process = CrawlerProcess(
             settings={
                 **get_project_settings().copy_to_dict(),
                 "CLOSESPIDER_ITEMCOUNT": ScrapePipeline.MAX_PAGES,
+                "DOWNLOAD_MAXSIZE": ScrapePipeline.MAX_PAGE_SIZE,
                 "FEEDS": {f"{csv_path}": {"format": "csv"}},
+                # Disable warnings related to page size
+                "DOWNLOAD_WARNSIZE": 0,
             }
         )
         # Filter out error messages related to max download size being exceeded
@@ -84,7 +83,6 @@ class ScrapePipeline:
             ScrapeSpider,
             start_urls=[f"http://{domain}"],
             allowed_domains=[domain],
-            asset_path=asset_path,
         )
         process.start()
         process.join()

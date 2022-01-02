@@ -52,9 +52,9 @@ def test_it_retains_existing_pages_in_the_database():
         website=website,
         url="https://17ziele.de/my-page.html",
         depth=5,
-        file_name="abcdef",
+        content="abcdef",
     )
     ScrapePipeline.process("17ziele.de")
     assert len(website.webpages) == 6
     assert webpage.reload().depth == None
-    assert webpage.file_name == None
+    assert webpage.content == None

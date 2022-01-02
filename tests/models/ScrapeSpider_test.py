@@ -1,4 +1,3 @@
-import tempfile
 import requests
 import pytest
 from scrapy.http import TextResponse, Request
@@ -15,12 +14,7 @@ def test_it_does_not_error_on_non_text_response():
         body=requests.get(url).content, url=url, request=Request(url=url)
     )
 
-    with tempfile.TemporaryDirectory() as tmp_dir:
-        results = list(
-            ScrapeSpider(asset_path=tmp_dir, allowed_domains=["17ziele.de"]).parse(
-                scrapy_response
-            )
-        )
+    results = list(ScrapeSpider(allowed_domains=["17ziele.de"]).parse(scrapy_response))
 
     # No error raised and no results returned
     assert len(results) == 0

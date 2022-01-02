@@ -100,9 +100,3 @@ SCHEDULER_MEMORY_QUEUE = "scrapy.squeues.FifoMemoryQueue"
 # HTTPCACHE_DIR = 'httpcache'
 # HTTPCACHE_IGNORE_HTTP_CODES = []
 # HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
-
-# Disable downloads of files greater than 10MB
-DOWNLOAD_MAXSIZE = 10 * 1e6
-
-# Disable download size warnings
-DOWNLOAD_WARNSIZE = 0
