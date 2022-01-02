@@ -52,6 +52,9 @@ COPY poetry.lock pyproject.toml ./
 RUN --mount=type=cache,target=/builder/.venv poetry install --no-dev --remove-untracked
 RUN --mount=type=cache,target=/builder/.venv cp -rT $VENV_PATH $VENV_PATH-prod
 
+# Install required library for python-magic
+RUN apt-get install libmagic1
+
 # Install dev dependencies as well
 FROM builder as builder-dev
 RUN --mount=type=cache,target=/builder/.venv,id=dev cp -rT $VENV_PATH-prod $VENV_PATH

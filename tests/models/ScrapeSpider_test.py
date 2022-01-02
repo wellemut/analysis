@@ -1,7 +1,7 @@
 import tempfile
 import requests
 import pytest
-from scrapy.http import Response, Request
+from scrapy.http import TextResponse, Request
 from scrape.ScrapeSpider import ScrapeSpider
 
 
@@ -11,7 +11,7 @@ def test_it_does_not_error_on_non_text_response():
 
     # Forge a scrapy response to test
     # Request is necessary for the response.meta to work
-    scrapy_response = Response(
+    scrapy_response = TextResponse(
         body=requests.get(url).content, url=url, request=Request(url=url)
     )
 
