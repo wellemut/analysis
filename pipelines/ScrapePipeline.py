@@ -1,3 +1,4 @@
+import itertools
 import logging
 import tempfile
 from multiprocessing import Process
@@ -49,19 +50,14 @@ class ScrapePipeline:
                 csv.field_size_limit(ScrapePipeline.MAX_PAGE_SIZE)
                 reader = csv.DictReader(csv_file)
 
-                # Write each webpage into the database
-                page_count = 0
-                for row in reader:
+                # Scrapy will not exactly observe the MAX_PAGES limit
+                # because it will finish any pending requests that it
+                # has already started. To get the desired maximum, we
+                # stop processing pages after the maximum is reached.
+                for row in itertools.islice(reader, cls.MAX_PAGES):
+                    # Write each webpage into the database
                     webpage = Webpage.find_by_or_create(website=website, url=row["url"])
                     webpage.update(depth=row["depth"], content=row["content"])
-
-                    # Scrapy will not exactly observe the MAX_PAGES limit
-                    # because it will finish any pending requests that it
-                    # has already started. To get the desired maximum, we
-                    # stop processing pages after the maximum is reached.
-                    page_count += 1
-                    if page_count >= cls.MAX_PAGES:
-                        break
 
     @staticmethod
     def scrape(domain, csv_path):
