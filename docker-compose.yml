@@ -6,7 +6,6 @@ services:
       target: development
     volumes:
       - ./:/app
-      - application_data:/var/lib/globalgoalsdirectory/
     ports:
       - "8000:80"
     environment:
@@ -54,7 +53,6 @@ services:
 
 volumes:
   postgres_data:
-  application_data:
 
 networks:
   test:

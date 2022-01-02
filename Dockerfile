@@ -70,7 +70,6 @@ COPY --from=builder-dev $VENV_PATH-dev $VENV_PATH
 
 # Switch to non-root user (for generating migrations inside container)
 RUN useradd -m -u 1000 -o -s /bin/bash user
-RUN chown -R user:user /var/lib/globalgoalsdirectory
 USER user
 
 WORKDIR /app
