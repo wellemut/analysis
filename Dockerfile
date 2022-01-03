@@ -39,11 +39,19 @@ ENV PATH="$POETRY_HOME/bin:$VENV_PATH/bin:$PATH"
 # Set up /var/lib application directory
 RUN mkdir /var/lib/globalgoalsdirectory
 
+# Install required library for python-magic
+RUN apt-get install libmagic1
+
+# Install language identification model for fasttext (~ 126 MB)
+# See: https://fasttext.cc/docs/en/language-identification.html
+RUN curl --create-dirs -o /var/lib/globalgoalsdirectory/lid.176.bin https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.bin
+
 # Install poetry and dependencies
 FROM base as builder
 
 # Install poetry - respects $POETRY_VERSION, etc...
 RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
+
 
 # Copy poetry.lock and pyproject.toml
 WORKDIR $BUILDER_PATH
@@ -52,8 +60,6 @@ COPY poetry.lock pyproject.toml ./
 RUN --mount=type=cache,target=/builder/.venv poetry install --no-dev --remove-untracked
 RUN --mount=type=cache,target=/builder/.venv cp -rT $VENV_PATH $VENV_PATH-prod
 
-# Install required library for python-magic
-RUN apt-get install libmagic1
 
 # Install dev dependencies as well
 FROM builder as builder-dev

@@ -23,6 +23,8 @@ Development Goals using natural language processing (NLP).
     - [Managing migrations](#managing-migrations)
     - [Accessing the database](#accessing-the-database)
   - [Testing](#testing)
+  - [References](#references)
+    - [Language Detection](#language-detection)
 
 ## Deployment
 
@@ -293,3 +295,20 @@ $ docker-compose logs -f api-test
 
 The container is started with `pytest-watch`, which automatically reruns all
 tests when a test is modified, added, or removed.
+
+## References
+
+### Language Detection
+
+Language detection is provided via the `fasttext` library.
+The pre-trained model is published under a
+[CC-BY-SA 3.0 license](https://creativecommons.org/licenses/by-sa/3.0/).
+Refer to
+[https://fasttext.cc/docs/en/language-identification.html](https://fasttext.cc/docs/en/language-identification.html)
+for more information.
+
+**Relevant papers:**
+
+- A. Joulin, E. Grave, P. Bojanowski, T. Mikolov, Bag of Tricks for Efficient Text Classification
+
+- A. Joulin, E. Grave, P. Bojanowski, M. Douze, H. Jégou, T. Mikolov, FastText.zip: Compressing text classification models

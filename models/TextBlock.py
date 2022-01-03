@@ -9,6 +9,7 @@ class TextBlock(models.BaseModel):
     hash = Column(String, index=True, unique=True, nullable=False)
     word_count = Column(Integer, nullable=False)
     content = Column(String, nullable=False)
+    language = Column(String, nullable=True)
 
     webpage_text_blocks = relationship("WebpageTextBlock", back_populates="text_block")
 
