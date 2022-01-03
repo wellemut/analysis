@@ -59,16 +59,21 @@ class ScrapePipeline:
                     webpage = Webpage.find_by_or_create(website=website, url=row["url"])
                     webpage.update(depth=row["depth"], content=row["content"])
 
-    @staticmethod
-    def scrape(domain, csv_path):
+    @classmethod
+    def get_scrape_settings(cls):
+        settings = get_project_settings().copy()
+        settings.set("CLOSESPIDER_ITEMCOUNT", cls.MAX_PAGES)
+        settings.set("DOWNLOAD_MAXSIZE", cls.MAX_PAGE_SIZE)
+        # Disable warnings related to page size
+        settings.set("DOWNLOAD_WARNSIZE", 0)
+        return settings
+
+    @classmethod
+    def scrape(cls, domain, csv_path):
         process = CrawlerProcess(
             settings={
-                **get_project_settings().copy_to_dict(),
-                "CLOSESPIDER_ITEMCOUNT": ScrapePipeline.MAX_PAGES,
-                "DOWNLOAD_MAXSIZE": ScrapePipeline.MAX_PAGE_SIZE,
+                **cls.get_scrape_settings().copy_to_dict(),
                 "FEEDS": {f"{csv_path}": {"format": "csv"}},
-                # Disable warnings related to page size
-                "DOWNLOAD_WARNSIZE": 0,
             }
         )
         # Filter out error messages related to max download size being exceeded

@@ -1,8 +1,13 @@
 import os
 import pytest
-from scrapy.utils.project import get_project_settings
-from pipelines.ScrapePipeline import ScrapePipeline
+from pipelines import ScrapePipeline
 from models import Website, Webpage
+
+# Scrape max 5 pages per domain to speed up the testing
+@pytest.fixture(autouse=True)
+def limit_to_5_pages(mocker):
+    mocker.patch.object(ScrapePipeline, "MAX_PAGES", 5)
+    yield
 
 
 @pytest.fixture(autouse=True)
@@ -22,20 +27,14 @@ def cache_scrapy_requests(mocker):
         "HTTPCACHE_IGNORE_MISSING": True,
     }
     # Combine default and custom settings into a new test_settings dict
-    scrapy_settings = get_project_settings().copy()
+    scrapy_settings = ScrapePipeline().get_scrape_settings().copy()
     for key, value in cache_settings.items():
         scrapy_settings.set(key, value)
-    mocker.patch(
-        "pipelines.ScrapePipeline.get_project_settings",
+    mocker.patch.object(
+        ScrapePipeline,
+        "get_scrape_settings",
         return_value=scrapy_settings,
     )
-    yield
-
-
-# Scrape max 5 pages per domain to speed up the testing
-@pytest.fixture(autouse=True)
-def limit_to_5_pages(mocker):
-    mocker.patch.object(ScrapePipeline, "MAX_PAGES", 5)
     yield
 
 
