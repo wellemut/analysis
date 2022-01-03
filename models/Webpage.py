@@ -14,6 +14,7 @@ class Webpage(models.BaseModel):
     website = relationship(
         "Website", back_populates="webpages", foreign_keys=website_id
     )
+    webpage_text_blocks = relationship("WebpageTextBlock", back_populates="webpage")
 
     # Create a webpage from the provided URL, automatically finding the
     # associated website (or creating it, if it does not exist)

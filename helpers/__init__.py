@@ -1,1 +1,3 @@
+from .squish import squish
+from .extract_texts_from_html import extract_texts_from_html
 from .get_database_session import get_database_session
