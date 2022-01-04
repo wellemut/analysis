@@ -1,23 +1,5 @@
 import pytest
-from models import TextBlock
-
-
-def describe_find_by_content_or_create():
-    def it_creates_new_text_block_with_hash_and_word_count():
-        block = TextBlock.find_by_content_or_create("hello world!")
-        assert block.id != None
-        assert (
-            block.hash
-            == "7509e5bda0c762d2bac7f90d758b5b2263fa01ccbc542ab5e3df163be08e6ca9"
-        )
-        assert block.word_count == 2
-        assert TextBlock.query.count() == 1
-
-    def it_returns_existing_text_block_if_block_with_same_hash_exists():
-        block = TextBlock.find_by_content_or_create("hello world!")
-        block2 = TextBlock.find_by_content_or_create("hello world!")
-        assert block.id == block2.id
-        assert TextBlock.query.count() == 1
+from models import TextBlock, Website
 
 
 def describe_content_to_hash():
@@ -37,6 +19,33 @@ def describe_count_words():
 
 
 def describe_create():
+    def it_cannot_create_two_identical_text_blocks_for_the_same_website():
+        website = Website.create(domain="example.com")
+        TextBlock.create(
+            website=website, hash="abc", word_count=2, content="hello world!"
+        )
+        with pytest.raises(
+            Exception, match="duplicate key value violates unique constraint"
+        ):
+            TextBlock.create(
+                website=website, hash="abc", word_count=2, content="hello world!"
+            )
+
+    def it_can_create_identical_text_blocks_for_different_websites():
+        TextBlock.create(
+            website=Website.create(domain="example.com"),
+            hash="abc",
+            word_count=2,
+            content="hello world!",
+        )
+        TextBlock.create(
+            website=Website.create(domain="test.com"),
+            hash="abc",
+            word_count=2,
+            content="hello world!",
+        )
+        assert TextBlock.query.count() == 2
+
     def it_cannot_be_created_without_content_or_hash_or_word_count():
         with pytest.raises(Exception, match='null value in column "word_count"'):
             TextBlock.create(content="abc", hash="abc")

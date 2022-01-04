@@ -54,11 +54,16 @@ def test_it_ignores_blocklisted_urls():
 def test_it_removes_existing_text_block_associations_for_the_website():
     webpage = Webpage.create_from_url("https://www.17ziele.de")
     webpage.update(content="<body>hello world</body>")
-    block = TextBlock.find_by_content_or_create("xyz")
+    block = TextBlock.create(
+        website=webpage.website, content="xyz", hash="abc", word_count=1
+    )
     WebpageTextBlock.create(webpage=webpage, text_block=block, tag="p")
 
     other_webpage = Webpage.create_from_url("https://example.com")
-    WebpageTextBlock.create(webpage=other_webpage, text_block=block, tag="p")
+    other_block = TextBlock.create(
+        website=other_webpage.website, content="xyz", hash="abc", word_count=1
+    )
+    WebpageTextBlock.create(webpage=other_webpage, text_block=other_block, tag="p")
 
     ExtractPipeline.process("17ziele.de")
 

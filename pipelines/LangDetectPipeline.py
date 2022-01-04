@@ -1,7 +1,7 @@
 import os
 from sqlalchemy.orm import load_only
 import fasttext
-from models import TextBlock, Webpage, Website, WebpageTextBlock
+from models import TextBlock, Website
 from helpers import batches, suppress_stdout_and_stderr
 from config import APPLICATION_DATA_PATH
 
@@ -19,28 +19,25 @@ class LangDetectPipeline:
     def process(cls, domain):
         website = Website.find_by(domain=domain)
 
-        # Get IDs for all text blocks that belong to this domain and that do not
-        # yet have their language identified
+        # Get IDs for all text blocks that belong to this domain
         blocks = (
-            TextBlock.query.join(WebpageTextBlock, Webpage, Website)
-            .where(Website.id == website.id)
-            .where(TextBlock.language == None)
+            TextBlock.query.where(TextBlock.website_id == website.id)
             .options(load_only("id"))
             .all()
         )
         block_ids = [block.id for block in blocks]
 
         # Operate on text blocks in batches for better performance
-        for ids in batches(block_ids, 100):
-            # Load the blocks in this batch
-            blocks = TextBlock.query.where(TextBlock.id.in_(ids)).all()
+        with TextBlock.session.begin():
+            for ids in batches(block_ids, 100):
+                # Load the blocks in this batch
+                blocks = TextBlock.query.where(TextBlock.id.in_(ids)).all()
 
-            # Identify language for each block
-            for block in blocks:
-                block.language = cls.detect_language(block.content)
+                # Identify language for each block
+                for block in blocks:
+                    block.language = cls.detect_language(block.content)
 
-            # Save the updated text blocks
-            with TextBlock.session.begin():
+                # Save the updated text blocks
                 for block in blocks:
                     block.save()
 

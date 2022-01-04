@@ -69,10 +69,6 @@ class ExtractPipeline:
 
     @classmethod
     def process(cls, domain):
-        # Store new webpage text blocks (associations between webpages and
-        # text blocks)
-        webpage_text_blocks = []
-
         # Get IDs for all webpages that belong to this domain and that have some
         # content
         website = Website.find_by(domain=domain)
@@ -84,36 +80,45 @@ class ExtractPipeline:
         )
         webpage_ids = [page.id for page in webpages]
 
-        # For each page, ...
-        for id in webpage_ids:
-            webpage = Webpage.find(id)
+        with website.session.begin():
+            # Clear existing text blocks and text block associations
+            all_webpages = (
+                Webpage.query.where(Webpage.website_id == website.id)
+                .options(load_only("id"))
+                .all()
+            )
+            WebpageTextBlock.query.where(
+                WebpageTextBlock.webpage_id.in_([page.id for page in all_webpages])
+            ).delete()
+            TextBlock.query.where(TextBlock.website_id == website.id).delete()
 
-            # ... skip if the URL is blocklisted (e.g., privacy policy or news)
-            if cls.is_url_blocklisted(webpage.url):
-                continue
+            # For each page, ...
+            for id in webpage_ids:
+                webpage = Webpage.find(id)
 
-            # ... eotherwise, extract text blocks from HTML content
-            for text in extract_texts_from_html(webpage.content):
+                # ... skip if the URL is blocklisted (e.g., privacy policy or news)
+                if cls.is_url_blocklisted(webpage.url):
+                    continue
 
-                # Find or create associated text block
-                block = TextBlock.find_by_content_or_create(content=text["content"])
+                # ... eotherwise, extract text blocks from HTML content
+                for text in extract_texts_from_html(webpage.content):
 
-                # Set up text block association
-                webpage_text_blocks.append(
-                    WebpageTextBlock().fill(
+                    # Find or create associated text block
+                    content = text["content"]
+                    hash = TextBlock.text_to_hash(content)
+                    block = TextBlock.find_by(website_id=website.id, hash=hash)
+                    if not block:
+                        block = TextBlock.create(
+                            website=website,
+                            hash=hash,
+                            content=content,
+                            word_count=TextBlock.count_words(content),
+                        )
+
+                    # Set up text block association
+                    WebpageTextBlock.create(
                         webpage_id=id, text_block_id=block.id, tag=text["tag"]
                     )
-                )
-
-        with website.session.begin():
-            # Clear existing text block associations
-            WebpageTextBlock.query.where(
-                WebpageTextBlock.webpage_id.in_(webpage_ids)
-            ).delete()
-
-            # Save new text block associations
-            for webpage_text_block in webpage_text_blocks:
-                webpage_text_block.save()
 
     @classmethod
     def is_url_blocklisted(cls, url):

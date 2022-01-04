@@ -8,6 +8,7 @@ class Website(models.BaseModel):
     domain = Column(String, nullable=False, index=True, unique=True)
 
     webpages = relationship("Webpage", back_populates="website")
+    text_blocks = relationship("TextBlock", back_populates="website")
 
     @property
     def homepage(self):

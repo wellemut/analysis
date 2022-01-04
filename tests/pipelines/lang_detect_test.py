@@ -4,11 +4,17 @@ from models import Webpage, TextBlock, WebpageTextBlock
 
 def test_it_identifies_language_of_text_blocks():
     page = Webpage.create_from_url("https://www.17ziele.de")
-    block1 = TextBlock.find_by_content_or_create(
-        "Die 17 Ziele sind von allen Ländern verabschiedet worden."
+    block1 = TextBlock.create(
+        website=page.website,
+        hash="abc",
+        word_count=1,
+        content="Die 17 Ziele sind von allen Ländern verabschiedet worden.",
     )
-    block2 = TextBlock.find_by_content_or_create(
-        "By 2030, all countries need to work to eliminate extreme poverty."
+    block2 = TextBlock.create(
+        website=page.website,
+        hash="def",
+        word_count=1,
+        content="By 2030, all countries need to work to eliminate extreme poverty.",
     )
     WebpageTextBlock.create(webpage=page, text_block=block1, tag="p")
     WebpageTextBlock.create(webpage=page, text_block=block2, tag="p")

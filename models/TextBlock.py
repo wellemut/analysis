@@ -1,16 +1,21 @@
 from hashlib import sha256
-from sqlalchemy import Column, Integer, String
+from sqlalchemy import Column, ForeignKey, Integer, String, UniqueConstraint
 from sqlalchemy.orm import relationship
 import models
 
 
 class TextBlock(models.BaseModel):
     id = Column(Integer, primary_key=True)
-    hash = Column(String, index=True, unique=True, nullable=False)
+    website_id = Column(Integer, ForeignKey("website.id"), nullable=False)
+    hash = Column(String, nullable=False)
     word_count = Column(Integer, nullable=False)
     content = Column(String, nullable=False)
     language = Column(String, nullable=True)
+    __table_args__ = (UniqueConstraint("website_id", "hash"),)
 
+    website = relationship(
+        "Website", back_populates="text_blocks", foreign_keys=website_id
+    )
     webpage_text_blocks = relationship("WebpageTextBlock", back_populates="text_block")
 
     @classmethod
