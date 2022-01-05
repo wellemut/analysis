@@ -6,6 +6,8 @@ services:
       target: development
     volumes:
       - ./:/app
+      # Prevent .git folder from being mounted into container
+      - /app/.git
     ports:
       - "8000:80"
     environment:
