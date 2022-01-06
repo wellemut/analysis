@@ -157,7 +157,14 @@ def create_en_normalizer(nlp, name):
     british_to_american_english = {}
     with open(os.path.join("data", "british_to_american_spellings.json")) as file:
         british_to_american_english = json.load(file)
-    return TokenNormalizer(british_to_american_english)
+    normalization_dict = {
+        **british_to_american_english,
+        # Contractions of 'will' are not correctly expanded at the moment. This
+        # will be fixed in Spacy v3.3. For now, we fix this manually.
+        # See: https://github.com/explosion/spaCy/issues/9899#issuecomment-996719820
+        "'ll": "will",
+    }
+    return TokenNormalizer(normalization_dict)
 
 
 class TokenNormalizer:

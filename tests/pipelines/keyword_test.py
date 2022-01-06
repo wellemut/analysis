@@ -67,6 +67,17 @@ def describe_get_nlp():
         lemmas = [token.lemma_ for token in doc]
         assert lemmas == "I optimize five meter of program in ten installment".split()
 
+    def it_expands_contractions_of_will():
+        # There is a bug in Spacy where contractions of will (e.g., he'll) are
+        # not correctly expanded to 'will' and instead remain as "'ll". This
+        # will be fixed in Spacy 3.3 according to
+        # https://github.com/explosion/spaCy/issues/9899
+        # For now, we manually replace 'll lemmas with will
+        nlp = KeywordPipeline.get_nlp("en")
+        doc = nlp("I'll he'll she'll we'll")
+        lemmas = [token.lemma_ for token in doc]
+        assert lemmas == "I will he will she will we will".split()
+
 
 def describe_find_keywords():
     def it_matches_poverty():
