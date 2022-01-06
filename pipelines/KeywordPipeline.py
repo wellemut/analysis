@@ -2,10 +2,13 @@ import os
 from itertools import groupby
 from functools import cache
 import csv
+import json
 from sqlalchemy.orm import load_only
 from sqlalchemy_mixins.utils import classproperty
 import spacy
 from spacy.matcher import PhraseMatcher
+from spacy.language import Language
+from spacy.lang.en import English
 from models import Keyword, Website, TextBlock
 from helpers import batches
 
@@ -126,7 +129,7 @@ class KeywordPipeline:
     @classmethod
     @cache
     def get_nlp(cls, language):
-        return spacy.load(
+        nlp = spacy.load(
             cls.NLP_MODELS[language],
             # Disable all pipelines except for lemmatizer.
             # Lemmatizer requires tagger and attribute_ruler, so these are
@@ -135,3 +138,33 @@ class KeywordPipeline:
             # See: https://spacy.io/api/lemmatizer
             exclude=["parser", "senter", "ner"],
         )
+        nlp.add_pipe("lemma_normalizer")
+
+        return nlp
+
+
+# Do nothing by default
+@Language.component("lemma_normalizer")
+def default_normalizer(doc):
+    return doc
+
+
+@English.factory("lemma_normalizer")
+def create_en_normalizer(nlp, name):
+    # Standardize all lemmas from british to american spelling using the
+    # British-to-American dictionary available here:
+    # https://raw.githubusercontent.com/hyperreality/American-British-English-Translator/master/data/british_spellings.json
+    british_to_american_english = {}
+    with open(os.path.join("data", "british_to_american_spellings.json")) as file:
+        british_to_american_english = json.load(file)
+    return TokenNormalizer(british_to_american_english)
+
+
+class TokenNormalizer:
+    def __init__(self, norm_table):
+        self.norm_table = norm_table
+
+    def __call__(self, doc):
+        for token in doc:
+            token.lemma_ = self.norm_table.get(token.lemma_, token.lemma_)
+        return doc
