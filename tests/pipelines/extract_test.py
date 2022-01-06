@@ -1,6 +1,6 @@
 from models.WebpageTextBlock import WebpageTextBlock
 from pipelines import ExtractPipeline
-from models import Webpage, TextBlock
+from models import Webpage, TextBlock, Keyword
 
 
 def test_it_extracts_text_blocks_from_webpages():
@@ -51,13 +51,14 @@ def test_it_ignores_blocklisted_urls():
     assert TextBlock.query.count() == 0
 
 
-def test_it_removes_existing_text_block_associations_for_the_website():
+def test_it_removes_existing_text_block_associations_and_keywords_for_the_website():
     webpage = Webpage.create_from_url("https://www.17ziele.de")
     webpage.update(content="<body>hello world</body>")
     block = TextBlock.create(
         website=webpage.website, content="xyz", hash="abc", word_count=1
     )
     WebpageTextBlock.create(webpage=webpage, text_block=block, tag="p")
+    Keyword.create(text_block=block, keyword="a", sdg=1, start=0, end=1)
 
     other_webpage = Webpage.create_from_url("https://example.com")
     other_block = TextBlock.create(

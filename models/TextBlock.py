@@ -17,6 +17,7 @@ class TextBlock(models.BaseModel):
         "Website", back_populates="text_blocks", foreign_keys=website_id
     )
     webpage_text_blocks = relationship("WebpageTextBlock", back_populates="text_block")
+    keywords = relationship("Keyword", back_populates="text_block")
 
     @classmethod
     def find_by_content_or_create(cls, content):

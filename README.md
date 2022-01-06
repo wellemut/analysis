@@ -25,6 +25,7 @@ Development Goals using natural language processing (NLP).
   - [Testing](#testing)
   - [References](#references)
     - [Language Detection](#language-detection)
+    - [SDG Keywords](#sdg-keywords)
 
 ## Deployment
 
@@ -312,3 +313,17 @@ for more information.
 - A. Joulin, E. Grave, P. Bojanowski, T. Mikolov, Bag of Tricks for Efficient Text Classification
 
 - A. Joulin, E. Grave, P. Bojanowski, M. Douze, H. Jégou, T. Mikolov, FastText.zip: Compressing text classification models
+
+### SDG Keywords
+
+English SDG keywords are based on
+[Nuria Bautista's SDG ontology](https://figshare.com/articles/dataset/SDG_ontology/11106113/1).
+The ontology is published under a
+[CC-BY 4.0 license](https://creativecommons.org/licenses/by/4.0/).
+Refer to
+[https://figshare.com/articles/dataset/SDG_ontology/11106113/1](https://figshare.com/articles/dataset/SDG_ontology/11106113/1)
+for more information.
+
+**Relevant papers:**
+
+- Bautista-Puig, N.; Mauleón E. (2019). Unveiling the path towards sustainability: is there a research interest on sustainable goals? In the 17th International Conference on Scientometrics & Informetrics (ISSI 2019), Rome (Italy), Volume II, ISBN 978-88-3381-118-5, p.2770-2771.
