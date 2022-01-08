@@ -36,7 +36,7 @@ class TextCollection:
 
 # Returns texts from an HTML document
 def extract_texts_from_html(html):
-    soup = BeautifulSoup(html, "html.parser")
+    soup = BeautifulSoup(html, "lxml")
     texts = TextCollection()
 
     # Ignore all content in script tags
