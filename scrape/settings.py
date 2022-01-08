@@ -49,6 +49,15 @@ RETRY_TIMES = 1
 # See: https://docs.scrapy.org/en/latest/topics/broad-crawls.html#disable-cookies
 COOKIES_ENABLED = False
 
+# Overwrite the OffsiteMiddleware to only follow links that are on the same root
+# or www domain (e.g., example.com and www.example.com), but no links to
+# subdomains (e.g., subdomain.example.com)
+# See: https://github.com/scrapy/scrapy/issues/3412
+SPIDER_MIDDLEWARES = {
+    "scrapy.spidermiddlewares.offsite.OffsiteMiddleware": None,
+    "scrape.OffsiteMiddleware.OffsiteMiddleware": 500,
+}
+
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs

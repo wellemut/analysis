@@ -18,7 +18,11 @@ class ScrapeSpider(scrapy.Spider):
     # Docs: https://docs.scrapy.org/en/latest/topics/link-extractors.html
     def extract_links(self, response):
         return LinkExtractor(
-            allow_domains=self.allowed_domains, canonicalize=True
+            # Only extract links matching root domain or www-domain, but not
+            # any other subdomains
+            allow=fr'^.+\:\/\/(www.)?({"|".join(self.allowed_domains)})',
+            allow_domains=self.allowed_domains,
+            canonicalize=True,
         ).extract_links(response)
 
     def parse(self, response):
