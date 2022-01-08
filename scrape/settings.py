@@ -36,6 +36,19 @@ DEPTH_PRIORITY = 1
 SCHEDULER_DISK_QUEUE = "scrapy.squeues.PickleFifoDiskQueue"
 SCHEDULER_MEMORY_QUEUE = "scrapy.squeues.FifoMemoryQueue"
 
+# Abort page load after 15 seconds, if not complete (defaults to 3 minutes)
+# See: https://docs.scrapy.org/en/latest/topics/broad-crawls.html#reduce-download-timeout
+DOWNLOAD_TIMEOUT = 15
+
+# Retry page load one time after failure, for two attemps in total (original
+# attempt plus one retry).
+# See: https://docs.scrapy.org/en/latest/topics/broad-crawls.html#disable-retries
+RETRY_TIMES = 1
+
+# Disable cookies, as recommended by Scrapy (enabled by default)
+# See: https://docs.scrapy.org/en/latest/topics/broad-crawls.html#disable-cookies
+COOKIES_ENABLED = False
+
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
@@ -43,9 +56,6 @@ SCHEDULER_MEMORY_QUEUE = "scrapy.squeues.FifoMemoryQueue"
 # The download delay setting will honor only one of:
 # CONCURRENT_REQUESTS_PER_DOMAIN = 16
 # CONCURRENT_REQUESTS_PER_IP = 16
-
-# Disable cookies (enabled by default)
-# COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 # TELNETCONSOLE_ENABLED = False
