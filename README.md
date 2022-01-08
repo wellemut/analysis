@@ -22,6 +22,7 @@ Development Goals using natural language processing (NLP).
     - [Managing dependencies](#managing-dependencies)
     - [Managing migrations](#managing-migrations)
     - [Accessing the database](#accessing-the-database)
+    - [Backing up the database](#backing-up-the-database)
   - [Testing](#testing)
   - [References](#references)
     - [Language Detection](#language-detection)
@@ -267,14 +268,28 @@ when the container is destroyed/recreated.
 You can access the database by entering the database container:
 
 ```
-$ docker-compose exec database bash
-$ psql -U postgres -d analysisdb
+$ docker-compose exec database psql -U postgres -d analysisdb
 ```
 
 From there, you can run arbitrary SQL queries:
 
 ```
 SELECT * FROM websites;
+```
+
+### Backing up the database
+
+You can back up the development database by running:
+
+```
+$ docker-compose exec -T database pg_dumpall -c -U postgres | gzip > dump_`date %Y-%m-+%d"_"%H_%M_%S`.sql.gz
+```
+
+This will create a compressed SQL dump of the database in the repository. It can
+be restored with:
+
+```
+$ gzip --stdout -d dump_YYYY-mm-dd_HH_MM_SS.sql.gz | docker-compose exec -T database psql -U postgres
 ```
 
 ## Testing
