@@ -13,7 +13,18 @@ class ScrapeSpider(scrapy.Spider):
     # See: https://hexfox.com/p/how-to-filter-out-duplicate-urls-from-scrapys-start-urls/
     def start_requests(self):
         for url in self.start_urls:
-            yield scrapy.Request(url, errback=self.on_error)
+            # If start URL fails, attempt the following fallback URLs in order
+            fallback_urls = [
+                url.replace("https://", "https://www.", 1),
+                url.replace("https://", "http://", 1),
+                url.replace("https://", "http://www.", 1),
+            ]
+            yield scrapy.Request(
+                url,
+                callback=self.parse,
+                errback=self.on_error,
+                cb_kwargs=dict(fallback_urls=fallback_urls),
+            )
 
     # Extract all links on the page
     # Docs: https://docs.scrapy.org/en/latest/topics/link-extractors.html
@@ -26,7 +37,7 @@ class ScrapeSpider(scrapy.Spider):
             canonicalize=True,
         ).extract_links(response)
 
-    def parse(self, response, depth=0):
+    def parse(self, response, depth=0, fallback_urls=None):
         # Get response metadata
         status_code = response.status
         headers = response.headers.to_unicode_dict()
@@ -74,9 +85,21 @@ class ScrapeSpider(scrapy.Spider):
 
     # Handle a scraping error
     def on_error(self, failure):
+        depth = failure.request.cb_kwargs.get("depth", 0)
         yield {
             "url": failure.request.url,
-            "depth": failure.request.cb_kwargs.get("depth", 0),
+            "depth": depth,
             "status_code": 999,
             "content": repr(failure),
         }
+
+        # Attempt one of the fallback URLs (see start_requests)
+        fallback_urls = failure.request.cb_kwargs.get("fallback_urls", [])
+        if len(fallback_urls):
+            yield scrapy.Request(
+                # Use the first fallback URL from the list
+                fallback_urls.pop(0),
+                callback=self.parse,
+                errback=self.on_error,
+                cb_kwargs=dict(fallback_urls=fallback_urls),
+            )

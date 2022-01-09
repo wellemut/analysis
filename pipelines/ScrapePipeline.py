@@ -138,7 +138,7 @@ class ScrapePipeline:
 
         process.crawl(
             ScrapeSpider,
-            start_urls=[f"http://{domain}"],
+            start_urls=[f"https://{domain}"],
             allowed_domains=[domain],
         )
         process.start()

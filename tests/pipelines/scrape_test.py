@@ -54,9 +54,22 @@ def test_it_scrapes_pages_of_domain():
     assert website.homepage.mime_type == "HTML document, UTF-8 Unicode text"
     assert website.homepage.content.find("©2021 ENGAGEMENT GLOBAL") > 0
 
-    # It stores redirect
-    redirect = Webpage.find_by(url="http://17ziele.de")
-    assert redirect.status_code == 301
+
+def test_it_falls_back_to_www_and_non_https_when_it_cannot_find_start_url():
+    website = Website.create(domain="example.com")
+    ScrapePipeline.process(website.domain)
+
+    # It makes four scraping attemps that result in errors
+    assert len(website.webpages) == 4
+    assert [page.status_code for page in website.webpages] == [999, 999, 999, 999]
+
+    # It starts with the https version as the start URL
+    assert website.webpages[0].url == "https://example.com"
+
+    # It tries the following three fallback URLs before giving up
+    assert website.webpages[1].url == "https://www.example.com"
+    assert website.webpages[2].url == "http://example.com"
+    assert website.webpages[3].url == "http://www.example.com"
 
 
 def test_it_retains_existing_referenced_pages_in_the_database():
