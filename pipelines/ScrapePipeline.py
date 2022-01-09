@@ -1,12 +1,12 @@
-import itertools
 import logging
 import tempfile
 from multiprocessing import Process
 import csv
+from sqlalchemy.orm import load_only
 from scrapy.crawler import CrawlerProcess as CrawlerProcess
 from scrapy.utils.project import get_project_settings
 from scrape.ScrapeSpider import ScrapeSpider
-from models import Website, Webpage
+from models import Website, Webpage, WebpageTextBlock
 
 
 class ScrapePipeline:
@@ -39,7 +39,24 @@ class ScrapePipeline:
             with Website.session.begin():
                 website = Website.find_by_or_create(domain=domain)
 
-                # Reset attributes for all pages of this website
+                # Delete all webpages that are no longer needed (ID is not
+                # being referenced)
+                unreferenced_webpages = (
+                    Webpage.query.join(
+                        WebpageTextBlock,
+                        Webpage.id == WebpageTextBlock.webpage_id,
+                        isouter=True,
+                    )
+                    .where(Webpage.website_id == website.id)
+                    .where(WebpageTextBlock.id == None)
+                    .options(load_only("id"))
+                    .all()
+                )
+                Webpage.query.where(
+                    Webpage.id.in_([page.id for page in unreferenced_webpages])
+                ).delete()
+
+                # Reset attributes for all remaining pages of this website
                 Webpage.query.filter_by(website_id=website.id).update(
                     dict(
                         depth=None,

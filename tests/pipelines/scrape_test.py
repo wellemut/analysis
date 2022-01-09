@@ -1,7 +1,7 @@
 import os
 import pytest
 from pipelines import ScrapePipeline
-from models import Website, Webpage
+from models import Website, Webpage, TextBlock, WebpageTextBlock
 
 # Scrape max 5 pages per domain to speed up the testing
 @pytest.fixture(autouse=True)
@@ -57,20 +57,36 @@ def test_it_scrapes_pages_of_domain():
     assert redirect.status_code == 301
 
 
-def test_it_retains_existing_pages_in_the_database():
-    website = Website.create(domain="17ziele.de")
-    webpage = Webpage.create(
+def test_it_retains_existing_referenced_pages_in_the_database():
+    website = Website.create(domain="example.com")
+    unreferenced_webpage = Webpage.create(
         website=website,
-        url="https://17ziele.de/my-page.html",
+        url="https://example.com/my-page.html",
+    )
+    referenced_webpage = Webpage.create(
+        website=website,
+        url="https://example.com/about",
         depth=5,
         status_code=200,
         headers='{"key": "value"}',
         mime_type="HTML Doc",
         content="abcdef",
     )
-    ScrapePipeline.process("17ziele.de")
-    assert webpage.reload().depth == None
-    assert webpage.status_code == None
-    assert webpage.headers == None
-    assert webpage.mime_type == None
-    assert webpage.content == None
+    block = TextBlock.create(website=website, content="abc", hash="abc", word_count=1)
+    WebpageTextBlock.create(webpage=referenced_webpage, text_block=block, tag="p")
+
+    # Before pipeline, both pages exist
+    assert len(website.webpages) == 2
+    assert Webpage.find_by(url=unreferenced_webpage.url) != None
+
+    ScrapePipeline.process(website.domain)
+
+    # After pipeline, unreferenced webpage is deleted...
+    assert Webpage.find_by(url=unreferenced_webpage.url) == None
+
+    # and referenced webpage is reset
+    assert referenced_webpage.reload().depth == None
+    assert referenced_webpage.status_code == None
+    assert referenced_webpage.headers == None
+    assert referenced_webpage.mime_type == None
+    assert referenced_webpage.content == None
