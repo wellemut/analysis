@@ -277,6 +277,12 @@ From there, you can run arbitrary SQL queries:
 SELECT * FROM websites;
 ```
 
+If a GUI is preferred for accessing the database, any kind of database
+management software (e.g., [pgAdmin](https://www.pgadmin.org/) or
+[TablePlus](https://tableplus.com/)) should be able to connect to
+`localhost:5432` using the postgres username and password described in the
+`docker-compose.yml` file.
+
 ### Backing up the database
 
 You can back up the development database by running:
