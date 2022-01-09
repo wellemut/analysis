@@ -2,6 +2,13 @@ import pytest
 from models import Website, Webpage
 
 
+def test_domain_from_url_returns_root_domain():
+    assert Website.domain_from_url("http://www.example.com") == "example.com"
+    assert Website.domain_from_url("http://example.com/abc/def") == "example.com"
+    assert Website.domain_from_url("http://sub.test.com") == "sub.test.com"
+    assert Website.domain_from_url("http://www.sub.test.com") == "sub.test.com"
+
+
 def describe_homepage():
     @pytest.fixture
     def website():

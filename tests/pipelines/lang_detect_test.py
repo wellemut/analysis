@@ -1,9 +1,9 @@
 from pipelines import LangDetectPipeline
-from models import Webpage, TextBlock, WebpageTextBlock
+from models import TextBlock, WebpageTextBlock
 
 
-def test_it_identifies_language_of_text_blocks():
-    page = Webpage.create_from_url("https://www.17ziele.de")
+def test_it_identifies_language_of_text_blocks(create_webpage_from_url):
+    page = create_webpage_from_url("https://www.17ziele.de")
     block1 = TextBlock.create(
         website=page.website,
         hash="abc",

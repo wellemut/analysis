@@ -33,11 +33,3 @@ class Webpage(models.BaseModel):
     @hybrid_property
     def has_content(self):
         return self.content != None
-
-    # Create a webpage from the provided URL, automatically finding the
-    # associated website (or creating it, if it does not exist)
-    @classmethod
-    def create_from_url(cls, url):
-        ext = tldextract.extract(url)
-        website = models.Website.find_by_or_create(domain=f"{ext.domain}.{ext.suffix}")
-        return cls.create(website=website, url=url)

@@ -1,11 +1,11 @@
 from models.WebpageTextBlock import WebpageTextBlock
 from pipelines import ExtractPipeline
-from models import Webpage, TextBlock, Keyword
+from models import TextBlock, Keyword
 
 
-def test_it_extracts_text_blocks_from_webpages():
-    page1 = Webpage.create_from_url("https://www.17ziele.de")
-    page1.update(
+def test_it_extracts_text_blocks_from_webpages(create_webpage_from_url):
+    page1 = create_webpage_from_url(
+        "https://www.17ziele.de",
         content="""
         <html>
             <head><title>my title</title>
@@ -14,8 +14,8 @@ def test_it_extracts_text_blocks_from_webpages():
             </body>
         </html>""",
     )
-    page2 = Webpage.create_from_url("https://www.17ziele.de/abc")
-    page2.update(
+    create_webpage_from_url(
+        "https://www.17ziele.de/abc",
         content="""
         <html>
             <body>
@@ -32,35 +32,37 @@ def test_it_extracts_text_blocks_from_webpages():
     assert page1.webpage_text_blocks[0].text_block.content == "my title"
 
 
-def test_it_ignores_pages_without_content():
-    page = Webpage.create_from_url("https://www.17ziele.de")
-    page.update(content="<body>abc</body>")
-    Webpage.create_from_url("https://www.17ziele.de/home")
+def test_it_ignores_pages_without_content(create_webpage_from_url):
+    create_webpage_from_url("https://www.17ziele.de", content="<body>abc</body>")
+    create_webpage_from_url("https://www.17ziele.de/home")
 
     ExtractPipeline.process("17ziele.de")
 
     assert TextBlock.query.count() == 1
 
 
-def test_it_ignores_blocklisted_urls():
-    page = Webpage.create_from_url("https://www.17ziele.de/privacy.html")
-    page.update(content="<body><p>ignore content</p></body>")
+def test_it_ignores_blocklisted_urls(create_webpage_from_url):
+    create_webpage_from_url(
+        "https://www.17ziele.de/privacy.html",
+        content="<body><p>ignore content</p></body>",
+    )
 
     ExtractPipeline.process("17ziele.de")
 
     assert TextBlock.query.count() == 0
 
 
-def test_it_removes_existing_text_block_associations_and_keywords_for_the_website():
-    webpage = Webpage.create_from_url("https://www.17ziele.de")
-    webpage.update(content="<body>hello world</body>")
+def test_it_removes_associated_records_for_the_website(create_webpage_from_url):
+    webpage = create_webpage_from_url(
+        "https://www.17ziele.de", content="<body>hello world</body>"
+    )
     block = TextBlock.create(
         website=webpage.website, content="xyz", hash="abc", word_count=1
     )
     WebpageTextBlock.create(webpage=webpage, text_block=block, tag="p")
     Keyword.create(text_block=block, keyword="a", sdg=1, start=0, end=1)
 
-    other_webpage = Webpage.create_from_url("https://example.com")
+    other_webpage = create_webpage_from_url("https://example.com")
     other_block = TextBlock.create(
         website=other_webpage.website, content="xyz", hash="abc", word_count=1
     )
