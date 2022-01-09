@@ -16,8 +16,41 @@ def test_it_does_not_error_on_non_text_response():
 
     results = list(ScrapeSpider(allowed_domains=["17ziele.de"]).parse(scrapy_response))
 
-    # No error raised and no results returned
-    assert len(results) == 0
+    # No error raised
+    assert len(results) == 1
+    assert results[0]["status_code"] == 200
+    assert results[0]["mime_type"] == "PDF document, version 1.3"
+    assert results[0]["content"] == None
+
+
+@pytest.mark.vcr
+def test_it_collects_redirects():
+    url = "http://github.com"
+    request = requests.get(url, allow_redirects=False)
+
+    # Forge a scrapy response to test
+    # Request is necessary for the response.meta to work
+    scrapy_response = TextResponse(
+        status=request.status_code,
+        headers=request.headers,
+        body=request.content,
+        url=url,
+        request=Request(url=url),
+    )
+
+    results = list(ScrapeSpider(allowed_domains=["github.com"]).parse(scrapy_response))
+
+    assert len(results) == 2
+    assert {
+        "url": url,
+        "depth": 0,
+        "content": None,
+        "status_code": 301,
+        "mime_type": "empty",
+        "headers": '{"content-length": "0", "location": "https://github.com/"}',
+    } == results[0]
+    assert results[1].url == "https://github.com/"
+    assert results[1].cb_kwargs["depth"] == 0
 
 
 def describe_link_extraction():

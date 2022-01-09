@@ -1,7 +1,7 @@
 from io import BytesIO
+import json
 import scrapy
 from scrapy.linkextractors import LinkExtractor
-from scrapy.http.response.text import TextResponse
 import magic
 
 
@@ -25,22 +25,38 @@ class ScrapeSpider(scrapy.Spider):
             canonicalize=True,
         ).extract_links(response)
 
-    def parse(self, response):
-        # Skip if response is not text (e.g., binary, such as image)
-        # See: https://stackoverflow.com/a/57475077/6451879
-        if not isinstance(response, TextResponse):
-            return
+    def parse(self, response, depth=0):
+        # Get response metadata
+        status_code = response.status
+        headers = response.headers.to_unicode_dict()
 
-        # Skip if response is not plain text or HTML (e.g., PDF)
-        type = magic.from_buffer(BytesIO(response.body).read(2048))
-        if not type == "text/plain" and not type.startswith("HTML document"):
-            return
+        # Get response content if it's plain text or HTML document
+        content = None
+        mime_type = magic.from_buffer(BytesIO(response.body).read(2048))
+        if mime_type == "text/plain" or mime_type.startswith("HTML document"):
+            content = response.text
 
-        depth = response.meta.get("depth", 0)
+        yield {
+            "url": response.url,
+            "depth": depth,
+            "status_code": status_code,
+            "content": content,
+            "mime_type": mime_type,
+            "headers": json.dumps(headers),
+        }
 
-        yield {"url": response.url, "depth": depth, "content": response.text}
+        # For redirects, keep depth identical and check location header for new
+        # URL
+        if status_code in [301, 302, 303, 307, 308]:
+            redirect_url = headers.get("Location")
+            if redirect_url:
+                yield response.follow(
+                    redirect_url, callback=self.parse, cb_kwargs=dict(depth=depth)
+                )
 
-        for link in self.extract_links(response):
-            yield response.follow(
-                link.url, callback=self.parse, meta={"depth": depth + 1}
-            )
+        # Otherwise, look in entire body for new links
+        elif content is not None:
+            for link in self.extract_links(response):
+                yield response.follow(
+                    link.url, callback=self.parse, cb_kwargs=dict(depth=depth + 1)
+                )

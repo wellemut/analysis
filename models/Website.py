@@ -12,4 +12,4 @@ class Website(models.BaseModel):
 
     @property
     def homepage(self):
-        return models.Webpage.find_by(website=self, depth=0)
+        return models.Webpage.find_by(website=self, depth=0, status_code=200)

@@ -5,13 +5,12 @@ from models import Website, Webpage
 
 # Scrape max 5 pages per domain to speed up the testing
 @pytest.fixture(autouse=True)
-def limit_to_5_pages(mocker):
+def a_limit_to_5_pages(mocker):
     mocker.patch.object(ScrapePipeline, "MAX_PAGES", 5)
-    yield
 
 
 @pytest.fixture(autouse=True)
-def cache_scrapy_requests(mocker):
+def b_cache_scrapy_requests(mocker):
     # Custom scrapy settings to inject
     # These cache all scrapy requests and are an alternative to pytest VCR,
     # which does not work with twisted
@@ -35,14 +34,27 @@ def cache_scrapy_requests(mocker):
         "get_scrape_settings",
         return_value=scrapy_settings,
     )
-    yield
 
 
 def test_it_scrapes_pages_of_domain():
     ScrapePipeline.process("17ziele.de")
     website = Website.find_by(domain="17ziele.de")
-    assert len(website.webpages) == 5
+
+    # It stores pages with status 200
+    assert (
+        Webpage.query.filter_by(is_ok_and_has_content=True, website=website).count()
+        == 5
+    )
+    assert website.homepage.url == "https://17ziele.de/"
+    assert website.homepage.depth == 0
+    assert website.homepage.status_code == 200
+    assert website.homepage.headers != None
+    assert website.homepage.mime_type == "HTML document, UTF-8 Unicode text"
     assert website.homepage.content.find("©2021 ENGAGEMENT GLOBAL") > 0
+
+    # It stores redirect
+    redirect = Webpage.find_by(url="http://17ziele.de")
+    assert redirect.status_code == 301
 
 
 def test_it_retains_existing_pages_in_the_database():
@@ -51,9 +63,14 @@ def test_it_retains_existing_pages_in_the_database():
         website=website,
         url="https://17ziele.de/my-page.html",
         depth=5,
+        status_code=200,
+        headers='{"key": "value"}',
+        mime_type="HTML Doc",
         content="abcdef",
     )
     ScrapePipeline.process("17ziele.de")
-    assert len(website.webpages) == 6
     assert webpage.reload().depth == None
+    assert webpage.status_code == None
+    assert webpage.headers == None
+    assert webpage.mime_type == None
     assert webpage.content == None

@@ -26,6 +26,17 @@ LOG_LEVEL = "WARN"
 #          'no-referrer-when-downgrade, strict-origin-when-cross-origin'
 REFERER_ENABLED = False
 
+# Disable redirect middleware and instead pass all pages (even those with status
+# code of 301-308 to the spider's parse method). This avoids the issue where
+# Scrapy "blindly" follows a redirect to a location that is outside the allowed
+# domains.
+# See: https://github.com/scrapy/scrapy/issues/1042
+REDIRECT_ENABLED = False
+
+# Pass all response to the spider's parse method (even 301-308 and 404 pages),
+# so that we an analyze and process it manually
+HTTPERROR_ALLOW_ALL = True
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 CONCURRENT_REQUESTS = 16
 
@@ -58,6 +69,16 @@ SPIDER_MIDDLEWARES = {
     "scrape.OffsiteMiddleware.OffsiteMiddleware": 500,
 }
 
+# Add a custom CloseSpider extension that can auto-close a spider after a
+# maximum number of items have been scraped that match a particular condition.
+# We use this to close the spider after the pipeline's MAX_PAGES with status
+# code 200 and having content have been scraped. The default CloseSpider
+# extension does not allow to differentiate between different items but we do
+# not want to count redirects or 404s towards our max page limit.
+EXTENSIONS = {
+    "scrape.CloseSpiderItemCountCondition.CloseSpiderItemCountCondition": 0,
+}
+
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
 # See also autothrottle settings and docs
@@ -75,22 +96,10 @@ SPIDER_MIDDLEWARES = {
 #   'Accept-Language': 'en',
 # }
 
-# Enable or disable spider middlewares
-# See https://docs.scrapy.org/en/latest/topics/spider-middleware.html
-# SPIDER_MIDDLEWARES = {
-#    'scrape.middlewares.ScrapeSpiderMiddleware': 543,
-# }
-
 # Enable or disable downloader middlewares
 # See https://docs.scrapy.org/en/latest/topics/downloader-middleware.html
 # DOWNLOADER_MIDDLEWARES = {
 #    'scrape.middlewares.ScrapeDownloaderMiddleware': 543,
-# }
-
-# Enable or disable extensions
-# See https://docs.scrapy.org/en/latest/topics/extensions.html
-# EXTENSIONS = {
-#    'scrapy.extensions.telnet.TelnetConsole': None,
 # }
 
 # Configure item pipelines

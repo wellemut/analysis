@@ -40,8 +40,14 @@ class ScrapePipeline:
                 website = Website.find_by_or_create(domain=domain)
 
                 # Reset attributes for all pages of this website
-                Webpage.query.filter(Webpage.website_id == website.id).update(
-                    {"depth": None, "content": None}
+                Webpage.query.filter_by(website_id=website.id).update(
+                    dict(
+                        depth=None,
+                        status_code=None,
+                        headers=None,
+                        mime_type=None,
+                        content=None,
+                    )
                 )
 
                 # Increase the CSV field size limit to the allowed maximum
@@ -50,19 +56,46 @@ class ScrapePipeline:
                 csv.field_size_limit(ScrapePipeline.MAX_PAGE_SIZE)
                 reader = csv.DictReader(csv_file)
 
-                # Scrapy will not exactly observe the MAX_PAGES limit
-                # because it will finish any pending requests that it
-                # has already started. To get the desired maximum, we
-                # stop processing pages after the maximum is reached.
-                for row in itertools.islice(reader, cls.MAX_PAGES):
+                pages_count_ok = 0
+                for row in reader:
+                    # Replace any empty strings in fields with None, since CSV
+                    # cannot handle None natively
+                    for key, value in row.items():
+                        if isinstance(value, str) and value == "":
+                            row[key] = None
+
+                    # Convert status code to int
+                    row["status_code"] = int(row["status_code"])
+
                     # Write each webpage into the database
-                    webpage = Webpage.find_by_or_create(website=website, url=row["url"])
-                    webpage.update(depth=row["depth"], content=row["content"])
+                    webpage = Webpage.find_by_or_create(
+                        website=website, url=row.pop("url")
+                    )
+                    webpage.update(**row)
+
+                    # Scrapy will not exactly observe the MAX_PAGES limit
+                    # because it will finish any pending requests that it has
+                    # already started. To get the desired maximum, we stop
+                    # processing pages after the maximum is reached.
+                    if cls.is_ok_and_has_content(row):
+                        pages_count_ok += 1
+
+                    if pages_count_ok >= cls.MAX_PAGES:
+                        break
+
+    @staticmethod
+    def is_ok_and_has_content(page):
+        return page["status_code"] == 200 and page["content"] is not None
 
     @classmethod
     def get_scrape_settings(cls):
         settings = get_project_settings().copy()
-        settings.set("CLOSESPIDER_ITEMCOUNT", cls.MAX_PAGES)
+        # Close spider after max number of pages meeting the condition (status
+        # code 200 and having content) have been scraped
+        settings.set(
+            "CLOSESPIDER_ITEMCOUNT_CONDITION",
+            dict(count=cls.MAX_PAGES, condition=cls.is_ok_and_has_content),
+        )
         settings.set("DOWNLOAD_MAXSIZE", cls.MAX_PAGE_SIZE)
         # Disable warnings related to page size
         settings.set("DOWNLOAD_WARNSIZE", 0)
