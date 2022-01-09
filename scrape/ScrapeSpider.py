@@ -6,6 +6,7 @@ import magic
 
 
 class ScrapeSpider(scrapy.Spider):
+    REDIRECT_STATUS_CODES = [301, 302, 303, 307, 308]
     name = "ScrapeSpider"
 
     # Include start URLs in filtering duplicates
@@ -45,9 +46,17 @@ class ScrapeSpider(scrapy.Spider):
             "headers": json.dumps(headers),
         }
 
+        # Default message, indicating an error response
+        message = "❌"
+        if status_code == 200:
+            message = "✅"
+        elif status_code in self.REDIRECT_STATUS_CODES:
+            message = "⏩"
+        print(message, end="")
+
         # For redirects, keep depth identical and check location header for new
         # URL
-        if status_code in [301, 302, 303, 307, 308]:
+        if status_code in self.REDIRECT_STATUS_CODES:
             redirect_url = headers.get("Location")
             if redirect_url:
                 yield self.follow(response, redirect_url, depth=depth)

@@ -17,6 +17,8 @@ class ScrapePipeline:
 
     @classmethod
     def process(cls, domain):
+        print(f"Scraping {domain}:", end=" ")
+
         # Store scraped URLs in a temporary file
         # We do this so that we can avoid writing the URLs to the database until
         # the very end. This allows us to wrap the database insert/updates into
@@ -34,6 +36,8 @@ class ScrapePipeline:
             )
             p.start()
             p.join()
+            # Start a new line (Scrapy prints messages on a single line)
+            print("")
 
             # Wrap database actions in a transaction
             with Website.session.begin():
@@ -99,6 +103,8 @@ class ScrapePipeline:
 
                     if pages_count_ok >= cls.MAX_PAGES:
                         break
+
+        print("Scraped", pages_count_ok, "pages for", domain)
 
     @staticmethod
     def is_ok_and_has_content(page):
