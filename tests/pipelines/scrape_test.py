@@ -24,6 +24,8 @@ def b_cache_scrapy_requests(mocker):
         ),
         "HTTPCACHE_IGNORE_RESPONSE_CACHE_CONTROLS": ["no-cache", "no-store"],
         "HTTPCACHE_IGNORE_MISSING": True,
+        # Disable throttling
+        "AUTOTHROTTLE_ENABLED": False,
     }
     # Combine default and custom settings into a new test_settings dict
     scrapy_settings = ScrapePipeline().get_scrape_settings().copy()
