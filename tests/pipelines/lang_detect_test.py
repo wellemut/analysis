@@ -1,4 +1,4 @@
-from pipelines import LangDetectPipeline
+from pipelines.LangDetectPipeline import LangDetectPipeline
 from models import TextBlock, WebpageTextBlock
 
 

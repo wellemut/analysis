@@ -1,5 +1,5 @@
 from models.WebpageTextBlock import WebpageTextBlock
-from pipelines import ExtractPipeline
+from pipelines.ExtractPipeline import ExtractPipeline
 from models import TextBlock, Keyword
 
 

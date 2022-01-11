@@ -1,4 +1,5 @@
 import argparse
+import pipelines
 
 program = argparse.ArgumentParser(
     description="Run one or several domains through all pipelines",
@@ -7,12 +8,7 @@ program = argparse.ArgumentParser(
 program.add_argument("domain", nargs="+", help="one or more domains to analyze")
 args = program.parse_args()
 
+# Run domain through pipelines
 for domain in args.domain:
-    # Load pipelines only when needed, otherwise run.py --help becomes very slow
-    pipelines = __import__("pipelines")
-
-    # Run domain through pipelines
-    pipelines.ScrapePipeline.process(domain)
-    pipelines.ExtractPipeline.process(domain)
-    pipelines.LangDetectPipeline.process(domain)
-    pipelines.KeywordPipeline.process(domain)
+    for pipeline in pipelines.names:
+        pipelines.run(pipeline, domain)

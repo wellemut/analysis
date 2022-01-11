@@ -1,4 +1,4 @@
-from pipelines import KeywordPipeline
+from pipelines.KeywordPipeline import KeywordPipeline
 from models import Keyword, TextBlock, Website
 from helpers import matches_dict
 

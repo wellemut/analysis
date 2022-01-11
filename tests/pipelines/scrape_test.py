@@ -1,6 +1,6 @@
 import os
 import pytest
-from pipelines import ScrapePipeline
+from pipelines.ScrapePipeline import ScrapePipeline
 from models import Website, Webpage, TextBlock, WebpageTextBlock
 
 # Scrape max 5 pages per domain to speed up the testing
