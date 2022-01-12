@@ -2,7 +2,6 @@ import logging
 import tempfile
 from multiprocessing import Process
 import csv
-from sqlalchemy.orm import load_only
 from scrapy.crawler import CrawlerProcess as CrawlerProcess
 from scrapy.utils.project import get_project_settings
 from scrape.ScrapeSpider import ScrapeSpider
@@ -44,24 +43,11 @@ class ScrapePipeline:
                 website = Website.find_by_or_create(domain=domain)
 
                 # Delete all webpages that are no longer needed (ID is not
-                # being referenced)
-                unreferenced_webpages = (
-                    Webpage.query.join(
-                        WebpageTextBlock,
-                        Webpage.id == WebpageTextBlock.webpage_id,
-                        isouter=True,
-                    )
-                    .where(Webpage.website_id == website.id)
-                    .where(WebpageTextBlock.id == None)
-                    .options(load_only("id"))
-                    .all()
-                )
-                Webpage.query.where(
-                    Webpage.id.in_([page.id for page in unreferenced_webpages])
-                ).delete()
+                # being referenced in any other table)
+                Webpage.delete_unused_by_website(website)
 
                 # Reset attributes for all remaining pages of this website
-                Webpage.query.filter_by(website_id=website.id).update(
+                Webpage.query.filter_by(website=website).update(
                     dict(
                         depth=None,
                         status_code=None,

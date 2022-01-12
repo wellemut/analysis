@@ -32,3 +32,13 @@ class Webpage(models.BaseModel):
     @hybrid_property
     def has_content(self):
         return self.content != None
+
+    # Delete any webpages for the given website ID that are not being referenced
+    # by any (Webpage)TextBlocks. These webpages are unused and can be removed.
+    @classmethod
+    def delete_unused_by_website(cls, website):
+        cls.delete_by_ids(
+            cls.id.query.join(models.WebpageTextBlock, isouter=True)
+            .where(cls.website == website)
+            .where(models.WebpageTextBlock.id == None)
+        )

@@ -63,6 +63,13 @@ class BaseModel(Base, AllFeaturesMixin, TimestampsMixin):
     def settable_attributes(cls):
         return cls.columns + cls.settable_hybrid_properties + cls.settable_relations
 
+    # Delete records via the provided IDs or subquery
+    @classmethod
+    def delete_by_ids(cls, ids_or_subquery):
+        return cls.query.where(cls.id.in_(ids_or_subquery)).delete(
+            synchronize_session="fetch"
+        )
+
     # Return True if the given attribute has been modified
     def has_attribute_changed(self, attribute):
         attr = getattr(inspect(self).attrs, attribute)

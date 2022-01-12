@@ -36,6 +36,10 @@ class TextBlock(models.BaseModel):
     def count_words(cls, text):
         return len(text.split())
 
+    @classmethod
+    def delete_by_website(cls, website):
+        return cls.query.filter_by(website=website).delete()
+
     # Make sure content and word count are valid
     def on_create(self):
         if self.content == "":

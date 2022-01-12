@@ -47,3 +47,25 @@ def describe_create():
     def it_cannot_be_created_with_word_count_zero():
         with pytest.raises(Exception, match="Text block word count cannot be zero"):
             TextBlock.create(content="     ", hash="abc", word_count=0)
+
+
+def describe_delete_by_website():
+    def test_it_deletes_text_blocks_associated_with_website(factory):
+        website = factory.website()
+        factory.text_block(website=website)
+        factory.text_block(website=website)
+
+        assert TextBlock.query.count() == 2
+        TextBlock.delete_by_website(website)
+        assert TextBlock.query.count() == 0
+
+    def test_it_does_not_touch_unassociated_text_blocks(factory):
+        block = factory.text_block()
+        other_block = factory.text_block()
+        assert TextBlock.query.count() == 2
+
+        TextBlock.delete_by_website(block.website)
+
+        assert TextBlock.query.count() == 1
+        assert TextBlock.find(block.id) is None
+        assert TextBlock.find(other_block.id) is not None

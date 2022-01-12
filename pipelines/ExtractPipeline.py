@@ -1,6 +1,5 @@
 import re
 from urllib.parse import urlparse
-from sqlalchemy.orm import load_only
 from helpers.extract_texts_from_html import extract_texts_from_html
 from models import Website, Webpage, TextBlock, WebpageTextBlock, Keyword
 
@@ -80,23 +79,9 @@ class ExtractPipeline:
 
         with website.session.begin():
             # Clear existing text blocks and text block associations
-            all_webpages = (
-                Webpage.query.where(Webpage.website_id == website.id)
-                .options(load_only("id"))
-                .all()
-            )
-            WebpageTextBlock.query.where(
-                WebpageTextBlock.webpage_id.in_([page.id for page in all_webpages])
-            ).delete()
-            all_blocks = (
-                TextBlock.query.where(TextBlock.website_id == website.id)
-                .options(load_only("id"))
-                .all()
-            )
-            Keyword.query.where(
-                Keyword.text_block_id.in_([block.id for block in all_blocks])
-            ).delete()
-            TextBlock.query.where(TextBlock.website_id == website.id).delete()
+            WebpageTextBlock.delete_by_website(website)
+            Keyword.delete_by_website(website)
+            TextBlock.delete_by_website(website)
 
             # For each page, ...
             for id in webpage_ids:

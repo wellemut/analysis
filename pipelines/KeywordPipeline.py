@@ -58,7 +58,7 @@ class KeywordPipeline:
 
         with Keyword.session.begin():
             # Clear existing keywords from database
-            Keyword.query.where(Keyword.text_block_id.in_(block_ids)).delete()
+            Keyword.delete_by_website(website)
 
             # Write new keywords to database
             for keyword in keywords:

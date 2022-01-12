@@ -37,3 +37,11 @@ class Keyword(models.BaseModel):
             )
 
         return _transformer
+
+    @classmethod
+    def delete_by_website(cls, website):
+        return cls.delete_by_ids(
+            cls.id.query.join(models.TextBlock).where(
+                models.TextBlock.website == website
+            )
+        )

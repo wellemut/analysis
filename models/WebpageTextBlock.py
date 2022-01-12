@@ -17,3 +17,9 @@ class WebpageTextBlock(models.BaseModel):
     text_block = relationship(
         "TextBlock", back_populates="webpage_text_blocks", foreign_keys=text_block_id
     )
+
+    @classmethod
+    def delete_by_website(cls, website):
+        return cls.delete_by_ids(
+            cls.id.query.join(models.Webpage).where(models.Webpage.website == website)
+        )
