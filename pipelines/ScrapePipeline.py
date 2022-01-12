@@ -18,6 +18,10 @@ class ScrapePipeline:
     def process(cls, domain):
         print(f"Scraping {domain}:", end=" ")
 
+        # Determine the homepage / first page to scrape
+        website = Website.find_by(domain=domain) or Website().fill(domain=domain)
+        homepage = website.homepage or f"https://{domain}"
+
         # Store scraped URLs in a temporary file
         # We do this so that we can avoid writing the URLs to the database until
         # the very end. This allows us to wrap the database insert/updates into
@@ -30,6 +34,7 @@ class ScrapePipeline:
                 target=ScrapePipeline.scrape,
                 kwargs={
                     "domain": domain,
+                    "homepage": homepage,
                     "csv_path": csv_file.name,
                 },
             )
@@ -40,7 +45,7 @@ class ScrapePipeline:
 
             # Wrap database actions in a transaction
             with Website.session.begin():
-                website = Website.find_by_or_create(domain=domain)
+                website.save()
 
                 # Delete all webpages that are no longer needed (ID is not
                 # being referenced in any other table)
@@ -111,7 +116,7 @@ class ScrapePipeline:
         return settings
 
     @classmethod
-    def scrape(cls, domain, csv_path):
+    def scrape(cls, domain, homepage, csv_path):
         process = CrawlerProcess(
             settings={
                 **cls.get_scrape_settings().copy_to_dict(),
@@ -124,7 +129,7 @@ class ScrapePipeline:
 
         process.crawl(
             ScrapeSpider,
-            start_urls=[f"https://{domain}"],
+            start_urls=[homepage],
             allowed_domains=[domain],
         )
         process.start()

@@ -47,29 +47,36 @@ def test_it_scrapes_pages_of_domain():
         Webpage.query.filter_by(is_ok_and_has_content=True, website=website).count()
         == 5
     )
-    assert website.homepage.url == "https://17ziele.de/"
-    assert website.homepage.depth == 0
-    assert website.homepage.status_code == 200
-    assert website.homepage.headers != None
-    assert website.homepage.mime_type == "HTML document, UTF-8 Unicode text"
-    assert website.homepage.content.find("©2021 ENGAGEMENT GLOBAL") > 0
+    homepage = website.suggested_homepage
+    assert homepage.url == "https://17ziele.de/"
+    assert homepage.depth == 0
+    assert homepage.status_code == 200
+    assert homepage.headers != None
+    assert homepage.mime_type == "HTML document, UTF-8 Unicode text"
+    assert homepage.content.find("©2021 ENGAGEMENT GLOBAL") > 0
 
 
 def test_it_falls_back_to_www_and_non_https_when_it_cannot_find_start_url(factory):
-    website = factory.website(domain="example.com")
+    website = factory.website(
+        domain="example.com", homepage="https://www.example.com/home"
+    )
     ScrapePipeline.process(website.domain)
 
     # It makes four scraping attemps that result in errors
-    assert len(website.webpages) == 4
-    assert [page.status_code for page in website.webpages] == [999, 999, 999, 999]
+    assert len(website.webpages) == 5
+    assert [page.status_code for page in website.webpages] == [999, 999, 999, 999, 999]
 
-    # It starts with the https version as the start URL
-    assert website.webpages[0].url == "https://example.com"
+    # It starts with homepage as the start URL
+    assert website.webpages[0].url == "https://www.example.com/home"
 
-    # It tries the following three fallback URLs before giving up
-    assert website.webpages[1].url == "https://www.example.com"
-    assert website.webpages[2].url == "http://example.com"
-    assert website.webpages[3].url == "http://www.example.com"
+    # It tries the following four fallback URLs before giving up
+    assert website.webpages[1].url == "https://example.com"
+    assert website.webpages[2].url == "https://www.example.com"
+    assert website.webpages[3].url == "http://example.com"
+    assert website.webpages[4].url == "http://www.example.com"
+
+    # Has no suggested homepage
+    assert website.suggested_homepage == None
 
 
 def test_it_retains_existing_referenced_pages_in_the_database(factory):

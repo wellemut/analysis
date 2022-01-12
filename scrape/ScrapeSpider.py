@@ -3,6 +3,7 @@ import json
 import scrapy
 from scrapy.linkextractors import LinkExtractor
 import magic
+from helpers import get_domain_from_url
 
 
 class ScrapeSpider(scrapy.Spider):
@@ -14,10 +15,12 @@ class ScrapeSpider(scrapy.Spider):
     def start_requests(self):
         for url in self.start_urls:
             # If start URL fails, attempt the following fallback URLs in order
+            domain = get_domain_from_url(url)
             fallback_urls = [
-                url.replace("https://", "https://www.", 1),
-                url.replace("https://", "http://", 1),
-                url.replace("https://", "http://www.", 1),
+                f"https://{domain}",
+                f"https://www.{domain}",
+                f"http://{domain}",
+                f"http://www.{domain}",
             ]
             yield scrapy.Request(
                 url,

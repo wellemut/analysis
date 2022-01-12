@@ -1,6 +1,7 @@
 import random
 import string
 from models import Keyword, TextBlock, Webpage, WebpageTextBlock, Website
+from helpers import get_domain_from_url
 
 
 class FixtureFactory:
@@ -33,8 +34,7 @@ class FixtureFactory:
 
     @classmethod
     def webpage_from_url(cls, url, **kwargs):
-        domain = Website.domain_from_url(url)
-        website = Website.find_by_or_create(domain=domain)
+        website = Website.find_by_or_create(domain=get_domain_from_url(url))
         return Webpage.create(website=website, url=url, **kwargs)
 
     @classmethod
