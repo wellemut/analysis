@@ -1,7 +1,7 @@
 import pytest
 from sqlalchemy.orm import close_all_sessions
-from vcr import use_cassette
-from models import BaseModel, Website, Webpage
+from models import BaseModel
+from .FixtureFactory import FixtureFactory
 
 # Truncate all tables
 @pytest.fixture(autouse=True)
@@ -18,12 +18,7 @@ def vcr_config():
     return {"record_mode": "none"}
 
 
-# Factory for generating a Webpage from a URL
+# A factory for generating models
 @pytest.fixture
-def create_webpage_from_url():
-    def _webpage_factory(url, **kwargs):
-        domain = Website.domain_from_url(url)
-        website = Website.find_by_or_create(domain=domain)
-        return Webpage.create(website=website, url=url, **kwargs)
-
-    return _webpage_factory
+def factory():
+    return FixtureFactory

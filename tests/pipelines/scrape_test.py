@@ -55,8 +55,8 @@ def test_it_scrapes_pages_of_domain():
     assert website.homepage.content.find("©2021 ENGAGEMENT GLOBAL") > 0
 
 
-def test_it_falls_back_to_www_and_non_https_when_it_cannot_find_start_url():
-    website = Website.create(domain="example.com")
+def test_it_falls_back_to_www_and_non_https_when_it_cannot_find_start_url(factory):
+    website = factory.website(domain="example.com")
     ScrapePipeline.process(website.domain)
 
     # It makes four scraping attemps that result in errors
@@ -72,23 +72,13 @@ def test_it_falls_back_to_www_and_non_https_when_it_cannot_find_start_url():
     assert website.webpages[3].url == "http://www.example.com"
 
 
-def test_it_retains_existing_referenced_pages_in_the_database():
-    website = Website.create(domain="example.com")
-    unreferenced_webpage = Webpage.create(
-        website=website,
-        url="https://example.com/my-page.html",
+def test_it_retains_existing_referenced_pages_in_the_database(factory):
+    website = factory.website()
+    unreferenced_webpage = factory.webpage(website=website)
+    referenced_webpage = factory.webpage(
+        website=website, depth=5, status_code=200, content="abcdef"
     )
-    referenced_webpage = Webpage.create(
-        website=website,
-        url="https://example.com/about",
-        depth=5,
-        status_code=200,
-        headers='{"key": "value"}',
-        mime_type="HTML Doc",
-        content="abcdef",
-    )
-    block = TextBlock.create(website=website, content="abc", hash="abc", word_count=1)
-    WebpageTextBlock.create(webpage=referenced_webpage, text_block=block, tag="p")
+    factory.webpage_text_block(webpage=referenced_webpage)
 
     # Before pipeline, both pages exist
     assert len(website.webpages) == 2

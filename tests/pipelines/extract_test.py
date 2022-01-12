@@ -3,8 +3,8 @@ from pipelines.ExtractPipeline import ExtractPipeline
 from models import TextBlock, Keyword
 
 
-def test_it_extracts_text_blocks_from_webpages(create_webpage_from_url):
-    page1 = create_webpage_from_url(
+def test_it_extracts_text_blocks_from_webpages(factory):
+    page1 = factory.webpage_from_url(
         "https://www.17ziele.de",
         content="""
         <html>
@@ -14,7 +14,7 @@ def test_it_extracts_text_blocks_from_webpages(create_webpage_from_url):
             </body>
         </html>""",
     )
-    create_webpage_from_url(
+    factory.webpage_from_url(
         "https://www.17ziele.de/abc",
         content="""
         <html>
@@ -32,17 +32,17 @@ def test_it_extracts_text_blocks_from_webpages(create_webpage_from_url):
     assert page1.webpage_text_blocks[0].text_block.content == "my title"
 
 
-def test_it_ignores_pages_without_content(create_webpage_from_url):
-    create_webpage_from_url("https://www.17ziele.de", content="<body>abc</body>")
-    create_webpage_from_url("https://www.17ziele.de/home")
+def test_it_ignores_pages_without_content(factory):
+    factory.webpage_from_url("https://www.17ziele.de", content="<body>abc</body>")
+    factory.webpage_from_url("https://www.17ziele.de/home")
 
     ExtractPipeline.process("17ziele.de")
 
     assert TextBlock.query.count() == 1
 
 
-def test_it_ignores_blocklisted_urls(create_webpage_from_url):
-    create_webpage_from_url(
+def test_it_ignores_blocklisted_urls(factory):
+    factory.webpage_from_url(
         "https://www.17ziele.de/privacy.html",
         content="<body><p>ignore content</p></body>",
     )
@@ -52,21 +52,17 @@ def test_it_ignores_blocklisted_urls(create_webpage_from_url):
     assert TextBlock.query.count() == 0
 
 
-def test_it_removes_associated_records_for_the_website(create_webpage_from_url):
-    webpage = create_webpage_from_url(
+def test_it_removes_associated_records_for_the_website(factory):
+    webpage = factory.webpage_from_url(
         "https://www.17ziele.de", content="<body>hello world</body>"
     )
-    block = TextBlock.create(
-        website=webpage.website, content="xyz", hash="abc", word_count=1
-    )
-    WebpageTextBlock.create(webpage=webpage, text_block=block, tag="p")
-    Keyword.create(text_block=block, keyword="a", sdg=1, start=0, end=1)
+    block = factory.text_block(website=webpage.website)
+    factory.webpage_text_block(webpage=webpage, text_block=block)
+    factory.keyword(text_block=block)
 
-    other_webpage = create_webpage_from_url("https://example.com")
-    other_block = TextBlock.create(
-        website=other_webpage.website, content="xyz", hash="abc", word_count=1
-    )
-    WebpageTextBlock.create(webpage=other_webpage, text_block=other_block, tag="p")
+    other_webpage = factory.webpage_from_url("https://example.com")
+    other_block = factory.text_block(website=other_webpage.website)
+    factory.webpage_text_block(webpage=other_webpage, text_block=other_block)
 
     ExtractPipeline.process("17ziele.de")
 

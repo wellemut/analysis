@@ -11,13 +11,13 @@ def test_domain_from_url_returns_root_domain():
 
 def describe_homepage():
     @pytest.fixture
-    def website():
-        return Website.create(domain="example.com")
+    def website(factory):
+        return factory.website(domain="example.com")
 
     @pytest.fixture
-    def create_webpage(website):
+    def create_webpage(factory, website):
         def _create_webpage(url, depth=None, status_code=None):
-            Webpage.create(
+            factory.webpage(
                 website=website, url=url, depth=depth, status_code=status_code
             )
 

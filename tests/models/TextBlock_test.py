@@ -19,31 +19,17 @@ def describe_count_words():
 
 
 def describe_create():
-    def it_cannot_create_two_identical_text_blocks_for_the_same_website():
-        website = Website.create(domain="example.com")
-        TextBlock.create(
-            website=website, hash="abc", word_count=2, content="hello world!"
-        )
+    def it_cannot_create_two_identical_text_blocks_for_the_same_website(factory):
+        website = factory.website()
+        factory.text_block(website=website, hash="abc")
         with pytest.raises(
             Exception, match="duplicate key value violates unique constraint"
         ):
-            TextBlock.create(
-                website=website, hash="abc", word_count=2, content="hello world!"
-            )
+            factory.text_block(website=website, hash="abc")
 
-    def it_can_create_identical_text_blocks_for_different_websites():
-        TextBlock.create(
-            website=Website.create(domain="example.com"),
-            hash="abc",
-            word_count=2,
-            content="hello world!",
-        )
-        TextBlock.create(
-            website=Website.create(domain="test.com"),
-            hash="abc",
-            word_count=2,
-            content="hello world!",
-        )
+    def it_can_create_identical_text_blocks_for_different_websites(factory):
+        factory.text_block(website=factory.website(domain="a.com"), hash="abc")
+        factory.text_block(website=factory.website(domain="b.com"), hash="abc")
         assert TextBlock.query.count() == 2
 
     def it_cannot_be_created_without_content_or_hash_or_word_count():

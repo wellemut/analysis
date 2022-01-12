@@ -7,17 +7,12 @@ def test_it_supports_english():
     assert KeywordPipeline.supported_languages == ["en"]
 
 
-def test_it_finds_keywords_in_text_blocks():
-    website = Website.create(domain="17ziele.de")
-    TextBlock.create(
-        website=website,
-        content="Poverty continues to be a major issue.",
-        hash="abc",
-        word_count=1,
-        language="en",
+def test_it_finds_keywords_in_text_blocks(factory):
+    block = factory.text_block(
+        content="Poverty continues to be a major issue.", language="en"
     )
 
-    KeywordPipeline.process("17ziele.de")
+    KeywordPipeline.process(block.website.domain)
 
     assert Keyword.query.count() == 1
     keyword = Keyword.first()
@@ -27,35 +22,25 @@ def test_it_finds_keywords_in_text_blocks():
     assert keyword.end == 7
 
 
-def test_it_ignores_non_english_texts():
-    website = Website.create(domain="17ziele.de")
-    for index, language in enumerate(["de", "fr", "unclear", None]):
-        TextBlock.create(
-            website=website,
-            content="Poverty continues to be a major issue.",
-            hash=f"abc{index}",
-            word_count=1,
-            language=language,
-        )
+def test_it_ignores_non_english_texts(factory):
+    website = factory.website()
+    content = "Poverty continues to be a major issue."
+    factory.text_block(website=website, content=content, hash="a", language="de")
+    factory.text_block(website=website, content=content, hash="b", language="fr")
+    factory.text_block(website=website, content=content, hash="c", language="unclear")
+    factory.text_block(website=website, content=content, hash="d", language=None)
 
-    KeywordPipeline.process("17ziele.de")
+    KeywordPipeline.process(website.domain)
 
     assert Keyword.query.count() == 0
 
 
-def test_it_deletes_existing_keywords_for_the_domain():
-    website = Website.create(domain="17ziele.de")
-    block = TextBlock.create(
-        website=website,
-        content="Lorem ipsum dolorem...",
-        hash="abc",
-        word_count=1,
-        language="en",
-    )
-    Keyword.create(text_block=block, keyword="a", sdg=1, start=0, end=1)
-    Keyword.create(text_block=block, keyword="b", sdg=1, start=1, end=2)
+def test_it_deletes_existing_keywords_for_the_domain(factory):
+    block = factory.text_block()
+    factory.keyword(text_block=block)
+    factory.keyword(text_block=block)
 
-    KeywordPipeline.process("17ziele.de")
+    KeywordPipeline.process(block.website.domain)
 
     assert Keyword.query.count() == 0
 
