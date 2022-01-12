@@ -1,5 +1,4 @@
 import os
-from sqlalchemy.orm import load_only
 import fasttext
 from models import TextBlock, Website
 from helpers import batches, suppress_stdout_and_stderr
@@ -20,12 +19,7 @@ class LangDetectPipeline:
         website = Website.find_by(domain=domain)
 
         # Get IDs for all text blocks that belong to this domain
-        blocks = (
-            TextBlock.query.where(TextBlock.website_id == website.id)
-            .options(load_only("id"))
-            .all()
-        )
-        block_ids = [block.id for block in blocks]
+        block_ids = TextBlock.query.filter_by(website=website).ids()
 
         # Operate on text blocks in batches for better performance
         with TextBlock.session.begin():

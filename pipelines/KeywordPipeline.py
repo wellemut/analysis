@@ -3,7 +3,6 @@ from itertools import groupby
 from functools import cache
 import csv
 import json
-from sqlalchemy.orm import load_only
 from sqlalchemy_mixins.utils import classproperty
 import spacy
 from spacy.matcher import PhraseMatcher
@@ -26,13 +25,11 @@ class KeywordPipeline:
 
         # Get IDs for all text blocks that belong to this domain and that have
         # content in one of the supported languages
-        blocks = (
-            TextBlock.query.where(TextBlock.website_id == website.id)
+        block_ids = (
+            TextBlock.query.filter_by(website=website)
             .where(TextBlock.language.in_(cls.supported_languages))
-            .options(load_only("id"))
-            .all()
+            .ids()
         )
-        block_ids = [block.id for block in blocks]
 
         for ids in batches(block_ids, 100):
             # Load the blocks in this batch

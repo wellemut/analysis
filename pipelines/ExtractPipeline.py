@@ -72,13 +72,11 @@ class ExtractPipeline:
         # Get IDs for all webpages that belong to this domain and that have some
         # content
         website = Website.find_by(domain=domain)
-        webpages = (
-            Webpage.query.where(Webpage.website_id == website.id)
+        webpage_ids = (
+            Webpage.query.filter_by(website=website)
             .where(Webpage.content != None)
-            .options(load_only("id"))
-            .all()
+            .ids()
         )
-        webpage_ids = [page.id for page in webpages]
 
         with website.session.begin():
             # Clear existing text blocks and text block associations

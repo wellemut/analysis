@@ -3,6 +3,7 @@ import contextvars
 from sqlalchemy import create_engine
 from sqlalchemy.event import listen
 from sqlalchemy.orm import sessionmaker, Session
+from helpers.orm import Query
 
 # Using context var, we get a database session that is unique to the current
 # thread
@@ -11,7 +12,7 @@ database_session = contextvars.ContextVar("database_session", default=None)
 # from the DB connection timing out.
 # See: https://stackoverflow.com/a/66515677/6451879
 engine = create_engine(os.environ.get("DATABASE_URL"), pool_pre_ping=True)
-establish_session = sessionmaker(bind=engine, autocommit=True)
+establish_session = sessionmaker(bind=engine, autocommit=True, query_cls=Query)
 
 
 # Get the current database session or start a new one
