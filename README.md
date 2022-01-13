@@ -298,6 +298,12 @@ be restored with:
 $ gzip --stdout -d dump_YYYY-mm-dd_HH_MM_SS.sql.gz | docker-compose exec -T database psql -U postgres
 ```
 
+For even smaller file sizes, use the [`p7zip`](http://manpages.ubuntu.com/manpages/bionic/man1/p7zip.1.html) utility. This takes quite a while longer than `gzip` but the resulting file size is **significantly** smaller.
+
+```
+$ docker-compose exec -T database pg_dumpall -c -U postgres | p7zip > dump_`date +%Y-%m-%d"_"%H_%M_%S`.sql.7z
+```
+
 ## Testing
 
 We use pytest to test the application. Tests are defined in the `/tests`
