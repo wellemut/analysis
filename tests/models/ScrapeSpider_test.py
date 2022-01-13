@@ -54,7 +54,7 @@ def test_it_collects_redirects():
 
 
 def describe_link_extraction():
-    body = """
+    body_with_external_links = """
     <html>
         <body>
             <a href='/subpage'>subpage</a>
@@ -71,7 +71,7 @@ def describe_link_extraction():
     def it_follows_links_on_the_same_naked_and_www_domain_only():
         url = "https://www.example.com/"
         scrapy_response = TextResponse(
-            body=body,
+            body=body_with_external_links,
             url=url,
             request=Request(url=url),
         )
@@ -90,7 +90,7 @@ def describe_link_extraction():
     def it_supports_subdomains_as_allowed_domain():
         url = "https://subdomain.example.com/"
         scrapy_response = TextResponse(
-            body=body,
+            body=body_with_external_links,
             url=url,
             request=Request(url=url),
         )
@@ -107,3 +107,54 @@ def describe_link_extraction():
         assert results[1].url == "https://subdomain.example.com/subpage"
         assert results[2].url == "https://subdomain.example.com/about"
         assert results[3].url == "https://www.subdomain.example.com/more"
+
+    body_with_internal_links = """
+        <html>
+            <body>
+                <a href='/'>HOME</a>
+                <a href='/jrc'>JRC HOME</a>
+                <a href='/jrc/en'>JRC EN</a>
+                <a href='https://www.example.com/jrc/en/news'>JRC EN NEWS</a>
+            </body>    
+        </html>""".encode(
+        "utf-8"
+    )
+
+    def it_prioritizes_urls_matching_the_start_url():
+        url = "https://example.com/jrc/en/"
+        scrapy_response = TextResponse(
+            body=body_with_internal_links,
+            url=url,
+            request=Request(url=url, cb_kwargs=dict(start_url=url)),
+        )
+
+        results = list(
+            ScrapeSpider(allowed_domains=["example.com"], start_urls=[url]).parse(
+                scrapy_response
+            )
+        )
+
+        # Results do not include links to subdomain.example.com nor other-domain.com
+        assert len(results) == 5
+        assert results[0]["depth"] == 0
+        assert results[1].url == "https://example.com/"
+        assert results[1].priority == 0
+        assert results[2].url == "https://example.com/jrc"
+        assert results[2].priority == 100
+        assert results[3].url == "https://example.com/jrc/en"
+        assert results[3].priority == 200
+        assert results[4].url == "https://www.example.com/jrc/en/news"
+        assert results[4].priority == 200
+
+
+def describe_get_url_priority():
+    def it_gives_highest_priority_to_urls_matching_start_url():
+        start_url = "https://www.example.com/en/home"
+        spider = ScrapeSpider(start_urls=[start_url])
+        assert spider.get_url_priority("https://example.com/en") == 100
+        assert spider.get_url_priority("https://example.com/en/") == 100
+        assert spider.get_url_priority("https://example.com/") == 0
+        assert spider.get_url_priority("https://example.com/") == 0
+        assert spider.get_url_priority("https://example.com/en/home") == 200
+        assert spider.get_url_priority("https://example.com/en/home/") == 200
+        assert spider.get_url_priority("https://example.com/en/home/news") == 200

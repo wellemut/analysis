@@ -1,4 +1,5 @@
 from io import BytesIO
+from urllib.parse import urlparse
 import json
 import scrapy
 from scrapy.linkextractors import LinkExtractor
@@ -80,10 +81,39 @@ class ScrapeSpider(scrapy.Spider):
             for link in self.extract_links(response):
                 yield self.follow(response, link.url, depth=depth + 1)
 
+    # Return the numeric priority for a given URL
+    # The more path segments of the url match one of the given start_urls, the
+    # higher the priority. This makes sure that the scraper prioritizes URLs
+    # the pages that are "subpages" of the start URLs.
+    def get_url_priority(self, url):
+        # Split a URL into a list of its segments
+        get_url_segments = lambda url: urlparse(url).path.strip("/").split("/")
+
+        # Get path segments from given URL and start URLs
+        url_segments = get_url_segments(url)
+        start_segments = [get_url_segments(url) for url in self.start_urls]
+
+        # Count number of segment matches of given URL with start URLs
+        priority = 0
+        for segments in start_segments:
+            for index, segment in enumerate(segments):
+                # Stop as soon as we have a mismatch in the segments
+                if index >= len(url_segments) or segment != url_segments[index]:
+                    break
+
+                # Increment the priority level by 100 for each matching segment
+                priority = max(priority, (index + 1) * 100)
+
+        return priority
+
     # Follow a link
     def follow(self, response, url, **kwargs):
         return response.follow(
-            url, callback=self.parse, errback=self.on_error, cb_kwargs=kwargs
+            url,
+            priority=self.get_url_priority(url),
+            callback=self.parse,
+            errback=self.on_error,
+            cb_kwargs=kwargs,
         )
 
     # Handle a scraping error

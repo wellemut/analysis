@@ -38,7 +38,7 @@ REDIRECT_ENABLED = False
 HTTPERROR_ALLOW_ALL = True
 
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
-CONCURRENT_REQUESTS = 16
+CONCURRENT_REQUESTS = 5
 
 # Crawl in breadth-first order rather than depth-first order because we want to
 # give priority to pages that are reachable with fewer clicks
