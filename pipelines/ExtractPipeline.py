@@ -77,6 +77,10 @@ class ExtractPipeline:
             website=website, is_ok_and_has_content=True
         ).ids()
 
+        # Cache block hashes and associated block IDs in a hash map. This is
+        # faster than querying the database for hash IDs.
+        hash_to_id_map = dict()
+
         with website.session.begin():
             # Clear existing text blocks and text block associations
             WebpageTextBlock.delete_by_website(website)
@@ -93,22 +97,24 @@ class ExtractPipeline:
 
                 # ... otherwise, extract text blocks from HTML content
                 for text in extract_texts_from_html(webpage.content):
-
-                    # Find or create associated text block
                     content = text["content"]
                     hash = TextBlock.text_to_hash(content)
-                    block = TextBlock.find_by(website_id=website.id, hash=hash)
-                    if not block:
+
+                    # If block with this hash does not yet exist, create it
+                    if not hash in hash_to_id_map:
                         block = TextBlock.create(
-                            website=website,
+                            website_id=website.id,
                             hash=hash,
                             content=content,
                             word_count=TextBlock.count_words(content),
                         )
+                        hash_to_id_map[hash] = block.id
 
                     # Set up text block association
                     WebpageTextBlock.create(
-                        webpage_id=id, text_block_id=block.id, tag=text["tag"]
+                        webpage_id=id,
+                        text_block_id=hash_to_id_map.get(hash),
+                        tag=text["tag"],
                     )
 
                 # Print progress indicator
