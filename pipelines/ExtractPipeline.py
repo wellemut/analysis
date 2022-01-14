@@ -68,14 +68,14 @@ class ExtractPipeline:
 
     @classmethod
     def process(cls, domain):
-        # Get IDs for all webpages that belong to this domain and that have some
-        # content
+        print(f"Extracting {domain}:", end=" ")
+
+        # Get IDs for all webpages that belong to this domain and that have
+        # content and status code 200
         website = Website.find_by(domain=domain)
-        webpage_ids = (
-            Webpage.query.filter_by(website=website)
-            .where(Webpage.content != None)
-            .ids()
-        )
+        webpage_ids = Webpage.query.filter_by(
+            website=website, is_ok_and_has_content=True
+        ).ids()
 
         with website.session.begin():
             # Clear existing text blocks and text block associations
@@ -91,7 +91,7 @@ class ExtractPipeline:
                 if cls.is_url_blocklisted(webpage.url):
                     continue
 
-                # ... eotherwise, extract text blocks from HTML content
+                # ... otherwise, extract text blocks from HTML content
                 for text in extract_texts_from_html(webpage.content):
 
                     # Find or create associated text block
@@ -110,6 +110,17 @@ class ExtractPipeline:
                     WebpageTextBlock.create(
                         webpage_id=id, text_block_id=block.id, tag=text["tag"]
                     )
+
+                # Print progress indicator
+                print(".", end="")
+
+        # Print summary stats
+        print("")
+        print(
+            "Extracted",
+            TextBlock.query.filter_by(website=website).count(),
+            "text blocks",
+        )
 
     @classmethod
     def is_url_blocklisted(cls, url):

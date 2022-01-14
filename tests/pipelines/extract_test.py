@@ -1,11 +1,12 @@
 from models.WebpageTextBlock import WebpageTextBlock
 from pipelines.ExtractPipeline import ExtractPipeline
-from models import TextBlock, Keyword
+from models import TextBlock
 
 
 def test_it_extracts_text_blocks_from_webpages(factory):
     page1 = factory.webpage_from_url(
         "https://www.17ziele.de",
+        status_code=200,
         content="""
         <html>
             <head><title>my title</title>
@@ -16,6 +17,7 @@ def test_it_extracts_text_blocks_from_webpages(factory):
     )
     factory.webpage_from_url(
         "https://www.17ziele.de/abc",
+        status_code=200,
         content="""
         <html>
             <body>
@@ -32,19 +34,24 @@ def test_it_extracts_text_blocks_from_webpages(factory):
     assert page1.webpage_text_blocks[0].text_block.content == "my title"
 
 
-def test_it_ignores_pages_without_content(factory):
-    factory.webpage_from_url("https://www.17ziele.de", content="<body>abc</body>")
-    factory.webpage_from_url("https://www.17ziele.de/home")
+def test_it_ignores_pages_without_content_and_status_200(factory):
+    site = factory.website()
+    page = factory.webpage(website=site, content="<body>abc</body>", status_code=200)
+    factory.webpage(website=site, content="<body>abc</body>", status_code=301)
+    factory.webpage(website=site, content="<body>abc</body>", status_code=404)
+    factory.webpage(website=site, content=None, status_code=200)
 
-    ExtractPipeline.process("17ziele.de")
+    ExtractPipeline.process(site.domain)
 
     assert TextBlock.query.count() == 1
+    assert len(page.webpage_text_blocks) == 1
 
 
 def test_it_ignores_blocklisted_urls(factory):
     factory.webpage_from_url(
         "https://www.17ziele.de/privacy.html",
         content="<body><p>ignore content</p></body>",
+        status_code=200,
     )
 
     ExtractPipeline.process("17ziele.de")
@@ -53,18 +60,16 @@ def test_it_ignores_blocklisted_urls(factory):
 
 
 def test_it_removes_associated_records_for_the_website(factory):
-    webpage = factory.webpage_from_url(
-        "https://www.17ziele.de", content="<body>hello world</body>"
-    )
+    webpage = factory.webpage(content="<body>hello world</body>", status_code=200)
     block = factory.text_block(website=webpage.website)
     factory.webpage_text_block(webpage=webpage, text_block=block)
     factory.keyword(text_block=block)
 
-    other_webpage = factory.webpage_from_url("https://example.com")
+    other_webpage = factory.webpage()
     other_block = factory.text_block(website=other_webpage.website)
     factory.webpage_text_block(webpage=other_webpage, text_block=other_block)
 
-    ExtractPipeline.process("17ziele.de")
+    ExtractPipeline.process(webpage.website.domain)
 
     assert TextBlock.query.count() == 2
     assert WebpageTextBlock.query.count() == 2
