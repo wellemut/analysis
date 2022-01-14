@@ -16,6 +16,8 @@ class LangDetectPipeline:
 
     @classmethod
     def process(cls, domain):
+        print(f"Detecting languages for {domain}:", end=" ")
+
         website = Website.find_by(domain=domain)
 
         # Get IDs for all text blocks that belong to this domain
@@ -34,6 +36,12 @@ class LangDetectPipeline:
                 # Save the updated text blocks
                 for block in blocks:
                     block.save()
+
+                # Print pogress indicator
+                print(".", end="")
+
+        # Finish with new line
+        print("")
 
     @classmethod
     def detect_language(cls, text):
