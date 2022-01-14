@@ -18,6 +18,12 @@ class Webpage(models.BaseModel):
         "Website", back_populates="webpages", foreign_keys=website_id
     )
     webpage_text_blocks = relationship("WebpageTextBlock", back_populates="webpage")
+    outgoing_links = relationship(
+        "Link", back_populates="source_webpage", foreign_keys="Link.source_webpage_id"
+    )
+    incoming_links = relationship(
+        "Link", back_populates="target_webpage", foreign_keys="Link.target_webpage_id"
+    )
 
     @hybrid_property
     def is_ok_and_has_content(self):

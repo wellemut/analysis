@@ -1,5 +1,6 @@
 from .BaseModel import BaseModel
 from .Keyword import Keyword
+from .Link import Link
 from .Webpage import Webpage
 from .Website import Website
 from .TextBlock import TextBlock

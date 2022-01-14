@@ -6,6 +6,7 @@ pipelines = {
     "extract": "ExtractPipeline",
     "langdetect": "LangDetectPipeline",
     "keyword": "KeywordPipeline",
+    "links": "LinksPipeline",
 }
 
 # Names of available pipelines

@@ -1,5 +1,6 @@
 from .batches import batches
 from .squish import squish
+from .extract_links_from_html import extract_links_from_html
 from .extract_texts_from_html import extract_texts_from_html
 from .get_database_session import get_database_session
 from .get_domain_from_url import get_domain_from_url
