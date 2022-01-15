@@ -28,20 +28,20 @@ class LinksPipeline:
 
                 # ... extract links from HTML content
                 for link in extract_links_from_html(webpage.content):
-                    target_domain = cls.get_target_domain(link)
-
-                    # Only process links that are web links, email addresses, or
-                    # phone numbers
-                    if not cls.is_web_or_email_or_phone(link):
-                        continue
-
-                    # Exclude any internal links
-                    if target_domain == domain:
-                        continue
-
-                    # If we have no target domain, just save link as is
-                    if target_domain is None:
+                    # If we have an email address or a phone number, save link
+                    # as is
+                    if cls.is_email_or_phone(link):
                         Link.create(source_webpage_id=webpage.id, target=link)
+                        continue
+
+                    target_domain = get_domain_from_url(link)
+
+                    # If we have no target domain, the URL does not start with
+                    # http(s) or is malformed.
+                    # If the target domain is equal to the current domain, we
+                    # have an internal link.
+                    # In both cases, we ignore the link and move on
+                    if target_domain is None or target_domain == domain:
                         continue
 
                     # Otherwise, find or create target website...
@@ -78,15 +78,6 @@ class LinksPipeline:
         )
 
     @classmethod
-    def get_target_domain(cls, url):
-        return get_domain_from_url(url) if cls.is_web(url) else None
-
-    @classmethod
-    def is_web_or_email_or_phone(cls, url):
+    def is_email_or_phone(cls, url):
         url = url.lower()
-        return cls.is_web(url) or url.startswith("mailto:") or url.startswith("tel:")
-
-    @classmethod
-    def is_web(cls, url):
-        url = url.lower()
-        return url.startswith("https://") or url.startswith("http://")
+        return url.startswith("mailto:") or url.startswith("tel:")
