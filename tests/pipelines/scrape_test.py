@@ -57,9 +57,8 @@ def test_it_scrapes_pages_of_domain():
 
 
 def test_it_falls_back_to_www_and_non_https_when_it_cannot_find_start_url(factory):
-    website = factory.website(
-        domain="example.com", homepage="https://www.example.com/home"
-    )
+    website = factory.website(domain="example.com")
+    factory.organization(website=website, homepage="https://www.example.com/home")
     ScrapePipeline.process(website.domain)
 
     # It makes four scraping attemps that result in errors

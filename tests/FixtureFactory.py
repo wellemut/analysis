@@ -1,6 +1,14 @@
 import random
 import string
-from models import Keyword, Link, TextBlock, Webpage, WebpageTextBlock, Website
+from models import (
+    Keyword,
+    Link,
+    Organization,
+    TextBlock,
+    Webpage,
+    WebpageTextBlock,
+    Website,
+)
 from helpers import get_domain_from_url
 
 
@@ -31,6 +39,12 @@ class FixtureFactory:
                     target=lambda x: None if "target_webpage" in x else cls.letters(5),
                 ),
             )
+        )
+
+    @classmethod
+    def organization(cls, **kwargs):
+        return Organization.create(
+            **cls.with_defaults(kwargs, dict(website=lambda _: cls.website()))
         )
 
     @classmethod

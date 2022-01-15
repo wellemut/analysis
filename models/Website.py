@@ -1,5 +1,4 @@
-from urllib.parse import urlparse
-from sqlalchemy import Column, Integer, String, JSON
+from sqlalchemy import Column, Integer, String
 from sqlalchemy.orm import relationship
 import models
 
@@ -7,9 +6,8 @@ import models
 class Website(models.BaseModel):
     id = Column(Integer, primary_key=True)
     domain = Column(String, nullable=False, index=True, unique=True)
-    homepage = Column(String, nullable=True)
-    meta = Column(JSON, nullable=True)
 
+    organization = relationship("Organization", back_populates="website", uselist=False)
     webpages = relationship("Webpage", back_populates="website")
     text_blocks = relationship("TextBlock", back_populates="website")
 

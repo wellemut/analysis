@@ -20,7 +20,9 @@ class ScrapePipeline:
 
         # Determine the homepage / first page to scrape
         website = Website.find_by(domain=domain) or Website().fill(domain=domain)
-        homepage = website.homepage or f"https://{domain}"
+        homepage = f"https://{domain}"
+        if website.organization and website.organization.homepage:
+            homepage = website.organization.homepage
 
         # Store scraped URLs in a temporary file
         # We do this so that we can avoid writing the URLs to the database until
