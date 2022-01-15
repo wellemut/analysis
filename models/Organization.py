@@ -15,3 +15,5 @@ class Organization(models.BaseModel):
     website = relationship(
         "Website", back_populates="organization", foreign_keys=website_id
     )
+    # relationship outbound_connections defined in models.Connection
+    # relationship inbound_connections defined in models.Connection

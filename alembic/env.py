@@ -7,6 +7,8 @@ from sqlalchemy import pool
 
 from alembic import context
 
+from alembic_utils.replaceable_entity import register_entities
+
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
@@ -21,9 +23,12 @@ fileConfig(config.config_file_name)
 
 # add your model's MetaData object here
 # for 'autogenerate' support
-from models import BaseModel
+from models import BaseModel, BaseView
 
 target_metadata = BaseModel.metadata
+
+# Register custom views with alembic_utils
+register_entities(BaseView.views)
 
 # other values from the config, defined by the needs of env.py,
 # can be acquired:
