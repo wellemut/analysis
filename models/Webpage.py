@@ -1,5 +1,5 @@
 from sqlalchemy import Column, ForeignKey, Integer, String
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import aliased, relationship
 from sqlalchemy.ext.hybrid import hybrid_property
 import models
 
@@ -40,11 +40,18 @@ class Webpage(models.BaseModel):
         return self.content != None
 
     # Delete any webpages for the given website ID that are not being referenced
-    # by any (Webpage)TextBlocks. These webpages are unused and can be removed.
+    # by any (Webpage)TextBlocks, any outgoing links, or any incoming links.
+    # These webpages are unused and can be removed.
     @classmethod
     def delete_unused_by_website(cls, website):
+        outgoing_links = aliased(models.Link)
+        incoming_links = aliased(models.Link)
         cls.delete_by_ids(
-            cls.id.query.join(models.WebpageTextBlock, isouter=True)
+            cls.id.query.join(cls.webpage_text_blocks, isouter=True)
+            .join(outgoing_links, cls.outgoing_links, isouter=True)
+            .join(incoming_links, cls.incoming_links, isouter=True)
             .where(cls.website == website)
             .where(models.WebpageTextBlock.id == None)
+            .where(outgoing_links.id == None)
+            .where(incoming_links.id == None)
         )
