@@ -16,10 +16,10 @@ class Link(models.BaseModel):
     target = Column(String, nullable=True)
 
     source_webpage = relationship(
-        "Webpage", back_populates="outgoing_links", foreign_keys=source_webpage_id
+        "Webpage", back_populates="outbound_links", foreign_keys=source_webpage_id
     )
     target_webpage = relationship(
-        "Webpage", back_populates="incoming_links", foreign_keys=target_webpage_id
+        "Webpage", back_populates="inbound_links", foreign_keys=target_webpage_id
     )
 
     __table_args__ = (

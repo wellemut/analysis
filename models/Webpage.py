@@ -18,10 +18,10 @@ class Webpage(models.BaseModel):
         "Website", back_populates="webpages", foreign_keys=website_id
     )
     webpage_text_blocks = relationship("WebpageTextBlock", back_populates="webpage")
-    outgoing_links = relationship(
+    outbound_links = relationship(
         "Link", back_populates="source_webpage", foreign_keys="Link.source_webpage_id"
     )
-    incoming_links = relationship(
+    inbound_links = relationship(
         "Link", back_populates="target_webpage", foreign_keys="Link.target_webpage_id"
     )
 
@@ -40,18 +40,18 @@ class Webpage(models.BaseModel):
         return self.content != None
 
     # Delete any webpages for the given website ID that are not being referenced
-    # by any (Webpage)TextBlocks, any outgoing links, or any incoming links.
+    # by any (Webpage)TextBlocks, any outbound links, or any inbound links.
     # These webpages are unused and can be removed.
     @classmethod
     def delete_unused_by_website(cls, website):
-        outgoing_links = aliased(models.Link)
-        incoming_links = aliased(models.Link)
+        outbound_links = aliased(models.Link)
+        inbound_links = aliased(models.Link)
         cls.delete_by_ids(
             cls.id.query.join(cls.webpage_text_blocks, isouter=True)
-            .join(outgoing_links, cls.outgoing_links, isouter=True)
-            .join(incoming_links, cls.incoming_links, isouter=True)
+            .join(outbound_links, cls.outbound_links, isouter=True)
+            .join(inbound_links, cls.inbound_links, isouter=True)
             .where(cls.website == website)
             .where(models.WebpageTextBlock.id == None)
-            .where(outgoing_links.id == None)
-            .where(incoming_links.id == None)
+            .where(outbound_links.id == None)
+            .where(inbound_links.id == None)
         )

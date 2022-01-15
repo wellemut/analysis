@@ -22,7 +22,7 @@ def test_it_identifies_links_in_content(factory):
     LinksPipeline.process(website.domain)
 
     assert Link.query.count() == 4
-    links = webpage.outgoing_links
+    links = webpage.outbound_links
     assert links[0].target_webpage.url == "https://test.com/"
     assert links[0].target_webpage.website.domain == "test.com"
     assert links[1].target_webpage.url == "http://test.com/abc"
@@ -38,11 +38,11 @@ def test_it_deletes_existing_links(factory):
     factory.link(source_webpage=webpage)
     factory.link(source_webpage=webpage)
 
-    assert len(webpage.outgoing_links) == 2
+    assert len(webpage.outbound_links) == 2
 
     LinksPipeline.process(webpage.website.domain)
 
-    assert len(webpage.outgoing_links) == 0
+    assert len(webpage.outbound_links) == 0
 
 
 def test_it_ignores_pages_without_content_and_status_200(factory):
@@ -56,4 +56,4 @@ def test_it_ignores_pages_without_content_and_status_200(factory):
     LinksPipeline.process(site.domain)
 
     assert Link.query.count() == 1
-    assert len(page.outgoing_links) == 1
+    assert len(page.outbound_links) == 1

@@ -3,7 +3,7 @@ from models import Link
 
 
 def describe_delete_by_website():
-    def test_it_deletes_outgoing_links_of_website(factory):
+    def test_it_deletes_outbound_links_of_website(factory):
         website = factory.website()
         factory.link(source_webpage=factory.webpage(website=website))
         factory.link(source_webpage=factory.webpage(website=website))
@@ -12,7 +12,7 @@ def describe_delete_by_website():
         Link.delete_by_website(website)
         assert Link.query.count() == 0
 
-    def test_it_does_not_delete_incoming_links_of_website(factory):
+    def test_it_does_not_delete_inbound_links_of_website(factory):
         website = factory.website()
         factory.link(target_webpage=factory.webpage(website=website))
         factory.link(target_webpage=factory.webpage(website=website))
