@@ -14,5 +14,5 @@ class Website(models.BaseModel):
 
     # Return the suggested homepage based on webpages that have been scraped
     @property
-    def suggested_homepage(self):
-        return models.Webpage.find_by(website=self, depth=0, status_code=200)
+    def root_page(self):
+        return models.Webpage.find_by(website=self, is_root=True)

@@ -40,6 +40,10 @@ class Webpage(models.BaseModel):
     def has_content(self):
         return self.content != None
 
+    @hybrid_property
+    def is_root(self):
+        return (self.depth == 0) & self.is_ok
+
     # Delete any webpages for the given website ID that are not being referenced
     # by any (Webpage)TextBlocks, any outbound links, or any inbound links.
     # These webpages are unused and can be removed.

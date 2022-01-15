@@ -47,13 +47,13 @@ def test_it_scrapes_pages_of_domain():
         Webpage.query.filter_by(is_ok_and_has_content=True, website=website).count()
         == 5
     )
-    homepage = website.suggested_homepage
-    assert homepage.url == "https://17ziele.de/"
-    assert homepage.depth == 0
-    assert homepage.status_code == 200
-    assert homepage.headers != None
-    assert homepage.mime_type == "HTML document, UTF-8 Unicode text"
-    assert homepage.content.find("©2021 ENGAGEMENT GLOBAL") > 0
+    root_page = website.root_page
+    assert root_page.url == "https://17ziele.de/"
+    assert root_page.depth == 0
+    assert root_page.status_code == 200
+    assert root_page.headers != None
+    assert root_page.mime_type == "HTML document, UTF-8 Unicode text"
+    assert root_page.content.find("©2021 ENGAGEMENT GLOBAL") > 0
 
 
 def test_it_falls_back_to_www_and_non_https_when_it_cannot_find_start_url(factory):
@@ -75,7 +75,7 @@ def test_it_falls_back_to_www_and_non_https_when_it_cannot_find_start_url(factor
     assert website.webpages[4].url == "http://www.example.com"
 
     # Has no suggested homepage
-    assert website.suggested_homepage == None
+    assert website.root_page == None
 
 
 def test_it_retains_existing_referenced_pages_in_the_database(factory):

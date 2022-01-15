@@ -1,4 +1,4 @@
-def describe_suggested_homepage():
+def describe_root_page():
     def it_returns_homepage(factory):
         site = factory.website()
         factory.webpage(website=site, depth=0, status_code=301)
@@ -6,7 +6,7 @@ def describe_suggested_homepage():
         factory.webpage(website=site, depth=1, status_code=200)
         factory.webpage(website=site, depth=1, status_code=200)
 
-        assert site.suggested_homepage == root_page
+        assert site.root_page == root_page
 
     def it_returns_none_if_no_homepage(factory):
         site = factory.website()
@@ -16,4 +16,4 @@ def describe_suggested_homepage():
         factory.webpage(website=site, depth=1)
         factory.webpage(website=site, depth=1)
 
-        assert site.suggested_homepage == None
+        assert site.root_page == None
