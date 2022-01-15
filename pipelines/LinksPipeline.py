@@ -1,5 +1,9 @@
 from models import Link, Website, Webpage
-from helpers import extract_links_from_html, get_domain_from_url
+from helpers import (
+    extract_links_from_html,
+    get_domain_from_url,
+    get_top_level_domain_from_url,
+)
 
 
 class LinksPipeline:
@@ -46,7 +50,10 @@ class LinksPipeline:
 
                     # Otherwise, find or create target website...
                     if target_domain not in domain_to_website_id_map:
-                        target_website = Website.find_by_or_create(domain=target_domain)
+                        target_website = Website.find_by_or_create(
+                            domain=target_domain,
+                            top_level_domain=get_top_level_domain_from_url(link),
+                        )
                         domain_to_website_id_map[target_domain] = target_website.id
 
                     # ... and target webpage

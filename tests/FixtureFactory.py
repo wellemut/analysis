@@ -9,7 +9,6 @@ from models import (
     WebpageTextBlock,
     Website,
 )
-from helpers import get_domain_from_url
 
 
 class FixtureFactory:
@@ -60,11 +59,6 @@ class FixtureFactory:
         )
 
     @classmethod
-    def webpage_from_url(cls, url, **kwargs):
-        website = Website.find_by_or_create(domain=get_domain_from_url(url))
-        return Webpage.create(website=website, url=url, **kwargs)
-
-    @classmethod
     def webpage_text_block(cls, **kwargs):
         return WebpageTextBlock.create(
             **cls.with_defaults(
@@ -80,7 +74,13 @@ class FixtureFactory:
     @classmethod
     def website(cls, **kwargs):
         return Website.create(
-            **cls.with_defaults(kwargs, dict(domain=lambda _: cls.domain()))
+            **cls.with_defaults(
+                kwargs,
+                dict(
+                    domain=lambda _: cls.domain(),
+                    top_level_domain=lambda x: x["domain"],
+                ),
+            )
         )
 
     @classmethod

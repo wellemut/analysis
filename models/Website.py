@@ -6,6 +6,7 @@ import models
 class Website(models.BaseModel):
     id = Column(Integer, primary_key=True)
     domain = Column(String, nullable=False, index=True, unique=True)
+    top_level_domain = Column(String, nullable=False, index=True, unique=False)
 
     organization = relationship("Organization", back_populates="website", uselist=False)
     webpages = relationship("Webpage", back_populates="website")

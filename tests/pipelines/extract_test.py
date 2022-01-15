@@ -4,8 +4,9 @@ from models import TextBlock
 
 
 def test_it_extracts_text_blocks_from_webpages(factory):
-    page1 = factory.webpage_from_url(
-        "https://www.17ziele.de",
+    website = factory.website()
+    page1 = factory.webpage(
+        website=website,
         status_code=200,
         content="""
         <html>
@@ -15,8 +16,8 @@ def test_it_extracts_text_blocks_from_webpages(factory):
             </body>
         </html>""",
     )
-    factory.webpage_from_url(
-        "https://www.17ziele.de/abc",
+    factory.webpage(
+        website=website,
         status_code=200,
         content="""
         <html>
@@ -26,7 +27,7 @@ def test_it_extracts_text_blocks_from_webpages(factory):
         </html>""",
     )
 
-    ExtractPipeline.process("17ziele.de")
+    ExtractPipeline.process(website.domain)
 
     assert TextBlock.query.count() == 2
     assert len(page1.webpage_text_blocks) == 2
@@ -48,13 +49,13 @@ def test_it_ignores_pages_without_content_and_status_200(factory):
 
 
 def test_it_ignores_blocklisted_urls(factory):
-    factory.webpage_from_url(
-        "https://www.17ziele.de/privacy.html",
+    page = factory.webpage(
+        url="https://www.example.com/privacy",
         content="<body><p>ignore content</p></body>",
         status_code=200,
     )
 
-    ExtractPipeline.process("17ziele.de")
+    ExtractPipeline.process(page.website.domain)
 
     assert TextBlock.query.count() == 0
 

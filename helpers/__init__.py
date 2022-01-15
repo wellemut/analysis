@@ -4,5 +4,6 @@ from .extract_links_from_html import extract_links_from_html
 from .extract_texts_from_html import extract_texts_from_html
 from .get_database_session import get_database_session
 from .get_domain_from_url import get_domain_from_url
+from .get_top_level_domain_from_url import get_top_level_domain_from_url
 from .matches_dict import matches_dict
 from .suppress_stdout_and_stderr import suppress_stdout_and_stderr

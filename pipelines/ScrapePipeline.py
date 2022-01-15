@@ -5,7 +5,8 @@ import csv
 from scrapy.crawler import CrawlerProcess as CrawlerProcess
 from scrapy.utils.project import get_project_settings
 from scrape.ScrapeSpider import ScrapeSpider
-from models import Website, Webpage, WebpageTextBlock
+from models import Website, Webpage
+from helpers import get_top_level_domain_from_url
 
 
 class ScrapePipeline:
@@ -19,8 +20,10 @@ class ScrapePipeline:
         print(f"Scraping {domain}:", end=" ")
 
         # Determine the homepage / first page to scrape
-        website = Website.find_by(domain=domain) or Website().fill(domain=domain)
         homepage = f"https://{domain}"
+        website = Website.find_by(domain=domain) or Website().fill(
+            domain=domain, top_level_domain=get_top_level_domain_from_url(homepage)
+        )
         if website.organization and website.organization.homepage:
             homepage = website.organization.homepage
 
