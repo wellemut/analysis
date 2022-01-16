@@ -57,3 +57,30 @@ def test_it_ignores_pages_without_content_and_status_200(factory):
 
     assert Link.query.count() == 1
     assert len(page.outbound_links) == 1
+
+
+def describe_is_email():
+    def it_returns_true_for_valid_emails():
+        assert LinksPipeline.is_email("mailto:user@example.com") == True
+        assert LinksPipeline.is_email("mailto:user@example.com?subject=hello") == True
+        assert LinksPipeline.is_email("MAiLto:user@example.com") == True
+
+    def it_returns_false_for_non_mailto_links():
+        assert LinksPipeline.is_email("mail:user@example.com") == False
+        assert LinksPipeline.is_email("user@example.com") == False
+        assert LinksPipeline.is_email("https://user@example.com") == False
+        assert LinksPipeline.is_email("tel:user@example.com") == False
+
+    def it_returns_false_if_link_has_no_at_symbol():
+        assert LinksPipeline.is_email("mailto:?subject=email") == False
+
+
+def describe_is_phone():
+    def it_returns_true_for_url_starting_with_tel():
+        assert LinksPipeline.is_phone("tel:123") == True
+        assert LinksPipeline.is_phone("tel:+04537175") == True
+        assert LinksPipeline.is_phone("TEl:AbCDEfgh") == True
+
+    def it_returns_false_for_non_tel_links():
+        assert LinksPipeline.is_phone("mailto:12344756") == False
+        assert LinksPipeline.is_phone("https://4475321473") == False

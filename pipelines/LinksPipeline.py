@@ -34,7 +34,7 @@ class LinksPipeline:
                 for link in extract_links_from_html(webpage.content):
                     # If we have an email address or a phone number, save link
                     # as is
-                    if cls.is_email_or_phone(link):
+                    if cls.is_email(link) or cls.is_phone(link):
                         Link.create(source_webpage_id=webpage.id, target=link)
                         continue
 
@@ -85,6 +85,9 @@ class LinksPipeline:
         )
 
     @classmethod
-    def is_email_or_phone(cls, url):
-        url = url.lower()
-        return url.startswith("mailto:") or url.startswith("tel:")
+    def is_email(cls, url):
+        return url.lower().startswith("mailto:") and "@" in url
+
+    @classmethod
+    def is_phone(cls, url):
+        return url.lower().startswith("tel:")
