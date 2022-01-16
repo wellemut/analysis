@@ -4,6 +4,7 @@ from models import (
     Keyword,
     Link,
     Organization,
+    Social,
     TextBlock,
     Webpage,
     WebpageTextBlock,
@@ -79,6 +80,20 @@ class FixtureFactory:
                 dict(
                     domain=lambda _: cls.domain(),
                     top_level_domain=lambda x: x["domain"],
+                ),
+            )
+        )
+
+    @classmethod
+    def social(cls, **kwargs):
+        return Social.create(
+            **cls.with_defaults(
+                kwargs,
+                dict(
+                    organization=lambda _: cls.organization(),
+                    type="twitter",
+                    value=lambda _: cls.letters(10),
+                    page_count=lambda _: random.randint(1, 100),
                 ),
             )
         )

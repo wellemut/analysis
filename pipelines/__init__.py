@@ -7,6 +7,7 @@ pipelines = {
     "langdetect": "LangDetectPipeline",
     "keyword": "KeywordPipeline",
     "links": "LinksPipeline",
+    "socials": "SocialsPipeline",
 }
 
 # Names of available pipelines
