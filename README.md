@@ -3,6 +3,11 @@
 This repo contains the code for mapping organizations to the 17 Sustainable
 Development Goals using natural language processing (NLP).
 
+> ⚠ Work in progress: This is a complete rebuild of the analyis pipelines, built
+> for Docker, backed by PostgreSQL, fully tested, and with a massively expanded
+> and improved set of SDG keywords. The rebuild is not yet complete. For the
+> discontinued stable version, see the `v1` branch.
+
 ## Table of Contents
 
 - [globalgoals.directory: analysis](#globalgoalsdirectory-analysis)
