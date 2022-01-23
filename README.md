@@ -296,8 +296,10 @@ You can back up the development database by running:
 $ docker-compose exec -T database pg_dumpall -c -U postgres | gzip > dump_`date +%Y-%m-%d"_"%H_%M_%S`.sql.gz
 ```
 
-This will create a compressed SQL dump of the database in the repository. It can
-be restored with:
+This will create a compressed SQL dump of the database in the repository.
+
+To restore the dump, first make sure to remove the Docker volume for the
+database before importing the dump. Then run:
 
 ```
 $ gzip --stdout -d dump_YYYY-mm-dd_HH_MM_SS.sql.gz | docker-compose exec -T database psql -U postgres
