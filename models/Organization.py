@@ -11,6 +11,10 @@ class Organization(models.BaseModel):
     )
     homepage = Column(String, nullable=True)
     meta = Column(JSONB, nullable=True)
+    email_address = Column(String, nullable=True)
+    facebook_handle = Column(String, nullable=True)
+    twitter_handle = Column(String, nullable=True)
+    linkedin_handle = Column(String, nullable=True)
 
     website = relationship(
         "Website", back_populates="organization", foreign_keys=website_id

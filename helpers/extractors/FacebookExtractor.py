@@ -4,7 +4,6 @@ from helpers.extractors import BaseExtractor
 
 
 class FacebookExtractor(BaseExtractor):
-    name = "facebook"
     top_level_domains = ["facebook.com", "fb.me", "fb.com"]
     NUMERIC_HANDLE_PATTERN = re.compile(r"^.*?\d{5,}$")
     RESERVED_TERMS = [

@@ -3,7 +3,6 @@ from helpers.extractors import BaseExtractor
 
 
 class LinkedinExtractor(BaseExtractor):
-    name = "linkedin"
     top_level_domains = ["linkedin.com"]
     # A list of path segments that will precede a handle
     VALID_ENTITIES = ["company", "school", "showcase"]

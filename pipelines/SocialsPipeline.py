@@ -11,25 +11,34 @@ from helpers.extractors import (
 
 
 class SocialsPipeline:
-    EXTRACTORS = [
-        FacebookExtractor,
-        TwitterExtractor,
-        LinkedinExtractor,
-        EmailExtractor,
-    ]
+    EXTRACTORS = dict(
+        email_address=EmailExtractor,
+        facebook_handle=FacebookExtractor,
+        twitter_handle=TwitterExtractor,
+        linkedin_handle=LinkedinExtractor,
+    )
 
     @classmethod
     def process(cls, domain):
         print(f"Identifying socials for {domain}:", end=" ")
 
+        # Count the number of webpages that belong to this domain
         website = Website.find_by(domain=domain)
+        organization = website.organization
+        number_of_scraped_pages = Webpage.query.filter_by(
+            website=website, is_ok_and_has_content=True
+        ).count()
 
         # Set up extractor instances
-        extractors = [Extractor() for Extractor in cls.EXTRACTORS]
+        extractors = []
+        for column, Extractor in cls.EXTRACTORS.items():
+            extractor = Extractor(domain=domain, page_count=number_of_scraped_pages)
+            extractor.name = column
+            extractors.append(extractor)
 
         # Top level domains to filter for
         top_level_domains = set()
-        for extractor in cls.EXTRACTORS:
+        for extractor in extractors:
             top_level_domains.update(extractor.top_level_domains)
 
         # Check if top level domains include None
@@ -63,9 +72,10 @@ class SocialsPipeline:
                     .join(Webpage.website, isouter=True)
                     .where(Link.id.in_(ids))
                     .with_entities(
-                        func.coalesce(Link.target, Webpage.url).label("target"),
-                        Website.top_level_domain,
+                        Link.id,
                         Link.source_webpage_id,
+                        Website.top_level_domain,
+                        func.coalesce(Link.target, Webpage.url).label("target"),
                     )
                     .all()
                 )
@@ -78,19 +88,25 @@ class SocialsPipeline:
                             continue
 
                         # ...and extract the value (handle, email address, ...)
-                        extractor.process(link=link.target, page=link.source_webpage_id)
+                        extractor.process(
+                            link=link.target,
+                            link_id=link.id,
+                            page_id=link.source_webpage_id,
+                        )
 
                 # Print progress indicator
                 print(".", end="")
 
         for extractor in extractors:
+            organization.fill(**{extractor.name: extractor.top_candidate})
             for handle, page_count in extractor.counts.items():
                 Social.create(
-                    organization_id=website.organization.id,
+                    organization_id=organization.id,
                     type=extractor.name,
                     value=handle,
                     page_count=page_count,
                 )
+        organization.save()
 
         print("")
         print(

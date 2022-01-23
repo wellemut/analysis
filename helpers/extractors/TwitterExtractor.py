@@ -4,7 +4,6 @@ from helpers.extractors import BaseExtractor
 
 
 class TwitterExtractor(BaseExtractor):
-    name = "twitter"
     top_level_domains = ["twitter.com"]
     # A list of path segments that are valid after a username
     VALID_USER_PATHS = ["status", "lists", "timelines"]
