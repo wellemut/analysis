@@ -5,7 +5,7 @@ pipelines = {
     "scrape": "ScrapePipeline",
     "extract": "ExtractPipeline",
     "langdetect": "LangDetectPipeline",
-    "keyword": "KeywordPipeline",
+    "keywords": "KeywordsPipeline",
     "links": "LinksPipeline",
     "socials": "SocialsPipeline",
 }

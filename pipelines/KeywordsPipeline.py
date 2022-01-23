@@ -12,12 +12,14 @@ from models import Keyword, Website, TextBlock
 from helpers import batches
 
 
-class KeywordPipeline:
+class KeywordsPipeline:
     # Mapping of languages to the Spacy models to use for the NLP pipeline
     NLP_MODELS = {"en": "en_core_web_sm"}
 
     @classmethod
     def process(cls, domain):
+        print(f"Finding keywords for {domain}:", end=" ")
+
         website = Website.find_by(domain=domain)
 
         # Keep track of identified keywords
@@ -55,6 +57,8 @@ class KeywordPipeline:
                                 end=match["end"],
                             )
                         )
+            # Print pogress indicator
+            print(".", end="")
 
         with Keyword.session.begin():
             # Clear existing keywords from database
@@ -63,6 +67,10 @@ class KeywordPipeline:
             # Write new keywords to database
             for keyword in keywords:
                 keyword.save()
+
+        # Finish with new line
+        print("")
+        print("Found", len(keywords), "keywords")
 
     # Find SDG keywords in the provided Spacy NLP document
     # Return a list of dicts with the following keys:
