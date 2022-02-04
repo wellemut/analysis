@@ -50,7 +50,7 @@ def describe_get_nlp():
         nlp = KeywordsPipeline.get_nlp("en")
         doc = nlp("I optimise five metres of programmes in ten instalments")
         lemmas = [token.lemma_ for token in doc]
-        assert lemmas == "I optimize five meter of program in ten installment".split()
+        assert lemmas == "i optimize five meter of program in ten installment".split()
 
     def it_expands_contractions_of_will():
         # There is a bug in Spacy where contractions of will (e.g., he'll) are
@@ -61,7 +61,7 @@ def describe_get_nlp():
         nlp = KeywordsPipeline.get_nlp("en")
         doc = nlp("I'll he'll she'll we'll")
         lemmas = [token.lemma_ for token in doc]
-        assert lemmas == "I will he will she will we will".split()
+        assert lemmas == "i will he will she will we will".split()
 
 
 def describe_find_keywords():

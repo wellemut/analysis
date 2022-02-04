@@ -178,5 +178,5 @@ class TokenNormalizer:
 
     def __call__(self, doc):
         for token in doc:
-            token.lemma_ = self.norm_table.get(token.lemma_, token.lemma_)
+            token.lemma_ = self.norm_table.get(token.lemma_, token.lemma_).lower()
         return doc
