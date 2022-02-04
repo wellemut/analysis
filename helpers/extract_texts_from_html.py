@@ -1,16 +1,18 @@
-from bs4 import BeautifulSoup, NavigableString
+from bs4 import BeautifulSoup
 from helpers import squish
 
 
-def contains_text(tag):
-    # Ignore non tags (text instances)
-    if isinstance(tag, NavigableString):
+def div_without_child_div(tag):
+    # Return false if tag is not a div
+    if tag.name != "div":
         return False
 
-    # Return true if any immediate child of this tag is a string
-    for content in tag.contents:
-        if isinstance(content, NavigableString) and len(squish(content)) > 0:
-            return True
+    # Return false if any child tags are divs
+    if tag.find("div", recursive=True):
+        return False
+
+    # We found a div without any child divs
+    return True
 
 
 class TextCollection:
@@ -19,7 +21,7 @@ class TextCollection:
 
     # Add a text to the text collection from a given tag, and optionally with
     # a specific tag_name or a custom content getter method.
-    def add(self, tag, tag_name=None, getter=lambda x: x.get_text()):
+    def add(self, tag, tag_name=None, getter=lambda x: x.get_text(separator=" ")):
         if tag is None:
             return
 
@@ -52,15 +54,16 @@ def extract_texts_from_html(html):
     )
 
     # Add any text nodes
-    for tag in soup.find_all(["h1", "h2", "h3", "h4", "h5", "h6", "p"]):
+    for tag in soup.find_all(["h1", "h2", "h3", "h4", "h5", "h6", "ol", "ul", "p"]):
         texts.add(tag)
 
     # Add image descriptions
     for image in soup.find_all("img"):
         texts.add(image, getter=lambda x: x.get("alt"))
 
-    # Add any remaining text inside the body (e.g., from divs or spans)
-    while tag := soup.body.find(contains_text):
+    # Add any remaining text inside the body, starting with the deepest div and
+    # working upwards
+    while tag := soup.body.find(div_without_child_div):
         texts.add(tag)
 
     # Finally, add any remaining text from the HTML body

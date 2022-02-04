@@ -10,8 +10,8 @@ def test_it_extracts_contained_tags():
     )
     assert len(texts) == 2
     assert texts[0]["tag"] == "h1"
-    assert texts[0]["content"] == "Hello world!"
-    assert texts[1]["tag"] == "span"
+    assert texts[0]["content"] == "Hello world !"
+    assert texts[1]["tag"] == "body"
     assert texts[1]["content"] == "outer inner"
 
 
@@ -65,8 +65,29 @@ def test_it_includes_deeply_nested_tags():
     )
 
     assert len(texts) == 1
-    assert texts[0]["tag"] == "b"
+    assert texts[0]["tag"] == "div"
     assert texts[0]["content"] == "hello"
+
+
+def test_it_extracts_child_tags_before_parents():
+    texts = extract_texts_from_html(
+        """
+        <body>
+            <main>
+                <div>
+                    <info>
+                        all my content
+                        <div>ok <b>hello!</b></div>
+                    </info>
+                </div>
+            </main>
+        </body>"""
+    )
+    assert len(texts) == 2
+    assert texts[0]["tag"] == "div"
+    assert texts[0]["content"] == "ok hello!"
+    assert texts[1]["tag"] == "div"
+    assert texts[1]["content"] == "all my content"
 
 
 def test_it_includes_image_alt_tags():
@@ -80,6 +101,21 @@ def test_it_includes_image_alt_tags():
     assert len(texts) == 1
     assert texts[0]["tag"] == "img"
     assert texts[0]["content"] == "image description"
+
+
+def test_it_extracts_list_items():
+    texts = extract_texts_from_html(
+        """
+        <body>
+            <ol>
+                <li>hello world!</li><li>test</li>
+            </ol>
+        </body>
+        """
+    )
+    assert len(texts) == 1
+    assert texts[0]["tag"] == "ol"
+    assert texts[0]["content"] == "hello world! test"
 
 
 def test_it_ignores_html_comments():
