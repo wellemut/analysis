@@ -53,6 +53,10 @@ def extract_texts_from_html(html):
         getter=lambda x: x.get("content"),
     )
 
+    # Replace all br tags with periods
+    for tag in soup.find_all("br"):
+        tag.replace_with(". ")
+
     # Add any text nodes
     for tag in soup.find_all(["h1", "h2", "h3", "h4", "h5", "h6", "ol", "ul", "p"]):
         texts.add(tag)

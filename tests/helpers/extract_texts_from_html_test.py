@@ -118,6 +118,19 @@ def test_it_extracts_list_items():
     assert texts[0]["content"] == "hello world! test"
 
 
+def test_it_splits_content_at_br_tags():
+    texts = extract_texts_from_html(
+        """<body>
+        <p>mission:<br/>improve life</p>
+        <p>vision<br>- item 1<br>- item 2</p>
+        </body>"""
+    )
+    assert texts[0]["tag"] == "p"
+    assert texts[0]["content"] == "mission: . improve life"
+    assert texts[1]["tag"] == "p"
+    assert texts[1]["content"] == "vision . - item 1 . - item 2"
+
+
 def test_it_ignores_html_comments():
     texts = extract_texts_from_html(
         """
