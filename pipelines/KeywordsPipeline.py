@@ -14,7 +14,7 @@ from helpers import batches
 
 class KeywordsPipeline:
     # Mapping of languages to the Spacy models to use for the NLP pipeline
-    NLP_MODELS = {"en": "en_core_web_sm"}
+    NLP_MODELS = {"en": "en_core_web_lg"}
 
     @classmethod
     def process(cls, domain):
