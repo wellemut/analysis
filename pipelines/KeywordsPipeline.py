@@ -95,6 +95,24 @@ class KeywordsPipeline:
                 }
             )
 
+        # Sort matches by starting position and descending end position, so that
+        # contained keywords will always appear after the keywords that contain
+        # them.
+        matches = sorted(matches, key=lambda x: (x["start"], -x["end"]))
+
+        # Flag any matches that are fully contained within another match of the
+        # same SDG
+        sdgs = set([match["sdg"] for match in matches])
+        for sdg in sdgs:
+            matches_for_sdg = [match for match in matches if match["sdg"] == sdg]
+            end = -1
+            for match in matches_for_sdg:
+                # This keyword is fully contained by a previous keyword
+                if match["end"] <= end:
+                    matches.remove(match)
+                # Move the end position forward
+                end = max(end, match["end"])
+
         return matches
 
     @classproperty

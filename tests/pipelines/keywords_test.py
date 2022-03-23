@@ -91,3 +91,11 @@ def describe_find_keywords():
         matches_american = KeywordsPipeline.find_keywords(american)
         assert len(matches_american) == 1
         assert {"keyword": "organized crime"} == matches_dict(matches_american[0])
+
+    def it_does_not_double_count_contained_keywords():
+        nlp = KeywordsPipeline.get_nlp("en")
+        doc = nlp("We fight for the climate and climate change mitigation.")
+        matches = KeywordsPipeline.find_keywords(doc)
+        assert len(matches) == 2
+        assert {"keyword": "climate"} == matches_dict(matches[0])
+        assert {"keyword": "climate change mitigation"} == matches_dict(matches[1])
