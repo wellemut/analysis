@@ -1,2888 +1,1329 @@
 keyword,sdg
-"""bop"" countries",1
+SDG 1,1
+SDG1,1
+low-income,1
+living standard,1
+impoverished,1
+vulnerable community,1
+financial security,1
+living condition,1
+poor people,1
+poor populations,1
+poverty,1
 absolute poverty,1
-bellagio principles,1
-child nutritional status,1
-counting marginalised children,1
-dimensions of inequality,1
-diseases of poverty,1
 economic marginalisation,1
-education poverty,1
-educational poverty,1
 end poverty,1
+eradicate poverty,1
+reduce poverty,1
 eradicate poverty,1
 extreme poverty,1
 global poverty,1
-growth and poverty reduction,1
+living in poverty,1
+life in poverty,1
 poor and vulnerable,1
-poverty,1
-poverty alleviating,1
 poverty alleviation,1
-poverty child,1
-poverty end,1
 poverty eradication,1
-poverty extreme,1
-poverty life,1
-poverty living,1
-povertly line,1
+poverty line,1
 poverty reduction,1
 poor resilience,1
 social protection,1
-acceptable diet,2
-agree-hs,2
-agricultural biotechnology,2
-agricultural productivity,2
-agriculture and environment,2
-agriculture and food,2
-agriculture production,2
-aids-related deaths,2
-call to action,2
-child hunger,2
-child mortality rate,2
-child nutrition,2
-child nutrition disorders/epildemiology/economics,2
-child nutritional disorders,2
-child survival,2
-climatic change and food security,2
-complementary foods,2
-development aid,2
-development aids,2
-development food,2
-diet,2
-dietary change,2
-dietary diversification,2
-dietary diversity,2
-dietary guidelines,2
-dietary patterns,2
-dietary quality,2
-diverse food systems,2
-double burden of malnutrition,2
-dual nutrition burden,2
-dutch disease,2
-econutrition,2
-energy poor,2
-energy poverty,2
-ethical coffee,2
-exit time from poverty,2
+child support grant,1
+child welfare,1
+microfinance,1
+poverty levels,1
+social assistance,1
+social protection,1
+social safety net,1
+social security,1
+social support,1
+social welfare,1
+welfare,1
+safety net,1
+livelihood,1
+basic need,1
+financial empowerment,1
+global poverty,1
+income poverty,1
+poverty reduction,1
+resilience of the poor,1
+SDG 2,2
+SDG2,2
 famine,2
-fbdgs,2
+drought,2
 food,2
-food access,2
-food aid,2
-food and fodder,2
-food and nutrition security,2
-food availability and affordability,2
-food chain,2
-food consumption,2
-food crisis,2
-food demand,2
-food demand projections,2
-food handler,2
-food insecurity,2
-food insecurity and hunger,2
-food needs,2
-food need,2
-food nutrition,2
-food planning,2
-food poverty,2
-food price,2
-food prices,2
-food production,2
-food provisioning,2
-food safety,2
-food security,2
-food security and nutrition,2
-food security indicators,2
-food supply chain wastes,2
-food system,2
-food systems,2
-food trade,2
-food waste,2
-food-based approaches,2
-food-water-energy nexus,2
-food-water-energy-climate change nexus,2
-forests as a food source,2
-fruit,2
-gari,2
-global food,2
-global health education,2
-global hunger,2
-global nutrition governance,2
-global nutrition index,2
-green products,2
-health and nutrition policy,2
-health and social policy,2
-human capability-based poverty,2
-human milk banking,2
-hunger,2
-hunger,2
-hunger data,2
-hunger improved nutrition,2
-hunger malnutrition,2
-hunger targets,2
-impoverishment,2
-income poverty,2
-indigenous vegetables,2
-infant and young child nutrition,2
-infant feeding behaviour,2
-infant milk substitutes,2
-infant nutrition,2
-infectious diseases of poverty,2
-infoods,2
-international code of marketing of breast-milk substitutes,2
-livelihood,2
-livelihood improvement,2
-livelihood loss,2
-livelihoods,2
-macronutrient,2
-malnutrition,2
-maternal nutrition,2
-medical poverty trap,2
-mediterranean diet,2
-micronutrient,2
-milk,2
-mini nutritional assessment,2
-moderate acute malnutrition,2
-multidimensional poverty,2
-multi-dimensional poverty,2
-non-income poverty,2
-nutrients,2
+agriculture,2
+agricultural,2
+starvation,2
 nutrition,2
-nutrition and hiv/aids,2
-nutrition disorders,2
-orphaned and vulnerable children,2
-orphans,2
-poor economics,2
-poorest of the poor,2
-poverty alleviation,2
-poverty analysis,2
-poverty and social inequality,2
-poverty dynamics,2
-poverty eradication,2
-poverty gap,2
-poverty goals,2
-poverty headcount,2
-poverty line,2
-poverty mapping,2
-poverty measurement,2
-poverty measures,2
-poverty mitigation,2
-poverty paradigms,2
-poverty penalty,2
-poverty rate,2
-poverty reduction,2
-poverty reduction strategy,2
-poverty reduction strategy papers,2
-poverty targeting,2
-poverty threshold,2
-poverty trap,2
-poverty traps,2
-povery,2
-primary care community nutrition,2
-priority to the disadvantaged,2
-productivity of the rural poor,2
-pro-poor connections,2
-pro-poor growth,2
-pro-poor interventions,2
-protein calorie malnutrition,2
-protein energy malnutrition (pem),2
-protein-energy malnutrition,2
-prsps,2
-refugee,2
-refugees,2
-relative poverty,2
-resource poor,2
-rice,2
-rural development,2
-rural hunger,2
-rural livelihoods,2
-rural poverty,2
-rural poverty alleviation,2
-scaling-up nutrition,2
-school meals programmes,2
-slavery,2
-social vulnerability,2
-solutions of food security,2
-staple foods,2
-sub-nutrition,2
-sustainable agriculture,2
-sustainable food production,2
-sustainable agriculture,2
-sustainable diet,2
-sustainable diets,2
-sustainable food systems,2
-take-home rations,2
-technology-poor contexts,2
-time poverty,2
-ultra poor,2
-ultra-poor,2
-undernourished,2
-undernourishment,2
+nutritious,2
+stunting,2
+crop,2
+soil,2
+acute severe maternal undernutrition,2
+agri-food supply chain,2
+Agriculture Research,2
+crop switching,2
+agricultural losses,2
+agricultural technologies,2
+agricultural community,2
+agricultural development,2
+agricultural export subsidies,2
+agricultural innovation,2
+agricultural land,2
+agricultural management,2
+agricultural markets,2
+agricultural policy,2
+agricultural practices,2
+agricultural production,2
+agricultural productivity,2
+agricultural soils,2
+agricultural systems,2
+agricultural sector,2
+agricultural operations,2
+agriculture and potassium,2
+agriculture producer,2
+agroforestry management,2
+agroforestry practices,2
+arable land,2
+conservation agriculture,2
+crop growth,2
+crop management,2
+crop productivity,2
+crop yield,2
+cropping systems,2
+aquaculture,2
+farmed fish,2
+dietary diversity,2
+doha development round,2
+early life nutrition,2
+end hunger,2
+european food safety authority,2
+farmyard manure,2
+fertilizer,2
+food quality,2
+food availability,2
+food commodity market,2
+food gap,2
+food governance,2
+food insecurity,2
+food market access,2
+food nutrition,2
+food price,2
+food provision,2
+food production,2
+food productivity,2
+food reserves,2
+food insecurity,2
+food security,2
+food supply,2
+food system,2
+agro-food,2
+food crisis,2
+food consumption,2
+healthy food,2
+food value chain,2
+genetically modified food,2
+gmo,2
+grain yield,2
+hidden hunger,2
+high nutrition risk,2
+hunger,2
+land management,2
+land reform,2
+land right,2
+land tenure,2
+livestock,2
+malnutrition,2
+manure,2
+farm to fork,2
+maternal nutrition,2
 undernutrition,2
-under-nutrition prevalence,2
-underutilised crops,2
-underweight,2
-underweight and stunting,2
-urban food strategies,2
-urban poor,2
-urban poverty,2
-urban poverty and nutrition,2
-urban poverty reduction,2
-urban slums,2
-vulnerable consumers,2
-vulnerable groups,2
-vulnerable people,2
-cigarette smoke,3
-[malaria,3
-absenteeism,3
-abuse drug,3
-abuse drugs,3
-abuse substance,3
-abuse substances,3
-accesibilidad a los servicios sanitarios,3
-accesibilidad a servicios sanitarios,3
-access to care,3
-access to health care,3
-access to health facilities,3
-access to health services,3
-access to medicines,3
-access to obstetric services,3
-accessibilite aux services de sante,3
-accessibilite des services de sante,3
-acquired immune deficiency syndrome,3
-acquired immunodeficiency syndrome,3
-activities,3
-acute kidney injury,3
-acute malnutrition,3
-acute respiratory disease,3
-acute respiratory infection,3
-addo,3
-adolescent girls,3
-adolescent health,3
-adolescent health services,3
-adults,3
-affordability,3
-african development,3
-aid,3
+nutrition assessment ,2
+nutrition risk,2
+nutritional status,2
+obesity,2
+obese,2
+overweight,2
+plant bank,2
+prenatal nutrition,2
+productive agriculture,2
+resilient agriculture,2
+food producer,2
+farmer,2
+smallholder farms,2
+soil fertility,2
+farming,2
+farming system,2
+smallholder farming,2
+sustainable farming,2
+sustainable agriculture,2
+crop selection,2
+sustainable food production,2
+sustainable land management,2
+SDG 3,3
+SDG3,3
+acute respiratory distress syndrome,3
+acute rheumatic fever,3
+adolescent birth rate,3
+affordable medicines,3
 aids,3
-aids spending,3
-alcohol,3
 alcohol abuse,3
 alcohol consumption,3
-allergens,3
-amhara,3
-anaemia,3
-anaerobic conversion,3
-andhra pradesh,3
+alcohol use,3
+alcoholism,3
+alzheimer's disease,3
 anemia,3
-antagony,3
 antenatal care,3
-ante-natal care,3
-antenatal care services,3
-antenatal care use,3
-antibiotic resistance,3
-antibiotics,3
-antiinfectives,3
-antimalarials,3
-antimicrobial resistance,3
-antipoverty vaccines,3
+antineoplastic agent,3
 antiretroviral therapy,3
-antiretroviral treatment,3
-anti-tnf alpha agents,3
-antituberculous,3
-artemisia annua cultivation,3
-artemisinin,3
-artemisinin combinatin therapy,3
-artemisinin resistance,3
-artemisinins,3
-asianization,3
-asphyxia,3
-avermectin,3
-ayuda al desarrollo,3
-backlog,3
-bacteria,3
-bacterial infection,3
-bacterial infections,3
-barbers,3
-basic education,3
-basic emergency obstetric care,3
-basic health unit,3
-basic needs,3
-basic services,3
-bcg,3
-biomedical informatics,3
-biomedical research,3
-birds,3
-birth asphyxia,3
-birth asphyxia (ba),3
-birth attendants,3
-birth certificates,3
-birth control,3
-birth interval,3
-birth registration,3
-breast cancer screening,3
-breast milk,3
-breastfeeding,3
-burden,3
-burden of disease,3
-burden of diseases,3
-burkina-faso,3
-burkitt lymphoma,3
-cadmium,3
-caesarean section,3
-canada,3
+blood pressure,3
+body mass index,3
+brain injury,3
+breast cancer,3
+breast neoplasms,3
+cancer cell,3
 cancer,3
-carbon storage and sequestration,3
-cardiovascular disease,3
-care cascad,3
-care-seeking,3
-caricom caribbean,3
-caste system,3
-cause and consequence,3
-causes,3
-causes of growth,3
-central asia,3
-certified emission reduction,3
-cervical cancer,3
-cervical cancer screening,3
-chad,3
-charcoal production,3
-chemotherapy,3
-chhattisgarh,3
-child advocacy,3
-child and family health,3
-child and maternal health,3
-child death,3
-child development,3
-child development intervention,3
-child education,3
-child feeding,3
-child growth,3
+cardiovascular,3
+cause of death,3
+child deaths,3
 child health,3
-child health day,3
-child health interventions,3
-child health outcomes,3
-child labor,3
-child malnutrition,3
-child marriage,3
-child morbidity,3
 child mortality,3
-child mortality monitoring,3
-child poverty,3
-child stunting,3
-child undernutrition,3
 childbirth,3
-child-health,3
-childhood,3
-childhood mortality,3
-children under 5 years of age,3
-childs perspective,3
-child-survival revolution,3
-chiranjeevi scheme,3
-chlamydia infections,3
-christianity,3
-chronic,3
-chronic care model,3
+cholera,3
 chronic disease,3
-chronic kidney disease,3
-chronic kidney disease prevention,3
-chronic poverty,3
-chronic restrictive lung disease,3
-church-state relations in melanesia,3
-clinical audit,3
-clinical care,3
-clinical epidemiology,3
-clinical pharmacology,3
-clinical pharmacy,3
-clinical practice,3
-clinical practice guidelines,3
-clinical research,3
-clinical trials,3
-coffee wilt disease,3
-coinfection,3
-coinn,3
-coliforms,3
-combat aids,3
-combat ebola,3
-combat hepatitis,3
-combat hiv,3
-combat malaria,3
-combat tropical disease,3
-combat tropical diseases,3
-combat zika,3
-communicable disease prevention and control,3
-communicable diseases,3
-community based health programs,3
-community based rehabilitation,3
-community care,3
-community health,3
-community health aides,3
-community health care,3
-community health centers,3
-community health programs,3
-community health provision,3
-community health services,3
-community health worker,3
-community health worker programmes,3
-community health worker training,3
-community health workers,3
-community interventions,3
-community malaria worker,3
-community mental health care,3
-community nurses,3
-community well-being,3
-community-based health insurance,3
-community-based interventions,3
-community-based prevention,3
-community-based rehabilitation,3
-community-based therapeutic care,3
-community-health workers,3
-community-led total sanitation,3
-complications of abortion,3
-comprehensive emergency obstetric care,3
-comprehensive social security,3
-concurrent sexual partnerships,3
-condom use,3
-condoms,3
-conflict deaths,3
-congenital syphilis,3
-conjugate vaccines,3
+chronic obstructive pulmonary disease,3
+respiratory disease,3
+communicable disease,3
+congenital heart disease,3
 contraception,3
-contraception and unplanned pregnancy,3
-contraceptive availability,3
-contraceptive distribution,3
 contraceptive use,3
-contraceptives,3
-copenhagen syndrome,3
-cost of illness,3
-costs of illness,3
-counseling and testing hiv/aids,3
-country health information systems,3
-critical pedagogy,3
-critical psychology,3
-cross-boundary cancer studies,3
-crude vaccination,3
-cuidados obstetricos de emergencia,3
-dac (the development assistance committee),3
-death,3
-death causes constituent,3
-deaths,3
-debt distress,3
-decade of vaccines,3
-delivery,3
-delivery care,3
-delivery care utilization,3
-delivery of health care,3
-demand for family planning,3
-dementia,3
+coronary artery disease,3
 dengue,3
-dengue fever,3
-dengue virus,3
-dental caries,3
 depression,3
-desired family size,3
-desnutricion,3
-determinants of health,3
-development assistance for health,3
-developmental origins of health and disease (dohad),3
 diabetes,3
-diabetes mellitus,3
-diagnosis,3
-diagnostics,3
+diabetic,3
 diarrhea,3
-diarrheal disease,3
-diarrhoea,3
-diarrhoeal disease,3
-directives de la pratique clinique,3
-directly observed therapy,3
-directly observed therapy (dots),3
-disabilities,3
-disability,3
-disability adjusted life year,3
-disability evaluation,3
-disability studies,3
-disability-adjusted life years,3
-disability-adjusted life-year,3
-disability-inclusive development,3
-disabled people,3
-disabled persons,3
-disaster nursing,3
-discrimination,3
-disease,3
 disease burden,3
-disease control,3
-disease control programme,3
-disease effects,3
-disease elimination,3
-disease eradication,3
-disease prevention,3
-disease states,3
-diseases,3
-disinfection,3
-dislipidemy,3
-diversity,3
-doctors,3
-double burden of disease,3
-drug availability,3
-drug delivery,3
-drug development,3
-drug discovery,3
-drug donations,3
-drug resistance,3
-drug rule,3
-drug trials,3
-drug use and trafficking,3
-drugs,3
+disease transmission,3
+district health boards,3
+drug safety,3
+drug users,3
 dysentery,3
-e. coli,3
-early child development,3
-early child development (ecd),3
-early childhood core and development,3
-early childhood development,3
-early growth,3
-early initiation,3
 ebola,3
-ebola epidemic,3
-eclampsia,3
-ecohealth,3
-ecological health,3
-ecological sanitation,3
-economic and health consequences of caregiving,3
-eflornithine,3
-egalitarian,3
-ehealth,3
-elderly,3
-emergency medical service,3
-emergency neonatal care,3
-emergency obstetric and newborn care,3
-emergency obstetric care,3
-emergency obstetric care (emoc),3
-emergency response,3
-emergency transport,3
-emerging disease,3
-emerging pathogens,3
-emotion,3
-empathy,3
-environment and public health,3
-environmental burden of disease,3
-environmental epidemiology,3
-environmental health,3
-environmental hygiene,3
-environmentally transmitted diseases,3
-epidemic,3
-epidemiologia,3
-epidemiological and nutritional transition,3
-epidemiologie,3
+emerging infectious disease,3
 epidemiology,3
-epigenetic,3
-epigenetics,3
-equity in health,3
-equity of access to immunization,3
-equity of access to vaccines,3
-escherichia coli,3
-essential medicines,3
-essential newborn care,3
-essential obstetric care,3
-essential surgery,3
-essential surgical care,3
-etiology,3
-evaluacion de cuidados sanitarios,3
-evaluation des soins de sante,3
-evaluation of doctors knowledge,3
-evidence-based medicine,3
-exclusive breastfeeding,3
-expanded program on immunization (epi),3
-eye health,3
-facility birth,3
-facility delivery,3
-facility utilisation,3
-faeco-oral disease,3
-family health,3
+essential health-care services and access,3
+medical access,3
+vaccine access,3
 family planning,3
-family planning knowledge,3
-family planning programs,3
-family wellbeing program,3
-fast breathing,3
-fatigue life,3
-fecal indicator bacteria,3
-feeding behaviors,3
-fertility,3
-fertility control,3
-fertility rate,3
-fetal,3
-fever,3
-fibroids,3
-filariasis,3
-food pathogen,3
-foreign-born,3
-free maternal services,3
-full contraceptive access,3
-full contraceptive choice,3
-future health systems,3
-gambling regulation,3
-gastrointestinal diseases,3
-gather health estimate,3
-gavi-the vaccine alliance,3
-genetic diversity,3
-genetic transformation,3
-genetics,3
-genital,3
+fetal growth restriction,3
 gestational age,3
 gestational diabetes,3
-gestational diabetes mellitus,3
-gestational hypertension,3
-gi infection,3
-giardia,3
-global alliance for vaccines and immunization,3
-global anesthesia,3
-global burden of disease,3
-global burden of diseases,3
-global child health,3
-global database on blood safety,3
-global disease burden,3
-global fund for health,3
-global fund to fights aids tuberculosis and malaria,3
-global health,3
-global health funding,3
-global health initiatives,3
-global health security agenda (ghsa),3
-global health targets,3
-global health technology,3
-global immunization and vision strategy,3
-global mental health,3
-global public health terminology,3
-global school health,3
-global strategy for infant and young child feeding,3
-global vaccine action plan,3
-global youth development,3
-go4health,3
-government health expenditures,3
-guias de practicas clinicas,3
-guillian-barre syndrome,3
-gut microbiota,3
-haart,3
-haart therapy,3
-hand hygiene,3
-hand washing,3
-happiness,3
+h1n1,3
+epidemic,3
 health,3
-health access,3
-health and development,3
-health behavior change,3
 health care,3
-health care costs,3
-health care delivery,3
-health care facilities,3
-health care financing,3
-health care professional,3
-health care providers,3
-health care reform,3
-health care sector,3
-health care services,3
-health care surveys,3
-health care system,3
-health care systems,3
-health care utilization,3
-health center,3
-health data,3
-health data analytics,3
-health determinant,3
-health determinants,3
-health development,3
-health equity,3
-health expenditure,3
-health expenditures,3
-health extension program,3
-health facilities,3
-health facility,3
-health facility birth,3
-health facility delivery,3
-health finance,3
-health financing,3
-health funding,3
-health impact,3
-health impact assessment,3
-health impact modeling,3
-health impacts,3
-health indicators,3
-health inequalities,3
-health inequality,3
-health inequities,3
-health inequity,3
-health informatics,3
-health information,3
-health information system,3
-health information systems,3
-health information systems project,3
-health insurance,3
-health interventions,3
-health knowledge management,3
-health knowledge systems,3
-health literacy,3
-health management information systems,3
-health manpower,3
-health metrics,3
-health needs assessment,3
-health of non-nationals,3
-health outcomes,3
-health planning,3
-health planning guidelines.,3
-health priorities,3
-health professional,3
-health professional associations,3
-health professionals,3
-health promoter training,3
-health promotion,3
-health reform,3
-health research,3
-health research agenda,3
-health resources,3
-health risk,3
-health risk assessment,3
-health sector,3
-health sector cascade,3
-health security,3
-health seeking behavior,3
-health service needs,3
-health service utilization,3
-health services,3
-health services accessibility,3
-health services evaluation,3
-health services research,3
-health services research: maternal health services,3
-health services utilization,3
-health spending,3
-health statistics,3
-health status,3
-health status indicators,3
-health supply chain management,3
-health surveillance,3
-health surveillance assistants,3
-health surveys,3
-health system,3
-health system change,3
-health system efficiency,3
-health system evaluation,3
-health system factors,3
-health system responsiveness,3
-health system strengthening,3
-health systems,3
-health systems arrangements,3
-health systems challenges,3
-health systems guidance,3
-health systems research,3
-health systems strengthening,3
-"health systems, trends",3
-health technologies,3
-health worker migration,3
-health worker motivation,3
-health workers,3
-health workforce,3
-health workforce planning,3
 healthcare,3
-healthcare access,3
-healthcare associations,3
-healthcare disparities,3
-healthcare financing,3
-healthcare policy,3
-healthcare professional associations,3
-healthcare professionals,3
-healthcare provider performance,3
-healthcare providers perception,3
-healthcare teams,3
-health-promoting schools,3
-health-related behaviors,3
-health-related millennium development goals,3
-health-seeking behaviour,3
-healthy diets,3
-healthy life expectancy,3
-health equity,3
-helminths,3
-helping babies breathe,3
-helping babies breathe (hbb),3
-hemoglobin,3
-hemorrhage,3
+health emergency preparedness,3
+health outcomes,3
+health regulation,3
+health policy,3
+health risk,3
+health service,3
+health system,3
+health worker,3
+healthy lifestyle,3
+heart disease,3
+heart failure,3
 hepatitis,3
-hepatitis c,3
-hib,3
-hib initiative,3
-high hiv prevalence,3
-high risk pregnancy,3
-highly active antiretroviral therapy,3
-highly active antiretroviral therapy (haart),3
 hiv,3
-hiv acquisition,3
-hiv and aids,3
-hiv infection,3
-hiv infections,3
-hiv infections/prevention and control,3
-hiv information systems,3
-hiv prevalence,3
-hiv prevention,3
-hiv risk behaviour,3
-hiv testing,3
-hiv transmission,3
-hiv treatment guidelines,3
-hiv/aids,3
-hiv &  aids,3
-hiv & aid,3
-hiv & aids,3
-hiv/aids epidemic,3
-hiv/aids prevention and treatment,3
-hiv/aids services,3
-hiv-exposed uninfected children,3
-hiv-syphilis co-infection,3
-home birth,3
-home delivery,3
-hookworm,3
-hormonal contraception,3
-hospital information systems,3
-hospital mortality,3
-hpv vaccine,3
-human african trypanosomiasis,3
-human health risk,3
-human immunodeficiency virus,3
-human resources for health,3
-human wellbeing,3
+health science,3
+spread of diseases,3
+antibiotic resistance,3
 wellbeing,3
+well-being,3
+disease,3
+human wellbeing,3
 human well-being,3
-human-wellbeing,3
+human disease,3
+human illness,3
+huntington's disease,3
 hypertension,3
-hypertensive disorders,3
-hypertensive disorders of pregnancy,3
-hypothermia,3
-hypovolemic shock,3
-hysterectomy,3
-immunisation,3
-immunization,3
-immunization campaigns,3
-immunizations,3
 immunology,3
-impediments to public health in nepal,3
-impoverishment risks and reconstruction model,3
-improved health,3
-ims act,3
-inclusive wealth index,3
-inclusiveness,3
-indicadores del estado de salud,3
-indicateurs de statut de sante,3
+inclusive health,3
 indigenous health,3
-individuals with disabilities,3
-induced abortion,3
-induced-abortion,3
-infant and young child feeding,3
-infant feeding,3
-infant health,3
-infected,3
-infection,3
-infections,3
+infant mortality,3
 infectious disease,3
-infectious disease control,3
-infertility,3
-infibulation,3
-injury,3
-injury research,3
-integrated management of childhood illness,3
-integrated management of childhood illnesses (imci),3
-integrated maternal and child healthcare system,3
-integrated school health,3
-integration of health services,3
-integrative medicine,3
-intellectual disabilities,3
-intensive glucose control,3
-intercultural models of care,3
-intergenerational health,3
-intermittent preventive treatment of malaria in pregnancy,3
-international child health,3
-international classification of disease,3
-international classification of diseases,3
-international federation of gynecology and obstetrics,3
-international health,3
-international health issues,3
-international health,3
-intestinal helminths,3
-intrapartum care,3
-intrapartum related,3
-intrapartum related neonatal deaths (irnd),3
-intrapartum-related neonatal deaths,3
-intravenous drug users,3
-investigacion en servicios sanitarios,3
-iodine deficiency,3
-iron deficiency,3
-iron deficiency anemia,3
-irvingia gabonensis,3
-ivermectin,3
-kaposi sarcoma,3
-kwashiorkor,3
-late developer,3
-latent tuberculosis infection,3
-lca,3
-leadership in obstetrics and gynaecology for impact and change,3
-leishmaniasis,3
-leishmaniasis and trypanosomiasis,3
-leprosy,3
-leptospirosis,3
-levels of care,3
-life course epidemiology,3
-lifesaving medicines,3
-lifestyle,3
-life-threating disease,3
-liquor consumption,3
-liver cirrhosis,3
-liver disease,3
-liver stage,3
-lives saved tool,3
-living conditions,3
-living standard,3
-long-acting reversible contraceptives,3
-long-lasting insecticidal nets,3
+inflammatory bowel disease,3
+intensive care unit,3
+life expectancy,3
+live birth rate,3
 low birth weight,3
-low birth weight anthropometric measurements predictor,3
-lymphatic filariasis,3
-magnesium sulphate,3
+health coverage,3
+universal health coverage,3
+lung cancer,3
+lung disease,3
+major depressive disorder,3
 malaria,3
-malaria control,3
-malaria elimination,3
-malaria mortality,3
-malaria plasmodium faciparum,3
-malaria profile,3
-malaria rapid diagnostic tests,3
-malaria research,3
-malaria vectors,3
-malaria/mortality,3
-malaria/prevention and control,3
-malarial drug resistance,3
-malignant tumors,3
-management of disability,3
-maternal and child health,3
-maternal and child health care,3
-maternal and child health disparities,3
-maternal and child health interventions,3
-maternal and child health services,3
-maternal and infant health,3
-maternal and neonatal health,3
-maternal and newborn care,3
-maternal and newborn health,3
-maternal and perinatal health,3
-maternal and reproductive health,3
-maternal care,3
-maternal characteristics,3
-maternal child health,3
-maternal child health services,3
-maternal depression,3
 maternal health,3
-maternal health care,3
-maternal health care (mhc),3
-maternal health care utilization,3
-maternal health voucher,3
-maternal healthcare,3
-maternal health-care,3
-maternal immunization,3
-maternal infection,3
-maternal mental health,3
-maternal mortality,3
-maternal neonatal and child health,3
-maternal newborn and child health,3
-maternal obesity,3
-maternal resuscitation,3
-maternal survival,3
-maternal welfare,3
-"maternal, newborn and child health",3
-"maternal, newborn, and child health",3
-"maternal, newborn, and child health outcomes",3
-maternal-child health,3
-maternity care,3
-maternity care-seeking,3
-measles,3
-medical,3
-medical anthropology,3
-medical care,3
-medical colonialism,3
-medical ethics,3
-medical geology,3
-medical indigence,3
-medical informatics,3
-medical information,3
-medical intervention,3
-medical interventions,3
-medical record systems,3
-medical terminology,3
-medication care,3
-medicinal drugs,3
-medicine,3
-medicines,3
-medicines supply management,3
-meikirch model,3
-melancholia,3
-mental disorders,3
-mental health,3
-microcephaly,3
-micronutrient deficiency,3
-micronutrient malnutrition,3
-micronutrients,3
-microtox,3
-microvascular complications,3
-midwifery,3
-minimum social assistance,3
-ministry of health,3
-minority health,3
-mobile health,3
-mobile health (mhealth),3
-modern contraception,3
-modern contraceptives,3
-morbidity,3
-morbidity and mortality,3
-morbility,3
 mortality,3
-mosquito bites,3
-mosquito nets,3
-mother-friendly care,3
-mtbvac,3
-multi drug resistance,3
-multidrug-resistant/prevention and control,3
-multiple dimensions of well-being,3
-mycobacterium tuberculosis,3
-national health accounts,3
-national health estimates,3
-national health research systems,3
-national rural health mission,3
-neglected diseases,3
-neglected tropical disease,3
-neglected tropical diseases,3
-neglected tropical diseases malaria,3
-neonatal,3
-neonatal and child health,3
-neonatal care,3
-neonatal encephalopathy (ne),3
-neonatal health,3
-neonatal health programs,3
-neonatal hypothermia,3
-neonatal hypothyroidism,3
-neonatal incubator,3
-neonatal infection,3
-neonatal infections,3
+maternal mortality,3
+measles,3
+medical care,3
+medicine,3
+mental disease,3
+mental disorder,3
+mental health,3
+mers,3
+mortality rate,3
+myocardial infarction,3
+narcotic drug abuse,3
+neglected disease,3
+tropical disease,3
 neonatal intensive care,3
-neonatal nursing,3
-neonatal resuscitation,3
-neonatal sepsis,3
-neonatal surgery,3
-neonatal tetanus,3
-neonate,3
-neonates,3
-neonatology,3
-nepalese experience,3
-new contraceptive technologies,3
-new cooperative medical scheme (ncms),3
-new hiv,3
-new vaccines,3
-newborn,3
-newborn and adolescent health,3
-newborn and child health,3
-newborn behaviours,3
-newborn care,3
-newborn commodities,3
-newborn health,3
-newborn mice,3
-newborn practices,3
-newborns,3
-noncommunicable disease,3
+neonatal mortality,3
+neoplasm,3
 non-communicable disease,3
-noncommunicable diseases,3
-non-communicable diseases,3
-non-communicable diseases (ncds),3
-non-governmental organizations health systems strengthening,3
-nrhm,3
-nurses,3
-nursing,3
+non-small cell lung cancer,3
+nonalcoholic fatty liver disease,3
 obesity,3
-obesity/epidemiology/economics,3
-obstetric care,3
-obstetric care use,3
-obstetric clinical practice,3
-obstetric complications,3
-obstetric dilemma,3
-obstetric emergency,3
-obstetric guidelines,3
-obstetric hemorrhage,3
-obstetric labor complications,3
-obstetric outcome,3
-obstetric referral,3
-obstetric simulator,3
-obstetric surgery,3
-obstetrical pelvis,3
-obstetrician,3
-obstetrics,3
-occupational health program,3
-older persons,3
-oncology,3
-one health,3
-oral health,3
-orphan vaccine,3
-overweight and obesity,3
-pacific island health development,3
-package of care,3
-paediatric anaesthesia,3
-paquete de cuidados sanitarios,3
-parental monitoring,3
-parent-child communication,3
-parenting,3
-parents,3
-parturients,3
-passive case detection,3
-pathogenesis,3
-pathogenic organisms,3
-pathway to survival,3
-patient,3
-patient centered care,3
-patient focus,3
-patient safety,3
-pediatric cancer,3
-pediatric critical care,3
-pediatric emergency,3
-pediatric infection,3
-pediatric surgery,3
-people with disabilities,3
-pepfar,3
-perinatal,3
-perinatal audit,3
-perinatal care,3
-perinatal mental health project,3
-perinatal nursing,3
-perinatal outcome,3
-person with disabilities,3
-personal health,3
-persons living with disabilities,3
-persons with disability,3
-pesticides,3
-pharmaceutical care,3
-pharmaceutical medicines,3
-pharmaceutical systems,3
-pharmacist roles,3
-pharmacogenomics,3
-pharmacy,3
-pharmacy curriculum,3
-phosphorus,3
-physical and rehabilitation medicine,3
-place of delivery,3
-planetary health,3
-planned pregnancy,3
-plant-made vaccine,3
-plasmodium,3
-plasmodium falciparum malaria,3
-plasmodium vivax,3
-pneumococcal,3
-pneumococcal conjugate vaccines,3
+parkinson's disease,3
+patient satisfaction,3
 pneumonia,3
 polio,3
-political determinants of health,3
-population health,3
-post-abortion care,3
-post-exposure vaccine,3
-postnatal care,3
-post-natal care,3
+pollution death,3
+pollution disease,3
+post-traumatic stress disorder,3
 postnatal depression,3
-postnatal visit,3
-postpartum,3
-postpartum haemorrhage,3
-post-partum health care,3
-postpartum hemorrhage,3
-postpartum period,3
-praziquantel,3
-precision medicine,3
-precision public health,3
-preconception,3
-predictors,3
-preeclampsia,3
-pre-eclampsia,3
-pre-exposure vaccine,3
 pregnancy,3
-pregnancy and childbirth,3
-pregnancy complication,3
-pregnancy complications,3
-pregnancy hypertension,3
 pregnant women,3
-premature,3
-premature infant,3
-premature infants,3
-prematurity,3
-prenatal,3
-prenatal care,3
-prenatal-care,3
-preterm,3
-preterm birth,3
-preterm birth premature,3
-prevention,3
-prevention & control,3
-prevention and control,3
-prevention of latent tb,3
-prevention of mother-to-child transmission,3
-prevention of mother-to-child transmission of hiv,3
-prevention of mother-to-child transmission of hiv programmes,3
-prevention strategy,3
-preventive and promotive health services,3
-preventive chemotherapy,3
-preventive health care,3
-preventive therapy,3
+premature mortality,3
+preventable death,3
+preventable deaths,3
 primary care,3
-primary health care,3
-primary health centre,3
-primary healthcare,3
-priority substances and priority hazardous substances (ps/phs),3
-probiotics,3
-professional birth attendants,3
-protection of health,3
-psychoanalysis,3
-psychological stress,3
-psychosexual therapy,3
-psychosocial aspects,3
-psychosocial treatment,3
-public health,3
-public health associations,3
-public health challenges,3
-public health curriculum,3
-public health emergency,3
-public health interventions,3
-public health nutrition,3
-pulmonary tuberculosis,3
-quality health care,3
-quality improvement,3
-quality improvement and health systems strengthening,3
-quality of care,3
-quality of health care,3
-quality healthcare,3
-quality of health-care,3
-quality of hospital care,3
-quality of life,3
-quality of obstetric care,3
-quality of srh services,3
-radiologic nursing,3
-radiology,3
-radiology outreach,3
-recombinant vaccines,3
-referral hospital,3
-reproductive and child health,3
-reproductive and maternal health services,3
-reproductive and sexual health,3
-reproductive epidemiology,3
+psychological harm,3
+psychological wellbeing,3
+quality adjusted life year,3
 reproductive health,3
-reproductive health care,3
-reproductive health policy and programmes,3
-reproductive health services,3
-resistant tuberculosis,3
-respectful maternal care,3
-respectful maternity care,3
-respiratory diseases,3
-respiratory illnesses,3
-respiratory medicine,3
-respiratory physicians,3
-retention of hiv-tb coinfected clients in hiv care,3
-retirement,3
-reverse vaccinology,3
+respiratory distress syndrome,3
+respiratory tract infection,3
 rheumatic heart disease,3
-rheumatoid arthritis,3
-right to health,3
-rntcp,3
-rotavirus,3
-rotavirus vaccine,3
-rural and remote health care,3
-rural health,3
-safe male circumcision,3
-safe surgery,3
-safer childbirth,3
-salmonella,3
-salmonella spp.,3
-salud infantil,3
-sante des enfants,3
-saving newborn lives,3
+sars,3
 schistosomiasis,3
-school health classes for cancer prevention,3
-schools of public health,3
-sensitized children,3
-sequestration,3
-severe mental illness,3
-severe preeclampsia,3
-sexual,3
-sexual activity,3
-sexual and reproductive health,3
-sexual and reproductive health care,3
+severity of illness index,3
+sexual and reproductive health-care,3
 sexual health,3
-sexual paraphilias,3
-sexual health-care,3
-sexuality,3
-sexuality disconnect,3
+sexual risk behavior,3
+sexually transmitted disease,3
 sexually transmitted infection,3
-sexually transmitted infections,3
-short course chemotherapy,3
-sick newborn care,3
-sickle cell disease,3
-skill birth attendants,3
-skilled attendance at birth,3
-skilled attendance at delivery,3
-skilled attendant,3
-skilled birth attendance,3
-skilled birth attendant,3
-skilled birth attendant (sba),3
-skilled birth attendants,3
-skilled birth attendants (sbas),3
-skilled care,3
-skilled health personnel,3
-skilled maternal care,3
-smoking,3
-smoking/epidemiology/economics,3
-social autopsy,3
-social change,3
+sleeping sickness,3
+smoking cessation,3
 social determinants of health,3
-social epidemiology,3
-social exclusion,3
-social health insurance,3
-social welfare,3
-soins obstetricaux d'urgence,3
-soins obstetriques d'urgence,3
-source of health-care,3
-south african health system,3
-special neonatal care unit,3
-spina bifida,3
-sputum smear-positive tuberculosis,3
-standard prenatal care,3
-still birth,3
-stillbirth,3
-stillbirths,3
-street-involved children,3
-subjective wellbeing,3
-subjective well-being,3
 substance abuse,3
+substance addiction,3
 substance use disorders,3
-supplemental immunization activities,3
-surgery,3
-surgical development,3
-surgical health systems,3
-surveillance network severe maternal morbidity,3
-surveillance of foodborne diseases,3
-survival of recent births,3
-sustainable child development index (scdi),3
-sustainable disease control,3
-syndemic,3
-syndemics,3
-tb/vih,3
-telehealth,3
-telemedicine,3
-tertiary hospital,3
-tetanus toxoid vaccination,3
-therapeutic vaccine,3
-thermal care,3
-timely vaccination,3
-timely vaccination score,3
+sudden infant death syndrome,3
+suicide,3
+public health,3
+tobacco addiction,3
 tobacco control,3
-trachoma,3
-traditional birth attendant,3
-traditional birth attendants,3
-traditional medicine,3
-traffic accidents,3
-treatment,3
-treatment as prevention,3
-treatment coverage,3
-treatment outcomes,3
-treponematoses,3
-triglyceride metabolism,3
-tropical and neglected diseases,3
+tobacco use,3
+traffic accident,3
+traumatic brain injury,3
 tropical disease,3
-tropical diseases,3
-tropical hyperthermia,3
-trypanosoma brucei gambiense,3
-trypanosomiasis,3
-tuberculin skin test,3
 tuberculosis,3
-tuberculosis control,3
-tuberculosis disease,3
-tuberculosis prevention,3
-tuberculosis vaccine,3
-turmeric,3
-type 1 diabetes,3
-ubiquitous health,3
-under-5 children,3
-underfive children,3
-under-five children,3
-unintended pregnancy,3
-universal access to sexual and reproductive health services,3
+tumor necrosis factor,3
+tumor,3
+typhoid fever,3
+under-5 mortality,3
 universal health,3
-universal health care,3
-universal health coverage,3
-universal health coverage (uhc),3
-unsafe abortion,3
-unwanted pregnancies,3
-urban health,3
-urban malaria scheme,3
-urgencias obstetricas,3
-urine source separation,3
-uterine artery embolization,3
-uterine balloon tamponade,3
-utilization of maternal health services,3
-utilization of skilled birth attendants,3
-vaccination,3
-vaccine,3
-vaccine manufacture,3
+children's health,3
+health outcomes,3
+child health,3
 vaccine preventable diseases,3
-vaccines,3
-vascular endothelial growth factor (vegf),3
-vertical disease programming,3
-vitamin a deficiency,3
-vitamin a supplementation,3
-vitamins,3
-vouchers for health,3
 water-borne disease,3
-waterborne illness,3
-wealth,3
-wealth inequalities,3
-weaning,3
-well-being,3
-wellness wheel,3
-who family planning guidelines,3
-who framework convention on tobacco control (who fctc),3
-world health,3
-years lost to disability,3
-young adult,3
-young adults,3
-young child,3
-young children,3
-young people,3
-youth,3
-youth attitudes,3
-youth participation,3
-youth-friendly services,3
-youths,3
-zika,3
+world health organization,3
+world obesity federation,3
 zika virus,3
-zinc supplementation,3
-2-childhood,4
-academia,4
-academic libraries,4
-academic partnerships,4
-academic responsibilities,4
-accelerated course,4
-access to education,4
-adsorption,4
-adult education,4
-adult learning and education,4
-african education,4
-baseline study,4
-basic education,4
-basic literacy,4
-categorical imperative,4
-child diarrhea,4
-comparative education,4
-cross-border delivery of education,4
-desd,4
-distance learning,4
-doctoral education,4
-early childhood,4
-educating young women,4
+improve health,3
+health danger,3
+serious disease,3
+household pollutants,3
+household air pollution,3
+unhealthy pollutants,3
+smoke-related illness,3
+lower blood pressure,3
+harm health,3
+health equity,3
+global health,3
+SDG4,4
+SDG 4,4
+training,4
 education,4
-education and child health,4
-education and policy,4
-education equality,4
-education for all,4
-education for sustainability,4
-education for sustainable development,4
-education inequalities,4
-education management information systems,4
-education measurement,4
-education outcomes,4
-education planning,4
-education post-2015,4
 educational,4
-educational access,4
-educational games,4
-educational intervention,4
-educational legacy,4
-educational status,4
-educational system,4
-educational targets,4
-educational transitions,4
-e-learning,4
-enrolment,4
-environmental education,4
-equal education,4
-esd,4
-evaluation of educational dynamics,4
-family literacy,4
-farmer education,4
+classroom,4
+mooc,4
+leadership program,4
+learning poverty,4
+academic,4
+academic achievement,4
+academic training,4
+academic module,4
+Leadership Academy,4
+training program,4
+apprenticeship,4
+access and technical education,4
+access and tertiary education,4
+access and vocational education,4
+adult basic education,4
+adult education,4
+girls' education,4
 female education,4
-fit for school,4
-global education governance,4
-globalization and international higher education,4
-graduate,4
-graduate education,4
-guidelines training module,4
-health education,4
-high education,4
-higher education,4
-higher education for sustainable,4
-household education strategies,4
-illiteracy,4
-inclusion and education,4
-inclusive education,4
-international cooperation in higher education,4
-international development education,4
-international education,4
-internationalization of teaching,4
-leadership education,4
-learning,4
-learning and research,4
-learning approaches,4
-learning metrics,4
-learning styles,4
-learning to learn,4
-learning-based approach,4
-leverage points in academic changes,4
-lifelong learning,4
+edtech,4
+adult learner,4
+affordable education,4
+basic education,4
+childhood curriculum,4
+compulsory secondary education,4
+culturally diverse students,4
+students,4
+curriculum reform,4
 literacy,4
-literature review,4
-madrasa,4
-master of nursing,4
-medical education,4
-medical students,4
-midwifery education,4
-multigrade schooling,4
-multilingual literacy,4
-multilingualism,4
-narratives,4
-non-formal education (nfl),4
-nursing education,4
-nutrition education,4
-nutrition training,4
-online macromarketing course,4
-online training resources,4
-open education resources,4
-para-teacher,4
-patient education,4
-physical education,4
-popular education,4
-postgraduate,4
-post-primary education,4
-post primary education,4
-postprimary education,4
-pre-primary,4
-pre primary,4
-preprimary,4
-pre school,4
-preschool,4
-pre-school children,4
-preservice education,4
-primary education,4
+literacy skills,4
+early childhood curriculum,4
+early childhood development,4
+early childhood education,4
+early childhood pedagogy,4
+early childhood special education,4
+early years learning framework,4
+learning resource,4
+learning environment,4
+peer learning,4
+remote learning,4
+sustainability education,4
+sustainable development studies,4
+education work,4
+education dropouts,4
+education exclusion,4
+education expenditure,4
+education facilities,4
+education indicators,4
+education institutions,4
+education policy,4
+education quality,4
+quality education,4
+education reform,4
+education research,4
+education program,4
+Education for Sustainable Development,4
+educational access,4
+educational attainment,4
+educational enrolment,4
+educational environment,4
+educational financial aid,4
+educational gap,4
+educational governance,4
+educational inequality,4
+educational outcomes,4
+educational reform,4
+educational status,4
+educational program,4
+education model,4
+education institution,4
+educational institution,4
+educators,4
+Executive Education,4
+executive course,4
+non-degree program,4
+environmental education,4
+environmental studies,4
+Sustainability Course,4
+environmental course,4
+sustainability-focused course,4
+equal access and education,4
+equal education,4
+formal education,4
+global citizenship,4
+Global Education,4
+teaching and learning,4
+future of education,4
+Global School,4
+high school,4
+high school education,4
+high school graduation rates,4
+inclusive education,4
+teacher education,4
+teacher training,4
+international education,4
+intercultural learning,4
+learning method,4
+learning tool,4
+learning experience,4
+learning environment,4
+learning opportunities,4
+learning outcomes,4
+lifelong learning,4
+lower secondary education,4
+massive open online courses,4
+online course,4
+online learning,4
+online education,4
+open learning,4
+Open knowledge,4
+Programme for International Student Assessment,4
+national assessment program – literacy and numeracy,4
+national education policies,4
+non-formal education,4
+numeracy,4
+scholar,4
+scholarly,4
+k-12,4
+open educational resources,4
+organized learning,4
+pedagogical content knowledge,4
+pre-primary education,4
+pre-college program,4
 primary education,4
 primary school,4
-primary school enrolment,4
-public health education,4
-quality education,4
-reinforcement learning (rl),4
-residency education,4
-reusable learning objects,4
-right to education,4
-school,4
+professional development,4
+professional learning,4
+e-learning,4
+public education,4
+public schools,4
+safety in school,4
 school attendance,4
+curriculum,4
 school enrollment,4
-school libraries,4
-schoolchildren,4
-schools,4
+school safety,4
+Summer School,4
+science technology engineering mathematics,4
 secondary education,4
+higher education,4
 secondary school,4
-stem,4
+special education needs,4
+special education,4
+student assessment,4
 sustainable development education,4
-tamale teaching hospital,4
+teacher attrition,4
 teacher education,4
-teacher identity,4
-teachers professional development,4
-teaching,4
-teaching and learning,4
+teacher training,4
+technology education,4
 tertiary education,4
-training,4
-transition primary to lower secondary education,4
-transnational education,4
-universal basic education,4
-universal coverage,4
+tertiary institutions,4
+universal education,4
+vocational education,4
+vocational training,4
+Postgraduate Training,4
 university,4
-universities,4
-university : enterprise cooperation,4
-veterinary education,4
-vocational education and training,4
-abolition,5
-abortion,5
-abortion law and policy,5
-abortion rights,5
-abused women,5
-adolescent pregnancy,5
-andean communities,5
-child maltreatment,5
+SDG 5,5
+SDG5,5
+family planning services,5
+reproductive healthcare,5
+sexism,5
 child marriage,5
+contraceptive behaviour,5
+contraceptive use,5
 domestic violence,5
-economics of gender,5
-empowerment,5
-empowerment,5
-equal access,5
-equality,5
-female adolescents,5
-female community health volunteers (fchvs),5
-female empowerment,5
-female genital cutting,5
-female genital mutilation,5
-female genital mutilation/cutting,5
-female involvement,5
-female labour market participation,5
-female literacy,5
-female schooling,5
-female-headed households,5
+early marriage,5
+employment equity,5
+empower girls,5
+empower women,5
+empowerment of women,5
+family violence,5
+female entrepreneurship,5
+female exploitation,5
+female infanticide,5
+female labor force,5
+female leader,5
+female managers,5
+female ownership,5
+female political participation,5
+female politician,5
+female sex workers,5
+female smallholder,5
 feminism,5
-feminist analysis,5
-figo logic initiative,5
-funding for womens rights,5
+feminist,5
+forced marriage,5
+forced prostitution,5
 gender,5
-gender and curriculum,5
-gender and development,5
-gender and feminism,5
-gender bias,5
-gender discourse,5
 gender discrimination,5
-gender disparity in schooling,5
-gender dysphoria,5
-gender empowerment,5
+gender disparities,5
 gender equality,5
 gender equity,5
 gender gap,5
-gender indicators,5
-gender inequalities,5
+gender stereotypes,5
 gender inequality,5
-gender inequality in immunization,5
-gender inequity,5
+high inequality,5
+gender injustice,5
 gender mainstreaming,5
 gender parity,5
-gender resource recovery,5
-gender roles,5
-gender stereotypes,5
-gender vulnerability,5
-gender-based violence,5
+gender participation,5
+gender quota,5
+gender segregation,5
+gender wage gap,5
+gender differences,5
 genital mutilation,5
-gini index,5
-girl child,5
-girls,5
-girls education,5
-girls enrolment,5
-girls retention,5
-girls school experiences,5
-global womens health,5
-hiv-infected pregnant women,5
-international womens rights frameworks,5
-liberal feminism,5
-male participation,5
-male-headed households,5
-married women,5
-masculinities,5
-maternal,5
-maternal & newborn health road maps,5
-maternal age,5
-maternal and child care,5
-maternal delays,5
-maternal determinants,5
-maternal education,5
-maternal factors,5
-maternal near miss,5
-maternal near-miss review,5
-maternal outcome,5
-maternal welfare/economics,5
-melanesian women,5
-men and boys,5
-motherhood method,5
-mothers,5
-"mothers, benin",5
-muslim women,5
-mutilation,5
-national gender mechanisms,5
-patriarchal,5
-pmtct,5
-political gender gap,5
-poor women,5
-population assistance,5
-rape,5
-registration of pregnancy,5
-remote birth,5
-reproductive,5
-"reproductive, maternal, newborn and child health",5
-rural maternal healthcare,5
-safe motherhood,5
-safe motherhood program,5
-safe motherhood programs,5
-saving mothers and newborns initiative,5
-school feeding,5
-services de maternite,5
-servicios de maternidad,5
-severe maternal outcome,5
-sex,5
-sex differences,5
-sex partner,5
-sexual discrimination,5
-sexual exploitation,5
-sexual harassment,5
+honor killing,5
+household equity,5
+intimate partner violence,5
+misogyny,5
+sexual abuse,5
 sexual violence,5
-sisterhood method,5
-social inclusion,5
-south asian women,5
-transgender sexual addiction,5
-unwanted sexual experience,5
+reproductive health,5
+reproductive rights,5
+sex offenses,5
+sex trafficking,5
+sexism,5
+lgbtq+,5
+lgbtq,5
+transgender,5
+sextortion,5
+sexual abuse,5
+sexual assault,5
+sexual crime,5
+sexual education,5
+sexual exploitation,5
+gender-based,5
+gender-sensitive,5
+gender-related,5
+sexual violence,5
+spouse abuse,5
+unpaid care work,5
 violence against women,5
-woman empowerment,5
-woman health,5
-women,5
-women,5
-women and childrens health,5
-women and development,5
-women empowerment,5
-women health,5
-women in development,5
-women workers,5
-women health,5
-womens health,5
-women�s rights,5
-womens and childrens health,5
-womens dietary diversity score,5
-womens empowerment,5
-women empowerment,5
-womens empowerment,5
-womens global health,5
-womens groups,5
-womens health,5
-womens health issues,5
-womens health/violence,5
-womens human rights,5
-womens literacy programmes,5
-womens rights,5
-womens status,5
-workplace equality,5
-young women,5
-access to drinking water,6
-access to water,6
-accessible water,6
-affordable drinking water,6
-agricultural trade reform,6
-appropriate technology,6
-approvisionnement en eau,6
-aquapot project,6
-aquifer,6
-basic social services,6
-blue versus green water,6
-botswana,6
-clean water,6
-colonial water policy,6
-consumptive water use,6
-daily water demand,6
-defecation,6
-desalination,6
-diarrhoeal diseases,6
-drinking water,6
-drinking water supply,6
-drinking water treatment,6
-drinking-water supply,6
-drought,6
-eau potable,6
-fecal contamination,6
-fecal sludge management,6
-filtered vs. unfiltered water,6
-flood,6
-floods,6
-free basic water,6
-fresh water,6
-fuentes de agua,6
-global goal on water,6
-hygiene,6
-hygiene practices,6
-hygienic behaviour,6
-improved sanitation coverage,6
-improved water access indicator,6
-improved water and sanitation,6
-improved water sources,6
-improving water,6
-informal water providers,6
-integrated water resource management,6
-integrated water resources management,6
-integration,6
-irrigation,6
-multiple-use water services,6
-municipal water services,6
-municipal water supply agencies,6
-nano membrane toilet,6
-non-revenue water,6
-non-sewered sanitary systems,6
-open defecation,6
-packaged water,6
-pit latrine,6
-point-of-use water treatment,6
-pollution,6
-poor quality water use,6
-potable water,6
-public water service,6
-resource-oriented sanitation,6
-right to sanitation,6
-right to water,6
-river basins,6
-river,6
-rivers,6
-rural sanitation in ghana,6
-rural water and sanitation,6
-rural water schemes,6
-rural water supplies,6
-rural water supply,6
-rural water supply and sanitation,6
-rural water systems,6
-rural-water,6
-sachet water,6
-safe drinking water,6
-safe water,6
-safely managed water,6
-safer drinking-water,6
-sanitation,6
-sanitation adoption,6
-sanitation business,6
-sanitation chains,6
-sanitation coverage,6
-sanitation facilities,6
-sanitation ladder,6
-sanitation safety planning,6
-sanitation success,6
-sanitation success indicator,6
-sanitation system,6
-sanitation systems,6
-sanitation technologies,6
-sanitation trend,6
-sanitation/economics,6
-seahorse aquaculture,6
-sewerage,6
-shared sanitation,6
-small-scale sewage systems,6
-soil-water-waste nexus,6
-sprinkler irrigation,6
-stored rainwater quality,6
-supercritical water,6
-sustainable sanitation,6
-toilet facilities,6
-toilet,6
-toilets,6
-traditional and conventional medicine,6
-udd toilet,6
-unsafe sanitation,6
-urban services,6
-urban water cycle,6
-urban water cycle services,6
-urban water management,6
-urban water supply,6
-vip latrine,6
-virtual water content,6
-virtual water trade,6
-wash,6
-wash in schools,6
-wash programmes,6
-wastewater,6
-wastewater management,6
-wastewater treatment,6
-wastewater treatment plants,6
-wastewater use,6
+women in leadership,5
+women labour force participation,5
+women's autonomy,5
+women's economic development,5
+women's empowerment,5
+women's livelihood,5
+women's ownership,5
+women's power,5
+women's rights,5
+women's sexual health,5
+women's reproductive health,5
+women's underrepresentation,5
+women's unemployment,5
+womens' employment,5
+recognize women,5
+SDG 6,6
+SDG6,6
+"water, sanitation and hygiene",6
 water access,6
-water accessibility,6
-water allocation,6
-water and health,6
-water and sanitation,6
-water and sanitation sector,6
-water consumption,6
-water cost,6
-water crisis,6
-water demand management,6
-water filtration,6
-water footprint assessment,6
-water infrastructure,6
-water infrastructure planning,6
-water management,6
-water poverty,6
-water resources,6
-water resources management,6
-water reuse,6
-water safety plans,6
-water service,6
-water services,6
+activated sludge,6
+affordable water,6
+drinking water,6
+aquatic ecosystems,6
+aquatic environment,6
+aquifer,6
+black water,6
+blue water,6
+chemical oxygen demand,6
+water source,6
+clean water,6
+desalination,6
+equitable sanitation,6
+sanitation,6
+fresh water,6
+freshwater,6
+green water,6
+grey water,6
+groundwater,6
+hand-washing facility,6
+water,6
 water supply,6
-water supply and sanitation,6
-water supply/economics,6
+water security,6
+water governance,6
+rainwater harvesting,6
+irrigation water,6
+surface water,6
+lake water quality,6
+membrane bioreactor,6
+moving bed biofilm reactor,6
+official development assistance and water and sanitation ,6
+defecation,6
+pit lake water quality,6
+potable water,6
+water ecosystem,6
+wetland,6
+quality water,6
+recycled water,6
+reverse osmosis,6
+river bank filtration,6
+sanitation services,6
+sewage treatment,6
+soil water assessment tool,6
+sustainable supply and freshwater,6
+sustainable withdrawals and freshwater,6
+tap water,6
+total suspended solids,6
+transboundary cooperation,6
+treated water,6
+ultrafiltration,6
+untreated wastewater,6
+waste water,6
+wastewater,6
+water analysis,6
+hygienic toilet,6
+sanitation & hygiene,6
+sanitation and hygiene,6
+water availability,6
+water bodies,6
+water conservation,6
+water contamination,6
+water cooperation,6
+water demand,6
+water desalination,6
+water distribution system,6
+water ecosystems,6
+water efficiency,6
+water environment,6
+water filtration,6
+water footprint,6
+water harvesting,6
+water management,6
+water pollutant,6
+water pollution,6
+water purification,6
+water quality,6
+water recycling,6
+water resource,6
+water reuse,6
+water scarcity,6
+water source,6
+water sources,6
+water stress,6
+water supply,6
 water treatment,6
 water use,6
-water utility,6
-water utility optimisation,6
-access affordable,7
-access energy,7
-access energies,7
-access to electricity,7
-affordable energies,7
+water-use,6
+water-related,6
+watershed,6
+water well,6
+peatland,6
+SDG 7,7
+SDG7,7
+electric grid,7
+affordable electricity,7
+affordable energy,7
+fossil fuel subsidy,7
 alternative energy,7
-appropriate engineering,7
-battery,7
-biodiversity value,7
-bioenergy,7
-biofortification,7
 biofuel,7
-biofuel policy,7
-biofuels,7
-biopsychosocial model,7
-carbon,7
-changement climatique,7
-charcoal,7
+geothermal,7
+clean cooking,7
 clean energy,7
-coal mine methane,7
-coal mine methane (cmm),7
-coal mine methane policy,7
-combustion,7
-efficiency of renewable energy,7
-electric energy intensity,7
-electrical energy storage (ees) technologies,7
+clean fuel,7
+cleaner fossil-fuel technology,7
+electricity consumption,7
 electricity,7
-electricity access,7
-electricity generation,7
-electricity sector reform,7
-electrification,7
-emission,7
-emissions,7
-energy,7
+energy harvesting,7
 energy access,7
-energy access modelling,7
-energy accessibility,7
-energy and emission taxes,7
+energy conservation,7
 energy consumption,7
 energy conversion,7
-energy demand,7
 energy development,7
 energy efficiency,7
-energy efficiency,7
-energy indicators,7
+energy equity,7
+energy governance,7
 energy infrastructure,7
-energy intensities,7
 energy intensity,7
-energy issues,7
-energy pathways,7
-energy payback time,7
-energy planning,7
-energy renovation,7
-energy resource,7
-energy saving,7
+energy justice,7
+energy ladder,7
+energy management,7
+energy policy,7
+energy poverty,7
+energy research,7
 energy security,7
-energy sovereignty,7
+energy storage,7
 energy supply,7
-energy systems,7
+energy system,7
+energy production,7
+energy generation,7
+energy nexus,7
+energy sector,7
+grid decarbonisation,7
+energy technology,7
 energy transition,7
-energy transitions,7
-energy use,7
-energy utilization,7
-geothermal energy,7
-green energy,7
-hydro energy,7
-leap model,7
-levelized cost of electricity,7
-lpg fuel subsidies,7
-material and energy use,7
-micro hydro power (mhp),7
-non-hydro electricity generation,7
-nuclear power,7
-off-grid rural electrification,7
-off-grid system,7
-renewable and sustainable energy,7
-renewable energies,7
+fuel cell,7
+fuel poverty,7
+fuel switching,7
+energy management,7
+hybrid energy,7
+hydroelectric,7
+hydropower,7
+hydrogen production,7
+modern electricity,7
+modern energy,7
+photovoltaic,7
+power consumption,7
+power generation,7
+reliable electricity,7
+reliable energy,7
+energy,7
+low-carbon,7
+decarbonization,7
 renewable energy,7
-renewable energy (re),7
-renewables,7
-smart grids (sg),7
+renewable power,7
+electrification,7
+smart grid,7
+smart meter,7
+smart microgrid,7
+smart power,7
+solar cell,7
 solar energy,7
-solid fuels,7
+solar power,7
+solar park,7
+solar,7
+energy storage,7
 sustainable energy,7
-sustainable energy access,7
-sustainable energy for all initiative,7
-sustainable energy investments,7
-volatile renewable energies,7
+thermal energy,7
+thermal power plants,7
+water splitting,7
+wind,7
 wind energy,7
-woodfuels,7
-woody biomass,7
-banking,8
-boundary,8
-care-seeking behavior,8
-child health surveys,8
-commerce,8
-contracting,8
-curriculum adaptation,8
-curriculum development,8
-curriculum planning,8
-curriculum-making,8
+wind farm,7
+wind power development,7
+wind power generation,7
+wind power generator,7
+wind power integration,7
+wind power penetration,7
+wind power plants,7
+wind power system,7
+wind turbine,7
+SDG 8,8
+SDG8,8
+economic recovery,8
+underemployed,8
+micro enterprise,8
+small enterprise,8
+medium enterprise,8
+medium-sized enterprise,8
+small-sized enterprise,8
+micro-sized enterprise,8
+small and mid-sized enterprises,8
+entrepreneur,8
+entrepreneurship,8
+access to banking,8
+access to finance,8
+labor market,8
+child labor,8
+child soldier,8
 decent job,8
 decent work,8
-decent work,8
-developing markets,8
-development banks,8
 development work,8
-duty bearers,8
-economic diversification,8
-economic innovation,8
+digital economy,8
+economic,8
+economic activity,8
 economic assessment,8
-economic benefits,8
 economic conditions,8
-economic consequence,8
-economic costs,8
-economic criteria,8
+economic decoupling,8
+economic development,8
+economic diversification,8
 economic evaluation,8
-economic evaluations,8
 economic growth,8
+economic system,8
 economic impact,8
-economic impacts,8
-economic indexes,8
+economic index,8
+economic innovation,8
 economic productivity,8
 economic regulation,8
 economic return,8
-economic returns,8
-economic security trap,8
-economical planning,8
-economics,8
-economy,8
-emerging markets,8
+economic plan,8
+ecotourism,8
+fair economy,8
+create jobs,8
 employability,8
-employer perceptions,8
-employment,8
-employment,8
-energy market,8
-enterprises,8
-enterprise,8
+employment policy,8
+employment protection,8
 entrepreneurship,8
-ethical banking,8
-evaluacion economica,8
-evaluation economique,8
-exemption,8
-expenditure patterns,8
-finance,8
-financial and economic crisis,8
-financial crisis,8
-financial development,8
-financial incentives,8
-financial management,8
-financial market liberalization,8
-financial model,8
-financial ratios,8
-financial risk,8
-financial risk protection,8
-financial security,8
-financial support,8
-financial sustainability,8
-financial tracking system,8
-financial wellness,8
-financialisation,8
+financial access,8
+financial inclusion,8
+forced labor,8
+compulsory labor,8
+full employment,8
 gdp,8
-gdp growth,8
-green and inclusive economic growth,8
+gross national product,8
+natural capital accounting,8
+natural capital,8
 green economy,8
 green finance,8
+financial service,8
 green growth,8
 green tourism,8
-gross domestic product (gdp),8
-gross domestic product growth,8
-growth,8
-growth standards,8
-growth status,8
-growth strategy,8
-health care workforce,8
-health extension worker,8
-health extension workers,8
-health personnel,8
-health worker,8
-income growth,8
+human trafficking,8
+inclusive economy,8
+inclusive growth,8
 informal economy,8
-international financial flows,8
-international monetary fund,8
+informal employment,8
+international labor organization,8
 job creation,8
-labor,8
+labor union,8
 labor right,8
-labor rights,8
-laboratory workforce strengthening,8
-labour market,8
-labour productivity,8
+labor market,8
 limits of growth,8
-living wage,8
+equal pay,8
 long-term growth,8
-malmquist productivity index,8
-malmquist-dea,8
-manpower,8
-manufacturing,8
-manufacturing/remanufacturing,8
-midwifery workforce,8
 migrant labor,8
-mitigation banks,8
-mobile malaria worker,8
-monetary,8
-money,8
-money metric poverty,8
-national income accounting,8
-nature-based tourism management,8
-near-miss,8
-near-miss review,8
-non-health gross domestic product loss,8
-obstetric labor,8
-occupation,8
-occupational activity,8
-occupational change,8
-occupational roles,8
-organization,8
-organizational capacity,8
-organizational capacity building,8
-organizational capacity development,8
-organizational change,8
-organizational issues,8
-organizational studies,8
-organizations,8
-paediatric,8
-paediatrics,8
-paediatrics,8
-pediatrics,8
-person equivalent,8
-physicians,8
-place marketing development,8
-practitioners,8
-professional development,8
-professional meetings,8
-professional role,8
-professionalisation,8
-program managers,8
-pro-poor tourism,8
-public health nurses,8
-quality of working life,8
-registered nurses,8
-rular electrification,8
-run-of-river hydropower,8
-rural electrification,8
-rural health workers,8
-sex workers,8
-slavery ,8
-smallholder,8
-smallholders,8
-small-holders,8
-smart growth,8
-smart tourism,8
-socio-economic sustainability,8
-sustainable economic development,8
-sustainable economy,8
-sustainable return on investment,8
+migrant workers,8
+protect workers,8
+workers' rights,8
+labor standard,8
+minimum wage,8
+living wage,8
+wage growth,8
+modern slavery,8
+precarious employment,8
+precarious job,8
 sustainable tourism,8
-teacher recruitment,8
-teamwork,8
-tourism,8
-tourism and development,8
-trade support,8
-traditional practitioners,8
-training of trainers,8
-transition economies,8
+quality job,8
+good job,8
+run-of-river hydropower,8
+safe work,8
+secure work,8
+slavery,8
+small business,8
+smart growth,8
+social entrepreneurship,8
+socio-economic development,8
+stable employment,8
+stable jobs,8
+sustainable economy,8
+thriving economy,8
+clean economy,8
+sustainable growth,8
+tourism sector,8
+trade union,8
 unemployment,8
-veterinary,8
-village doctor,8
-village health worker,8
-village health workers,8
-well-paid jobs,8
-work,8
-work opportunities,8
-workforce,8
-workforce science,8
-workforce shortage,8
-workforce surveillance,8
+unemployment rate,8
 working conditions,8
-workplace,8
-workplaces,8
+working poor,8
 youth employment,8
+youth employability,8
 youth unemployment,8
-adaptive capacity,9
-adaptive comanagement,9
-adaptive co-management,9
-affordable access,9
-campaign,9
-clean development mechanism (cdm),9
-commercial banks,9
-commercial online services,9
-commercialization,9
-company,9
-construction management,9
-construction materials,9
-cooperatives,9
-corporate social responsibility,9
-corporate social responsibility (csr),9
-corporate sustainability,9
-corporations,9
-dairy farming,9
-digital libraries,9
-disaster resilience,9
-eco-innovation,9
+employment,8
+SDG 9,9
+SDG9,9
+science and technology,9
+blockchain,9
+digital technology,9
+digital transformation,9
+digital transition,9
+digitalization,9
+applied research,9
+broadband access,9
+broadband provider,9
+affordable broadband,9
+fiber optic,9
+5G,9
+clean infrastructure,9
+communications technology,9
+critical infrastructure,9
+distribution infrastructure,9
 ecological infrastructure,9
-economic development,9
-ecosystem distress syndrome,9
-energy industry,9
-enterprise input-output,9
-fast-fashion industry,9
-global data infrastructure,9
+energy infrastructure,9
+future infrastructure,9
+data infrastructure,9
 green infrastructure,9
-green innovation,9
-green investment schemes,9
-green manufacturing system,9
-green refinery,9
-gwr,9
-haiti reconstruction,9
-hospital schools,9
-hospitals,9
-hss,9
-inclusive industry,9
-inclusive innovation,9
-industrial buildings,9
-industrial district,9
-industrialisation,9
-industrializing economy,9
-industry,9
-infrastructure,9
-infrastructure decision making,9
-infrastructure reconstruction,9
+open source,9
 innovation,9
-innovative funding,9
-innovativeness,9
-internet,9
+green innovation,9
+green manufacturing,9
+inclusive industrialization,9
+inclusive industry,9
+heavy industry,9
+inclusive innovation,9
+industrialization,9
+industrialize,9
+industrial,9
+industry growth,9
+industry,9
+sustainable industry,9
+infrastructural development,9
+infrastructure development,9
+infrastructure investment,9
+infrastructure reconstruction,9
+infrastructure supply,9
+infrastructure,9
+innovation management,9
+innovation processes,9
+innovation system,9
 internet access,9
 internet services,9
-intrastrure planning,9
+infrastructure planning,9
 laboratory,9
-laboratory medicine,9
-labour markets,9
-lean manufacturing,9
-libraries,9
-library and information services,9
-life cycle analysis,9
-life cycle analysis (lca),9
-life cycle assessment,9
-life cycle assessment (lca),9
-life cycle costing (lcc),9
-life cycle design,9
-life cycle thinking,9
-life cycles,9
-life expectancy,9
-life-course,9
-life-course perspective,9
-life-cycle thinking,9
-l'omd,9
-low cost technologies,9
-low-cost energy technology,9
+lab,9
+technology,9
+new technology,9
+emerging technology,9
+manufacturing,9
+factory,9
 market access,9
-market creation,9
-market performance,9
-market segmenting,9
-markets,9
-micro-carrier technology,9
 microenterprise,9
-mission hospitals,9
-panopticon,9
-peacebuilding,9
-pediatric,9
-pediatrics,9
-post-productivism,9
-practice of gmp,9
-primary health facilities,9
-primary healthcare facilities,9
-professional organizations,9
-public health facilities,9
-public health facility,9
+multi-disciplinary research,9
+multidisciplinary research,9
+nation infrastructure,9
+national infrastructure,9
+private research,9
 public infrastructure,9
-public libraries,9
+internet of things,9
+artificial intelligence,9
+artificial general intelligence,9
+neural network,9
+quantum computer,9
+augmented reality,9
+virtual reality,9
+communications technology,9
+machine learning,9
+deep learning,9
+autonomous vehicles,9
+public research,9
 quality infrastructure,9
 regional infrastructure,9
 reliable infrastructure,9
+research investment,9
 resilient infrastructure,9
-responsabilidad social corporativa,9
-responsible digital innovation,9
+digital innovation,9
 responsible innovation,9
-reverse innovation,9
-rooftop greenhouse,9
-rural health centre,9
-rural health services,9
 rural infrastructure,9
-small- and medium-sized enterprises (smes),9
+scientific advances,9
+scientific research,9
+smart infrastructure,9
 social enterprise,9
-social enterprises,9
 social entrepreneurship,9
 social innovation,9
-social marketing,9
-supply chain management,9
-supply chain of artemisinin,9
-supply chain sustainability,9
-supply chains,9
-supply-side,9
+sustainable business model,9
+sustainable industrialization,9
 sustainable industry,9
 sustainable infrastructure,9
-sustainable business model,9
 sustainable innovation,9
-technological capabilities,9
+sustainable manufacturing,9
 technological innovation,9
-technological innovations,9
-technologies,9
-technologists,9
-technology,9
 technology assessment,9
+technology development,9
 technology gaps,9
 technology receptivity,9
 technology transfer,9
-trade,9
-trade costs,9
-trade facilitation,9
-trade-off analysis,9
-tradeoffs,9
-trade-offs,9
-trade-offs and synergies,9
-traditional agroforestry systems,9
 transborder infrastructure,9
-world bank,9
-"""win-win"" reform agenda",10
-adaptive cycle,10
-adverse outcomes,10
-advisory committee,10
-advocacy,10
-advocacy and political process,10
-advocacy coalitions,10
-anthropometric measurements,10
-axiomatization,10
-barriers to action,10
-debt reduction,10
-debt sustainability,10
-delivery of health care/organization and administration,10
-deprivation,10
-desarrollo,10
-developed countries,10
-developing country,10
-developing country manufacturers network,10
-developing region,10
-developing world,10
-development,10
-development assistance,10
-development assistance committee,10
-development cooperation,10
-development coordination,10
-development finance,10
-development impact,10
-development indicators,10
-development planning,10
-disadvantaged areas,10
-disadvantaged populations,10
-discrimination,10
+transportation infrastructure,9
+water infrastructure,9
+SDG 10,10
+SDG10,10
+unequal,10
+financing development,10
+official development assistance,10
+ODA,10
+DAC country,10
+least-developed country,10
+secure income,10
+remittance,10
+wealthy individual,10
+richest individual,10
+fair share,10
+equalizing instrument,10
+universal basic income,10
+inclusive development,10
+leave no one behind,10
+leave-no-one-behind,10
+vulnerable community,10
+just transition,10
+environmental justice,10
+economic justice,10
+social justice,10
+wealth accumulation,10
+wealth disparity,10
 disparity,10
-disparities,10
+equity,10
+equitable,10
+ageism,10
+sexism,10
+redistribute wealth,10
+wealth redistribution,10
+distribution of wealth,10
+wealth gap,10
+concentration of wealth,10
+wealth inequality,10
+reduce inequality,10
+discrimination,10
+discriminatory,10
+rich and poor,10
+richer countries,10
+poorer countries,10
+rich-poor gap,10
+disparity,10
+displaced people,10
+safeguard policy,10
+safeguard management,10
 displaced populations,10
 displacement,10
-distribution,10
-distribution campaign,10
-distributional problems,10
-donor aid,10
-duty of consultation and no-harm rule,10
-ecological debt,10
-ecological economics,10
+marginalized group,10
+marginalized community,10
 economic disparity,10
-economic inequality,10
+economic gap,10
+economic empowerment,10
 economic inclusion,10
-emerging donor,10
-emerging donors,10
-emerging economies,10
-emerging global structures,10
+economic inequality,10
+economic marginalization,10
+economic reform policy,10
 equal opportunity,10
-equality,10
 equality measure,10
-equality of access to srh services,10
 equality of opportunity,10
-essential interventions,10
 ethnic disparities,10
 ethnic divisions,10
-ethnic minorities,10
-eu-gcc cooperation,10
-external debt,10
+ethnic minority,10
 financial inclusion,10
-financial inclusion index,10
-financing for development,10
-financing for sustainable development,10
-foreign aid,10
-foreign and development aid,10
-foreign assistance,10
-fragile states,10
-free trade,10
-gfatm,10
 gini,10
 global disparities,10
-global fund,10
 global inequality,10
-government subsidies,10
-health care disparities,10
-health disparities,10
-health outcome inequality,10
-heavily indebted,10
-human development,10
-human development index,10
-human development indicators,10
-human development report,10
-immunization coverage disparities,10
 income inequality,10
-income inequality growth,10
-income levels growth,10
-income expenditure growth,10
-income without growth,10
-inequality,10
-inequalities,10
-inequity,10
-intersectoral cooperation,10
-intersectoral coordination,10
-intersectoral partnerships,10
-intersectorial,10
-latin american development,10
-ldcs,10
-least developed country,10
-least developed countries,10
-least developed nation,10
-least developed nations,10
-least-developed countries,10
-less developed countries,10
-lmic,10
-lmics,10
-low-and middle income country,10
-low & middle income country,10
-low middle income country,10
-low and middle income country,10
-low-income and lower-middle-income countries,10
-low-income and middle-income countries,10
-low income country,10
-low-income countries,10
-low-middle income country,10
-low-middle income countries,10
-low-resource countries,10
-low-resource setting,10
-major donors,10
-middle- and high-income economy,10
-middle high income country,10
-middle low income country,10
-middle level income country,10
-middleincome country,10
-middle income country,10
-middle-income countries,10
-mutual aid,10
-official aid for health provision,10
-official development aid,10
-official development assistance,10
-output-based aid,10
-planetary stewardship,10
-planetary well-being,10
+income disparity,10
+poverty and inequality,10
+the richest,10
+the poorest,10
+1% versus 99%,10
+average wealth,10
+income gap,10
+increasing inequality,10
+increased inequaltity,10
+growing inequality,10
+widening inequality,10
+widened inequality,10
+greater inequality,10
+the elite,10
+immigration,10
+immigrant,10
+migration,10
+indigenous people,10
+migrant remittance,10
+migration policy,10
 political inclusion,10
-politics inclusion,10
-post-conflict societies,10
+racism,10
+the wealthy,10
 reduce inequality,10
 reduced inequality,10
-reduces inequality,10
 reducible inequality,10
-reducing inequality,10
-regional collaboration,10
-regional development,10
-regional differences,10
-regional disparities,10
-resource-limited countries,10
-resource-poor countries,10
-responsible investments,10
-sector-specific aid,10
+remittance corridors,10
+remittance costs,10
+responsible migration,10
+social class,10
+social discrimination,10
+social exclusion,10
+inclusion,10
+disability,10
 social inclusion,10
-socio-economic development,10
-south-south cooperation,10
-territorial disparities,10
-the 0.7 percent of gni target,10
-third world,10
-total official support for development,10
-transnational collaboration,10
-world countries,10
-africa surgery,11
-african cities,11
-budgeting,11
-building codes,11
-building performance simulation,11
-building-rooftop greenhouse symbiosis,11
-building,11
-buildings,11
-cis-7 countries,11
-cities,11
-city,11
-cities and sustainable development,11
-citizen participation,11
-citizenship,11
-citizen-state relations,11
-city branding,11
+inequality gap,10
+social inequality,10
+social isolation,10
+social divide,10
+shared prosperity,10
+social justice,10
+social policy,10
+social protection,10
+social security,10
+social stigma,10
+social support,10
+social welfare,10
+wage protection,10
+wage inequality,10
+equality,10
+inequality,10
+SDG 11,11
+SDG11,11
+affordable housing,11
+air pollutant,11
+air pollution,11
+air quality,11
+black carbon,11
+city planning,11
 city pollution,11
-civil and environmental engineering,11
-civil society,11
-civil society organization,11
-climate policy analysis models,11
-collective household model,11
-communities,11
-community,11
-community action,11
-community consultations,11
-community development,11
-community impact,11
-community management,11
-community mobilization,11
-community networks,11
-community participation,11
-community platforms,11
-community resilience,11
-community solidarity,11
-community survey,11
-community voices,11
-community volunteers,11
-community water,11
-community based,11
-community-based,11
-community-based approaches,11
-community-based disability workers,11
-community-based midwives,11
-community-based organizations,11
-community-based tourism,11
-community-focused strategies,11
-community-led,11
-consensus building,11
-conservation science and society,11
-convention for the safeguarding of intangible cultural heritage,11
-corporate citizenship,11
-decentralisation,11
-demographic and health surveys,11
-demographic surveillance,11
-demographic transition,11
-demography,11
-densities,11
-developing communities,11
-district,11
-district committee,11
-district law,11
-dlhs,11
-domestic,11
-domestic rainwater harvesting,11
-domestic sewage,11
-domestic wastewater treatment,11
-domestic water,11
-domestic water consumption,11
-domestic water supply,11
-domestication,11
-donor funding,11
-east african metropolises,11
-ecotourism,11
-enugu urban,11
-environmental accounting housekeeping books (eah) of domestic wastewater,11
-environmental degradation,11
-eradication of slums,11
-ethnicity,11
-ethnography,11
-expatriates,11
-faecal biomass,11
-faecal contamination,11
-faecal sludge,11
-family,11
-family agriculture,11
-family farming,11
-family poultry,11
-family structure,11
-farmers,11
-farming,11
-flat roof,11
-flushing sewer concept,11
-footprint,11
-footprints,11
-forest community,11
-forests inhabitant,11
-forests inhabitants,11
-fortification,11
-gated communities,11
-green space,11
-grey water,11
-health and demographic surveillance,11
-health and demographic surveillance system,11
-home economics,11
-home gardening,11
-home to hospital,11
-home visit,11
-home-based care,11
-house preference,11
-household,11
-household amenities,11
-household autonomy and health,11
-household economic status,11
-household energy,11
-household energy requirement,11
-household fuels,11
-household resilience,11
-household survey,11
-household toilet,11
-household water supply,11
-household water treatment,11
-household wealth,11
-household-centred approach,11
-households,11
-housing,11
-housing associations,11
+cultural heritage,11
+fine particulate matter,11
+gentrification,11
 housing conditions,11
-housing design,11
-housing finance,11
-housing microfinance,11
-housing programs,11
 housing quality,11
-housing-led urban regeneration,11
-human activity and the environment,11
-human dignity,11
-human dimensions,11
-human energy,11
-human needs,11
-human resource management,11
-human resource planning,11
-human resource requirements,11
-human right to sanitation,11
-human right to water,11
-human security,11
-human sensors,11
-humanitarianism,11
-humanities,11
-immigrant,11
-immigration,11
-inclusive urbanisation,11
-indigenous,11
-indigenous and local communities,11
-indigenous community,11
-indigenous economic development,11
-indigenous people,11
-indigenous peoples,11
-indigenous rights,11
-indigenous species,11
-individualization,11
-infancy,11
-infant,11
-infants,11
-information society,11
-integrated solid waste management,11
-kassena-nankana district,11
-knowledge societies,11
-knowledge society,11
-language,11
-language and culture,11
-language in development,11
-language management,11
-language of instruction,11
-leed-nd,11
-living with non-relatives,11
-lobola,11
-local livelihoods,11
-local participation,11
-low-income households,11
-maasai communities,11
-mega-cities,11
-midwives,11
-migrant,11
-migrants,11
-migration,11
-millennium village project,11
-millennium villages,11
-millennium villages project,11
-missing populations,11
-mobility of students and academic staff,11
-model villages,11
-mumbai slums,11
-municipal solid waste management,11
-municipality,11
-neighborhood sustainability assessment,11
-neighborhood,11
-neighborhoods,11
-neighbourhood sustainability assessment,11
-new cities,11
-new urban agenda,11
-new urbanization plan,11
-ngos,11
-ngos/ngdos,11
-online community,11
-paying for performance in developing,11
-peri-urban,11
-peri-urban ghana,11
-population,11
-population density,11
-population growth,11
-population projection,11
-population study,11
-population surveillance,11
-population-based study,11
-population-based surveys,11
-professional society,11
-race/ethnicity,11
-racism,11
-residential wealth index,11
-resilient buildings,11
-resource efficiency,11
-road accident,11
-road accidents,11
-road safety,11
-road traffic injury,11
-road traffic injuries,11
-rural,11
+inadequate housing,11
+inclusive urbanization,11
+informal settlements,11
+municipal solid waste,11
+municipal wastewater,11
+natural heritage,11
+pm10,11
+pm2.5,11
+public transit,11
+public transport system,11
+public transport,11
+rapid transit,11
+residential development,11
 rural and urban,11
-rural area,11
-rural bangladesh,11
-rural china,11
-rural city,11
-rural cities,11
 rural community,11
 rural development,11
-rural dispensaries,11
-rural district,11
-rural exploitation,11
-rural geography,11
-rural groundwater,11
-rural household,11
-rural households,11
-rural india,11
-rural kazakhstan,11
-rural region,11
-rural retention,11
-rural roads,11
-rural road,11
-rural south africa,11
-rural tanzania,11
-rural-burkina faso,11
-rural-urban,11
-rural-urban differences,11
 safe city,11
-safe cities,11
 safe housing,11
 safe transport,11
-slum,11
 slums,11
-slum upgrading,11
-small communities,11
-small family farms,11
-small systems,11
-small towns,11
-smart cities,11
 smart city,11
-smart sustainable cities,11
 smog,11
-social habits,11
-social identity,11
-society,11
-street vending,11
-suburban,11
-suburbanization,11
-sustainable cities,11
-sustainable city,11
-sustainable settlement,11
-sustainable transports,11
-sustainable transport,11
-sustainable urbanisation,11
-sustainable construction,11
-sustainable rural development,11
-sustainable transportation,11
-sustainable urban forms,11
-sustainable urbanization,11
-tamale metropolis,11
-tamale metropolitan area,11
-transportation planning,11
-travel,11
-travel behaviour,11
-travel demand,11
+electric bus,11
+electric vehicle,11
+EV charging,11
+city,11
 urban,11
-urban and rural,11
-urban anthropocene,11
-urban areas,11
-urban construction sector,11
+green roof,11
+suburban,11
+solid waste,11
+sustainable city,11
+sustainable community,11
+sustainable neighborhood,11
+sustainable settlement,11
+sustainable transport,11
+sustainable transportation,11
+sustainable transports,11
+town planning,11
+traffic congestion,11
+transportation planning,11
+transportation system,11
+urban design,11
 urban development,11
-urban development plan,11
+urban green space,11
+urban growth,11
+urban housing,11
 urban planning,11
-urban planning,11
-urban planning and development,11
-urban populations,11
-urban rural disparities,11
+urban policy,11
 urban segregation,11
-urban settlements,11
+urban sustainability,11
+urban traffic,11
 urban transformation,11
 urban transport,11
-urban-centrism,11
-urbanicity,11
+urban transportation,11
 urbanization,11
-urbanisation,11
-urban-rural,11
-urban-rural residence,11
-vegetable gardens,11
-vulnerable populations,11
-wroclaw larger urban zone,11
-3r,12
-activated carbon production,12
-activated sludge,12
-affordable assisted reproduction treatment,12
-agricultural pathways,12
+waste management,11
+waste treatment,11
+SDG 12,12
+SDG12,12
+anaerobic digestion,12
+chemical pollution,12
+chemical waste,12
+e-waste,12
+recycled,12
+landfill,12
+end-of-life,12
+eliminate waste,12
+Circular Electronics,12
 circular economy,12
-clothing consumption,12
-consumer,12
-consumer welfare,12
-consumer well-being,12
-consumerism,12
-consumption,12
+circular fashion,12
 consumption and production,12
+consumption and resource use,12
 consumption pattern,12
-disposal,12
-donor support,12
+corporate social responsibility,12
+corporate sustainability,12
+cradle to cradle,12
+disclosure standard,12
+domestic material consumption,12
+eco-labelling,12
+ecolabelling,12
 environmental compliance,12
-food supply,12
+environmental footprint,12
+environmental impact assessment,12
+environmental impact categories,12
+environmental life cycle assessment,12
+environmental pollution,12
+esg framework,12
+esg information,12
+esg standards,12
+esg,12
+food loss,12
 food waste,12
-free disposal hull,12
+fossil fuel subsidies,12
+fsc certification,12
+fsc-certified,12
 green consumption,12
+gri standard,12
+harvest efficiency,12
 harvest loss,12
-household consumption,12
-informal recycling,12
-informal waste sector,12
-life cycle,12
-material efficiency,12
+hazardous chemical,12
+hazardous waste,12
+heavy metal pollution,12
+industrial waste,12
+integrated reporting framework,12
+life cycle analysis,12
+life cycle assessment,12
+life-cycle assessment,12
+life cycle energy analysis,12
+life cycle impact assessment,12
+natural resources,12
+freshwater resource,12
+material flow,12
+material-flow,12
 material footprint,12
 material recovery,12
-material recovery facilities,12
-material recycle,12
+material recycling,12
 material reuse,12
-material stock,12
-natural resource,12
-natural resources,12
 obsolescence,12
-overconsumption,12
-per capita water consumption (lpcd),12
-recyclables,12
+organic pollutants,12
+pesticide pollution,12
+pesticide reduction,12
+post-harvest losses,12
+product life cycle,12
+production and consumption,12
+production and resource use,12
+production patterns,12
+public procurement,12
 recycling,12
-resistance to consumption,12
-resource-limited,12
-resource-limited setting,12
-reuse,12
-reutilisation des eaux usees,12
-separation and recycle,12
+reduce waste,12
+resource consumption,12
+resource efficiency,12
+resource extraction,12
+resource recycling,12
+resource reuse,12
+resource use,12
+resource management,12
+resource flow,12
+resource-efficient,12
+responsible consumption,12
+responsible production chains,12
+responsible production,12
+sasb standard,12
+sewage sludge,12
 solid waste,12
-solid waste management,12
-sustainable practices,12
+supply chain,12
+value chain,12
+spillover effects,12
+negative spillover,12
+international spillover,12
+transboundary effect,12
+sustainability accounting,12
+sustainability disclosure,12
+sustainability label,12
+sustainability reporting,12
+Environmental reporting,12
+extractive industry,12
+sustainability standards,12
+sustainability-related disclosure,12
 sustainable consumption,12
-sustainable consumption and production,12
-sustainable management,12
-sustainable production and consumption,12
-transgenic,12
-waste,12
-waste and resource management,12
+sustainable fashion,12
+sustainable procurement,12
+sustainable production,12
+toxic chemical,12
+toxic waste,12
+waste cleanup,12
 waste collection,12
 waste disposal,12
+waste generation,12
 waste management,12
-waste management strategy,12
-waste pickers,12
-waste picking,12
-wasting,12
-1.5 degrees c,13
-activated carbon adsorption,13
-adaptation pathway,13
-aim2flourish,13
-birthweight,13
-carbon,13
+waste recycling,12
+waste treatment,12
+waste water,12
+wasteful consumption,12
+wastewater,12
+water pollution,12
+zero waste,12
+SDG 13,13
+SDG13,13
+decarbonization,13
+environmental agreement,13
+anthropogenic climate,13
 carbon credit,13
 carbon dioxide,13
+black carbon,13
+carbon pollution,13
 carbon economy,13
 carbon emission,13
 carbon footprint,13
@@ -2890,305 +1331,285 @@ carbon market,13
 carbon pricing,13
 carbon sequestration potential,13
 carbon storage,13
-certification,13
-clients satisfaction,13
-climate forestatiion,13
+store carbon,13
+climate,13
+climate change,13
+climate neutrality,13
+climate forestation,13
 climate biodiversity,13
 climate desertification,13
 climate hazard,13
 climate impact,13
-climate impacts,13
+2°C,13
+2 degrees,13
+1.5°C,13
+1.5 degrees,13
+climate inaction,13
 climate mitigation,13
 climate model,13
+climate monitoring,13
 climate policy,13
-climate policies,13
+climate governance,13
+climate pollutant,13
+climate report,13
+climate justice,13
+climate study,13
+phase out fossil fuels,13
+methane leakage,13
+climate protection,13
 climate refugees,13
-climate resilience,13
 climate resilience,13
 climate strategy,13
 climate variability,13
-climate,13
-climate action,13
+conference of parties,13
+climate conference,13
+climate summit,13
+climate solution,13
 climate adaptation,13
-climate change,13
+climate assessment,13
+climate effects,13
+climate-resilient,13
+climate resilient,13
+climate crisis,13
+climate risk,13
+climate data,13
+climate technology,13
+climate-warming,13
+climate warming,13
+human-caused climate change,13
+mitigate climate change,13
+combat climate change,13
+fight climate change,13
+impact of climate change,13
+impact on climate,13
+climate change conference,13
 climate change adaptation,13
 climate change and water,13
 climate change mitigation,13
 climate change policy,13
 climate change responses,13
 climate change security,13
-climate changes,13
-climate resilient urban development,13
-climate variability,13
-climate variability and change,13
-climate vulnerability index,13
-climate-related disasters,13
-climate-smart agriculture,13
-co2,13
+Climate Change Impact,13
+climate change risk,13
+Climate Change Effects,13
+Climate Change Financing,13
+Climate Change Management,13
+Climate Change Planning,13
+Climate Change Scenarios,13
+climate emergency,13
+Planetary Emergency,13
+climate benefit,13
+climate resiliency,13
+cleantech,13
+clean tech,13
+clean-tech,13
 co2 capture,13
-co2 capture valorisation and storage,13
-co2 conversion,13
-cumulative emissions,13
-development and climate change,13
-diffuse pollution,13
-donors,13
-eco-innovation,13
-ecological footprint,13
-emerging pollutants,13
-emission,13
-emissions,13
+CO2 emission,13
+carbon capture,13
+reduce emissions,13
+cut emissions,13
 emissions reduction,13
 emissions scenarios,13
-environmental change,13
-environmental changes,13
-extreme weather,13
-focused prenatal care,13
-forest and climate change,13
-ghg emissions,13
+climate variability,13
+climate-related disaster,13
+climate-smart,13
+disaster risk reduction,13
+ghg emission,13
+additional warming,13
+net-zero,13
 global warming,13
-global warming commitment,13
-greenhouse gas,13
-greenhouse gases,13
-greenhouse gas emission,13
-greenhouse gas emissions,13
-household air pollution,13
-indoor air pollution,13
-international emissions trading,13
-low carbon development,13
-methane emission reductions,13
-natural disaster,13
-natural disasters,13
-non biogenic household carbon dioxide emissions,13
+emissions trading,13
+methane emission,13
+carbon footprint,13
+extreme weather,13
+global climate,13
+global temperature,13
+intergovernmental panel on climate change,13
+sea ice loss,13
+sea level change,13
+sea level rise,13
+sea-level rise,13
 paris agreement,13
-paris climate change agreement,13
 paris declaration,13
 paris principles,13
-polluter pays,13
-pollution,13
-pollution control,13
-product carbon footprint,13
-regional climate models,13
-social footprint,13
-sustainability footprint,13
-urban air pollution,13
-3-step strategic approach,14
-acidification,14
-acidity,14
-agroforestry themes,14
-arsenic,14
-arsenic mitigation,14
-blood screening,14
-capitalism,14
+SDG 14,14
+SDG14,14
+biodiversity,14
+aquaculture,14
+aquatic ecosystems,14
+aquatic food webs,14
+artisanal fishers,14
+baltic sea action plan,14
+biogeochemical cycle,14
 coastal,14
-coastal and marine fisheries,14
+coastal zone,14
+coastal areas,14
 coastal biodiversity,14
 coastal ecosystem,14
+coastal ecotourism,14
+coastal environment,14
+coastal eutrophication,14
 coastal habitat,14
-coastal park,14
-coastal resource,14
-coastal zones,14
-conservation of marine biodiversity,14
+coastal management,14
+coastal marine ecosystems,14
+coastal protection,14
+common fisheries policy,14
+community based conservation,14
+convention for the conservation of antarctic marine living resources,14
+coral bleach,14
 coral reef,14
-crop water productivity,14
-defluoridation of water,14
-drinking water quality,14
-drinking water safety,14
-drinking-water quality,14
-drip irrigation,14
-ecosystem water determinants,14
-emerging water scarcity,14
-eutrophication potential,14
-eutrophication,14
+coral triangle region,14
+destructive fishing,14
+ecological marine units,14
+ecosystem-based and marine areas,14
+ecosystem-based fisheries management,14
+ecotourism,14
+exclusive economic zone,14
+fish populations,14
 fish species,14
-fish stock,14
-fisherie,14
-fisheries,14
-fishing,14
-freshwater biodiversity,14
-gemstat,14
-global water partnership,14
-gray water,14
-green water,14
-ground water,14
-groundwater,14
-groundwater balance,14
-groundwater development,14
-groundwater management,14
-groundwater protection,14
-groundwater quality,14
-groundwater use,14
-hard-rock aquifers,14
-high seas,14
-hydrology & water resources,14
-improved multidimensional index of water poverty,14
-inclusive water poverty index,14
-indian ocean tsunami,14
-inland fisheries,14
-international water law,14
-international water resources law,14
-international year of freshwater,14
-irrigation,14
-irrigation efficiency,14
-irrigation techniques,14
-iwrm,14
-lerma river,14
-local groundwater balance model,14
-macrobrachium,14
+fish stocks,14
+fishery,14
+fishing effort,14
+fishing practices,14
+fishing pressure,14
+fishing policy,14
+great barrier reef,14
+harmful algal bloom,14
+marine plastics,14
+healthy ocean,14
+resilient ocean,14
+ice-ocean,14
+illegal fishing,14
+bycatch,14
+unsustainable fishing,14
+integrated coastal zone management,14
+integrated multi-trophic aquaculture,14
+large marine ecosystem,14
+law of the sea,14
+seafood traceability,14
+Sustainable Seafood,14
+seafood supply chain,14
+local fisheries,14
 marine,14
+marine acidity,14
 marine areas,14
 marine biodiversity,14
-marine biodiversity conservation,14
 marine conservation,14
+marine debris,14
+marine economy,14
 marine ecosystem,14
-marine ecosystems,14
+marine environment,14
+marine fish,14
 marine fisheries,14
-marine park,14
-marine pollution,14
-marine pollution abatement and ambient water quality improvement,14
-marine protected area,14
-marine protected area networks,14
-marine protected area targets,14
-marine reserves,14
-marine resources,14
+marine food web,14
+marine food chain,14
+marine habitats,14
+marine herbivorous fish,14
+marine invertebrate,14
+marine land slide,14
+marine life,14
 marine wildlife,14
-melamchi water supply project,14
-national water resource strategy,14
+marine mammals,14
+marine natural product,14
+marine organisms,14
+marine parks,14
+marine pollution,14
+marine protection,14
+marine protected area,14
+marine quota,14
+marine reserve,14
+marine resource,14
+marine spatial planning,14
+marine species,14
+marine stewardship council,14
+marine technology,14
+no-take marine protected area,14
 no-take marine reserve,14
-nutrition-sensitive fisheries,14
-ocean acidification,14
-ocean governance,14
-ocean temperature,14
+nutrient pollution,14
+nutrient runoff,14
 ocean,14
-oceanography,14
-offshore groundwater springs,14
-okavango river,14
-onchocerciasis,14
-ornamental fish,14
-overfish,14
-ph level,14
-rainfall,14
-rainfall data,14
-rainwater,14
-rainwater for drinking,14
-rainwater harvesting,14
-rights-based fishery management,14
-river blindness,14
-rivers,14
-roofwater harvesting,14
-salinity,14
-sea water,14
-sea-level rise,14
-seawater intrusion,14
-small island,14
-soil-water conservation,14
-sublittoral,14
-subsistence fishery,14
-transboundary rivers,14
-transboundary water governance,14
-water,14
-water availability for irrigation,14
+ocean acidification,14
+ocean health,14
+ocean ecosystem,14
+ocean environment,14
+ocean biogeographic information system,14
+oceanic circulation model,14
+overfishing,14
+overfished,14
+wild fish population,14
+plastic debris,14
+plastic density debris,14
+productive oceans,14
+regional fisheries management organizations,14
+sea grasses,14
+seagrass bed,14
+small island development states,14
+small-scale artisanal fishers,14
+small-scale fisheries,14
+species richness,14
+sustainable fisheries,14
+sustainable yield,14
+the marine strategy framework directive,14
+total allowable catch,14
+traditional ecological knowledge,14
+united nations convention on the law of the sea,14
+unregulated fishing,14
+fishing,14
+sea level,14
+sea-ice,14
+biodiversity,14
+ecosystem,14
+biosphere,14
+SDG 15,15
+SDG15,15
 deforestation,15
-2010 biodiversity target,15
-2010 target,15
-abandoned cropland mapping,15
-abandoned mines,15
-abiotic and biotic resources,15
-above ground standing biomass,15
-acacia,15
-access to land,15
-agriculture and food security,15
-agroecosystems,15
-agroforestry,15
-agroforestry development,15
-amartya sen,15
-amazon rainforest,15
-amazonian dark earths,15
-arid and semi-arid areas,15
-artemia enrichment,15
-artemisia annua,15
-artemisia annua agrotechnology,15
-asthma,15
-atlantic forest restoration pact,15
-average annual rate of reduction,15
-below poverty line,15
-biodiesel,15
+life on land,15
 biodiversity,15
+conservation,15
 biodiversity conservation,15
 biodiversity hotspots,15
 biodiversity indicator,15
 biodiversity indicators,15
 biodiversity research network,15
 biodiversity trends,15
-biogeochemical cycles,15
-biomedicine,15
-biotic and abiotic factors,15
+biodiversity loss,15
+protect biodiversity,15
+mountain biodiversity,15
+terrestrial biodiversity,15
+freshwater biodiversity,15
 community forestry,15
-community-based natural resource management,15
-compensation for land expropriation,15
-compensatory habitat,15
-conflict ecology,15
-convention on biological diversity,15
-crop loss,15
-crop production,15
-crop productivity,15
-crop protection,15
-crop residues,15
-crop rotation,15
-cropland expansion,15
-crop,15
-crops,15
-deforest,15
-deforestation,15
-degradation,15
-degradation analysis,15
-desertification,15
-desertification control,15
-drought,15
-dwesa-cwebe,15
-earthquake,15
-earthquakes,15
-ecological approach,15
-eco restoration,15
-endangered species,15
-environment,15
-ethnobotany,15
-fertilizers,15
-flex crops,15
-flood,15
-floods,15
 forest,15
 forest change detection,15
 forest cover loss,15
 forest degradation,15
-forest ecosystem services,15
-forest ecosystems,15
+degradation of forest,15
+forest ecosystem,15
 forest genetic resources,15
 forest management,15
-forest management planning,15
 forest monitoring,15
 forest residue,15
 forest valuation,15
 forestry,15
-fra 2015,15
-ganges brahmaputra meghna delta,15
-ganges-brahmaputra delta,15
-giant reed,15
-global land cover,15
-goat development,15
-gully erosion,15
-habitat,15
-hill,15
-humid tropics,15
-irrigated agriculture,15
-kedarnath wildlife sanctuary,15
-kilimanjaro region,15
-land,15
+natural resource management,15
+desertification,15
+arid land research,15
+ecological approach,15
+eco restoration,15
+endangered species,15
+invasive species,15
+native species,15
+species extinction,15
+terrestrial ecosystem,15
+freshwater ecosystem,15
+natural ecosystem,15
+ecosystems science,15
+native forests,15
 land administration,15
 land change science,15
 land conservation,15
 land degradation,15
-land degradation mitigation,15
-land degradation neutrality,15
+ecosystem degradation,15
+degradation of ecosystem,15
 land development phase,15
 land evaluation,15
 land grab,15
@@ -3198,926 +1619,302 @@ land management,15
 land productivity trends,15
 land question,15
 land use,15
-land use change,15
-land use modelling,15
-land use scanner,15
-land use trajectories,15
-landscape,15
-landscape approach,15
-landscape functions,15
-landscape metrics,15
-landscape scale mitigation,15
 land-use,15
-land-use change,15
-legacy mine land,15
-littoral,15
-littoral zone,15
-maize and bean yield,15
-mediterranean,15
-mimose,15
-minerals,15
 mountain ecosystems,15
 mountain forestry,15
 mountain forests,15
-national landscapes,15
-natural rubber,15
-net cereal production,15
-non-timber forest products,15
-northern frisian woodlands,15
-ntfps,15
-nwfps,15
-palms,15
-phenolic compounds,15
-plant genetic resources treaty,15
-plant genetic resourse,15
-plant health,15
-post-harvest structures,15
-precision agriculture,15
-primary forest,15
-protected area,15
-protected area of key biodiversity areas,15
-protected area targets,15
-protected areas,15
-protected fauna,15
-protected flora,15
-protected landscape area,15
-protected species,15
-puccinia graminis tritici ug99,15
-rangelands,15
 red list index,15
+red list species,15
 reforestation,15
-regional red lists,15
-residential land,15
-semi-arid environment,15
-small-scale farm forestry,15
-soil,15
-soils,15
-soil fertility,15
-soil functions,15
-soil health,15
-soil monitoring,15
-soil organic matter,15
-soil properties,15
-soil quality index,15
-soil resources,15
-soil salinisation,15
-soil security dimensions,15
-soil stabilization,15
-soil threats,15
-soil-transmitted helminths,15
-sorghum,15
-sustainable forest management,15
-sustainable soil management,15
-temperate grassland,15
-the brazilian semi-arid region,15
-tree,15
-tree inventory,15
-tree products,15
-tropical africa,15
-tropical agriculture,15
-tropical ecosystems,15
-tundra,15
-vegetation recovery,15
-wetlands,15
-woodland,15
-yayu biosphere reserve,15
-zero net land degradation,15
-accountability,16
-acid violence,16
-area of protection,16
-areas beyond national jurisdiction,16
-aristotle,16
-armed conflict,16
-arms,16
-asia/pacific,16
-australian health care system,16
-authoritative knowledge,16
-authority,16
-bihar,16
-biomimetics,16
-birth care,16
-birth order,16
-birth preparedness,16
-boundary work,16
-breeding,16
-bribery,16
-broadband,16
-budget reform,16
-budgetary adequacy,16
-capability approach,16
-child,16
-child public health,16
-civil conflict,16
-civil war,16
-climate finance,16
-climate for evidence informed health system policymaking,16
-coastal governance,16
-conflict management,16
-conflict resolution,16
-conflict-affected countries,16
-consequences of war,16
-conservation and development,16
-conservation area,16
-conservation areas,16
-conservation opportunity areas,16
-conservation outside protected areas,16
-conservation priorities,16
-convention on the rights of the child,16
-corporate governance,16
-corruption,16
-criminal law,16
-cultural sustainability,16
-cultural values,16
-culturally sustainable development,16
-death clustering,16
-death registries,16
-decentralisation,16
-decentralised development cooperation,16
-decentralization,16
-decentralization by devolution,16
-democracy,16
-democratic deliberation,16
-democratic development,16
-democratic governance,16
-democratization,16
-depoliticization,16
-determinants of mortality,16
-development discourse,16
-development organizations,16
-development partnership,16
-development policies,16
-development policy,16
-development policy framework,16
-development politics,16
-development principles,16
-developmental state,16
-die-off rates,16
-digital government,16
-digital government capacity,16
-digital government evolution,16
-diplomacy,16
-disease accounts,16
-disrespect and abuse,16
-early neonatal mortality,16
-ecological justice,16
-economic and institutional,16
-economic and political development,16
-economic and social development,16
-economic development,16
-economic policy,16
-education policy,16
-education policy formation,16
-educational policy,16
-effects of foreign aid,16
-e-governance,16
-e-government,16
-electoral discourse,16
-energy governance,16
-energy justice,16
-energy policies,16
-energy policy,16
-environment negotiation,16
-environmental governance,16
-environmental justice,16
-environmental management,16
-environmental management systems,16
-environmental policy,16
-environmental security,16
-equity,16
-equity and access,16
-esg risk,16
-ethical development,16
-ethical leadership,16
-ethical principles,16
-ethical values,16
-ethics,16
-ethnic conflict,16
-eu development policy,16
-european strategic policy,16
-european water framework directive,16
-evidence to policy,16
-evidence-based decision making,16
-evidence-based policy,16
-evidence-informed policy,16
-exclusion,16
-fao,16
-farm accountancy data network,16
-federal programs,16
-federation,16
-federations,16
-fisheries policies,16
-fisheries regulation,16
-floods directive,16
-food and agricultural organization (fao),16
-food and agricultural policies,16
-food policy,16
-forest governance,16
-forest inventory,16
-forest policy,16
-former soviet union,16
-garpr,16
-gavi policies,16
-gef,16
-geopolitics,16
-geoss,16
-global governance,16
-global health ethics,16
-global health governance,16
-global health inequalities,16
-global health law,16
-global health policy,16
-global ict programs,16
-global justice,16
-global policymaking,16
-global sepsis alliance,16
-global social policy,16
-global urban development policy,16
-global water governance,16
-good governance,16
-gouvernance,16
-governance,16
-governance for sustainability,16
-governance of research for health,16
-governance reforms,16
-governance triangle,16
-governing bodies,16
-governing states,16
-government,16
-governments,16
-government effectiveness,16
-governmentality,16
-gulf cooperation council,16
-gwsp,16
-health and education expenditure,16
-health governance,16
-health in all policies,16
-health legislations,16
-health policy,16
-health policies,16
-health policy analysis,16
-health policy and programmes,16
-health policy and systems research,16
-health policy dialogue,16
-health priorities/organization and administration,16
-health program,16
-health research institutions,16
-health research policy,16
-health research systems,16
-health sector reform,16
-health sector reforms,16
-health sector reforms programme (hsrp),16
-health services administration,16
-healthy public policy,16
-heath policy,16
-hierarchical governance,16
-high level forum on aid effectiveness (hlf),16
-higher education policy,16
-holistic government and governance,16
-homicide,16
-human right,16
-human rights ,16
-human rights based approach,16
-human trafficking,16
-hyogo framework of action (hfa),16
-icpd programme of action,16
-immunization policy,16
-immunization programs,16
-immunization resource allocation mechanisms,16
-imr,16
-imr india,16
-inclusive policy,16
-infant and child mortality,16
-infant mortality,16
-infant mortality rate,16
-insecurity,16
-institutions,16
-interactive governance,16
-international administration,16
-international aid,16
-international collective interest,16
-international conventions,16
-international cooperation,16
-international forest policy,16
-international law,16
-international organisations,16
-international norm,16
-international organizations,16
-international organism,16
-international partnerships,16
-international policy agenda,16
-international policy,16
-international police,16
-international policies,16
-international policy frameworks,16
-international relations,16
-international sustainable chemistry collaborative centre,16
-international treaties,16
-intimate partner violence,16
-intra- and intergenerational equity,16
-itns,16
-iucn,16
-iucn red list,16
-joined-up government,16
-justice,16
-justice delivery system,16
-land policy,16
-land-use planning,16
-land-use planning and control,16
-language policy,16
-law,16
-laws,16
-leadership and governance,16
-legal analysis,16
-legal framework,16
-legal operationalisation,16
-legislation as a topic,16
-legislative gaps and challenges,16
-local agenda 21,16
-local authorities,16
-local governance,16
-local government,16
-local governments,16
-local state,16
-london declaration,16
-macroeconomic policies,16
-macroeconomic policy,16
-magistrates courts,16
-mar del plata water conference,16
-market governance,16
-marrakech declaration,16
-maternal and child mortality,16
-maternal and child mortality reduction,16
-maternal and infant mortality,16
-maternal and newborn mortality rate (mnmr),16
-maternal and perinatal death review,16
-maternal death,16
-maternal death audit,16
-maternal death review,16
-maternal death reviews,16
-maternal death surveillance and response,16
-maternal deaths,16
-maternal health policy,16
-maternal health programs,16
-maternal health services,16
-maternal morbidity,16
-maternal mortality,16
-maternal mortality - trends,16
-maternal mortality and morbidity,16
-maternal mortality rate,16
-maternal mortality rate (mmr),16
-maternal mortality rates,16
-maternal mortality ratio,16
-maternal mortality ratio (mmr),16
-maternal obesity pregnancy-related deaths maternal deaths,16
-maternal-child health services,16
-maternity services,16
-mental health policy,16
-mental health services,16
-migration policy,16
-mission organizations,16
-monterrey consensus,16
-mortalidad infantil,16
-mortalite infantile,16
-mortality prevention,16
-mortality rate,16
-mortality rates,16
-mortality surveillance,16
-mortality trends,16
-multi-lateral agencies,16
-multi-level governance,16
-municipal partnerships,16
-municipalities,16
-nasfam,16
-national composite policy index,16
-national development planning,16
-national disaster risk management agency (nadrima),16
-national goals and targets,16
-national policies,16
-natural resource governance,16
-natural resource management,16
-natural resource management (nrm),16
-ncd,16
-needs assessment,16
-neonatal death,16
-neonatal deaths,16
-neonatal morbidity,16
-neonatal mortalit,16
-neonatal mortality,16
-neonatal mortality rate,16
-neonatal mortality rate (nmr),16
-neonatal survival,16
-new delhi statement,16
-new york consensus,16
-newborn death,16
-newborn mortality,16
-newborn mortality rate,16
-newborn resuscitation,16
-newborn survival,16
-nfhs,16
-ngo initiatives,16
-nhis,16
-non government organisation,16
-nongovernment organisation,16
-non government organisation,16
-non-government organisations (ngos),16
-non-governmental development organizations,16
-non-governmental organisation,16
-non-governmental organisations,16
-non-governmental organization (ngo),16
-nongovernmental organizations,16
-non-governmental organizations,16
-norms,16
-nutrition governance and management,16
-nutrition policy,16
-nutrition programmes,16
-nutrition programs,16
-nutrition security,16
-oecd,16
-oecm,16
-ongs de conservacion,16
-on-site sanitation,16
-oregon biodiversity project,16
-organisation,16
-organisation for economic co-operation and development,16
-organisation for economic co-operation and development development assistance committee (oecd dac),16
-organised crime,16
-participation accountability,16
-participation in decision-making,16
-participatory democracy,16
-participatory governance,16
-peace,16
-perinatal deaths,16
-perinatal mortality,16
-perinatal review,16
-periodic review,16
-perioperative mortality rate,16
-perpetrator,16
-place of maternal deaths,16
-policies,16
-policies and legislation,16
+threatened wildlife,15
+wildlife conservation,15
+wildlife detection,15
+conservation program,15
+conservation project,15
+conservation work,15
+lasting conservation,15
+nature conservation,15
+environmental conservation,15
+environmental analysis,15
+environmental research,15
+environmental system,15
+environmental monitoring,15
+environmental,15
+ecosystem assessment,15
+ecosystem science,15
+wetland ecosystem,15
+peatland,15
+arid land,15
+desert land,15
+preservation of diverse ecosystem,15
+conservation and nature,15
+conserve nature,15
+conserve wildlife,15
+protect wildlife,15
+vegetation,15
+wildlife,15
+conservation challenge,15
+natural habitat,15
+protection of nature,15
+preservation of nature,15
+save species,15
+health of the planet,15
+environmental challenge,15
+environmental degradation,15
+SDG 16,16
+SDG16,16
 policy,16
-policy advocacy,16
-policy agenda,16
-policy analysis,16
-policy and programme guidance,16
-policy change,16
-policy coherence,16
-policy coherence for development,16
-policy coordination,16
-policy development,16
-policy experiments,16
-policy formation,16
-policy framework,16
-policy frameworks,16
-policy framing,16
-policy gaps,16
-policy implementation,16
-policy instrument,16
-policy integration,16
-policy integration and mainstreaming,16
-policy making,16
-policy networks,16
-policy priorities,16
-policy process,16
-policy progress,16
-policy sciences analytical framework,16
-policy sensitivity,16
-policy solution,16
-policy support tools,16
-policy-led multi-criteria analysis,16
-policymaking,16
-policy-making,16
-policy-relevant science,16
-political and fiscal crisis,16
-political ecology,16
-political economy,16
-political factors,16
-political priority,16
-political settlement,16
-political stability,16
-political struggle,16
-political will,16
-political/legal,16
-politics,16
-politics of knowledge production,16
-politics of method,16
-population policies,16
-postabortion complications,16
-post-washington consensus,16
-power politics,16
-pregnancy-related deaths,16
-premature mortality,16
-preventable maternal death,16
-primary health care/organization and administration,16
-privacy laws,16
-pro-poor land policy,16
-provincial government,16
-public administration,16
-public administration reform,16
-public finance,16
-public governance,16
-public health policy,16
-public health practice,16
-public health professionals opinion,16
-public health sector,16
-public health services,16
-public health systems,16
-public health/economics,16
-public health,16
-public policies,16
-public policy,16
-public policy in melanesia,16
-public toilets,16
-quality of mortality data,16
-quality regulation,16
-rainforest alliance,16
-ramsar convention,16
-reform agendas,16
-regime,16
-regime change,16
-regional 3r forum in asia and the pacific,16
-regional networks,16
-regional organizations,16
-reproductive and sexual rights,16
-reproductive rights,16
-reproductive-age mortality survey,16
-resource governance,16
-resource management,16
-responsible research and innovation,16
-results agenda,16
-road traffic deaths,16
-rri,16
+political,16
+governance,16
+military spending,16
+political violence,16
+political system,16
+armed violence,16
+good governance,16
+democratic governance,16
+form of governance,16
+regulatory policy,16
+international policy,16
+build peace,16
+international peace,16
+peace and security,16
+mediation system,16
+peacebuilding,16
+end conflict,16
+prevent conflict,16
+national security,16
+global security,16
+global stability,16
+improve governance,16
+governance model,16
+conflict resolution,16
+global governance,16
+international decision-making,16
+global institutions,16
+governmental instability,16
+threat of conflict,16
+Cold War,16
+world war,16
+global war,16
+international war,16
+civil war,16
+warfare,16
+violent conflict,16
+political instability,16
+diplomacy,16
+constitutionalisation,16
+civil violence,16
+dictatorship,16
+democracy,16
+national dialogue,16
+decision maker,16
+decision-making model,16
+governance system,16
 rule of law,16
-rules,16
-safe delivery care policy,16
-salzburg global seminar (sgs) statement,16
-sanitary survey,16
-science-policy boundary,16
-science-policy interface,16
-sendai framework for disaster risk reduction 2015-2030,16
-sendai framework implementation,16
-sexual and reproductive health and rights,16
-sexual and reproductive health and rights (srhr),16
-sexual and reproductive health service,16
-sexual and reproductive rights,16
-sexual measurement,16
-sexual rights,16
-sexual violence,16
-snv netherlands development organisation,16
-social justice,16
-social policy,16
-social protection programs,16
-social security policy,16
-social security reform,16
-socio-cultural and policy issues,16
-socio-political analysis,16
-socio-political-economic factors,16
-socio-technical approach,16
-soil policy,16
-sport for development and peace,16
-stakeholder consultation,16
-stakeholder partnership,16
-stakeholders,16
-stakeholders participation,16
-state policy,16
-state resource management option,16
-state sovereignty,16
-statistics/organization and administration,16
-stewardship agreements,16
-stockholm convention,16
-stockholm declaration,16
-sustainability governance,16
-sustainability policy,16
-sustainable land management,16
-sustainable water governance,16
+rule-of-law,16
+legal system,16
+legal framework,16
+international law,16
+security council,16
+judicial independence,16
+weapons of mass destruction,16
+biological weapon,16
+chemical weapon,16
+nuclear weapons,16
+nuclear arms,16
+nuclear proliferation,16
+nuclear war,16
+disarmament,16
+non-proliferation treaty,16
+armed conflict,16
+arms flow,16
+arms trafficking,16
+arms control,16
+small arms,16
+organized crime,16
+anti-corruption,16
+anti-bribery,16
+bribery,16
+fight corruption,16
+empower citizens,16
+transnational corruption,16
+better policy,16
+public policy,16
+public affairs,16
+public sector,16
+policy dialogue,16
+policy development,16
+policy domain,16
+policy area,16
+policy advice,16
+policy support,16
+policy challenge,16
+policy analysis,16
+policy priority,16
+policy option,16
+policymaking,16
+policymaker,16
+policy maker,16
+policy shaper,16
+policy solutions,16
+effective institution,16
+accountable institution,16
+transparent institution,16
+effective policy,16
+transparent policy,16
+government transparency,16
+public accountability,16
+research on politics,16
+policy forum,16
+participatory decision-making,16
+policy debate,16
+multi-stakeholder dialogue,16
+foreign policy,16
+human rights,16
+human liberty,16
 terrorism,16
-the united nations (un),16
-tourism partnerships,16
-town planning,16
-trade and investment policy,16
-trade policy,16
-transnational agrarian movements,16
-un maternal mortality estimation inter-agency group (un mmeig),16
-unasul and cplp,16
-unclos,16
-under 5 mortality india,16
-under 5 mortality rate,16
-under five mortality,16
-under five mortality rate,16
-under-5 mortality,16
-under-five mortality,16
-under-five mortality rate,16
-underregistration,16
-underreporting,16
-unep,16
-unesco,16
-unfccc,16
-unicef,16
-unicefs immunization program,16
-union for international cancer control - asia regional office,16
-united nations,16
-united nations childrens fund,16
-united nations convention on the law of,16
-united nations convention on the law of the non-navigational uses of international watercourses,16
-united nations convention on the rights of the child,16
-united nations disability convention,16
-united nations forum on forests,16
-united nations general assembly special session on hiv/aids (ungass),16
-united nations interagency group for child mortality estimation,16
-united nations religion,16
-urban farming,16
-urban food policy,16
-urban food system,16
-urban governance,16
-urban policy,16
-vandalism,16
-violence,16
-violence prevention,16
-violence reduction,16
-waste policy,16
-water framework directive (wfd),16
-water governance,16
-water institutions,16
-water policy,16
-water resource management,16
-who,16
-who action plan,16
-who afro,16
-who guidelines,16
-who kobe centre,16
-whole of government,16
-whole person development,16
-wildlife conservation,16
-world economic forum,16
-world food summit,16
-world health assembly,16
-world health assembly call to action,16
-world health organization,16
-world social forum,16
-world summit for sustainable development,16
-world trade organisation (wto),16
-world urban forum,16
-world water council,16
-world water day,16
-world water forums,16
-zoonoses,16
-2030 agenda for sustainable development,17
-2030 sustainable development goals,17
-abuja declaration,17
-agenda,17
-agenda 2030,17
-aichi targets,17
-aid,17
+SDG 17,17
+SDG17,17
+system,17
+profit shifting,17
+tax avoidance,17
+tax evasion,17
+tax policy reform,17
+Intergovernmental,17
+multilateral negotiation,17
+multi-stakeholder,17
+multi-institutional,17
+bilateral partnership,17
+multilaterial partnership,17
+public-private cooperation,17
+public-private partnerships,17
+public-private collaboration,17
+global affairs,17
+global agenda,17
+global leadership,17
+global collaboration,17
+global cooperation,17
+global partnership,17
+global challenge,17
+global public interest,17
+global process,17
+global discussion,17
+global response,17
+global issue,17
+global future,17
+global strategy,17
+global dialogue,17
+global decision-making,17
+global challenge,17
+global problem,17
+global change,17
+global development,17
+sustainable global development,17
+development cooperation,17
+development policy,17
+international risk,17
+international agenda,17
+international affairs,17
+international leadership,17
+international collaboration,17
+international cooperation,17
+international partnership,17
+international challenge,17
+international public interest,17
+international response,17
+international issue,17
+international strategy,17
+international dialogue,17
+international decision-making,17
+international challenge,17
+international problem,17
+international risk,17
+develop international standard,17
+platform for dialogue,17
+global platform,17
+global transformation,17
+global trade,17
+trade policy,17
+Trans-Pacific Partnership,17
+trade agreement,17
+NAFTA,17
+global interdependence,17
+future generation,17
+global system,17
+global scenario,17
+global politics,17
+global civilization,17
+transatlantic collaboration,17
+transatlantic relationship,17
+wto,17
+world trade organization,17
+wef,17
+world economic forum,17
+global south,17
+global north,17
+development finance,17
+multilateral framework,17
+sustainable development goal,17
+green bonds,17
+social bonds,17
+sustainability bonds,17
+sustainability paradigm,17
+international relations,17
+complex system,17
+system mapping,17
+system analysis,17
+systems thinking,17
+systemic,17
+systems-based,17
+systemic change,17
+system change,17
+sustainable development,17
+development challenges,17
+oda,17
+official development assistance,17
 aid allocation,17
 aid dependency,17
 aid efficiency,17
 aid flows,17
-aid for trade,17
-aid localization,17
-aidnography,17
-aids,17
-asian social development,17
-burundi,17
-case management,17
-china,17
-conservative green paper on international development,17
-coordinated policy,17
-coordinated policies,17
-developed-developing world partnerships,17
 development agenda,17
 development aid,17
 development assistance,17
-development goal 1c,17
-development goals,17
-ecowas,17
-eu,17
-europe,17
-europe horizon 2020,17
-european union,17
-fadama,17
-fifth millennium development goal,17
-g20,17
-"g7 ""new alliance'",17
-g7+,17
-g77,17
-g8 summit,17
-gemi,17
-global agenda,17
-global challenges,17
-global change,17
-global collaboration,17
-global commitment,17
-global commons,17
-global conservation targets,17
-global development,17
-global development agenda,17
-global development goals,17
-global goals,17
-global health 2035,17
-global health agenda,17
-global health convention,17
-global health diplomacy,17
-global partnership,17
-global partnership for development,17
-global soil partnership,17
-global stability,17
-global strategy,17
-global targets,17
-goal #5,17
-habitat iii,17
-habitat loss,17
-history of millennium development goals,17
-indicators of sustainability,17
-indicators of sustainable development,17
-indicatorsi relevance,17
+development cooperation,17
+development co-operation,17
 international aid,17
-international collaboration,17
-international cooperation,17
-international decade for action,17
 international development,17
-international development (id),17
 international support,17
-isdr-icl sendai partnerships 2015-2025,17
-kyoto flexibility mechanisms,17
-kyoto ministerial declaration,17
-kyoto protocol,17
-mdg,17
-mdg 1,17
-mdg 4,17
-mdg 4 and 5,17
-mdg 5,17
-mdg 6,17
-mdg goals,17
-mdg monitoring,17
-mdg sanitation targets,17
-mdg two,17
-mdg1,17
-mdg4,17
-mdg-4,17
-mdg5,17
-mdg-5 and mdg-4,17
-mdgs,17
-mdgs 4 and 5,17
-mdgs and sdgs,17
-mdgs neonatal causes of death,17
-mdgs/sdgs,17
-millemium development goals,17
-millenium development,17
-millenium development goal 4,17
-millenium development goals,17
-millennial development,17
-millennium,17
-millennium consumption goals,17
-millennium declaration,17
-millennium development,17
-millennium development goal,17
-millenium development goals,17
-millenium development goal,17
-millennium development goal (mdg),17
-millennium development goal (mdg) 4,17
-millennium development goal 4,17
-millennium development goal 4 (mdg 4),17
-millennium development goal 5,17
-millennium development goal 5 (mdg 5),17
-millennium development goal 6,17
-millennium development goal 7,17
-millennium development goal five,17
-millennium development goal four,17
-millennium development goal time trend (1990-2015),17
-millennium development goal-5,17
-millennium development goals,17
-millennium development goals (mdg),17
-millennium development goals (mdg) maternal mortality,17
-millennium development goals (mdgs),17
-millennium development goals (mdgs) 4 and 5,17
-millennium development goals 4,17
-millennium development goals 4 (mdg4),17
-millennium development goals 4 and 5,17
-millennium development goals attainment,17
-millennium development goals description,17
-millennium development goals policy response,17
-millennium development goals(mdgs),17
-millennium development goalspovertyeducationequitywomen,17
-millennium developmental goals 2015,17
-millennium goal,17
-millennium goals,17
-millennium goalshiv,17
-millenniums development goals (mdg),17
-minimalist targets,17
-monitoring mdg progress,17
-multi-stakeholder,17
-nigeria and mdgs,17
-sustainable development goal,17
-objectifs de developpement du millenaire,17
-objetivos de desarrollo del milenio,17
-objetivos del milenio,17
-odm,17
-partnership,17
-partnerships,17
-post 2015,17
-post 2015 agenda,17
-post 2015 development agenda,17
-post natal care,17
-post-2015,17
-post-2015 agenda,17
-post-2015 debate,17
-post-2015 development,17
-post-2015 development agenda,17
-post-2015 development framework,17
-post-2015 development goals,17
-post-2015 discourse in bangladesh,17
-post-2015 education agenda,17
-post-2015 global development agenda,17
-post-2015 health agenda,17
-post-2015 health development agenda,17
-post-2015 sustainable development goals,17
-post-2015 sustainable development goals (sdgs),17
-post-mdg debate,17
-post-millennium development goals,17
-product development partnerships,17
-progress of mdg4,17
-progress of mdg5,17
-progress towards millennium,17
-public-private partnership,17
-public-private partnerships,17
-realisation des omd,17
-redd,17
-regional sustainable development,17
-rio conventions,17
-rio earth summit,17
-rio summit,17
-rio+20,17
-sdg,17
-sdg 11,17
-sdg 2.1,17
-sdg evaluation,17
-sdg goal 16,17
-sdg target 6,17
-sdg targets and indicators,17
-sdg14,17
-sdg6,17
+global debt,17
+debt financing,17
+debt relief,17
+debt restructuring,17
+developing country,17
+developing economy,17
+low-income country,17
+lics,17
+lic,17
+lidcs,17
+lidc,17
+global financial sector,17
+finance for sustainable development,17
+private sector investment,17
+responsible investment,17
+responsible investor,17
+global sustainability,17
+sdg financing gap,17
+sdgs financing gap,17
+sustainable development goal financing gap,17
+financing the sdgs,17
+financing the sustainable development goal,17
+sdg implementation,17
+sustainable development goal implementation,17
+2030 Agenda,17
+agenda 2030,17
+earth system,17
+system transformation,17
+sustainable world,17
+sustainable future,17
+global goals,17
 sdgs,17
-sdrs,17
-sgd,17
-state non-state partnership,17
-sustainable cooperation,17
-sustainable partner,17
-sustainable development goal,17
-sustainable development goal 11,17
-sustainable development goal indicators,17
-sustainable development goals,17
-sustainable development goals - sdgs,17
-sustainable development goals (sdg),17
-sustainable development goals (sdgs),17
-sustainable development goals (sdg's),17
-sustainable development indicators,17
-sustainable development indicators (sdis),17
-sustainable development objectives,17
-sustainable development planning,17
-sustainable development strategies,17
-target 11,17
-target 16,17
-targeting,17
-targeting goals,17
-targets,17
-targets and indicators,17
-terms of partnership,17
-the 2030 agenda,17
-the agenda 2030-sustainable development goals,17
-the hague ministerial declaration,17
-the integrative worldview framework (iwf),17
-the millennium development goals,17
-the un mdgs,17
-trading system,17
-trading systems,17
-un 2030 agenda,17
-un charter,17
-un commission on sustainable development,17
-un data revolution,17
-un decade of education for sustainable development,17
-un development strategies,17
-un general assembly,17
-un general assembly special event,17
-un habitat,17
-un initiatives,17
-un millennium development goals,17
-un millennium goals,17
-un millennium goals (mdg),17
-un post-2015 agenda,17
-un secretary-generals high-level panel,17
-un sustainable development goals,17
-un sustainable development goals (sdgs),17
-unccd,17
-united nations decade of education for,17
-united nations millenium development goals,17
-united nations millennium development goals,17
-united nations sdgs,17
-united nations sustainable development goals,17
-universal goals and targets,17
-urban sdg,17
-urban sustainable development goal,17
-washington consensus,17
-who global targets,17
-who growth standard,17
-whos millennium development goals,17
-world commission for water in the 21(st) century,17
+transinstitutional,17
+collaborative action,17

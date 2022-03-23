@@ -70,14 +70,14 @@ def describe_find_keywords():
         doc = nlp("We need to reduce poverty globally.")
         matches = KeywordsPipeline.find_keywords(doc)
         assert len(matches) == 1
-        assert {"keyword": "poverty", "sdg": 1} == matches_dict(matches[0])
+        assert {"keyword": "reduce poverty", "sdg": 1} == matches_dict(matches[0])
 
     def it_matches_based_on_lemma():
         nlp = KeywordsPipeline.get_nlp("en")
-        doc = nlp("The country teams called to action.")
+        doc = nlp("It is time for safer cities")
         matches = KeywordsPipeline.find_keywords(doc)
         assert len(matches) == 1
-        assert {"keyword": "call to action"} == matches_dict(matches[0])
+        assert {"keyword": "safe city"} == matches_dict(matches[0])
 
     def it_matches_both_british_and_american_english():
         nlp = KeywordsPipeline.get_nlp("en")
@@ -86,8 +86,8 @@ def describe_find_keywords():
 
         matches_british = KeywordsPipeline.find_keywords(british)
         assert len(matches_british) == 1
-        assert {"keyword": "organised crime"} == matches_dict(matches_british[0])
+        assert {"keyword": "organized crime"} == matches_dict(matches_british[0])
 
         matches_american = KeywordsPipeline.find_keywords(american)
         assert len(matches_american) == 1
-        assert {"keyword": "organised crime"} == matches_dict(matches_american[0])
+        assert {"keyword": "organized crime"} == matches_dict(matches_american[0])
