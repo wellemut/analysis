@@ -67,8 +67,11 @@ def extract_texts_from_html(html):
 
     # Add any remaining text inside the body, starting with the deepest div and
     # working upwards
-    while tag := soup.body.find(div_without_child_div):
-        texts.add(tag)
+    while tags := soup.body.find_all(div_without_child_div):
+        for tag in tags:
+            texts.add(tag)
+        if len(tags) == 0:
+            break
 
     # Finally, add any remaining text from the HTML body
     texts.add(soup.body)
