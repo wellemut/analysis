@@ -99,3 +99,14 @@ def describe_find_keywords():
         assert len(matches) == 2
         assert {"keyword": "climate"} == matches_dict(matches[0])
         assert {"keyword": "climate change mitigation"} == matches_dict(matches[1])
+
+    def it_does_not_count_keywords_if_they_are_all_generic():
+        nlp = KeywordsPipeline.get_nlp("en")
+        doc = nlp("There are academic students in the classroom of the university.")
+        matches = KeywordsPipeline.find_keywords(doc)
+        assert len(matches) == 0
+        doc = nlp(
+            "There are academic students working on education reform in the classroom of the university."
+        )
+        matches = KeywordsPipeline.find_keywords(doc)
+        assert len(matches) == 5

@@ -95,6 +95,16 @@ class KeywordsPipeline:
                 }
             )
 
+        # Drop keywords for an SDG if they are all generic
+        sdgs = set([match["sdg"] for match in matches])
+        for sdg in sdgs:
+            matches_for_sdg = [match for match in matches if match["sdg"] == sdg]
+
+            # If all keywords are generic keywords (no specific keyword for this
+            # SDG was found), then we remove them all
+            if all([m["type"] == "GENERIC" for m in matches_for_sdg]):
+                matches = [m for m in matches if m["sdg"] != sdg]
+
         # Sort matches by starting position and descending end position, so that
         # contained keywords will always appear after the keywords that contain
         # them.
@@ -127,7 +137,13 @@ class KeywordsPipeline:
         with open(os.path.join("data", f"keywords_{language}.csv")) as file:
             keywords = []
             for row in csv.DictReader(file):
-                keywords.append({"keyword": row["keyword"], "sdg": int(row["sdg"])})
+                keywords.append(
+                    {
+                        "keyword": row["keyword"],
+                        "sdg": int(row["sdg"]),
+                        "type": row["type"],
+                    }
+                )
             return keywords
 
     # Get the PhraseMatcher for the given language, with keyword matching
