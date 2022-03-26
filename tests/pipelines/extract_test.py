@@ -61,7 +61,11 @@ def test_it_ignores_blocklisted_urls(factory):
 
 
 def test_it_removes_associated_records_for_the_website(factory):
-    webpage = factory.webpage(content="<body>hello world</body>", status_code=200)
+    webpage = factory.webpage(
+        url="https://www.example.com/my-page",
+        content="<body>hello world</body>",
+        status_code=200,
+    )
     block = factory.text_block(website=webpage.website)
     factory.webpage_text_block(webpage=webpage, text_block=block)
     factory.keyword(text_block=block)
@@ -143,6 +147,15 @@ def describe_is_url_blocklisted():
         "https://www.ge.com/power/about/press-releases",
     ]
 
+    team = [
+        "https://www.example.com/team",
+        "https://www.example.com/author/john",
+        "https://www.example.com/authors/frank",
+        "https://www.example.com/about/staff",
+        "https://www.example.com/careers",
+        "https://www.example.com/about/sarah/bio",
+    ]
+
     misc = [
         "https://www.muelheim-ruhr.de/cms/shared/sitemap.php",
         "https://cenior.de/Impressum",
@@ -161,6 +174,10 @@ def describe_is_url_blocklisted():
 
     def test_that_feeds_are_ignored():
         for url in feeds:
+            assert ExtractPipeline.is_url_blocklisted(url) == True
+
+    def test_that_team_pages_are_ignored():
+        for url in team:
             assert ExtractPipeline.is_url_blocklisted(url) == True
 
     def test_that_misc_pages_are_ignored():

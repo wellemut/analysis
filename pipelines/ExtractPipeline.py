@@ -1,6 +1,6 @@
 import re
 from urllib.parse import urlparse
-from helpers.extract_texts_from_html import extract_texts_from_html
+from helpers import extract_texts_from_html
 from models import Website, Webpage, TextBlock, WebpageTextBlock, Keyword
 
 
@@ -64,6 +64,24 @@ class ExtractPipeline:
         "contact",
         "kontakt",
         "jobs",
+        "team",
+        "teams",
+        "ourteam",
+        "author",
+        "authors",
+        "career",
+        "careers",
+        "staff",
+        "boardofdirectors",
+        "advisoryboard",
+        "people",
+        "person",
+        "bio",
+        "bios",
+        "funders",
+        "partners",
+        "copyright",
+        "glossary",
     ]
 
     @classmethod
