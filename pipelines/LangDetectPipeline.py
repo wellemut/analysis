@@ -11,8 +11,10 @@ class LangDetectPipeline:
     PRETRAINED_MODEL_PATH = os.path.join(APPLICATION_DATA_PATH, "lid.176.bin")
     # Threshold above which the language prediction is considered reliable
     # This is lower than Google's 0.7 threshold (https://github.com/google/cld3/blob/fc486d014fb9043f3ec2950fb9829e8ca844cb45/src/nnet_language_identifier.cc#L67),
-    # but in our testing, 0.5 seems to perform decently well
-    PREDICTION_RELIABILITY_THRESHOLD = 0.5
+    # but in our testing, 0.3 seems to perform decently well.
+    # A low threshold is necessary to correctly identify short text strings,
+    # such as from a heading "Circular Economy".
+    PREDICTION_RELIABILITY_THRESHOLD = 0.3
 
     @classmethod
     def process(cls, domain):
@@ -57,9 +59,12 @@ class LangDetectPipeline:
         language = prediction[0][0].replace("__label__", "")
         probability = prediction[1][0]
 
-        # If the prediction probability lies below our threshold, set the
+        # Get the probability of the second most likely language
+        second_probability = prediction[1][1] if len(prediction[1]) > 1 else 0
+
+        # If the gap in prediction probability lies below our threshold, set the
         # language to 'unclear'
-        if probability <= cls.PREDICTION_RELIABILITY_THRESHOLD:
+        if probability - second_probability < cls.PREDICTION_RELIABILITY_THRESHOLD:
             return "unclear"
 
         return language

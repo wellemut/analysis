@@ -23,3 +23,7 @@ def test_it_identifies_language_of_texts():
     LangDetectPipeline.detect_language("Der Hund geht durch den Wald") == "de"
     LangDetectPipeline.detect_language("The stars shine brightly in the night") == "en"
     LangDetectPipeline.detect_language("© Peter") == "unclear"
+
+
+def test_it_identifies_language_of_short_texts():
+    LangDetectPipeline.detect_language("Circular economy") == "en"
