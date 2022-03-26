@@ -1,6 +1,8 @@
 import re
+from functools import cache
 from urllib.parse import urlparse
-from helpers import extract_texts_from_html
+import spacy
+from helpers import extract_texts_from_html, squish
 from models import Website, Webpage, TextBlock, WebpageTextBlock, Keyword
 
 
@@ -107,6 +109,10 @@ class ExtractPipeline:
                 if cls.is_url_blocklisted(webpage.url):
                     continue
 
+                # ... skip if the URL is for a person (e.g., team member)
+                if cls.is_url_for_person(webpage.url):
+                    continue
+
                 # ... otherwise, extract text blocks from HTML content
                 for text in extract_texts_from_html(webpage.content):
                     content = text["content"]
@@ -139,6 +145,41 @@ class ExtractPipeline:
             TextBlock.query.filter_by(website=website).count(),
             "text blocks",
         )
+
+    # Get the NLP pipeline for the given language (cached)
+    @classmethod
+    @cache
+    def get_nlp(cls):
+        return spacy.load("en_core_web_lg")
+
+    @classmethod
+    def is_url_for_person(cls, url):
+        # Initialize NLP pipeline
+        nlp = cls.get_nlp()
+
+        # Remove file extension, if any
+        path = cls.FILE_EXTENSION_REGEX.sub("", url.lower(), count=1)
+
+        # Split url path into its segments
+        segments = urlparse(path).path.strip("/").split("/")
+
+        # Pretty-format each segment, keeping only alphanumeric characters and
+        # using titlecase (which makes name recognition perform better)
+        non_alpha = re.compile(r"[^a-zA-Z0-9]")
+        segments = [squish(non_alpha.sub(" ", s)) for s in segments]
+
+        # Parse each segment
+        docs = nlp.pipe(segments)
+
+        # Check if any URL segment consists of just a person
+        for doc in docs:
+            ent = next(iter(doc.ents), None)
+            is_person = ent and ent.label_ == "PERSON"
+            is_full_length = ent and ent.start == 0 and ent.end == len(doc)
+            if is_person and is_full_length:
+                return True
+
+        return False
 
     @classmethod
     def is_url_blocklisted(cls, url):

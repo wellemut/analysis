@@ -60,6 +60,18 @@ def test_it_ignores_blocklisted_urls(factory):
     assert TextBlock.query.count() == 0
 
 
+def test_it_ignores_urls_for_people_pages(factory):
+    page = factory.webpage(
+        url="https://www.example.com/john-smith",
+        content="<body><p>ignore content</p></body>",
+        status_code=200,
+    )
+
+    ExtractPipeline.process(page.website.domain)
+
+    assert TextBlock.query.count() == 0
+
+
 def test_it_removes_associated_records_for_the_website(factory):
     webpage = factory.webpage(
         url="https://www.example.com/my-page",
@@ -176,3 +188,17 @@ def describe_is_url_blocklisted():
     def test_that_misc_pages_are_ignored():
         for url in misc:
             assert ExtractPipeline.is_url_blocklisted(url) == True
+
+
+def describe_is_url_for_person():
+    def it_marks_urls_where_person_is_an_entire_url_segment():
+        assert ExtractPipeline.is_url_for_person("https://example.com/about/john-smith")
+        assert ExtractPipeline.is_url_for_person("https://example.com/frank-meyer/bio")
+
+    def it_does_not_mark_urls_where_person_is_part_of_url_segment():
+        assert not ExtractPipeline.is_url_for_person(
+            "https://example.com/about-john-smith-institute"
+        )
+        assert not ExtractPipeline.is_url_for_person(
+            "https://example.com/blog/we-help-john-smith"
+        )
