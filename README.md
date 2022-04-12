@@ -30,6 +30,7 @@ Development Goals using natural language processing (NLP).
     - [Backing up the database](#backing-up-the-database)
   - [Testing](#testing)
   - [Scraping](#scraping)
+  - [Further Improvements](#further-improvements)
   - [References](#references)
     - [Language Detection](#language-detection)
     - [SDG Keywords](#sdg-keywords)
@@ -352,6 +353,35 @@ level pages.
 To scrape pages that rely partially or fully on JavaScript, all pages are
 processed using a headless Chromium browser. This feature is handled by
 [Playwright](https://github.com/scrapy-plugins/scrapy-playwright),
+
+## Further Improvements
+
+While hundreds of hours have gone into the development of the web scraper and
+natural language processing pipelines, there are still dozens of exciting
+frontiers for adding further functionality to this application. Among them are:
+
+- Port over missing features from v1 of the application (assessment of SDG
+  commitment, scraping of Twitter logo, address location via Google Maps API)
+- Setting up (authenticated and public) API endpoints for submitting URLs for
+  analysis and for retrieving analyzed results
+- Using job queues to handle scraping and analysis, so that the code can live
+  and run independently on a VPS (such as [PQ](https://github.com/malthe/pq))
+- Mapping the SDG keywords to the 169 SDG targets for a more fine-grained
+  analysis than we currently have with the 17 SDGs
+- Adding "IGNORE" keywords to the keyword list (e.g., ignoring "gender equality"
+  for SDG 10, even though the sub-term "equality" is a keyword under SDG 10)
+- Adding weights to keywords in the keyword list, so that some more generic
+  terms do not hold the same weight as more specific terms
+- Improving content detection, for example by more accurately identifying and
+  removing headers and footers from the page, so that only the main content is
+  analyzed or by using a library like
+  [Python Readability](https://github.com/buriy/python-readability)
+- Improve the detection of web pages for team members or other individuals,
+  which we generally want to ignore for our SDG mapping assessment
+- Add the ability to identify an organization's primary objective(s), which
+  should be much more narrow than the wider range SDG topics that we currently
+  extract, perhaps by looking exclusively at the about page or by using a
+  stricter subset of keywords or by using a stricter scoring algorithm
 
 ## References
 
