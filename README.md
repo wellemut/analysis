@@ -29,6 +29,7 @@ Development Goals using natural language processing (NLP).
     - [Accessing the database](#accessing-the-database)
     - [Backing up the database](#backing-up-the-database)
   - [Testing](#testing)
+  - [Scraping](#scraping)
   - [References](#references)
     - [Language Detection](#language-detection)
     - [SDG Keywords](#sdg-keywords)
@@ -330,6 +331,27 @@ $ docker-compose logs -f api-test
 
 The container is started with `pytest-watch`, which automatically reruns all
 tests when a test is modified, added, or removed.
+
+## Scraping
+
+The web scraping is executed via
+[Scrapy](https://docs.scrapy.org/en/latest/index.html), a very mature Python
+framework for web scraping. The scraper will start with a single URL as an entry
+point and then recursively find any internal links to other URLs on the same
+domain.
+
+Note that any links do another subdomain within the same top level domain is
+**not** considered as being on the same domain. This approach was chosen
+because sometimes several organizations will share the same top level domain
+and it is preferable to be able to distinguish between them.
+
+A [breadth-first approach](https://docs.scrapy.org/en/latest/faq.html?highlight=breadth%20first#does-scrapy-crawl-in-breadth-first-or-depth-first-order)
+is used to ensure that higher level pages always get scraped prior to lower
+level pages.
+
+To scrape pages that rely partially or fully on JavaScript, all pages are
+processed using a headless Chromium browser. This feature is handled by
+[Playwright](https://github.com/scrapy-plugins/scrapy-playwright),
 
 ## References
 

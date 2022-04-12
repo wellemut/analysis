@@ -1,7 +1,7 @@
-import os
 import pytest
 from pipelines.ScrapePipeline import ScrapePipeline
-from models import Website, Webpage, TextBlock, WebpageTextBlock
+from models import Website, Webpage
+import socket
 
 # Scrape max 5 pages per domain to speed up the testing
 @pytest.fixture(autouse=True)
@@ -10,26 +10,17 @@ def a_limit_to_5_pages(mocker):
 
 
 @pytest.fixture(autouse=True)
-def b_cache_scrapy_requests(mocker):
+def b_speed_up_scrapy_requests(mocker):
     # Custom scrapy settings to inject
-    # These cache all scrapy requests and are an alternative to pytest VCR,
-    # which does not work with twisted
-    # See: https://github.com/kiwicom/pytest-recording/issues/50
-    cache_settings = {
-        "HTTPCACHE_ENABLED": True,
-        # Never expire the cache
-        "HTTPCACHE_EXPIRATION_SECS": 0,
-        "HTTPCACHE_DIR": os.path.join(
-            os.path.dirname(os.path.abspath(__file__)), "scrapy-cache"
-        ),
-        "HTTPCACHE_IGNORE_RESPONSE_CACHE_CONTROLS": ["no-cache", "no-store"],
-        "HTTPCACHE_IGNORE_MISSING": True,
+    settings_overwrites = {
         # Disable throttling
         "AUTOTHROTTLE_ENABLED": False,
+        # Disable robots.txt check
+        "ROBOTSTXT_OBEY": False,
     }
     # Combine default and custom settings into a new test_settings dict
     scrapy_settings = ScrapePipeline().get_scrape_settings().copy()
-    for key, value in cache_settings.items():
+    for key, value in settings_overwrites.items():
         scrapy_settings.set(key, value)
     mocker.patch.object(
         ScrapePipeline,
@@ -38,44 +29,74 @@ def b_cache_scrapy_requests(mocker):
     )
 
 
+@pytest.mark.block_network(
+    # Get IP address of our mock local test server
+    allowed_hosts=socket.gethostbyname_ex("test.local.com")[2]
+)
 def test_it_scrapes_pages_of_domain():
-    ScrapePipeline.process("17ziele.de")
-    website = Website.find_by(domain="17ziele.de")
+    ScrapePipeline.process("test.local.com")
+    website = Website.find_by(domain="test.local.com")
 
     # It stores pages with status 200
     assert (
         Webpage.query.filter_by(is_ok_and_has_content=True, website=website).count()
-        == 5
+        == 3
     )
     root_page = website.root_page
-    assert root_page.url == "https://17ziele.de/"
     assert root_page.depth == 0
     assert root_page.status_code == 200
     assert root_page.headers != None
-    assert root_page.mime_type == "HTML document, UTF-8 Unicode text"
-    assert root_page.content.find("©2021 ENGAGEMENT GLOBAL") > 0
+    assert root_page.mime_type == "HTML document, ASCII text"
+    assert root_page.content.find("Hello World!") > 0
 
 
-def test_it_falls_back_to_www_and_non_https_when_it_cannot_find_start_url(factory):
-    website = factory.website(domain="example.com")
-    factory.organization(website=website, homepage="https://www.example.com/home")
-    ScrapePipeline.process(website.domain)
+@pytest.mark.block_network(
+    # Get IP address of our mock local server without response
+    allowed_hosts=socket.gethostbyname_ex("undefined.local.com")[2]
+)
+def describe_when_start_url_cannot_be_found():
+    def it_falls_back_to_www_and_non_https_versions_of_the_url(factory):
+        website = factory.website(domain="undefined.local.com")
+        factory.organization(
+            website=website, homepage="https://www.undefined.local.com/home"
+        )
+        ScrapePipeline.process(website.domain)
 
-    # It makes four scraping attemps that result in errors
-    assert len(website.webpages) == 5
-    assert [page.status_code for page in website.webpages] == [999, 999, 999, 999, 999]
+        # It makes four scraping attemps that result in errors
+        assert len(website.webpages) == 5
+        assert all([page.status_code == 999 for page in website.webpages])
 
-    # It starts with homepage as the start URL
-    assert website.webpages[0].url == "https://www.example.com/home"
+        # It starts with homepage as the start URL
+        assert website.webpages[0].url == "https://www.undefined.local.com/home"
 
-    # It tries the following four fallback URLs before giving up
-    assert website.webpages[1].url == "https://example.com"
-    assert website.webpages[2].url == "https://www.example.com"
-    assert website.webpages[3].url == "http://example.com"
-    assert website.webpages[4].url == "http://www.example.com"
+        # It tries the following four fallback URLs before giving up
+        assert website.webpages[1].url == "https://undefined.local.com"
+        assert website.webpages[2].url == "https://www.undefined.local.com"
+        assert website.webpages[3].url == "http://undefined.local.com"
+        assert website.webpages[4].url == "http://www.undefined.local.com"
 
-    # Has no suggested homepage
-    assert website.root_page == None
+        # Has no suggested homepage
+        assert website.root_page == None
+
+    def describe_when_start_url_is_one_of_the_fallback_urls():
+        def it_attempts_the_remaining_fallback_urls(factory):
+            website = factory.website(domain="undefined.local.com")
+            ScrapePipeline.process(website.domain)
+
+            # It makes four scraping attemps that result in errors
+            assert len(website.webpages) == 4
+            assert all([page.status_code == 999 for page in website.webpages])
+
+            # It starts with homepage as the start URL
+            assert website.webpages[0].url == "https://undefined.local.com"
+
+            # It tries the following three fallback URLs before giving up
+            assert website.webpages[1].url == "https://www.undefined.local.com"
+            assert website.webpages[2].url == "http://undefined.local.com"
+            assert website.webpages[3].url == "http://www.undefined.local.com"
+
+            # Has no suggested homepage
+            assert website.root_page == None
 
 
 def test_it_retains_existing_referenced_pages_in_the_database(factory):

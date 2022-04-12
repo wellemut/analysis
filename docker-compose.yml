@@ -36,6 +36,8 @@ services:
       - DATABASE_URL=postgresql://postgres:docker@database-test:5432/testdb
     depends_on:
       - database-test
+      - test-local-server
+      - undefined-local-server
     networks:
       - test
     profiles:
@@ -50,6 +52,28 @@ services:
       - POSTGRES_DB=testdb
     networks:
       - test
+    profiles:
+      - test
+  test-local-server:
+    image: "httpd:2.4-alpine"
+    expose:
+      - 80
+    volumes:
+      - ./tests/server:/usr/local/apache2/htdocs/
+    networks:
+      test:
+        aliases:
+          - test.local.com
+          - www.test.local.com
+    profiles:
+      - test
+  undefined-local-server:
+    image: "alpine:latest"
+    command: ["/bin/sh", "-c", "sleep infinity"]
+    networks:
+      test:
+        aliases:
+          - undefined.local.com
     profiles:
       - test
 

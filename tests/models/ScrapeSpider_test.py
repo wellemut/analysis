@@ -3,18 +3,40 @@ import pytest
 from scrapy.http import TextResponse, Request
 from scrape.ScrapeSpider import ScrapeSpider
 
+# Mock PlaywrightPage
+class PlaywrightPage:
+    _content = None
+
+    def __init__(self, content=None):
+        self._content = content
+
+    async def close(self):
+        pass
+
+    async def content(self):
+        return self._content
+
 
 @pytest.mark.vcr
-def test_it_does_not_error_on_non_text_response():
+async def test_it_does_not_error_on_non_text_response():
+    spider = ScrapeSpider(allowed_domains=["17ziele.de"])
     url = "https://17ziele.de/downloads.html?file=files/17ziele/content/downloads/17Ziele-Uebersicht.pdf"
+    content = requests.get(url).content
 
     # Forge a scrapy response to test
     # Request is necessary for the response.meta to work
     scrapy_response = TextResponse(
-        body=requests.get(url).content, url=url, request=Request(url=url)
+        body=content,
+        url=url,
+        request=Request(
+            url=url,
+            meta=dict(playwright_page=PlaywrightPage(content=content)),
+        ),
     )
 
-    results = list(ScrapeSpider(allowed_domains=["17ziele.de"]).parse(scrapy_response))
+    results = []
+    async for result in spider.parse(scrapy_response):
+        results.append(result)
 
     # No error raised
     assert len(results) == 1
@@ -24,7 +46,8 @@ def test_it_does_not_error_on_non_text_response():
 
 
 @pytest.mark.vcr
-def test_it_collects_redirects():
+async def test_it_collects_redirects():
+    spider = ScrapeSpider(allowed_domains=["github.com"])
     url = "http://github.com"
     request = requests.get(url, allow_redirects=False)
 
@@ -35,10 +58,14 @@ def test_it_collects_redirects():
         headers=request.headers,
         body=request.content,
         url=url,
-        request=Request(url=url),
+        request=Request(
+            url=url, meta=dict(playwright_page=PlaywrightPage(content=request.content))
+        ),
     )
 
-    results = list(ScrapeSpider(allowed_domains=["github.com"]).parse(scrapy_response))
+    results = []
+    async for result in spider.parse(scrapy_response):
+        results.append(result)
 
     assert len(results) == 2
     assert {
@@ -68,17 +95,23 @@ def describe_link_extraction():
         "utf-8"
     )
 
-    def it_follows_links_on_the_same_naked_and_www_domain_only():
+    async def it_follows_links_on_the_same_naked_and_www_domain_only():
+        spider = ScrapeSpider(allowed_domains=["example.com"])
         url = "https://www.example.com/"
         scrapy_response = TextResponse(
             body=body_with_external_links,
             url=url,
-            request=Request(url=url),
+            request=Request(
+                url=url,
+                meta=dict(
+                    playwright_page=PlaywrightPage(content=body_with_external_links)
+                ),
+            ),
         )
 
-        results = list(
-            ScrapeSpider(allowed_domains=["example.com"]).parse(scrapy_response)
-        )
+        results = []
+        async for result in spider.parse(scrapy_response):
+            results.append(result)
 
         # Results do not include links to subdomain.example.com nor other-domain.com
         assert len(results) == 4
@@ -87,19 +120,23 @@ def describe_link_extraction():
         assert results[2].url == "https://www.example.com/home"
         assert results[3].url == "https://example.com/blog"
 
-    def it_supports_subdomains_as_allowed_domain():
+    async def it_supports_subdomains_as_allowed_domain():
+        spider = ScrapeSpider(allowed_domains=["subdomain.example.com"])
         url = "https://subdomain.example.com/"
         scrapy_response = TextResponse(
             body=body_with_external_links,
             url=url,
-            request=Request(url=url),
+            request=Request(
+                url=url,
+                meta=dict(
+                    playwright_page=PlaywrightPage(content=body_with_external_links)
+                ),
+            ),
         )
 
-        results = list(
-            ScrapeSpider(allowed_domains=["subdomain.example.com"]).parse(
-                scrapy_response
-            )
-        )
+        results = []
+        async for result in spider.parse(scrapy_response):
+            results.append(result)
 
         # Results do not include links to subdomain.example.com nor other-domain.com
         assert len(results) == 4
@@ -120,19 +157,24 @@ def describe_link_extraction():
         "utf-8"
     )
 
-    def it_prioritizes_urls_matching_the_start_url():
+    async def it_prioritizes_urls_matching_the_start_url():
         url = "https://example.com/jrc/en/"
+        spider = ScrapeSpider(allowed_domains=["example.com"], start_urls=[url])
         scrapy_response = TextResponse(
             body=body_with_internal_links,
             url=url,
-            request=Request(url=url, cb_kwargs=dict(start_url=url)),
+            request=Request(
+                url=url,
+                cb_kwargs=dict(start_url=url),
+                meta=dict(
+                    playwright_page=PlaywrightPage(content=body_with_internal_links)
+                ),
+            ),
         )
 
-        results = list(
-            ScrapeSpider(allowed_domains=["example.com"], start_urls=[url]).parse(
-                scrapy_response
-            )
-        )
+        results = []
+        async for result in spider.parse(scrapy_response):
+            results.append(result)
 
         # Results do not include links to subdomain.example.com nor other-domain.com
         assert len(results) == 5

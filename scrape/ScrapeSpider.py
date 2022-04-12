@@ -23,11 +23,15 @@ class ScrapeSpider(scrapy.Spider):
                 f"http://{domain}",
                 f"http://www.{domain}",
             ]
+            # Remove start URL from fallback URLs
+            if url in fallback_urls:
+                fallback_urls.remove(url)
             yield scrapy.Request(
                 url,
                 callback=self.parse,
                 errback=self.on_error,
                 cb_kwargs=dict(fallback_urls=fallback_urls),
+                meta={"playwright": True, "playwright_include_page": True},
             )
 
     # Extract all links on the page
@@ -41,25 +45,27 @@ class ScrapeSpider(scrapy.Spider):
             canonicalize=True,
         ).extract_links(response)
 
-    def parse(self, response, depth=0, fallback_urls=None):
+    async def parse(self, response, depth=0, fallback_urls=None):
         # Get response metadata
         status_code = response.status
         headers = response.headers.to_unicode_dict()
 
         # Get response content if it's plain text or HTML document
         content = None
+        page = response.meta["playwright_page"]
         mime_type = magic.from_buffer(BytesIO(response.body).read(2048))
         if mime_type == "text/plain" or mime_type.startswith("HTML document"):
-            content = response.text
+            content = await page.content()
+        await page.close()
 
-        yield {
-            "url": response.url,
-            "depth": depth,
-            "status_code": status_code,
-            "content": content,
-            "mime_type": mime_type,
-            "headers": json.dumps(headers),
-        }
+        yield self.result(
+            url=response.url,
+            depth=depth,
+            status_code=status_code,
+            content=content,
+            mime_type=mime_type,
+            headers=json.dumps(headers),
+        )
 
         # Default message, indicating an error response
         message = "❌"
@@ -114,17 +120,24 @@ class ScrapeSpider(scrapy.Spider):
             callback=self.parse,
             errback=self.on_error,
             cb_kwargs=kwargs,
+            meta={"playwright": True, "playwright_include_page": True},
         )
 
     # Handle a scraping error
-    def on_error(self, failure):
-        depth = failure.request.cb_kwargs.get("depth", 0)
-        yield {
-            "url": failure.request.url,
-            "depth": depth,
-            "status_code": 999,
-            "content": repr(failure),
-        }
+    async def on_error(self, failure):
+        print("❌", end="")
+
+        # Close playwright page, if it was opened
+        page = failure.request.meta.get("playwright_page", None)
+        if page:
+            await page.close()
+
+        yield self.result(
+            url=failure.request.url,
+            depth=failure.request.cb_kwargs.get("depth", 0),
+            status_code=999,
+            content=repr(failure),
+        )
 
         # Attempt one of the fallback URLs (see start_requests)
         fallback_urls = failure.request.cb_kwargs.get("fallback_urls", [])
@@ -135,4 +148,17 @@ class ScrapeSpider(scrapy.Spider):
                 callback=self.parse,
                 errback=self.on_error,
                 cb_kwargs=dict(fallback_urls=fallback_urls),
+                meta={"playwright": True, "playwright_include_page": True},
             )
+
+    # Ensure that all results have the same format. Otherwise, the scrapy CSV
+    # feed writer will only use the keys present in the first result
+    def result(self, url, depth, status_code, content, mime_type=None, headers=None):
+        return dict(
+            url=url,
+            depth=depth,
+            status_code=status_code,
+            content=content,
+            mime_type=mime_type,
+            headers=headers,
+        )

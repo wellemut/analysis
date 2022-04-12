@@ -13,8 +13,8 @@ SPIDER_MODULES = ["scrape"]
 NEWSPIDER_MODULE = "scrape"
 
 
-# Crawl responsibly by identifying yourself (and your website) on the user-agent
-# USER_AGENT = 'scrape (+http://www.yourdomain.com)'
+# Use the default user agent of the headless browser in use
+USER_AGENT = None
 
 # Obey robots.txt rules
 ROBOTSTXT_OBEY = True
@@ -78,6 +78,14 @@ SPIDER_MIDDLEWARES = {
 EXTENSIONS = {
     "scrape.CloseSpiderItemCountCondition.CloseSpiderItemCountCondition": 0,
 }
+
+# Use headless browser for scraping
+# See: https://github.com/scrapy-plugins/scrapy-playwright
+DOWNLOAD_HANDLERS = {
+    "http": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+    "https": "scrapy_playwright.handler.ScrapyPlaywrightDownloadHandler",
+}
+TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 
 # Configure a delay for requests for the same website (default: 0)
 # See https://docs.scrapy.org/en/latest/topics/settings.html#download-delay
